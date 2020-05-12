@@ -1,0 +1,28 @@
+HResults -A -T 1 -t -I /home/haileris/gt2k-stuff/gt2k-alpha/examples/gestpan/labels.mlf -p /home/haileris/gt2k-stuff/gt2k-alpha/examples/gestpan/commands /home/haileris/gt2k-stuff/gt2k-alpha/examples/gestpan/ext/result.mlf0 
+====================== HTK Results Analysis =======================
+  Date: Thu Dec 11 17:46:56 2003
+  Ref : /home/haileris/gt2k-stuff/gt2k-alpha/examples/gestpan/labels.mlf
+  Rec : /home/haileris/gt2k-stuff/gt2k-alpha/examples/gestpan/ext/result.mlf0
+------------------------ Overall Results --------------------------
+SENT: %Correct=100.00 [H=150, S=0, N=150]
+WORD: %Corr=100.00, Acc=100.00 [H=150, D=0, S=0, I=0, N=150]
+------------------------ Confusion Matrix -------------------------
+       b   c   c   d   d   d   d   l   r   u   u   u 
+       u   i   i   o   o   o   o   e   i   p   p   p 
+       n   r   r   w   w   w   w   f   g   1   l   r 
+       n   c   c   n   n   n   n   t   h       e   i 
+       y   l   l   1   2   l   r   1   t       f   g  Del [ %c / %e]
+bunn  16   0   0   0   0   0   0   0   0   0   0   0    0
+circ   0  10   0   0   0   0   0   0   0   0   0   0    0
+circ   0   0  23   0   0   0   0   0   0   0   0   0    0
+down   0   0   0  10   0   0   0   0   0   0   0   0    0
+down   0   0   0   0   8   0   0   0   0   0   0   0    0
+down   0   0   0   0   0  10   0   0   0   0   0   0    0
+down   0   0   0   0   0   0  10   0   0   0   0   0    0
+left   0   0   0   0   0   0   0  19   0   0   0   0    0
+righ   0   0   0   0   0   0   0   0  15   0   0   0    0
+ up1   0   0   0   0   0   0   0   0   0   8   0   0    0
+uple   0   0   0   0   0   0   0   0   0   0  13   0    0
+upri   0   0   0   0   0   0   0   0   0   0   0   8    0
+Ins    0   0   0   0   0   0   0   0   0   0   0   0
+===================================================================
