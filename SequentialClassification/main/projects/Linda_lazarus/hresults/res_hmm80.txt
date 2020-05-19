@@ -1,0 +1,59 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/res_hmm80.mlf 
+Aligned transcription: data/htk/Linda_black_monkey_in_white_flowers_1587957752055.lab vs data/htk/Linda_black_monkey_in_white_flowers_1587957752055.rec
+ LAB: black monkey in white flowers 
+ REC: black monkey in blue  wagon   
+Aligned transcription: data/htk/Linda_alligator_in_orange_flowers_1587953695108.lab vs data/htk/Linda_alligator_in_orange_flowers_1587953695108.rec
+ LAB: alligator in orange flowers 
+ REC: alligator in blue   wagon   
+Aligned transcription: data/htk/Linda_black_snake_below_blue_chair_1587943567950.lab vs data/htk/Linda_black_snake_below_blue_chair_1587943567950.rec
+ LAB: black snake  below blue chair 
+ REC: black monkey in    blue chair 
+Aligned transcription: data/htk/Linda_alligator_above_blue_wall_1587955078038.lab vs data/htk/Linda_alligator_above_blue_wall_1587955078038.rec
+ LAB: alligator above blue wall 
+ REC: alligator above      wall 
+Aligned transcription: data/htk/Linda_alligator_above_orange_wagon_1587939777784.lab vs data/htk/Linda_alligator_above_orange_wagon_1587939777784.rec
+ LAB:       alligator above orange wagon 
+ REC: black alligator above        wagon 
+Aligned transcription: data/htk/Linda_grey_monkey_below_orange_chair_1587954847843.lab vs data/htk/Linda_grey_monkey_below_orange_chair_1587954847843.rec
+ LAB: grey monkey below orange chair 
+ REC: grey monkey       above  chair 
+Aligned transcription: data/htk/Linda_black_lion_above_grey_bed_1587957253029.lab vs data/htk/Linda_black_lion_above_grey_bed_1587957253029.rec
+ LAB: black lion above grey bed 
+ REC:       lion below grey bed 
+Aligned transcription: data/htk/Linda_blue_monkey_above_grey_box_1587939376570.lab vs data/htk/Linda_blue_monkey_above_grey_box_1587939376570.rec
+ LAB: blue monkey above grey box  
+ REC: blue monkey in    grey wall 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Sun May 17 00:35:46 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/res_hmm80.mlf                                  |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |   19  |  82.72  12.35   4.94   1.23  18.52  42.11 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w 
+       b   l   e   e   l   l   o   h   l   r   n   i   o   r   n   a   a 
+       o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l 
+       v   i       o   c   e       i   w   y       n   k   n   k   o   l 
+       e   g       w   k           r   e               e   g   e   n      Del [ %c / %e]
+abov   9   0   0   1   0   0   0   0   0   0   1   0   0   0   0   0   0    0 [81.8/2.5]
+alli   0  10   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+belo   0   0   0   2   0   0   0   0   0   0   1   0   0   0   0   0   0    1 [66.7/1.2]
+blac   0   0   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0    1
+blue   0   0   0   0   0   7   0   0   0   0   0   0   0   0   0   0   0    1
+ box   0   0   0   0   0   0   2   0   0   0   0   0   0   0   0   0   1    0 [66.7/1.2]
+chai   0   0   0   0   0   0   0   4   0   0   0   0   0   0   0   0   0    0
+flow   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   2   0    0 [33.3/2.5]
+grey   0   0   0   0   0   0   0   0   0   5   0   0   0   0   0   0   0    0
+  in   0   0   0   0   0   0   0   0   0   0   4   0   0   0   0   0   0    0
+lion   0   0   0   0   0   0   0   0   0   0   0   4   0   0   0   0   0    0
+monk   0   0   0   0   0   0   0   0   0   0   0   0   3   0   0   0   0    0
+oran   1   0   0   0   0   1   0   0   0   0   0   0   0   1   0   0   0    1 [33.3/2.5]
+snak   0   0   0   0   0   0   0   0   0   0   0   0   1   0   1   0   0    0 [50.0/1.2]
+wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   4   0    0
+wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   2    0
+whit   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0    0 [ 0.0/1.2]
+Ins    0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0

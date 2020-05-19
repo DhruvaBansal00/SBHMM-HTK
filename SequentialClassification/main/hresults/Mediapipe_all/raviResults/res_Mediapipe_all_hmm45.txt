@@ -1,0 +1,106 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/Mediapipe_all/res_Mediapipe_all_hmm45.mlf 
+Aligned transcription: data/Mediapipe/htk/raviColor_Snake_on_box_raviNew28042017.lab vs data/Mediapipe/htk/raviColor_Snake_on_box_raviNew28042017.rec
+ LAB: snake on box   
+ REC: snake in chair 
+Aligned transcription: data/Mediapipe/htk/raviColor_Spider_in_box_raviNew01052017.lab vs data/Mediapipe/htk/raviColor_Spider_in_box_raviNew01052017.rec
+ LAB: spider in    box   
+ REC: spider under chair 
+Aligned transcription: data/Mediapipe/htk/raviColor_Spider_in_box_raviNew101052017.lab vs data/Mediapipe/htk/raviColor_Spider_in_box_raviNew101052017.rec
+ LAB: spider in    box 
+ REC: spider under box 
+Aligned transcription: data/Mediapipe/htk/raviColor_Spider_in_box_raviNew28042017.lab vs data/Mediapipe/htk/raviColor_Spider_in_box_raviNew28042017.rec
+ LAB: spider in    box 
+ REC: spider under bed 
+Aligned transcription: data/Mediapipe/htk/raviColor_Cat_behind_box_raviNew101052017.lab vs data/Mediapipe/htk/raviColor_Cat_behind_box_raviNew101052017.rec
+ LAB: cat behind box  
+ REC: cat behind wall 
+Aligned transcription: data/Mediapipe/htk/raviColor_Cat_behind_box_raviNew01052017.lab vs data/Mediapipe/htk/raviColor_Cat_behind_box_raviNew01052017.rec
+ LAB: cat behind box 
+ REC: cat behind bed 
+Aligned transcription: data/Mediapipe/htk/raviColor_Cat_behind_box_raviNew28042017.lab vs data/Mediapipe/htk/raviColor_Cat_behind_box_raviNew28042017.rec
+ LAB: cat behind box 
+ REC: cat under  box 
+Aligned transcription: data/Mediapipe/htk/raviColor_Snake_under_bed_raviNew01052017.lab vs data/Mediapipe/htk/raviColor_Snake_under_bed_raviNew01052017.rec
+ LAB: snake under bed   
+ REC: snake under chair 
+Aligned transcription: data/Mediapipe/htk/raviColor_Spider_on_chair_raviNew28042017.lab vs data/Mediapipe/htk/raviColor_Spider_on_chair_raviNew28042017.rec
+ LAB: spider on    chair 
+ REC: cat    under chair 
+Aligned transcription: data/Mediapipe/htk/raviColor_Spider_on_chair_raviNew01052017.lab vs data/Mediapipe/htk/raviColor_Spider_on_chair_raviNew01052017.rec
+ LAB: spider on     chair 
+ REC: spider behind chair 
+Aligned transcription: data/Mediapipe/htk/raviColor_Alligator_in_box_raviNew28042017.lab vs data/Mediapipe/htk/raviColor_Alligator_in_box_raviNew28042017.rec
+ LAB: alligator in box 
+ REC: alligator on box 
+Aligned transcription: data/Mediapipe/htk/raviColor_Alligator_in_box_raviNew01052017.lab vs data/Mediapipe/htk/raviColor_Alligator_in_box_raviNew01052017.rec
+ LAB: alligator in box 
+ REC: alligator on box 
+Aligned transcription: data/Mediapipe/htk/raviColor_Alligator_in_box_raviNew101052017.lab vs data/Mediapipe/htk/raviColor_Alligator_in_box_raviNew101052017.rec
+ LAB: alligator in    box 
+ REC: alligator under box 
+Aligned transcription: data/Mediapipe/htk/raviColor_Alligator_on_bed_raviNew101052017.lab vs data/Mediapipe/htk/raviColor_Alligator_on_bed_raviNew101052017.rec
+ LAB: alligator on bed 
+ REC: spider    on bed 
+Aligned transcription: data/Mediapipe/htk/raviColor_Snake_in_flowers_raviNew28042017.lab vs data/Mediapipe/htk/raviColor_Snake_in_flowers_raviNew28042017.rec
+ LAB: snake in flowers 
+ REC: cat   in flowers 
+Aligned transcription: data/Mediapipe/htk/raviColor_Snake_behind_wall_raviNew28042017.lab vs data/Mediapipe/htk/raviColor_Snake_behind_wall_raviNew28042017.rec
+ LAB: snake behind wall  
+ REC: snake under  chair 
+Aligned transcription: data/Mediapipe/htk/raviColor_Snake_behind_wall_raviNew101052017.lab vs data/Mediapipe/htk/raviColor_Snake_behind_wall_raviNew101052017.rec
+ LAB: snake behind wall 
+ REC: snake on     wall 
+Aligned transcription: data/Mediapipe/htk/raviColor_Snake_behind_wall_raviNew01052017.lab vs data/Mediapipe/htk/raviColor_Snake_behind_wall_raviNew01052017.rec
+ LAB: snake behind wall 
+ REC: snake on     wall 
+Aligned transcription: data/Mediapipe/htk/raviColor_Snake_under_chair_raviNew101052017.lab vs data/Mediapipe/htk/raviColor_Snake_under_chair_raviNew101052017.rec
+ LAB: snake under chair 
+ REC: snake under bed   
+Aligned transcription: data/Mediapipe/htk/raviColor_Snake_under_chair_raviNew28042017.lab vs data/Mediapipe/htk/raviColor_Snake_under_chair_raviNew28042017.rec
+ LAB: snake under chair 
+ REC: cat   under bed   
+Aligned transcription: data/Mediapipe/htk/raviColor_Alligator_in_wagon_raviNew101052017.lab vs data/Mediapipe/htk/raviColor_Alligator_in_wagon_raviNew101052017.rec
+ LAB: alligator in wagon 
+ REC: spider    in bed   
+Aligned transcription: data/Mediapipe/htk/raviColor_Alligator_in_wagon_raviNew01052017.lab vs data/Mediapipe/htk/raviColor_Alligator_in_wagon_raviNew01052017.rec
+ LAB: alligator in     wagon 
+ REC: spider    behind wagon 
+Aligned transcription: data/Mediapipe/htk/raviColor_Alligator_in_wagon_raviNew28042017.lab vs data/Mediapipe/htk/raviColor_Alligator_in_wagon_raviNew28042017.rec
+ LAB: alligator in wagon 
+ REC: alligator on wagon 
+Aligned transcription: data/Mediapipe/htk/raviColor_Alligator_behind_wall_raviNew01052017.lab vs data/Mediapipe/htk/raviColor_Alligator_behind_wall_raviNew01052017.rec
+ LAB: alligator behind wall 
+ REC: alligator on     bed  
+Aligned transcription: data/Mediapipe/htk/raviColor_Alligator_behind_wall_raviNew101052017.lab vs data/Mediapipe/htk/raviColor_Alligator_behind_wall_raviNew101052017.rec
+ LAB: alligator behind wall 
+ REC: spider    on     wall 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Sat Mar  7 19:10:10 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/Mediapipe_all/res_Mediapipe_all_hmm45.mlf      |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |   57  |  79.53  20.47   0.00   0.00  20.47  43.86 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   b   b   b   c   c   f   i   o   s   s   u   w   w 
+       l   e   e   o   a   h   l   n   n   n   p   n   a   a 
+       l   d   h   x   t   a   o           a   i   d   g   l 
+       i       i           i   w           k   d   e   o   l 
+       g       n           r   e           e   e   r   n      Del [ %c / %e]
+alli  11   0   0   0   0   0   0   0   0   0   4   0   0   0    0 [73.3/2.3]
+ bed   0  10   0   0   0   1   0   0   0   0   0   0   0   0    0 [90.9/0.6]
+behi   0   0  12   0   0   0   0   0   4   0   0   2   0   0    0 [66.7/3.5]
+ box   0   2   0   7   0   2   0   0   0   0   0   0   0   1    0 [58.3/2.9]
+ cat   0   0   0   0  15   0   0   0   0   0   0   0   0   0    0
+chai   0   2   0   0   0  10   0   0   0   0   0   0   0   0    0 [83.3/1.2]
+flow   0   0   0   0   0   0   6   0   0   0   0   0   0   0    0
+  in   0   0   1   0   0   0   0   4   3   0   0   4   0   0    0 [33.3/4.7]
+  on   0   0   1   0   0   0   0   1  11   0   0   1   0   0    0 [78.6/1.8]
+snak   0   0   0   0   2   0   0   0   0  13   0   0   0   0    0 [86.7/1.2]
+spid   0   0   0   0   1   0   0   0   0   0  11   0   0   0    0 [91.7/0.6]
+unde   0   0   0   0   0   0   0   0   0   0   0  13   0   0    0
+wago   0   1   0   0   0   0   0   0   0   0   0   0   4   0    0 [80.0/0.6]
+wall   0   1   0   0   0   1   0   0   0   0   0   0   0   9    0 [81.8/1.2]
+Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0

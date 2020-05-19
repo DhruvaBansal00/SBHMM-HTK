@@ -1,0 +1,139 @@
+HCompV -A -T 2 -C configs/hcompv.conf -v 2.0 -f 0.01 -m -S lists/train.data -M models/hmm0 models/prototype 
+Stream 1
+ Mean Vector 
+       0.29    -0.82    -0.02    -0.26    -0.91     0.13    -0.16    -0.36     0.10     0.33    -0.56     0.28 ...
+ Variance Vector 
+       2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00 ...
+HCompV -A -T 2 -C configs/hcompv.conf -v 2.0 -f 0.01 -m -S lists/train.data -M models/hmm0 models/prototype 
+Stream 1
+ Mean Vector 
+       0.29    -0.82    -0.02    -0.26    -0.91     0.13    -0.16    -0.36     0.10     0.33    -0.56     0.28 ...
+ Variance Vector 
+       2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00 ...
+HCompV -A -T 2 -C configs/hcompv.conf -v 2.0 -f 0.01 -m -S lists/train.data -M models/hmm0 models/prototype 
+Stream 1
+ Mean Vector 
+       0.29    -0.82    -0.02    -0.26    -0.91     0.13    -0.16    -0.36     0.10     0.33    -0.56     0.28 ...
+ Variance Vector 
+       2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00 ...
+HCompV -A -T 2 -C configs/hcompv.conf -v 2.0 -f 0.01 -m -S lists/train.data -M models/hmm0 models/prototype 
+Stream 1
+ Mean Vector 
+       0.29    -0.82    -0.02    -0.26    -0.91     0.13    -0.16    -0.36     0.10     0.33    -0.56     0.28 ...
+ Variance Vector 
+       2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00 ...
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/orange 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/wall 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/blue 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/alligator 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/monkey 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/sil0 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/white 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/chair 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/box 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/grey 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/snake 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/wagon 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/in 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/bed 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/black 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/prototype 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/flowers 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/below 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/sil1 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/lion 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/above 
+HERest -A -d models/hmm1 -c 500.0 -v 0.0005 -A -I all_labels.mlf -M models/hmm2 -S lists/train.data -T 1 wordList 
+HERest -A -d models/hmm1 -c 500.0 -v 0.0005 -A -I all_labels.mlf -M models/hmm2 -S lists/train.data -T 1 wordList 
+HERest  ML Updating: Transitions Means Variances 
+
+ System is PLAIN
+2 Logical/2 Physical Models Loaded, VecSize=44
+Pruning-Off
+ Processing Data: lion_above_box_1_152.htk; Label lion_above_box_1_152.lab
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm2/newMacros -I all_labels.mlf -M models/hmm3 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm2/newMacros -I all_labels.mlf -M models/hmm3 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm3/newMacros -I all_labels.mlf -M models/hmm4 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm3/newMacros -I all_labels.mlf -M models/hmm4 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm4/newMacros -I all_labels.mlf -M models/hmm5 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm4/newMacros -I all_labels.mlf -M models/hmm5 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm5/newMacros -I all_labels.mlf -M models/hmm6 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm5/newMacros -I all_labels.mlf -M models/hmm6 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm6/newMacros -I all_labels.mlf -M models/hmm7 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm6/newMacros -I all_labels.mlf -M models/hmm7 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm7/newMacros -I all_labels.mlf -M models/hmm8 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm7/newMacros -I all_labels.mlf -M models/hmm8 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm8/newMacros -I all_labels.mlf -M models/hmm9 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm8/newMacros -I all_labels.mlf -M models/hmm9 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm9/newMacros -I all_labels.mlf -M models/hmm10 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm9/newMacros -I all_labels.mlf -M models/hmm10 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm10/newMacros -I all_labels.mlf -M models/hmm11 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm10/newMacros -I all_labels.mlf -M models/hmm11 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm11/newMacros -I all_labels.mlf -M models/hmm12 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm11/newMacros -I all_labels.mlf -M models/hmm12 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm12/newMacros -I all_labels.mlf -M models/hmm13 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm12/newMacros -I all_labels.mlf -M models/hmm13 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm13/newMacros -I all_labels.mlf -M models/hmm14 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm13/newMacros -I all_labels.mlf -M models/hmm14 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm14/newMacros -I all_labels.mlf -M models/hmm15 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm14/newMacros -I all_labels.mlf -M models/hmm15 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm15/newMacros -I all_labels.mlf -M models/hmm16 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm15/newMacros -I all_labels.mlf -M models/hmm16 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm16/newMacros -I all_labels.mlf -M models/hmm17 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm16/newMacros -I all_labels.mlf -M models/hmm17 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm17/newMacros -I all_labels.mlf -M models/hmm18 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm17/newMacros -I all_labels.mlf -M models/hmm18 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm18/newMacros -I all_labels.mlf -M models/hmm19 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm18/newMacros -I all_labels.mlf -M models/hmm19 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm19/newMacros -I all_labels.mlf -M models/hmm20 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm19/newMacros -I all_labels.mlf -M models/hmm20 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm20/newMacros -I all_labels.mlf -M models/hmm21 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm20/newMacros -I all_labels.mlf -M models/hmm21 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm21/newMacros -I all_labels.mlf -M models/hmm22 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm21/newMacros -I all_labels.mlf -M models/hmm22 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm22/newMacros -I all_labels.mlf -M models/hmm23 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm22/newMacros -I all_labels.mlf -M models/hmm23 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm23/newMacros -I all_labels.mlf -M models/hmm24 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm23/newMacros -I all_labels.mlf -M models/hmm24 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm24/newMacros -I all_labels.mlf -M models/hmm25 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm24/newMacros -I all_labels.mlf -M models/hmm25 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm25/newMacros -I all_labels.mlf -M models/hmm26 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm25/newMacros -I all_labels.mlf -M models/hmm26 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm26/newMacros -I all_labels.mlf -M models/hmm27 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm26/newMacros -I all_labels.mlf -M models/hmm27 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm27/newMacros -I all_labels.mlf -M models/hmm28 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm27/newMacros -I all_labels.mlf -M models/hmm28 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm28/newMacros -I all_labels.mlf -M models/hmm29 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm28/newMacros -I all_labels.mlf -M models/hmm29 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm29/newMacros -I all_labels.mlf -M models/hmm30 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm29/newMacros -I all_labels.mlf -M models/hmm30 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm30/newMacros -I all_labels.mlf -M models/hmm31 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm30/newMacros -I all_labels.mlf -M models/hmm31 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm31/newMacros -I all_labels.mlf -M models/hmm32 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm31/newMacros -I all_labels.mlf -M models/hmm32 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm32/newMacros -I all_labels.mlf -M models/hmm33 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm32/newMacros -I all_labels.mlf -M models/hmm33 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm33/newMacros -I all_labels.mlf -M models/hmm34 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm33/newMacros -I all_labels.mlf -M models/hmm34 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm34/newMacros -I all_labels.mlf -M models/hmm35 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm34/newMacros -I all_labels.mlf -M models/hmm35 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm35/newMacros -I all_labels.mlf -M models/hmm36 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm35/newMacros -I all_labels.mlf -M models/hmm36 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm36/newMacros -I all_labels.mlf -M models/hmm37 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm36/newMacros -I all_labels.mlf -M models/hmm37 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm37/newMacros -I all_labels.mlf -M models/hmm38 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm37/newMacros -I all_labels.mlf -M models/hmm38 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm38/newMacros -I all_labels.mlf -M models/hmm39 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm38/newMacros -I all_labels.mlf -M models/hmm39 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm39/newMacros -I all_labels.mlf -M models/hmm40 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm39/newMacros -I all_labels.mlf -M models/hmm40 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm40/newMacros -I all_labels.mlf -M models/hmm41 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm40/newMacros -I all_labels.mlf -M models/hmm41 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm41/newMacros -I all_labels.mlf -M models/hmm42 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm41/newMacros -I all_labels.mlf -M models/hmm42 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm42/newMacros -I all_labels.mlf -M models/hmm43 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm42/newMacros -I all_labels.mlf -M models/hmm43 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm43/newMacros -I all_labels.mlf -M models/hmm44 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm43/newMacros -I all_labels.mlf -M models/hmm44 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm44/newMacros -I all_labels.mlf -M models/hmm45 -S lists/train.data -T 1 wordList 
+HERest -A -c 500.0 -v 0.0005 -A -H models/hmm44/newMacros -I all_labels.mlf -M models/hmm45 -S lists/train.data -T 1 wordList 
