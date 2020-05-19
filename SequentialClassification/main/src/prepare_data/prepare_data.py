@@ -32,7 +32,7 @@ def prepare_data(features_config: dict, device: int = 0) -> None:
     else: 
         if(device==0):
             print('Creating .ark files...')
-            create_ark_files(features_config, verbose=False)
+            # create_ark_files(features_config, verbose=False)
             print('.ark files created')
         else:
             print('.ark files have already been created')
