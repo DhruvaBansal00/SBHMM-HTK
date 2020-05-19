@@ -3,8 +3,8 @@ import trainAdaboostedClassifier
 
 #get phrase assumes that the readline will return the path to the current phrase
 def getPhrase(res_file):
-	phraseName = res_file.readline().strip('\n').split("/")[-1].split(".")[0].split("_")
-	phraseName = phraseName[0]+"."+"_".join(phraseName[1:-1])+"."+phraseName[-1]
+	phraseName = res_file.readline().strip('\n').split("/")[-1].split(".")[0].split("_") ##Extract the file of the ark file with underscores instead of dots
+	phraseName = phraseName[0]+"."+"_".join(phraseName[1:-1])+"."+phraseName[-1] ##Add dots to match ark file format
 	words = []
 	line = res_file.readline()
 	currWord = None
@@ -21,7 +21,11 @@ def getPhrase(res_file):
 		currWord.states.append(State(float(line_split[0]), float(line_split[1]), line_split[2]))
 		currWord.end = currWord.states[-1].end
 		line = res_file.readline()
-
+	
+	if currWord != None:
+		currWord.end = currWord.states[-1].end
+		words.append(currWord)
+	
 	return Phrase(words[0].start, words[-1].end, phraseName, words)
 
 

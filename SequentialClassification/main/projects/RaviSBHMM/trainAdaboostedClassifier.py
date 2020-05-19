@@ -30,12 +30,15 @@ def getClassTree(phrases):
     return wordToDict
 
 def dataSetReader(phrases, arkFileLoc):
-    ark_files = glob.glob(arkFileLoc)
-    content = read_ark_files(ark_files[0])
-    print(content)
-
+    for phrase in phrases:
+        currPhraseArk = arkFileLoc+phrase.name+".ark"
+        content = read_ark_files(currPhraseArk)
+        print(currPhraseArk)
+        print(content.shape[0])
+        print(phrase.end)
+        print(content.shape[0]/phrase.end)
 def getTrainedClassifier(phrases):
     classLabels = getClassTree(phrases)
-    dataSetReader(phrases, "data/ark/*.ark")
+    dataSetReader(phrases, "data/ark/")
     # print(classLabels)
 
