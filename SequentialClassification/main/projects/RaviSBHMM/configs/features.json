@@ -207,5 +207,5 @@
         "delta_horizontal_hand_dist",
         "delta_vertical_hand_dist"
     ],
-    "features_dir": "data/ark/"
+    "features_dir": "data/ark/*.ark"
 }

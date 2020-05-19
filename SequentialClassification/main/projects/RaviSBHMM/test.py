@@ -63,8 +63,11 @@ def test(test_args) -> None:
 
     if test_args.method == 'recognition':
 
-        HVite_str = (f'HVite -A -H $macros -m -S lists/test.data -i $results '
-                     f'-p -10.0 -w wordNet.txt -s 25 dict wordList')
+        # HVite_str = (f'HVite -A -H $macros -f -m -S lists/test.data -i $results '
+        #              f'-p -10.0 -w wordNet.txt -s 25 dict wordList')
+        HVite_str = (f'HVite -A -H $macros -m -S lists/test.data -i '
+                     f'$results -w wordNet.txt -s 25 dict wordList')
+
         HVite_cmd = Template(HVite_str)
 
         HResults_str = (f'HResults -A -h -e \\?\\?\\? sil0 -e \\?\\?\\? '
@@ -77,6 +80,13 @@ def test(test_args) -> None:
         HVite_str = (f'HVite -a -o N -T 1 -b sil0 sil1 -H $macros -S '
                      f'lists/test.data -i $results -m -y lab -t 250.0 -s 1.0 '
                      f'-p 0.0 -I all_labels.mlf -s 25 dict wordList')
+        HVite_cmd = Template(HVite_str)
+        HResults_cmd = Template('')
+
+    elif test_args.method == 'alignment':
+
+        HVite_str = (f'HVite -A -H $macros -m -f -S lists/test.data -i '
+                     f'$results -w wordNet.txt -s 25 dict wordList')
         HVite_cmd = Template(HVite_str)
         HResults_cmd = Template('')
 

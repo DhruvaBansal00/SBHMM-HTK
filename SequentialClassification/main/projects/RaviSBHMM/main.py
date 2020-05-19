@@ -71,12 +71,12 @@ if __name__ == '__main__':
         train(arg_groups['train_args'], args.device)
         test(arg_groups['test_args'])
 
+        if args.method == "recognition":
+            all_results['fold_0'] = get_results(hresults_file)
+            all_results['average']['error'] = all_results['fold_0']['error']
+            all_results['average']['sentence_error'] = all_results['fold_0']['sentence_error']
 
-        all_results['fold_0'] = get_results(hresults_file)
-        all_results['average']['error'] = all_results['fold_0']['error']
-        all_results['average']['sentence_error'] = all_results['fold_0']['sentence_error']
-
-        print('Test on Train Results')
+            print('Test on Train Results')
 
     elif args.test_type == 'cross_val':
 
@@ -176,14 +176,17 @@ if __name__ == '__main__':
         train(arg_groups['train_args'], args.device)
         test(arg_groups['test_args'])
 
-        all_results['fold_0'] = get_results(hresults_file)
-        all_results['average']['correct'] = all_results['fold_0']['correct']
-        all_results['average']['sentence_error'] = all_results['fold_0']['sentence_error']
+        if args.method == "recognition":
+            all_results['fold_0'] = get_results(hresults_file)
+            all_results['average']['correct'] = all_results['fold_0']['correct']
+            all_results['average']['sentence_error'] = all_results['fold_0']['sentence_error']
 
-        print('Standard Train/Test Split Results')
+            print('Standard Train/Test Split Results')
 
-    print(f'Average Error: {all_results["average"]["error"]}')
-    print(f'Average Sentence Error: {all_results["average"]["sentence_error"]}')
+    if args.method == "recognition":
+        
+        print(f'Average Error: {all_results["average"]["error"]}')
+        print(f'Average Sentence Error: {all_results["average"]["sentence_error"]}')
 
     # print(all_results)
     # Loads data as new run into pickle

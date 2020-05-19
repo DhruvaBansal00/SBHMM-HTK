@@ -1,0 +1,159 @@
+{
+    "1": {
+        "features": [
+            "left_hand_x",
+            "left_hand_y",
+            "left_hand_w",
+            "left_hand_h",
+            "right_hand_x",
+            "right_hand_y",
+            "right_hand_w",
+            "right_hand_h",
+            "horizontal_hand_dist",
+            "vertical_hand_dist",
+            "delta_horizontal_hand_dist",
+            "delta_vertical_hand_dist"
+        ],
+        "average": {
+            "error": 15.3,
+            "sentence_error": 39.89
+        },
+        "fold_0": {
+            "substitutions": 10.48,
+            "deletions": 1.42,
+            "insertions": 3.4,
+            "error": 15.3,
+            "sentence_error": 39.89,
+            "confusion_matrix": "    ,-------------------------------------------------------------.\n    | HTK Results Analysis at Tue May 19 13:23:47 2020            |\n    | Ref: all_labels.mlf                                         |\n    | Rec: results/res_hmm44.mlf                                  |\n    |=============================================================|\n    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |\n    |-------------------------------------------------------------|\n    | Sum/Avg |  178  |  88.10  10.48   1.42   3.40  15.30  39.89 |\n    `-------------------------------------------------------------'\n------------------------ Confusion Matrix -------------------------\n       a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w\n       b   l   e   e   l   l   o   h   l   r   n   i   o   r   n   a   a   h\n       o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i\n       v   i       o   c   e       i   w   y       n   k   n   k   o   l   t\n       e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]\nabov  62   0   0   2   0   1   0   0   0   2  12   0   0   0   0   0   0   1    0 [77.5/2.5]\nalli   0  46   0   0   0   0   0   0   0   0   0   1   2   0   0   0   0   0    0 [93.9/0.4]\n bed   0   0  28   0   0   0   0   0   0   0   0   0   0   0   0   1   1   0    0 [93.3/0.3]\nbelo   0   0   0  52   0   0   0   0   0   0   0   0   0   0   0   0   0   0    1\nblac   0   0   0   0  21   3   0   0   0   0   0   0   0   1   0   0   0   0    2 [84.0/0.6]\nblue   1   0   0   0   0  41   0   0   0   1   0   0   0   0   0   0   0   6    2 [83.7/1.1]\n box   0   0   0   0   0   0  18   2   0   0   0   0   0   0   0   0   7   0    0 [66.7/1.3]\nchai   0   0   1   0   0   0   3  27   1   0   0   0   0   0   0   3   0   0    0 [77.1/1.1]\nflow   0   0   0   0   0   0   0   1  24   0   0   0   0   0   0   6   0   0    0 [77.4/1.0]\ngrey   0   0   0   0   0   0   0   0   0  43   0   0   0   0   0   0   0   1    0 [97.7/0.1]\n  in   2   0   0   0   0   0   0   0   0   0  41   0   0   0   0   0   0   0    2 [95.3/0.3]\nlion   0   1   0   0   0   0   0   0   0   0   0  44   0   0   0   0   0   0    0 [97.8/0.1]\nmonk   0   0   0   0   0   0   0   0   0   0   0   0  43   0   1   0   0   0    0 [97.7/0.1]\noran   1   0   0   0   0   0   0   0   0   0   0   0   0  27   0   0   0   2    2 [90.0/0.4]\nsnak   0   1   0   0   0   0   0   0   0   0   0   0   0   0  39   0   0   0    0 [97.5/0.1]\nwago   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0  19   0   0    0 [95.0/0.1]\nwall   0   0   0   0   0   0   1   0   1   0   0   0   0   0   0   0  33   0    0 [94.3/0.3]\nwhit   1   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0  14    1 [82.4/0.4]\nIns    0   0   0   1   2   2   0   0   0   3   3   0   0   6   0   0   0   7\n"
+        }
+    },
+    "2": {
+        "features": [
+            "left_hand_x",
+            "left_hand_y",
+            "left_hand_w",
+            "left_hand_h",
+            "right_hand_x",
+            "right_hand_y",
+            "right_hand_w",
+            "right_hand_h",
+            "horizontal_hand_dist",
+            "vertical_hand_dist",
+            "delta_horizontal_hand_dist",
+            "delta_vertical_hand_dist"
+        ],
+        "average": {
+            "error": 46.18,
+            "sentence_error": 88.2
+        },
+        "fold_0": {
+            "substitutions": 33.29,
+            "deletions": 8.5,
+            "insertions": 4.39,
+            "error": 46.18,
+            "sentence_error": 88.2,
+            "confusion_matrix": "    ,-------------------------------------------------------------.\n    | HTK Results Analysis at Tue May 19 13:36:48 2020            |\n    | Ref: all_labels.mlf                                         |\n    | Rec: results/res_hmm4.mlf                                   |\n    |=============================================================|\n    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |\n    |-------------------------------------------------------------|\n    | Sum/Avg |  178  |  58.22  33.29   8.50   4.39  46.18  88.20 |\n    `-------------------------------------------------------------'\n------------------------ Confusion Matrix -------------------------\n       a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w\n       b   l   e   e   l   l   o   h   l   r   n   i   o   r   n   a   a   h\n       o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i\n       v   i       o   c   e       i   w   y       n   k   n   k   o   l   t\n       e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]\nabov  43   3   0  14   0   0   0   0   0   3  11   0   1   1   1   0   0   0    3 [55.8/4.8]\nalli   0  37   0   0   0   0   0   0   0   0   0   8   3   0   1   0   0   0    0 [75.5/1.7]\n bed   0   0  13   0   0   0   1   2   2   0   0   0   0   0   0   0  12   0    0 [43.3/2.4]\nbelo   6   0   0  39   0   0   0   0   0   0   3   0   0   0   0   0   0   0    5 [81.2/1.3]\nblac   0   0   0   1  15   0   0   0   0   1   1   0   0   1   0   0   0   1    7 [75.0/0.7]\nblue   3   0   0   1   4  23   0   0   0   2   1   0   0   0   0   0   0   4   13 [60.5/2.1]\n box   0   0   0   0   0   0  12   0   1   0   0   0   0   0   0   0  14   0    0 [44.4/2.1]\nchai   0   0   2   0   0   0   5  18   3   0   0   0   0   0   0   0   7   0    0 [51.4/2.4]\nflow   0   0   1   0   0   0   1  12  16   0   0   0   0   0   0   0   1   0    0 [51.6/2.1]\ngrey   0   0   0   2   0   0   0   0   0  29   1   0   0   2   0   0   0   0   10 [85.3/0.7]\n  in  10   1   0  14   0   0   0   0   0   0  13   1   0   0   0   0   0   1    5 [32.5/3.8]\nlion   0   3   0   0   0   0   0   0   0   0   1  36   0   0   2   0   0   0    3 [85.7/0.8]\nmonk   0   5   0   1   0   0   0   0   0   0   0   3  29   0   2   0   0   0    4 [72.5/1.6]\noran   4   0   0   3   0   2   0   0   0   0   1   0   0  10   0   0   0   4    8 [41.7/2.0]\nsnak   0   3   0   0   0   0   0   0   0   0   0   1   0   0  36   0   0   0    0 [90.0/0.6]\nwago   0   0   0   0   0   0   0   1   6   0   0   0   0   0   0  12   1   0    0 [60.0/1.1]\nwall   0   0   1   0   0   0   3   7   6   0   0   0   0   0   0   0  18   0    0 [51.4/2.4]\nwhit   1   0   0   1   0   0   0   0   0   0   0   0   0   2   0   0   0  12    2 [75.0/0.6]\nIns    1   1   0   0   3   1   0   0   0   7   2   1   0   3   0   0   0  12\n"
+        }
+    },
+    "3": {
+        "features": [
+            "left_hand_x",
+            "left_hand_y",
+            "left_hand_w",
+            "left_hand_h",
+            "right_hand_x",
+            "right_hand_y",
+            "right_hand_w",
+            "right_hand_h",
+            "horizontal_hand_dist",
+            "vertical_hand_dist",
+            "delta_horizontal_hand_dist",
+            "delta_vertical_hand_dist"
+        ],
+        "average": {
+            "error": 35.55,
+            "sentence_error": 79.21
+        },
+        "fold_0": {
+            "substitutions": 25.92,
+            "deletions": 5.38,
+            "insertions": 4.25,
+            "error": 35.55,
+            "sentence_error": 79.21,
+            "confusion_matrix": "    ,-------------------------------------------------------------.\n    | HTK Results Analysis at Tue May 19 13:38:11 2020            |\n    | Ref: all_labels.mlf                                         |\n    | Rec: results/res_hmm9.mlf                                   |\n    |=============================================================|\n    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |\n    |-------------------------------------------------------------|\n    | Sum/Avg |  178  |  68.70  25.92   5.38   4.25  35.55  79.21 |\n    `-------------------------------------------------------------'\n------------------------ Confusion Matrix -------------------------\n       a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w\n       b   l   e   e   l   l   o   h   l   r   n   i   o   r   n   a   a   h\n       o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i\n       v   i       o   c   e       i   w   y       n   k   n   k   o   l   t\n       e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]\nabov  46   0   0   2   1   1   0   0   0   2  23   3   0   0   0   0   0   1    1 [58.2/4.7]\nalli   0  34   0   0   0   0   0   0   0   0   1   8   3   0   1   0   0   0    2 [72.3/1.8]\n bed   0   0  17   0   0   0   0   3   0   0   0   0   0   0   0   0  10   0    0 [56.7/1.8]\nbelo   3   0   0  45   0   0   0   0   0   0   3   0   0   0   0   0   0   0    2 [88.2/0.8]\nblac   0   0   0   0  17   1   0   0   0   0   0   0   0   2   0   0   0   1    6 [81.0/0.6]\nblue   3   0   0   0   5  27   0   0   0   1   1   0   0   3   0   0   0   3    8 [62.8/2.3]\n box   0   0   1   0   0   0  13   1   0   0   0   0   0   0   0   0  12   0    0 [48.1/2.0]\nchai   0   0   1   0   0   0   1  24   0   0   0   0   0   0   0   0   9   0    0 [68.6/1.6]\nflow   0   0   2   0   0   0   1   1  19   0   0   0   0   0   0   8   0   0    0 [61.3/1.7]\ngrey   0   0   0   1   1   0   0   0   0  37   0   0   0   0   0   0   0   0    5 [94.9/0.3]\n  in   7   0   0   4   0   0   0   0   0   0  26   0   0   0   0   0   0   1    7 [68.4/1.7]\nlion   0   0   0   0   0   0   0   0   0   0   0  37   2   0   6   0   0   0    0 [82.2/1.1]\nmonk   0   3   0   1   0   0   0   0   0   0   0   1  36   0   2   0   0   0    1 [83.7/1.0]\noran   4   0   0   0   1   0   0   0   0   2   2   0   0  16   0   0   0   2    5 [59.3/1.6]\nsnak   0   2   0   0   0   0   0   0   0   0   0   0   0   0  38   0   0   0    0 [95.0/0.3]\nwago   0   0   0   0   0   0   0   1   6   0   0   0   0   0   0  13   0   0    0 [65.0/1.0]\nwall   0   0   0   0   0   0   2   7   0   0   0   0   0   0   0   0  26   0    0 [74.3/1.3]\nwhit   1   0   0   1   0   1   0   0   0   0   0   0   0   0   0   0   0  14    1 [82.4/0.4]\nIns    1   0   0   1   5   2   0   0   0   5   2   2   0   2   0   0   0  10\n"
+        }
+    },
+    "4": {
+        "features": [
+            "left_hand_x",
+            "left_hand_y",
+            "left_hand_w",
+            "left_hand_h",
+            "right_hand_x",
+            "right_hand_y",
+            "right_hand_w",
+            "right_hand_h",
+            "horizontal_hand_dist",
+            "vertical_hand_dist",
+            "delta_horizontal_hand_dist",
+            "delta_vertical_hand_dist"
+        ],
+        "average": {
+            "error": 35.98,
+            "sentence_error": 78.09
+        },
+        "fold_0": {
+            "substitutions": 26.35,
+            "deletions": 5.24,
+            "insertions": 4.39,
+            "error": 35.98,
+            "sentence_error": 78.09,
+            "confusion_matrix": "    ,-------------------------------------------------------------.\n    | HTK Results Analysis at Tue May 19 13:38:45 2020            |\n    | Ref: all_labels.mlf                                         |\n    | Rec: results/res_hmm10.mlf                                  |\n    |=============================================================|\n    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |\n    |-------------------------------------------------------------|\n    | Sum/Avg |  178  |  68.41  26.35   5.24   4.39  35.98  78.09 |\n    `-------------------------------------------------------------'\n------------------------ Confusion Matrix -------------------------\n       a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w\n       b   l   e   e   l   l   o   h   l   r   n   i   o   r   n   a   a   h\n       o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i\n       v   i       o   c   e       i   w   y       n   k   n   k   o   l   t\n       e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]\nabov  43   0   0   2   1   1   0   0   0   5  22   3   0   0   1   0   0   1    1 [54.4/5.1]\nalli   0  33   0   0   0   0   0   0   0   0   1   9   3   0   1   0   0   0    2 [70.2/2.0]\n bed   0   0  16   0   0   0   0   3   0   0   0   0   0   0   0   0  11   0    0 [53.3/2.0]\nbelo   3   0   0  47   0   0   0   0   0   0   1   0   0   0   0   0   0   0    2 [92.2/0.6]\nblac   0   0   0   0  17   1   0   0   0   0   0   0   0   3   0   0   0   0    6 [81.0/0.6]\nblue   3   0   0   0   5  28   0   0   0   1   1   0   0   3   0   0   0   3    7 [63.6/2.3]\n box   0   0   1   0   0   0  12   2   0   0   0   0   0   0   0   0  12   0    0 [44.4/2.1]\nchai   0   0   1   0   0   0   0  24   0   0   0   0   0   0   0   0  10   0    0 [68.6/1.6]\nflow   0   0   2   0   0   0   1   0  19   0   0   0   0   0   0   9   0   0    0 [61.3/1.7]\ngrey   0   0   0   1   1   0   0   0   0  37   1   0   0   0   0   0   0   0    4 [92.5/0.4]\n  in   6   0   0   3   0   0   0   0   0   0  28   0   0   0   0   0   0   1    7 [73.7/1.4]\nlion   0   0   0   0   0   0   0   0   0   0   0  37   3   0   4   0   0   0    1 [84.1/1.0]\nmonk   0   3   0   1   0   0   0   0   0   0   0   2  36   0   1   0   0   0    1 [83.7/1.0]\noran   4   0   0   0   1   0   0   0   0   2   2   0   0  16   0   0   0   2    5 [59.3/1.6]\nsnak   0   2   0   0   0   0   0   0   0   0   0   0   0   0  38   0   0   0    0 [95.0/0.3]\nwago   0   0   0   0   0   0   0   1   6   0   0   0   0   0   0  13   0   0    0 [65.0/1.0]\nwall   0   0   0   0   0   0   1   9   0   0   0   0   0   0   0   0  25   0    0 [71.4/1.4]\nwhit   1   0   0   1   0   1   0   0   0   0   0   0   0   0   0   0   0  14    1 [82.4/0.4]\nIns    1   0   0   1   5   2   0   0   0   3   5   2   0   1   0   0   0  11\n"
+        }
+    },
+    "5": {
+        "features": [
+            "left_hand_x",
+            "left_hand_y",
+            "left_hand_w",
+            "left_hand_h",
+            "right_hand_x",
+            "right_hand_y",
+            "right_hand_w",
+            "right_hand_h",
+            "horizontal_hand_dist",
+            "vertical_hand_dist",
+            "delta_horizontal_hand_dist",
+            "delta_vertical_hand_dist"
+        ],
+        "average": {
+            "error": 38.24,
+            "sentence_error": 79.78
+        },
+        "fold_0": {
+            "substitutions": 27.48,
+            "deletions": 4.11,
+            "insertions": 6.66,
+            "error": 38.24,
+            "sentence_error": 79.78,
+            "confusion_matrix": "    ,-------------------------------------------------------------.\n    | HTK Results Analysis at Tue May 19 13:56:22 2020            |\n    | Ref: all_labels.mlf                                         |\n    | Rec: results/res_hmm10.mlf                                  |\n    |=============================================================|\n    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |\n    |-------------------------------------------------------------|\n    | Sum/Avg |  178  |  68.41  27.48   4.11   6.66  38.24  79.78 |\n    `-------------------------------------------------------------'\n------------------------ Confusion Matrix -------------------------\n       a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w\n       b   l   e   e   l   l   o   h   l   r   n   i   o   r   n   a   a   h\n       o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i\n       v   i       o   c   e       i   w   y       n   k   n   k   o   l   t\n       e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]\nabov  41   0   0   2   1   1   0   0   0   7  24   1   0   0   1   0   0   1    1 [51.9/5.4]\nalli   0  33   0   0   0   0   0   0   0   0   2   9   3   0   1   0   0   0    1 [68.8/2.1]\n bed   0   0  16   0   0   0   0   3   0   0   0   0   0   0   0   0  11   0    0 [53.3/2.0]\nbelo   3   0   0  47   0   0   0   0   0   0   1   0   0   0   0   0   0   0    2 [92.2/0.6]\nblac   0   0   0   0  18   1   0   0   0   0   0   0   0   3   0   0   0   0    5 [81.8/0.6]\nblue   3   0   0   0   5  30   0   0   0   1   1   0   0   3   0   0   0   3    5 [65.2/2.3]\n box   0   0   1   0   0   0  10   3   0   0   0   0   0   0   0   0  13   0    0 [37.0/2.4]\nchai   0   0   1   0   0   0   0  24   0   0   0   0   0   0   0   0  10   0    0 [68.6/1.6]\nflow   0   0   2   0   0   0   1   0  19   0   0   0   0   0   0   9   0   0    0 [61.3/1.7]\ngrey   0   0   0   1   1   0   0   0   0  39   0   0   0   0   0   0   0   0    3 [95.1/0.3]\n  in   5   0   0   3   0   0   0   0   0   2  28   0   0   0   0   0   0   1    6 [71.8/1.6]\nlion   0   0   0   0   0   0   0   0   0   0   0  34   3   0   8   0   0   0    0 [75.6/1.6]\nmonk   0   3   0   1   0   0   0   0   0   0   0   2  36   0   1   0   0   0    1 [83.7/1.0]\noran   3   0   0   0   1   0   0   0   0   2   1   0   0  19   0   0   0   2    4 [67.9/1.3]\nsnak   0   2   0   0   0   0   0   0   0   0   0   0   0   0  38   0   0   0    0 [95.0/0.3]\nwago   0   0   0   0   0   0   0   1   6   0   0   0   0   0   0  13   0   0    0 [65.0/1.0]\nwall   0   0   0   0   0   0   1  10   0   0   0   0   0   0   0   0  24   0    0 [68.6/1.6]\nwhit   1   0   0   1   0   1   0   0   0   0   0   0   0   0   0   0   0  14    1 [82.4/0.4]\nIns    3   0   0   1   9   2   0   0   0   4   6   3   0   2   0   0   0  17\n"
+        }
+    },
+    "6": {
+        "features": [
+            "left_hand_x",
+            "left_hand_y",
+            "left_hand_w",
+            "left_hand_h",
+            "right_hand_x",
+            "right_hand_y",
+            "right_hand_w",
+            "right_hand_h",
+            "horizontal_hand_dist",
+            "vertical_hand_dist",
+            "delta_horizontal_hand_dist",
+            "delta_vertical_hand_dist"
+        ],
+        "average": {}
+    }
+}
