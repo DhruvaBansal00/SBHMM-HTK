@@ -155,5 +155,22 @@
             "delta_vertical_hand_dist"
         ],
         "average": {}
+    },
+    "7": {
+        "features": [
+            "left_hand_x",
+            "left_hand_y",
+            "left_hand_w",
+            "left_hand_h",
+            "right_hand_x",
+            "right_hand_y",
+            "right_hand_w",
+            "right_hand_h",
+            "horizontal_hand_dist",
+            "vertical_hand_dist",
+            "delta_horizontal_hand_dist",
+            "delta_vertical_hand_dist"
+        ],
+        "average": {}
     }
 }
