@@ -31,12 +31,19 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
     """
 
     train(train_iters, mean, variance, transition_prob, device)
+    arkFileLoc = "data/ark/"
     for iters in range(sbhmm_iters):
         print("Training SBHMM")
 
         test(-2, -1, "alignment") #Save state alignments for each phrase in the results folder
         resultFile = glob.glob('results/*.mlf')[-1]
 
-        trainedClassifier = getClassifierFromStateAlignment(resultFile)
+        trainedClassifier = getClassifierFromStateAlignment(resultFile, arkFileLoc)
+
+        """
+        TODO: Use trained classifier to transform each dataframe to a new feature space
+        and save it in ark_sbhmm. Then create hmm and corresponding text files as well (basically prep data)
+        Then you are ready to run another loop of training HMM models. 
+        """
 
 
