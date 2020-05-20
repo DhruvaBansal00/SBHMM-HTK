@@ -22,27 +22,27 @@ Stream 1
       -0.05     2.72     1.26     0.71     0.43     2.27     1.26     0.71     0.47    -0.45    -0.01     0.00 
  Variance Vector 
        2.00     2.00     2.00     2.00     2.00     2.02     2.00     2.00     3.11     2.61     2.00     2.00 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/alligator 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/wall 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/white 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/lion 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/blue 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/black 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/in 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/grey 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/bed 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/below 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/sil0 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/chair 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/above 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/prototype 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/monkey 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/snake 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/wagon 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/flowers 
 HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/sil1 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/orange 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/in 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/monkey 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/bed 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/wall 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/above 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/lion 
 HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/box 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/snake 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/flowers 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/alligator 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/sil0 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/grey 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/wagon 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/orange 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/prototype 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/below 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/blue 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/white 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/black 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/chair 
 HERest -A -d models/hmm1 -c 500.0 -v 0.0005 -A -I all_labels.mlf -M models/hmm2 -S lists/train.data -T 1 wordList 
 HERest -A -d models/hmm1 -c 500.0 -v 0.0005 -A -I all_labels.mlf -M models/hmm2 -S lists/train.data -T 1 wordList 
 HERest  ML Updating: Transitions Means Variances 

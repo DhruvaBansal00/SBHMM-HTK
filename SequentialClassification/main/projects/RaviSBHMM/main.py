@@ -10,11 +10,9 @@ from sklearn.model_selection import (
 
 sys.path.insert(0, '../../')
 from src.prepare_data import prepare_data
-from src.train import create_data_lists
+from src.train import create_data_lists, train, trainSBHMM
 from src.utils import get_results, save_results, load_json, get_arg_groups
-from train import train
-from trainSBHMM import trainSBHMM
-from test import test
+from src.test import test
 
 
 if __name__ == '__main__':
@@ -25,9 +23,6 @@ if __name__ == '__main__':
     parser.add_argument('--prepare_data', action='store_true')
     parser.add_argument('--save_results', action='store_true')
     parser.add_argument('--device', type=int, default=0) # 0 is for mediapipe, 1 is for kinect
-
-    #Argument for SBHMM vs HMM
-    parser.add_argument('--train_sbhmm', action='store_true')    
 
     #Arguments for create_data_lists()
     parser.add_argument('--test_type', type=str, default='test_on_train',
@@ -48,6 +43,7 @@ if __name__ == '__main__':
                         default='all_results.json')
 
     #Arguments for training
+    parser.add_argument('--train_sbhmm', action='store_true')    
     parser.add_argument('--train_iters', nargs='*', type=int, default=[15, 20])
     parser.add_argument('--mean', type=float, default=0.0)
     parser.add_argument('--variance', type=float, default=1.0)
