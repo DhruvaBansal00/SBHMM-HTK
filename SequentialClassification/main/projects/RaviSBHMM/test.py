@@ -11,7 +11,7 @@ import glob
 import shutil
 from string import Template
 
-def test(start, end, method) -> None:
+def test(start: int, end: int, method: str) -> None:
     """Tests the HMM using HTK. Calls HVite and HResults. Can perform
     either recognition or verification. 
 

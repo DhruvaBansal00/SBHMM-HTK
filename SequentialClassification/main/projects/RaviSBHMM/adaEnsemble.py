@@ -11,7 +11,7 @@ import numpy as np
     
 #structure -> word.name -> index -> state.name -> class
 #supposed to create a map between word, index and the class number
-def getClassTree(phrases):
+def getClassTree(phrases: list) -> dict:
     wordToDict = {}
     currClass = 0
     for phrase in phrases:
@@ -32,7 +32,7 @@ def getClassTree(phrases):
     print("Total classes = " + str(currClass))
     return wordToDict
 
-def dataSetReader(classLabels, phrases, arkFileLoc):
+def dataSetReader(classLabels: dict, phrases: list, arkFileLoc: str) -> dict:
     dataset = {}  ##Class to frames
     for phrase in phrases:
         currPhraseArk = arkFileLoc+phrase.name+".ark"
@@ -51,7 +51,7 @@ def dataSetReader(classLabels, phrases, arkFileLoc):
         
     return dataset
 
-def getDataSetForTrainingClass(dataset, currClass):
+def getDataSetForTrainingClass(dataset: dict, currClass: int) -> (list, list):
     features = []
     labels = []
 
@@ -66,7 +66,7 @@ def getDataSetForTrainingClass(dataset, currClass):
 
 
 
-def getTrainedClassifier(phrases, arkFileLoc, trainMultipleClassifiers=True, random_state=42):
+def getTrainedClassifier(phrases: list, arkFileLoc: str, trainMultipleClassifiers: bool = True, random_state: int = 42) -> object:
     classLabels = getClassTree(phrases)
     dataset = dataSetReader(classLabels, phrases, arkFileLoc)
 

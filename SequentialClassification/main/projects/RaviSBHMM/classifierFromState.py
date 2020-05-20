@@ -1,8 +1,8 @@
 from classes import State, Word, Phrase
-from trainAdaboostedClassifier import AdaBoostedClassifierEnsemble
+from adaEnsemble import AdaBoostedClassifierEnsemble
 
 #get phrase assumes that the readline will return the path to the current phrase
-def getPhrase(res_file):
+def getPhrase(res_file: str) -> Phrase:
 	phraseName = res_file.readline().strip('\n').split("/")[-1].split(".")[0].split("_") ##Extract the file of the ark file with underscores instead of dots
 	phraseName = phraseName[0]+"."+"_".join(phraseName[1:-1])+"."+phraseName[-1] ##Add dots to match ark file format
 	words = []
@@ -29,7 +29,7 @@ def getPhrase(res_file):
 	return Phrase(words[0].start, words[-1].end, phraseName, words)
 
 
-def parse(res_file):
+def parse(res_file: str) -> list:
 	pos = res_file.tell()
 	nextline = res_file.readline()
 	phrases = []
@@ -41,16 +41,19 @@ def parse(res_file):
 	return phrases
 	
 
-curr_res_file = open("results/res_hmm45.mlf", "r")
-curr_res_file.readline()
+def getClassifierFromStateAlignment(resultFile: str, arkFolder: str = "data/ark/") -> object:
 
-phrases = parse(curr_res_file)
+	curr_res_file = open(resultFile, "r")
+	curr_res_file.readline()
 
-# for phrase in phrases:
-# 	print(phrase.name)
-# 	for word in phrase.words:
-# 		print(word.name)
-# 		for state in word.states:
-# 			print(state.name + " " + str(state.start) + " " + str(state.end))	
+	phrases = parse(curr_res_file)
 
-adaBoostedClassifier = AdaBoostedClassifierEnsemble(phrases, "data/ark/", trainMultipleClassifiers=True, random_state=42)
+	# for phrase in phrases:
+	# 	print(phrase.name)
+	# 	for word in phrase.words:
+	# 		print(word.name)
+	# 		for state in word.states:
+	# 			print(state.name + " " + str(state.start) + " " + str(state.end))	
+
+	adaBoostedClassifier = AdaBoostedClassifierEnsemble(phrases, arkFolder, trainMultipleClassifiers=True, random_state=42)
+	return adaBoostedClassifier

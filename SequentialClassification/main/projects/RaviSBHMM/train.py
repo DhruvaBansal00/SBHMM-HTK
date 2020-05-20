@@ -17,32 +17,7 @@ from src.train import initialize_models, generate_prototype
 from src.utils import load_json
 
 
-def train_cli(parser: ArgumentParser) -> ArgumentParser:
-    """Defines arguments to be passed to train() method.
-
-    Parameters
-    ----------
-    parser : ArgumentParser
-        The parser to which to add the argument group for training.
-
-    Returns
-    -------
-    return_val : ArgumentParser
-        The parser with the training argument group added.
-    """
-
-    group = parser.add_argument_group('train_args')
-    group.add_argument('--train_iters', nargs='*', type=int, default=[15, 20])
-    group.add_argument('--mean', type=float, default=0.0)
-    group.add_argument('--variance', type=float, default=1.0)
-    group.add_argument('--transition_prob', type=float, default=0.6)
-    group.add_argument('--sbhmm_iters', type=int, default=1)
-    # parser.add_argument('--device', type=int, default=0) # 0 is for mediapipe, 1 is for kinect
-
-    return parser
-
-
-def train(train_iters, mean, variance, transition_prob, device) -> None:
+def train(train_iters: list, mean: float, variance: float, transition_prob: float, device: int) -> None:
     """Trains the HMM using HTK. Calls HCompV, HRest, HERest, HHEd, and
     HParse. Configuration files for prototypes and increasing mixtures
     are found in configs/. 
