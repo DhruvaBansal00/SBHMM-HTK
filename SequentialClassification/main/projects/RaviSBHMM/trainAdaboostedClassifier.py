@@ -7,7 +7,8 @@ from src.prepare_data.ark_reader import read_ark_files
 import glob
 import numpy as np
 
-random_state = 42
+
+    
 #structure -> word.name -> index -> state.name -> class
 #supposed to create a map between word, index and the class number
 def getClassTree(phrases):
@@ -42,10 +43,7 @@ def dataSetReader(classLabels, phrases, arkFileLoc):
         for index, word in enumerate(phrase.words):
             for state in word.states:
                 currClass = classLabels[word.name][index][state.name]
-                
-                # temp = content[int(state.start * timeToFrame) : int(state.end * timeToFrame)]
-                # if temp.shape[0] == 1:
-                #     print(temp.shape)
+
                 if currClass in dataset:
                     dataset[currClass] = np.concatenate((dataset[currClass], content[int(state.start * timeToFrame) : int(state.end * timeToFrame)]))
                 else:
@@ -68,14 +66,17 @@ def getDataSetForTrainingClass(dataset, currClass):
 
 
 
-def getTrainedClassifier(phrases, trainMultipleClassifiers=True):
+def getTrainedClassifier(phrases, arkFileLoc, trainMultipleClassifiers=True, random_state=42):
     classLabels = getClassTree(phrases)
-    dataset = dataSetReader(classLabels, phrases, "data/ark/")
+    dataset = dataSetReader(classLabels, phrases, arkFileLoc)
+
+    print("Starting classifier training")
 
     if trainMultipleClassifiers:
         classifer = [AdaBoostClassifier(n_estimators=100, random_state=random_state) for classLabel in dataset]
 
         for classLabel in dataset:
+            print("Training binary classifier for class " + str(classLabel))
             X, Y = getDataSetForTrainingClass(dataset, classLabel)
             X, Y = shuffle(X, Y, random_state=random_state)
             classifer[classLabel].fit(X, Y)
@@ -103,3 +104,20 @@ def getTrainedClassifier(phrases, trainMultipleClassifiers=True):
     
     return classifer
     
+
+class AdaBoostedClassifierEnsemble(object):
+    
+    def __init__(self, phrases, arkFileLoc, trainMultipleClassifiers=True, random_state=42):
+        self.phrases = phrases
+        self.trainMultipleClassifiers = trainMultipleClassifiers
+        self.random_state = random_state
+
+        self.classifier = getTrainedClassifier(self.phrases, arkFileLoc, trainMultipleClassifiers=self.trainMultipleClassifiers, random_state=self.random_state)
+    
+    def getTransformedFeatures(self, feature):
+
+        if self.trainMultipleClassifiers:
+            transformation = [self.classifier[i].decision_function(feature) for i in range(len(self.classifier))]
+            return transformation
+        else:
+            raise NotImplementedError("This feature hasn't been implemented since accuracies are really low")

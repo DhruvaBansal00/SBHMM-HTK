@@ -1,5 +1,5 @@
 from classes import State, Word, Phrase
-import trainAdaboostedClassifier
+from trainAdaboostedClassifier import AdaBoostedClassifierEnsemble
 
 #get phrase assumes that the readline will return the path to the current phrase
 def getPhrase(res_file):
@@ -53,4 +53,4 @@ phrases = parse(curr_res_file)
 # 		for state in word.states:
 # 			print(state.name + " " + str(state.start) + " " + str(state.end))	
 
-trainAdaboostedClassifier.getTrainedClassifier(phrases)
+adaBoostedClassifier = AdaBoostedClassifierEnsemble(phrases, "data/ark/", trainMultipleClassifiers=True, random_state=42)
