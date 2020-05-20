@@ -173,7 +173,10 @@ if __name__ == '__main__':
             random_state=args.random_state)
 
         create_data_lists(train_data, test_data, args.users, args.phrase_len)
-        train(arg_groups['train_args'], args.device)
+        if args.train_sbhmm:
+            trainSBHMM(arg_groups['train_args'], args.device)
+        else:
+            train(arg_groups['train_args'], args.device)
         test(arg_groups['test_args'])
 
         all_results['fold_0'] = get_results(hresults_file)

@@ -32,16 +32,17 @@ def train_cli(parser: ArgumentParser) -> ArgumentParser:
     """
 
     group = parser.add_argument_group('train_args')
-    group.add_argument('--train_iters', nargs='*', type=int, default=[20, 45])
+    group.add_argument('--train_iters', nargs='*', type=int, default=[15, 20])
     group.add_argument('--mean', type=float, default=0.0)
     group.add_argument('--variance', type=float, default=1.0)
     group.add_argument('--transition_prob', type=float, default=0.6)
+    group.add_argument('--sbhmm_iters', type=int, default=1)
     # parser.add_argument('--device', type=int, default=0) # 0 is for mediapipe, 1 is for kinect
 
     return parser
 
 
-def train(train_args: Namespace, device) -> None:
+def train(train_iters, mean, variance, transition_prob, device) -> None:
     """Trains the HMM using HTK. Calls HCompV, HRest, HERest, HHEd, and
     HParse. Configuration files for prototypes and increasing mixtures
     are found in configs/. 
@@ -66,7 +67,7 @@ def train(train_args: Namespace, device) -> None:
         os.makedirs('logs')
 
     #n_models = train_iters[-1] + len(train_iters) - 1
-    for i in range(train_args.train_iters[-1] + 1):
+    for i in range(train_iters[-1] + 1):
         hmm_dir = os.path.join('models', f'hmm{i}')
         if not os.path.exists(hmm_dir):
             os.makedirs(hmm_dir)
@@ -84,8 +85,8 @@ def train(train_args: Namespace, device) -> None:
 
         prototype_filepath = 'models/prototype'
         generate_prototype(
-            int(n_states), n_features, prototype_filepath, train_args.mean,
-            train_args.variance, train_args.transition_prob)    
+            int(n_states), n_features, prototype_filepath, mean,
+            variance, transition_prob)    
 
         print('Running HCompV...')
         HCompV_command = (f'HCompV -A -T 2 -C configs/hcompv.conf -v 2.0 -f 0.01 '
@@ -115,7 +116,7 @@ def train(train_args: Namespace, device) -> None:
     os.system(HERest_command)
 
     start = 2
-    for i, n_iters in enumerate(train_args.train_iters):
+    for i, n_iters in enumerate(train_iters):
 
         for iter_ in range(start, n_iters):
 
@@ -127,7 +128,7 @@ def train(train_args: Namespace, device) -> None:
             os.system(HERest_command)
         print('HERest Complete')
 
-        if n_iters != train_args.train_iters[-1]:
+        if n_iters != train_iters[-1]:
             print(f'Running HHed Iteration: {n_iters}...')
             HHed_command = (f'HHEd -A -H models/hmm{n_iters-1}/newMacros -M '
                             f'models/hmm{n_iters} configs/hhed.conf '
@@ -138,30 +139,3 @@ def train(train_args: Namespace, device) -> None:
 
     cmd = 'HParse -A -T 1 grammar.txt wordNet.txt'
     os.system(cmd)
-
-
-if __name__ == '__main__':
-
-    parser = ArgumentParser()
-    parser = train_cli(parser)
-    args = parser.parse_args()
-
-    kf = KFold(n_splits=2)
-    kf.get_n_splits(X)
-    test_errors = []
-    htk_filepaths = glob.glob('data/htk/*htk')
-
-    for train_index, test_index in kf.split(htk_filepaths):
-
-        print("TRAIN:", train_index, "TEST:", test_index)
-        train, test = htk_filepaths[train_index], htk_filepaths[test_index]
-
-        create_data_lists(train, test)
-
-        train(args.initial_iters, args.reestimate_iters, args.users,
-              args.phrase_len, args.n_states, args.mean, args.variance,
-              args.transition_prob)
-
-        test_error = get_test_error()
-
-        test_errors.append()

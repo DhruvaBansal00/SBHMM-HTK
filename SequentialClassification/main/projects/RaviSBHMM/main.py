@@ -12,18 +12,22 @@ sys.path.insert(0, '../../')
 from src.prepare_data import prepare_data
 from src.train import create_data_lists
 from src.utils import get_results, save_results, load_json, get_arg_groups
-from train import train, train_cli
-from test import test, test_cli
+from train import train
+from trainSBHMM import trainSBHMM
+from test import test
 
 
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-
+    ############################## ARGUMENTS #####################################
     #Important
     parser.add_argument('--prepare_data', action='store_true')
     parser.add_argument('--save_results', action='store_true')
     parser.add_argument('--device', type=int, default=0) # 0 is for mediapipe, 1 is for kinect
+
+    #Argument for SBHMM vs HMM
+    parser.add_argument('--train_sbhmm', action='store_true')    
 
     #Arguments for create_data_lists()
     parser.add_argument('--test_type', type=str, default='test_on_train',
@@ -43,10 +47,20 @@ if __name__ == '__main__':
     parser.add_argument('--save_results_file', type=str,
                         default='all_results.json')
 
-    parser = train_cli(parser)
-    parser = test_cli(parser)
+    #Arguments for training
+    parser.add_argument('--train_iters', nargs='*', type=int, default=[15, 20])
+    parser.add_argument('--mean', type=float, default=0.0)
+    parser.add_argument('--variance', type=float, default=1.0)
+    parser.add_argument('--transition_prob', type=float, default=0.6)
+    parser.add_argument('--sbhmm_iters', type=int, default=1)
+
+    #Arguments for testing
+    parser.add_argument('--start', type=int, default=-10)
+    parser.add_argument('--end', type=int, default=-1)
+    parser.add_argument('--method', default='recognition')
+    
     args = parser.parse_args()
-    arg_groups = get_arg_groups(parser, args)
+    ########################################################################################
 
     cross_val_methods = {'kfold': (KFold, False),
                          'leave_one_phrase_out': (LeaveOneGroupOut, True),
@@ -68,8 +82,12 @@ if __name__ == '__main__':
 
         create_data_lists(
             htk_filepaths, [], args.users, args.phrase_len, test_on_train=True)
-        train(arg_groups['train_args'], args.device)
-        test(arg_groups['test_args'])
+        
+        if args.train_sbhmm:
+            trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
+        else:
+            train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
+        test(args.start, args.end, args.method)
 
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
@@ -128,8 +146,11 @@ if __name__ == '__main__':
             phrase_counts.append(phrase_count)
             create_data_lists(
                 train_data, test_data, args.users, args.phrase_len)
-            train(arg_groups['train_args'], args.device)
-            test(arg_groups['test_args'])
+            if args.train_sbhmm:
+                trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
+            else:
+                train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
+            test(args.start, args.end, args.method)
 
             results = get_results(hresults_file)
             all_results[f'fold_{i}'] = results
@@ -173,8 +194,11 @@ if __name__ == '__main__':
             random_state=args.random_state)
 
         create_data_lists(train_data, test_data, args.users, args.phrase_len)
-        train(arg_groups['train_args'], args.device)
-        test(arg_groups['test_args'])
+        if args.train_sbhmm:
+            trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
+        else:
+            train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
+        test(args.start, args.end, args.method)
 
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
