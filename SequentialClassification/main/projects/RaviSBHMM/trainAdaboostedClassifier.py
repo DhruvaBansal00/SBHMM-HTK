@@ -73,13 +73,13 @@ def getTrainedClassifier(phrases, trainMultipleClassifiers=True):
     dataset = dataSetReader(classLabels, phrases, "data/ark/")
 
     if trainMultipleClassifiers:
-        classifiers = [AdaBoostClassifier(n_estimators=100, random_state=random_state) for classLabel in dataset]
+        classifer = [AdaBoostClassifier(n_estimators=100, random_state=random_state) for classLabel in dataset]
 
         for classLabel in dataset:
             X, Y = getDataSetForTrainingClass(dataset, classLabel)
             X, Y = shuffle(X, Y, random_state=random_state)
-            classifiers[classLabel].fit(X, Y)
-            # print("Classifier " + str(classLabel) + " accepted training score = " + str(classifiers[classLabel].score(dataset[classLabel], [1 for i in range(len(dataset[classLabel]))])))
+            classifer[classLabel].fit(X, Y)
+            # print("Classifier " + str(classLabel) + " accepted training score = " + str(classifer[classLabel].score(dataset[classLabel], [1 for i in range(len(dataset[classLabel]))])))
             # print("Number accepted = "+str(len(dataset[classLabel])))
     
     else:
@@ -101,6 +101,5 @@ def getTrainedClassifier(phrases, trainMultipleClassifiers=True):
             # print("Number accepted = "+str(len(dataset[classLabel])))
 
     
-    
-    return classifiers
+    return classifer
     
