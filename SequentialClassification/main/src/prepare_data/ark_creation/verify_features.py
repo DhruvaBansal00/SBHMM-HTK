@@ -1,10 +1,9 @@
 import os
 import glob
 import argparse
-
 import cv2
 
-from feature_selection import select_features
+from .feature_selection import select_features
 
 if __name__ == '__main__':
 

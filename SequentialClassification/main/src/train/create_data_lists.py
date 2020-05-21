@@ -12,9 +12,7 @@ import argparse
 from random import shuffle
 
 
-def create_data_lists(
-		train_data: list, test_data: list, users: list = [], 
-		phrase_len: int = 0, test_on_train: bool = False) -> None:
+def create_data_lists(train_data: list, test_data: list, phrase_len: int = 0) -> None:
 	"""Creates train.data, test.data, and all.data, which contain the
 	phrases in the dataset.
 
@@ -26,30 +24,10 @@ def create_data_lists(
 	test_data : list
 		All phrases to be included as testing data.
 
-	users : list, optional, by default []
-		Only include specified users.
-
 	phrase_len : int, optional, by default 0
 		Only include phrases of the specified length.
-
-	test_on_train : bool, optional, by default False
-		If all phrases are used for training and testing.
 	"""
-
-	htk_dir = os.path.join('data', 'htk')
-	
-	if not os.path.exists('lists'):
-		os.makedirs('lists')
-
-	if len(users) > 0:
-		filenames = []
-		for user in users:
-			htk_filepaths = os.path.join(htk_dir, '*{}*.htk'.format(user))
-			filenames += glob.glob(htk_filepaths)
-
-	else:
-		htk_filepaths = os.path.join(htk_dir, '*.htk')
-		filenames = glob.glob(htk_filepaths)
+	#TODO: Add filter for phrase length
 
 	all_data_filepath = os.path.join('lists', 'all.data')
 	train_data_filepath = os.path.join('lists', 'train.data')
@@ -58,15 +36,6 @@ def create_data_lists(
 	with open(all_data_filepath, 'w') as all_data_list, \
 		 open(train_data_filepath, 'w') as train_data_list, \
 		 open(test_data_filepath, 'w') as test_data_list:
-
-		if test_on_train:
-
-			for phrase in train_data:
-				all_data_list.write('{}\n'.format(phrase))
-				train_data_list.write('{}\n'.format(phrase))
-				test_data_list.write('{}\n'.format(phrase))
-
-		else:
 
 			for phrase in train_data:
 				all_data_list.write('{}\n'.format(phrase))

@@ -7,6 +7,7 @@ create_ark_files
 """
 import os
 import glob
+import shutil
 
 import pandas as pd
 
@@ -51,11 +52,14 @@ def create_ark_files(features_config: dict, verbose: bool = False) -> None:
     """
 
     ark_dir = os.path.join('data', 'ark')
-    if not os.path.exists(ark_dir):
-        os.makedirs(ark_dir)
+
+    if os.path.exists(ark_dir):
+        shutil.rmtree(ark_dir)
+
+    os.makedirs(ark_dir)
         
     features_filepaths = glob.glob(features_config['features_dir'])
-    
+
     for features_filepath in features_filepaths:
 
         if verbose:
@@ -67,23 +71,5 @@ def create_ark_files(features_config: dict, verbose: bool = False) -> None:
         if features_df is not None:
             ark_filename = features_filepath.split('/')[-1].replace('data', 'ark')
             ark_filepath = os.path.join(ark_dir, ark_filename)
-            title = '_'.join(features_filepath.split('/')[-1].split('.')[:-1])
+            title = ark_filename.replace('.ark', "")
             _create_ark_file(features_df, ark_filepath, title)
-
-
-if __name__ == '__main__':
-
-    features_filepath = '/home/trace/Documents/MS/2019-08/cs6999/copycat-ml/main/projects/test2/data/ark/richa2.Alligator_in_box.23.ark'
-    features_config = '/home/trace/Documents/MS/2019-08/cs6999/copycat-ml/main/projects/test2/configs/features.config'
-    features_to_extract = load_feature_names(features_config)
-    
-    features_df = select_features(features_filepath, features_to_extract)
-
-    print(features_df.head())
-
-    # if features_df is not None:
-    #     ark_filename = features_filepath.split('/')[-1].replace('data', 'ark')#.lower()
-    #     ark_filepath = os.path.join(ark_dir, ark_filename)
-    #     title = '_'.join(features_filepath.split('/')[-1].split('.')[:-1])#.lower()
-    #     _create_ark_file(features_df, ark_filepath, title)
-    

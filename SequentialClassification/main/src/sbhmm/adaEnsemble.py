@@ -82,7 +82,8 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, trainMultipleClassifier
             classifer[classLabel].fit(X, Y)
             # print("Classifier " + str(classLabel) + " accepted training score = " + str(classifer[classLabel].score(dataset[classLabel], [1 for i in range(len(dataset[classLabel]))])))
             # print("Number accepted = "+str(len(dataset[classLabel])))
-    
+        
+        print("Classifier Training Completed")
     else:
         features = []
         labels = []

@@ -62,8 +62,3 @@ def generate_prototype(n_states: int, n_features: int, output_filepath: str,
 
         f.write(' '.join(['0.0']*n_states) + '\n')
         f.write('<EndHMM>\n')
-
-
-if __name__ == '__main__':
-
-    generate_prototype(6, 16, 'prototype.txt')

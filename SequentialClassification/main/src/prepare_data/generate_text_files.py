@@ -246,7 +246,7 @@ def _generate_mlf_file(device: int) -> None:
         for filename in filenames:
 
             label = filename.split('/')[-1].replace('htk', 'lab')
-            phrase = label.split('.')[0].split('_')[1:-1]
+            phrase = label.split('.')[1].split('_')
             if(device==1):
                 # uncomment for Prerna
                 # phrase = label.split('.')[0].split('_')[0:-1]
@@ -265,12 +265,3 @@ def _generate_mlf_file(device: int) -> None:
 
             f.write('sil1\n')
             f.write('.\n')
-
-
-if __name__ == '__main__':
-    project_name = 'test'
-    features_dir = '/home/trace/Documents/MS/2019-08/cs6999/copycat/MediaPipe_Features/*/*/*/*'
-
-    generate_word_list(features_dir, device)
-    generate_word_dict(features_dir, device)
-    generate_grammar(features_dir, device)

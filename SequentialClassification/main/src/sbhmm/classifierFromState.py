@@ -3,8 +3,7 @@ from .adaEnsemble import AdaBoostedClassifierEnsemble
 
 #get phrase assumes that the readline will return the path to the current phrase
 def getPhrase(res_file: str) -> Phrase:
-	phraseName = res_file.readline().strip('\n').split("/")[-1].split(".")[0].split("_") ##Extract the file of the ark file with underscores instead of dots
-	phraseName = phraseName[0]+"."+"_".join(phraseName[1:-1])+"."+phraseName[-1] ##Add dots to match ark file format
+	phraseName = ".".join(res_file.readline().strip('\n').split("/")[-1].split(".")[:-1]) ##Extract name of the file
 	words = []
 	line = res_file.readline()
 	currWord = None
