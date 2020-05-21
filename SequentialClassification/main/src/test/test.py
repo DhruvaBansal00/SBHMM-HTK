@@ -61,7 +61,8 @@ def test(start: int, end: int, method: str) -> None:
 
         HVite_str = (f'HVite -a -o N -T 1 -H $macros -m -f -S '
                      f'lists/train.data -i $results -m -y lab -t 250.0 -s 1.0 '
-                     f'-p 0.0 -I all_labels.mlf -s 25 dict wordList')
+                     f'-p 0.0 -I all_labels.mlf -s 25 dict wordList '
+                     f'>/dev/null 2>&1')
         HVite_cmd = Template(HVite_str)
         HResults_cmd = Template('')
 

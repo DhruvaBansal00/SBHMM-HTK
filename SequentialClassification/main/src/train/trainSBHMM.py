@@ -11,6 +11,7 @@ import glob
 import shutil
 import numpy as np
 import pandas as pd
+from tqdm import tqdm
 
 from .train import train
 from src.test import test
@@ -33,13 +34,12 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
         Argument group defined in train_cli() and split from main
         parser.
     """
-
+    print("----------------Starting SBHMM training with basic HMM for alignment-------------------")
     train(train_iters, mean, variance, transition_prob, device)
     arkFileLoc = "data/ark/"
     htkFileLoc = "data/htk/"
     trainDataFile = "lists/train.data"
 
-    print("Training SBHMM")
     for iters in range(sbhmm_iters):
 
         test(-2, -1, "alignment") #Save state alignments for each phrase in the results folder
@@ -61,9 +61,9 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
                 arkFiles.append(path.replace(htkFileLoc, arkFileLoc).replace(".htk", ".ark").strip('\n'))
                 newHtkFiles.append(path.replace(htkFileLoc, htkFileSave))
 
-        print("Creating new arkFiles")
+        print("Creating new .ark Files")
         num_features = 0
-        for arkFile in arkFiles:
+        for arkFile in tqdm(arkFiles):
 
             content = read_ark_files(arkFile)
             newContent = trainedClassifier.getTransformedFeatures(content)
@@ -74,6 +74,7 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
 
             _create_ark_file(pd.DataFrame(data=newContent), arkFileSavePath, arkFileName.replace(".ark", ""))
         
+        print("Creating new .htk Files")
         create_htk_files(htkFileSave, arkFileSave + "*ark")
 
         arkFileLoc = arkFileSave
@@ -82,8 +83,10 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
         with open(trainDataFile, 'w') as trainData:
             trainData.writelines(newHtkFiles)
         
+        print("Re-writing lists/train.data")
         trainData.close()
 
+        print("Training HMM on new feature space")
         train(train_iters, mean, variance, transition_prob, device, num_features=num_features)
 
 

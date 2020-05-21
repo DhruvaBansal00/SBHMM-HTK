@@ -21,13 +21,14 @@ def create_htk_files(htk_dir: str = os.path.join('data', 'htk'), ark_dir: str = 
     ark_files = glob.glob(ark_dir)
 
     for ark_file in ark_files:
-
-        print(ark_file)
-
+        
         kaldi_command = (f'~/kaldi/src/featbin/copy-feats-to-htk '
                          f'--output-dir={htk_dir} '
                          f'--output-ext=htk '
                          f'--sample-period=40000 '
-                         f'ark:{ark_file}')
+                         f'ark:{ark_file}'
+                         f'>/dev/null 2>&1')
+
+        ##last line silences stdout and stderr
 
         os.system(kaldi_command)

@@ -6,6 +6,7 @@ from sklearn.utils import shuffle
 from src.prepare_data.ark_reader import read_ark_files
 import glob
 import numpy as np
+from tqdm import tqdm
 
 
     
@@ -75,8 +76,8 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, trainMultipleClassifier
     if trainMultipleClassifiers:
         classifer = [AdaBoostClassifier(n_estimators=100, random_state=random_state) for classLabel in dataset]
 
-        for classLabel in dataset:
-            print("Training binary classifier for class " + str(classLabel))
+        for classLabel in tqdm(dataset):
+            # print("Training binary classifier for class " + str(classLabel))
             X, Y = getDataSetForTrainingClass(dataset, classLabel)
             X, Y = shuffle(X, Y, random_state=random_state)
             classifer[classLabel].fit(X, Y)
