@@ -63,7 +63,7 @@ def getDataSetForTrainingClass(dataset: dict, currClass: int) -> (list, list):
         else:
             labels.extend([0 for i in range(dataset[classLabel].shape[0])])
     
-    return [np.array(features)[0]], [np.array(labels)[0]]
+    return np.array(features), np.array(labels)
 
 
 
