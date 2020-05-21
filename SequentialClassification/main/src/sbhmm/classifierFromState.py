@@ -48,12 +48,5 @@ def getClassifierFromStateAlignment(resultFile: str, arkFolder: str = "data/ark/
 
 	phrases = parse(curr_res_file)
 
-	# for phrase in phrases:
-	# 	print(phrase.name)
-	# 	for word in phrase.words:
-	# 		print(word.name)
-	# 		for state in word.states:
-	# 			print(state.name + " " + str(state.start) + " " + str(state.end))	
-
 	adaBoostedClassifier = AdaBoostedClassifierEnsemble(phrases, arkFolder, trainMultipleClassifiers=True, random_state=42)
 	return adaBoostedClassifier

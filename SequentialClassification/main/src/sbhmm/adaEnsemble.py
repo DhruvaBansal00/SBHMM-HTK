@@ -62,7 +62,7 @@ def getDataSetForTrainingClass(dataset: dict, currClass: int) -> (list, list):
         else:
             labels.extend([0 for i in range(dataset[classLabel].shape[0])])
     
-    return np.array(features), np.array(labels)
+    return [np.array(features)[0]], [np.array(labels)[0]]
 
 
 
@@ -114,10 +114,12 @@ class AdaBoostedClassifierEnsemble(object):
 
         self.classifier = getTrainedClassifier(self.phrases, arkFileLoc, trainMultipleClassifiers=self.trainMultipleClassifiers, random_state=self.random_state)
     
-    def getTransformedFeatures(self, feature):
+    def getTransformedFeatures(self, features):
 
         if self.trainMultipleClassifiers:
-            transformation = [self.classifier[i].decision_function(feature) for i in range(len(self.classifier))]
-            return transformation
+            transformation = np.zeros((features.shape[0], len(self.classifier)))
+            for i in range(len(self.classifier)):
+                transformation[:, i] = self.classifier[i].decision_function(features).flatten()
+            return np.array(transformation)
         else:
             raise NotImplementedError("This feature hasn't been implemented since accuracies are really low")

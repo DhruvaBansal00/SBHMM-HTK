@@ -9,12 +9,16 @@ import os
 import sys
 import glob
 import shutil
-from argparse import ArgumentParser, Namespace
+import numpy as np
+import pandas as pd
 
-from .train import train, initialize_models, generate_prototype
+from .train import train
 from src.test import test
 from src.sbhmm import getClassifierFromStateAlignment
-from src.utils import load_json
+from src.prepare_data.ark_reader import read_ark_files
+from src.prepare_data.ark_creation import _create_ark_file
+from src.prepare_data.htk_creation import create_htk_files
+
 
 
 
@@ -45,5 +49,31 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
         and save it in ark_sbhmm. Then create hmm and corresponding text files as well (basically prep data)
         Then you are ready to run another loop of training HMM models. 
         """
+
+        
+        arkFileSave = "data/arkSBHMM/"
+        htkFileSave = "data/htkSBHMM"
+        if os.path.exists(arkFileSave):
+            shutil.rmtree(arkFileSave)
+
+        os.makedirs(arkFileSave)
+
+        for arkFile in glob.glob(arkFileLoc+"*"):
+
+            content = read_ark_files(arkFile)
+            newContent = trainedClassifier.getTransformedFeatures(content)
+            #TODO: Perform PCA
+            arkFileName = arkFile.split("/")[-1]
+            arkFileSavePath = arkFileSave + arkFileName
+
+            _create_ark_file(pd.DataFrame(data=newContent), arkFileSavePath, arkFileName.replace(".ark", ""))
+        
+        arkFileLoc = arkFileSave
+        create_htk_files(htkFileSave, arkFileLoc + "*ark")
+
+
+
+
+
 
 
