@@ -71,7 +71,7 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, trainMultipleClassifier
     classLabels = getClassTree(phrases)
     dataset = dataSetReader(classLabels, phrases, arkFileLoc)
 
-    print("Starting classifier training")
+    print("Training AdaBoosted Decision Tree Classifiers")
 
     if trainMultipleClassifiers:
         classifer = [AdaBoostClassifier(n_estimators=100, random_state=random_state) for classLabel in dataset]

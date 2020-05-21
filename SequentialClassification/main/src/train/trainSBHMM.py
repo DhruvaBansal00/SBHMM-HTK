@@ -39,6 +39,8 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
     arkFileLoc = "data/ark/"
     htkFileLoc = "data/htk/"
     trainDataFile = "lists/train.data"
+    
+    classifiers = []
 
     for iters in range(sbhmm_iters):
 
@@ -46,6 +48,7 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
         resultFile = glob.glob('results/*.mlf')[-1]
 
         trainedClassifier = getClassifierFromStateAlignment(resultFile, arkFileLoc)
+        classifiers.append(trainedClassifier)
         
         arkFileSave = "data/arkSBHMM"+str(iters)+"/"
         htkFileSave = "data/htkSBHMM"+str(iters)+"/"
@@ -88,6 +91,8 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
 
         print("Training HMM on new feature space")
         train(train_iters, mean, variance, transition_prob, device, num_features=num_features)
+
+    return classifiers
 
 
 
