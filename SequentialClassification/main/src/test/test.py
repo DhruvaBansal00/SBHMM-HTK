@@ -1,9 +1,7 @@
-"""Defines method to train HMM and parser group to pass arguments to
-train method. Can perform verification or recognition.
+"""Defines method to test HMM. Can perform verification or recognition.
 
 Methods
 -------
-test_cli
 test
 """
 import os

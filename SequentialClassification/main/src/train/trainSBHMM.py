@@ -44,12 +44,6 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
         resultFile = glob.glob('results/*.mlf')[-1]
 
         trainedClassifier = getClassifierFromStateAlignment(resultFile, arkFileLoc)
-
-        """
-        TODO: Create hmm and corresponding text files (basically prep data)
-        Then you are ready to run another loop of training HMM models. 
-        """
-
         
         arkFileSave = "data/arkSBHMM"+str(iters)+"/"
         htkFileSave = "data/htkSBHMM"+str(iters)
@@ -79,6 +73,8 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
         arkFileLoc = arkFileSave
         create_htk_files(htkFileSave, arkFileLoc + "*ark")
 
+        #TODO: Make new text files
+        #TODO: retrain models
 
 
 
