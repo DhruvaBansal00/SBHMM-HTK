@@ -17,7 +17,7 @@ from .gen_prototype import generate_prototype
 from src.utils import load_json
 
 
-def train(train_iters: list, mean: float, variance: float, transition_prob: float, device: int) -> None:
+def train(train_iters: list, mean: float, variance: float, transition_prob: float, device: int, num_features: int = None) -> None:
     """Trains the HMM using HTK. Calls HCompV, HRest, HERest, HHEd, and
     HParse. Configuration files for prototypes and increasing mixtures
     are found in configs/. 
@@ -51,7 +51,11 @@ def train(train_iters: list, mean: float, variance: float, transition_prob: floa
         features_config = load_json('configs/features.json')
     else:
         features_config = load_json('configs/features_kinect.json')
-    n_features = len(features_config['selected_features'])
+    
+    if num_features is None:
+        n_features = len(features_config['selected_features'])
+    else:
+        n_features = num_features
 
     print("-------------- Training HMM --------------")
 
