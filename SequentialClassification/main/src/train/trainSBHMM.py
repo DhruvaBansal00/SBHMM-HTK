@@ -22,7 +22,7 @@ from src.prepare_data.htk_creation import create_htk_files
 
 
 
-def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float, transition_prob: float, device: int) -> None:
+def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float, transition_prob: float, users: list, device: int) -> None:
     """Trains the SBHMM using HTK. First completes a loop of
     training HMM as usual. Then completes as many iterations of 
     adaboosting + HMM training as specified.
@@ -36,7 +36,7 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
 
     train(train_iters, mean, variance, transition_prob, device)
     arkFileLoc = "data/ark/"
-    
+
     for iters in range(sbhmm_iters):
         print("Training SBHMM")
 
@@ -51,14 +51,21 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
         """
 
         
-        arkFileSave = "data/arkSBHMM/"
-        htkFileSave = "data/htkSBHMM"
+        arkFileSave = "data/arkSBHMM"+str(iters)+"/"
+        htkFileSave = "data/htkSBHMM"+str(iters)
         if os.path.exists(arkFileSave):
             shutil.rmtree(arkFileSave)
 
         os.makedirs(arkFileSave)
 
-        for arkFile in glob.glob(arkFileLoc+"*"):
+        arkFiles = []
+        if len(users) == 0:
+            arkFiles = glob.glob(arkFileLoc+"*")
+        else:
+            for user in users:
+                arkFiles.extend(glob.glob(arkFileLoc+user+"*"))
+
+        for arkFile in arkFiles:
 
             content = read_ark_files(arkFile)
             newContent = trainedClassifier.getTransformedFeatures(content)

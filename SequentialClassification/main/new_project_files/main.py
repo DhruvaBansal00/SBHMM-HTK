@@ -3,6 +3,7 @@
 import sys
 import glob
 import argparse
+import os
 
 import numpy as np
 from sklearn.model_selection import (
@@ -73,14 +74,18 @@ if __name__ == '__main__':
         prepare_data(features_config, args.device)
 
     if args.test_type == 'test_on_train':
+        
+        if len(args.users) == 0:
+            htk_filepaths = glob.glob('data/htk/*htk')
+        else:
+            htk_filepaths = []
+            for user in args.users:
+                htk_filepaths.extend(glob.glob(os.path.join("data/htk", '*{}*.htk'.format(user))))
 
-        htk_filepaths = glob.glob('data/htk/*htk')
-
-        create_data_lists(
-            htk_filepaths, [], args.users, args.phrase_len, test_on_train=True)
+        create_data_lists(htk_filepaths, htk_filepaths, args.phrase_len)
         
         if args.train_sbhmm:
-            trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
+            trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.users, args.device)
         else:
             train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
         test(args.start, args.end, args.method)
@@ -100,10 +105,16 @@ if __name__ == '__main__':
         deletions = 0
         insertions = 0
         sentence_errors = 0
-        htk_filepaths = glob.glob('data/htk/*htk')
+
+        if len(args.users) == 0:
+            htk_filepaths = glob.glob('data/htk/*htk')
+        else:
+            htk_filepaths = []
+            for user in args.users:
+                htk_filepaths.extend(glob.glob(os.path.join("data/htk", '*{}*.htk'.format(user))))
 
         if(args.device==0):
-            phrases = [' '.join(filepath.split('_')[1:-1])
+            phrases = [' '.join(filepath.split('.')[1].split("_"))
                for filepath
                in htk_filepaths]
         else:
@@ -140,10 +151,10 @@ if __name__ == '__main__':
             word_count = phrase_len * phrase_count
             word_counts.append(word_count)
             phrase_counts.append(phrase_count)
-            create_data_lists(
-                train_data, test_data, args.users, args.phrase_len)
+            create_data_lists(train_data, test_data, args.phrase_len)
+
             if args.train_sbhmm:
-                trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
+                trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.users, args.device)
             else:
                 train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
             test(args.start, args.end, args.method)
@@ -173,9 +184,15 @@ if __name__ == '__main__':
 
     elif args.test_type == 'standard':
 
-        htk_filepaths = glob.glob('data/htk/*htk')
+        if len(args.users) == 0:
+            htk_filepaths = glob.glob('data/htk/*htk')
+        else:
+            htk_filepaths = []
+            for user in args.users:
+                htk_filepaths.extend(glob.glob(os.path.join("data/htk", '*{}*.htk'.format(user))))
+        
         if(args.device==0):
-            phrases = [' '.join(filepath.split('_')[1:-1])
+            phrases = [' '.join(filepath.split('.')[1].split('_'))
                for filepath
                in htk_filepaths]
         else:
@@ -189,9 +206,9 @@ if __name__ == '__main__':
             htk_filepaths, phrases, test_size=args.test_size,
             random_state=args.random_state)
 
-        create_data_lists(train_data, test_data, args.users, args.phrase_len)
+        create_data_lists(train_data, test_data, args.phrase_len)
         if args.train_sbhmm:
-            trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
+            trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.users, args.device)
         else:
             train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
         test(args.start, args.end, args.method)
