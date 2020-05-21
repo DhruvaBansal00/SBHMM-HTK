@@ -65,6 +65,7 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
             for user in users:
                 arkFiles.extend(glob.glob(arkFileLoc+user+"*"))
 
+        print("Creating new arkFiles")
         for arkFile in arkFiles:
 
             content = read_ark_files(arkFile)
