@@ -89,7 +89,7 @@ def train(train_iters: list, mean: float, variance: float, transition_prob: floa
 
 
     print('Running HERest Iteration: 1...')
-    HERest_command = (f'HERest -A -d models/hmm1 -c 500.0 -v 0.0005 -A -I '
+    HERest_command = (f'HERest -A -d models/hmm1 -c 500.0 -v 0.0005 -I '
                       f'all_labels.mlf -M models/hmm2 -S lists/train.data -T '
                       f'1 wordList >> logs/train.log')
     os.system(HERest_command)
@@ -110,7 +110,7 @@ def train(train_iters: list, mean: float, variance: float, transition_prob: floa
         if n_iters != train_iters[-1]:
             print(f'Running HHed Iteration: {n_iters}...')
             HHed_command = (f'HHEd -A -H models/hmm{n_iters-1}/newMacros -M '
-                            f'models/hmm{n_iters} configs/hhed.conf '
+                            f'models/hmm{n_iters} configs/hhed{i}.conf '
                             f'wordList')
             os.system(HHed_command)
             print('HHed Complete')
