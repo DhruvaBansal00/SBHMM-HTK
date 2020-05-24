@@ -13,7 +13,7 @@ sys.path.insert(0, '../../')
 from src.prepare_data import prepare_data
 from src.train import create_data_lists, train, trainSBHMM
 from src.utils import get_results, save_results, load_json, get_arg_groups
-from src.test import test
+from src.test import test, testSBHMM
 
 
 if __name__ == '__main__':
@@ -85,10 +85,11 @@ if __name__ == '__main__':
         create_data_lists(htk_filepaths, htk_filepaths, args.phrase_len)
         
         if args.train_sbhmm:
-            trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.users, args.device)
+            classifiers = trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
+            testSBHMM(args.start, args.end, args.method, classifiers)
         else:
             train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
-        test(args.start, args.end, args.method)
+            test(args.start, args.end, args.method)
 
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
@@ -154,10 +155,11 @@ if __name__ == '__main__':
             create_data_lists(train_data, test_data, args.phrase_len)
 
             if args.train_sbhmm:
-                trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.users, args.device)
+                classifiers = trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
+                testSBHMM(args.start, args.end, args.method, classifiers)
             else:
                 train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
-            test(args.start, args.end, args.method)
+                test(args.start, args.end, args.method)
 
             results = get_results(hresults_file)
             all_results[f'fold_{i}'] = results
@@ -208,10 +210,11 @@ if __name__ == '__main__':
 
         create_data_lists(train_data, test_data, args.phrase_len)
         if args.train_sbhmm:
-            trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.users, args.device)
+            classifiers = trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
+            testSBHMM(args.start, args.end, args.method, classifiers)
         else:
             train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
-        test(args.start, args.end, args.method)
+            test(args.start, args.end, args.method)
 
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)

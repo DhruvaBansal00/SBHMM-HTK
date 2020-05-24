@@ -83,11 +83,10 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
         arkFileLoc = arkFileSave
         htkFileLoc = htkFileSave
 
+        print("Re-writing lists/train.data")
         with open(trainDataFile, 'w') as trainData:
             trainData.writelines(newHtkFiles)
-        
-        print("Re-writing lists/train.data")
-        trainData.close()
+            trainData.close()
 
         print("Training HMM on new feature space")
         train(train_iters, mean, variance, transition_prob, device, num_features=num_features)
