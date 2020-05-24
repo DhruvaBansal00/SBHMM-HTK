@@ -80,7 +80,7 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, trainMultipleClassifier
             # print("Training binary classifier for class " + str(classLabel))
             X, Y = getDataSetForTrainingClass(dataset, classLabel)
             X, Y = shuffle(X, Y, random_state=random_state)
-            classifer[classLabel].fit([X[0]], [Y[0]])
+            classifer[classLabel].fit(X, Y)
             # print("Classifier " + str(classLabel) + " accepted training score = " + str(classifer[classLabel].score(dataset[classLabel], [1 for i in range(len(dataset[classLabel]))])))
             # print("Number accepted = "+str(len(dataset[classLabel])))
         
