@@ -56,9 +56,8 @@ def testSBHMM(start: int, end: int, method: str, classifiers: []) -> None:
     print("------Creating new HTK files--------")
     create_htk_files(htkFileSave, arkFileSave + "*ark")
     with open(testDataFile, 'w') as testData:
-        testData.writeLines(newHtkFiles)
-    
-    testData.close()
+        testData.writelines(newHtkFiles)
+        testData.close()
 
     print("------Executing HVITE Command-------")
     test(start, end, method)
