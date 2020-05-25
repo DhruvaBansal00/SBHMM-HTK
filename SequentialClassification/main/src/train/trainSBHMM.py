@@ -12,6 +12,7 @@ import shutil
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
+from sklearn.decomposition import PCA
 
 from .train import train
 from src.test import test
@@ -23,7 +24,8 @@ from src.prepare_data.htk_creation import create_htk_files
 
 
 
-def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float, transition_prob: float, device: int) -> None:
+
+def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float, transition_prob: float, device: int, pca_components: int) -> None:
     """Trains the SBHMM using HTK. First completes a loop of
     training HMM as usual. Then completes as many iterations of 
     adaboosting + HMM training as specified.
@@ -70,7 +72,10 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
 
             content = read_ark_files(arkFile)
             newContent = trainedClassifier.getTransformedFeatures(content)
-            #TODO: Perform PCA
+            
+            pca = PCA(n_components=pca_components)
+            newContent = pca.fit_transform(newContent)
+
             num_features = newContent.shape[1]
             arkFileName = arkFile.split("/")[-1]
             arkFileSavePath = arkFileSave + arkFileName

@@ -11,13 +11,14 @@ import shutil
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
+from sklearn.decomposition import PCA
 
 from .test import test
 from src.prepare_data.ark_reader import read_ark_files
 from src.prepare_data.ark_creation import _create_ark_file
 from src.prepare_data.htk_creation import create_htk_files
 
-def testSBHMM(start: int, end: int, method: str, classifiers: []) -> None:
+def testSBHMM(start: int, end: int, method: str, classifiers: [], pca_components: int) -> None:
 
     print("-------Testing SBHMM-----------")
     testDataFile = "lists/test.data"
@@ -48,7 +49,9 @@ def testSBHMM(start: int, end: int, method: str, classifiers: []) -> None:
         newContent = content
         for classifier in classifiers:
             newContent = classifier.getTransformedFeatures(newContent)
-        
+            pca = PCA(n_components=pca_components)
+            newContent = pca.fit_transform(newContent)
+
         arkFileName = arkFile.split("/")[-1]
         arkFileSavePath = arkFileSave + arkFileName
         _create_ark_file(pd.DataFrame(data=newContent), arkFileSavePath, arkFileName.replace(".ark", ""))
