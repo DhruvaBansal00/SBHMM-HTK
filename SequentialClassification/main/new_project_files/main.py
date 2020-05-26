@@ -71,6 +71,12 @@ if __name__ == '__main__':
     features_config = load_json('configs/features.json')
     all_results = {'features': features_config['selected_features'],
                    'average': {}}
+                   
+    if args.train_sbhmm:
+        hresults_file = f'hresults/res_hmm{args.sbhmm_iters[-1]-1}.txt'
+    else:
+        hresults_file = f'hresults/res_hmm{args.train_iters[-1]-1}.txt'
+
 
     if args.prepare_data:
 
@@ -94,8 +100,6 @@ if __name__ == '__main__':
             train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
             test(args.start, args.end, args.method)
         
-        hresults_file = f'hresults/res_hmm{args.train_iters[-1]-1}.txt'
-
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
             all_results['average']['error'] = all_results['fold_0']['error']
@@ -166,8 +170,6 @@ if __name__ == '__main__':
                 train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
                 test(args.start, args.end, args.method)
             
-            hresults_file = f'hresults/res_hmm{args.train_iters[-1]-1}.txt'
-
             results = get_results(hresults_file)
             all_results[f'fold_{i}'] = results
             all_results[f'fold_{i}']['phrase'] = phrase
@@ -222,8 +224,6 @@ if __name__ == '__main__':
         else:
             train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
             test(args.start, args.end, args.method)
-
-        hresults_file = f'hresults/res_hmm{args.train_iters[-1]-1}.txt'
 
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
