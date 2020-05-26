@@ -44,7 +44,7 @@ if __name__ == '__main__':
                         default='all_results.json')
 
     #Arguments for training
-    parser.add_argument('--train_iters', nargs='*', type=int, default=[20, 32, 46, 56, 68, 80])
+    parser.add_argument('--train_iters', nargs='*', type=int, default=[20, 40, 60, 80, 100, 120])
     parser.add_argument('--mean', type=float, default=0.0)
     parser.add_argument('--variance', type=float, default=1.0)
     parser.add_argument('--transition_prob', type=float, default=0.6)
@@ -53,7 +53,7 @@ if __name__ == '__main__':
     parser.add_argument('--train_sbhmm', action='store_true')    
     parser.add_argument('--sbhmm_cycles', type=int, default=1)
     parser.add_argument('--pca_components', type=int, default=50)
-    parser.add_argument('--sbhmm_iters', nargs='*', type=int, default=[20, 50, 80])
+    parser.add_argument('--sbhmm_iters', nargs='*', type=int, default=[20, 45])
 
     #Arguments for testing
     parser.add_argument('--start', type=int, default=-10)
@@ -71,7 +71,6 @@ if __name__ == '__main__':
     features_config = load_json('configs/features.json')
     all_results = {'features': features_config['selected_features'],
                    'average': {}}
-    hresults_file = f'hresults/res_hmm{args.train_iters[-1]-1}.txt'
 
     if args.prepare_data:
 
@@ -94,6 +93,8 @@ if __name__ == '__main__':
         else:
             train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
             test(args.start, args.end, args.method)
+        
+        hresults_file = f'hresults/res_hmm{args.train_iters[-1]-1}.txt'
 
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
@@ -164,6 +165,8 @@ if __name__ == '__main__':
             else:
                 train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
                 test(args.start, args.end, args.method)
+            
+            hresults_file = f'hresults/res_hmm{args.train_iters[-1]-1}.txt'
 
             results = get_results(hresults_file)
             all_results[f'fold_{i}'] = results
@@ -219,6 +222,8 @@ if __name__ == '__main__':
         else:
             train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
             test(args.start, args.end, args.method)
+
+        hresults_file = f'hresults/res_hmm{args.train_iters[-1]-1}.txt'
 
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
