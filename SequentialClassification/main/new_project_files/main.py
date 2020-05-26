@@ -37,19 +37,23 @@ if __name__ == '__main__':
                                                   'stratified'])
     parser.add_argument('--n_splits', required='cross_val' in sys.argv,
                         type=int, default=5)
-    parser.add_argument('--test_size', type=float, default=0.2)
+    parser.add_argument('--test_size', type=float, default=0.1)
 
     #Arguments for save_data()
     parser.add_argument('--save_results_file', type=str,
                         default='all_results.json')
 
     #Arguments for training
-    parser.add_argument('--train_sbhmm', action='store_true')    
-    parser.add_argument('--train_iters', nargs='*', type=int, default=[15, 20])
+    parser.add_argument('--train_iters', nargs='*', type=int, default=[20, 32, 46, 56, 68, 80])
     parser.add_argument('--mean', type=float, default=0.0)
     parser.add_argument('--variance', type=float, default=1.0)
     parser.add_argument('--transition_prob', type=float, default=0.6)
-    parser.add_argument('--sbhmm_iters', type=int, default=1)
+
+    #Arguments for SBHMM
+    parser.add_argument('--train_sbhmm', action='store_true')    
+    parser.add_argument('--sbhmm_cycles', type=int, default=1)
+    parser.add_argument('--pca_components', type=int, default=50)
+    parser.add_argument('--sbhmm_iters', nargs='*', type=int, default=[20, 50, 80])
 
     #Arguments for testing
     parser.add_argument('--start', type=int, default=-10)
@@ -85,8 +89,8 @@ if __name__ == '__main__':
         create_data_lists(htk_filepaths, htk_filepaths, args.phrase_len)
         
         if args.train_sbhmm:
-            classifiers = trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
-            testSBHMM(args.start, args.end, args.method, classifiers)
+            classifiers = trainSBHMM(args.sbhmm_cycles, args.train_iters, args.mean, args.variance, args.transition_prob, args.device, args.pca_components, args.sbhmm_iters)
+            testSBHMM(args.start, args.end, args.method, classifiers, args.pca_components)
         else:
             train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
             test(args.start, args.end, args.method)
@@ -155,8 +159,8 @@ if __name__ == '__main__':
             create_data_lists(train_data, test_data, args.phrase_len)
 
             if args.train_sbhmm:
-                classifiers = trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
-                testSBHMM(args.start, args.end, args.method, classifiers)
+                classifiers = trainSBHMM(args.sbhmm_cycles, args.train_iters, args.mean, args.variance, args.transition_prob, args.device, args.pca_components, args.sbhmm_iters)
+                testSBHMM(args.start, args.end, args.method, classifiers, args.pca_components)
             else:
                 train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
                 test(args.start, args.end, args.method)
@@ -210,15 +214,15 @@ if __name__ == '__main__':
 
         create_data_lists(train_data, test_data, args.phrase_len)
         if args.train_sbhmm:
-            classifiers = trainSBHMM(args.sbhmm_iters, args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
-            testSBHMM(args.start, args.end, args.method, classifiers)
+            classifiers = trainSBHMM(args.sbhmm_cycles, args.train_iters, args.mean, args.variance, args.transition_prob, args.device, args.pca_components, args.sbhmm_iters)
+            testSBHMM(args.start, args.end, args.method, classifiers, args.pca_components)
         else:
             train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
             test(args.start, args.end, args.method)
 
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
-            all_results['average']['correct'] = all_results['fold_0']['correct']
+            all_results['average']['error'] = all_results['fold_0']['error']
             all_results['average']['sentence_error'] = all_results['fold_0']['sentence_error']
 
             print('Standard Train/Test Split Results')
