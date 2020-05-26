@@ -25,7 +25,7 @@ from src.prepare_data.htk_creation import create_htk_files
 
 
 
-def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float, transition_prob: float, device: int, pca_components: int) -> None:
+def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: float, transition_prob: float, device: int, pca_components: int, sbhmm_iters: list) -> None:
     """Trains the SBHMM using HTK. First completes a loop of
     training HMM as usual. Then completes as many iterations of 
     adaboosting + HMM training as specified.
@@ -44,7 +44,7 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
     
     classifiers = []
 
-    for iters in range(sbhmm_iters):
+    for iters in range(sbhmm_cycles):
 
         test(-2, -1, "alignment") #Save state alignments for each phrase in the results folder
         resultFile = glob.glob('results/*.mlf')[-1]
@@ -94,7 +94,7 @@ def trainSBHMM(sbhmm_iters: int, train_iters: list, mean: float, variance: float
             trainData.close()
 
         print("Training HMM on new feature space")
-        train(train_iters, mean, variance, transition_prob, device, num_features=num_features)
+        train(sbhmm_iters, mean, variance, transition_prob, device, num_features=num_features)
 
     return classifiers
 
