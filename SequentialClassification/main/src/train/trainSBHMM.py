@@ -25,7 +25,7 @@ from src.prepare_data.htk_creation import create_htk_files
 
 
 
-def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: float, transition_prob: float, device: int, pca_components: int, sbhmm_iters: list) -> None:
+def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: float, transition_prob: float, device: int, pca_components: int, sbhmm_iters: list, include_state: bool) -> None:
     """Trains the SBHMM using HTK. First completes a loop of
     training HMM as usual. Then completes as many iterations of 
     adaboosting + HMM training as specified.
@@ -49,7 +49,7 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
         test(-2, -1, "alignment") #Save state alignments for each phrase in the results folder
         resultFile = glob.glob('results/*.mlf')[-1]
 
-        trainedClassifier = getClassifierFromStateAlignment(resultFile, arkFileLoc)
+        trainedClassifier = getClassifierFromStateAlignment(resultFile, arkFileLoc, include_state=include_state)
         classifiers.append(trainedClassifier)
         
         arkFileSave = "data/arkSBHMM"+str(iters)+"/"

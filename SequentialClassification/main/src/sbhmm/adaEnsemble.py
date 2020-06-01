@@ -12,7 +12,7 @@ from tqdm import tqdm
     
 #structure -> word.name -> index -> state.name -> class
 #supposed to create a map between word, index and the class number
-def getClassTree(phrases: list) -> dict:
+def getClassTree(phrases: list, include_state: bool) -> dict:
     wordToDict = {}
     currClass = 0
     for phrase in phrases:
@@ -22,18 +22,28 @@ def getClassTree(phrases: list) -> dict:
                 if word.name not in wordToDict:
                     wordToDict[word.name] = {}
                 
-                if index not in wordToDict[word.name]:
-                    wordToDict[word.name][index] = {}
+                if include_state:
                 
-                if state.name not in wordToDict[word.name][index]:
-                    wordToDict[word.name][index][state.name] = currClass
-                    currClass += 1
+                    if index not in wordToDict[word.name]:
+                        wordToDict[word.name][index] = {}
+                    
+                    if state.name not in wordToDict[word.name][index]:
+                        wordToDict[word.name][index][state.name] = currClass
+                        currClass += 1
+                
+                else:
+
+                    if index not in wordToDict[word.name]:
+                        wordToDict[word.name][index] = currClass
+                        currClass += 1
+
             index += 1
 
     print("Total classes = " + str(currClass))
+    print(wordToDict)
     return wordToDict
 
-def dataSetReader(classLabels: dict, phrases: list, arkFileLoc: str) -> dict:
+def dataSetReader(classLabels: dict, phrases: list, arkFileLoc: str, include_state: bool) -> dict:
     dataset = {}  ##Class to frames
     for phrase in phrases:
         currPhraseArk = arkFileLoc+phrase.name+".ark"
@@ -43,7 +53,7 @@ def dataSetReader(classLabels: dict, phrases: list, arkFileLoc: str) -> dict:
 
         for index, word in enumerate(phrase.words):
             for state in word.states:
-                currClass = classLabels[word.name][index][state.name]
+                currClass = classLabels[word.name][index][state.name] if include_state else classLabels[word.name][index]
 
                 if currClass in dataset:
                     dataset[currClass] = np.concatenate((dataset[currClass], content[int(state.start * timeToFrame) : int(state.end * timeToFrame)]))
@@ -67,9 +77,9 @@ def getDataSetForTrainingClass(dataset: dict, currClass: int) -> (list, list):
 
 
 
-def getTrainedClassifier(phrases: list, arkFileLoc: str, trainMultipleClassifiers: bool = True, random_state: int = 42) -> object:
-    classLabels = getClassTree(phrases)
-    dataset = dataSetReader(classLabels, phrases, arkFileLoc)
+def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, trainMultipleClassifiers: bool = True, random_state: int = 42) -> object:
+    classLabels = getClassTree(phrases, include_state)
+    dataset = dataSetReader(classLabels, phrases, arkFileLoc, include_state)
 
     print("Training AdaBoosted Decision Tree Classifiers")
 
@@ -109,12 +119,12 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, trainMultipleClassifier
 
 class AdaBoostedClassifierEnsemble(object):
     
-    def __init__(self, phrases, arkFileLoc, trainMultipleClassifiers=True, random_state=42):
+    def __init__(self, phrases, arkFileLoc, include_state, trainMultipleClassifiers=True, random_state=42):
         self.phrases = phrases
         self.trainMultipleClassifiers = trainMultipleClassifiers
         self.random_state = random_state
 
-        self.classifier = getTrainedClassifier(self.phrases, arkFileLoc, trainMultipleClassifiers=self.trainMultipleClassifiers, random_state=self.random_state)
+        self.classifier = getTrainedClassifier(self.phrases, arkFileLoc, include_state, trainMultipleClassifiers=self.trainMultipleClassifiers, random_state=self.random_state)
     
     def getTransformedFeatures(self, features):
 
