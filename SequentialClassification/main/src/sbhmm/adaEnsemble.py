@@ -40,7 +40,6 @@ def getClassTree(phrases: list, include_state: bool) -> dict:
             index += 1
 
     print("Total classes = " + str(currClass))
-    print(wordToDict)
     return wordToDict
 
 def dataSetReader(classLabels: dict, phrases: list, arkFileLoc: str, include_state: bool) -> dict:
