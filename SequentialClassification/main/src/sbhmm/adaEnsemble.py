@@ -20,13 +20,7 @@ def getClassTree(phrases: list, include_state: bool, include_index: bool) -> dic
         for word in phrase.words:
             for state in word.states:
                 if word.name not in wordToDict:
-
-                    if include_index:
-                        wordToDict[word.name] = {}
-
-                    else:
-                        wordToDict[word.name] = currClass
-                        currClass += 1
+                    wordToDict[word.name] = {}
                 
                 if include_state:
 
@@ -51,7 +45,13 @@ def getClassTree(phrases: list, include_state: bool, include_index: bool) -> dic
 
                         if index not in wordToDict[word.name]:
                             wordToDict[word.name][index] = currClass
-                            currClass += 1                        
+                            currClass += 1
+
+                    else:
+
+                        if type(wordToDict[word.name]) is dict:
+                            wordToDict[word.name] = currClass
+                            currClass += 1         
 
             index += 1
 
