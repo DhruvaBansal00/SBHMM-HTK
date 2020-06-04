@@ -27,7 +27,7 @@ from src.prepare_data.htk_creation import create_htk_files
 
 def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: float, 
             transition_prob: float, device: int, pca_components: int, sbhmm_iters: list, 
-            include_state: bool, include_index: bool) -> None:
+            include_state: bool, include_index: bool, no_pca: bool) -> None:
     """Trains the SBHMM using HTK. First completes a loop of
     training HMM as usual. Then completes as many iterations of 
     adaboosting + HMM training as specified.
@@ -75,8 +75,10 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
             content = read_ark_files(arkFile)
             newContent = trainedClassifier.getTransformedFeatures(content)
             
-            pca = PCA(n_components=pca_components)
-            newContent = pca.fit_transform(newContent)
+            if not no_pca:
+                pca = PCA(n_components=pca_components)
+                newContent = pca.fit_transform(newContent)
+                no_pca = True
 
             num_features = newContent.shape[1]
             arkFileName = arkFile.split("/")[-1]
