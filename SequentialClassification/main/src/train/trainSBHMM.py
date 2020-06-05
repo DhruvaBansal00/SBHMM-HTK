@@ -98,7 +98,6 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
 
         print("Training HMM on new feature space")
         train(sbhmm_iters, mean, variance, transition_prob, device, num_features=num_features)
-        no_pca = True
 
     return classifiers
 

@@ -52,12 +52,10 @@ def testSBHMM(start: int, end: int, method: str, classifiers: [], pca_components
             if not no_pca:
                 pca = PCA(n_components=pca_components)
                 newContent = pca.fit_transform(newContent)
-                no_pca = True
 
         arkFileName = arkFile.split("/")[-1]
         arkFileSavePath = arkFileSave + arkFileName
         _create_ark_file(pd.DataFrame(data=newContent), arkFileSavePath, arkFileName.replace(".ark", ""))
-        no_pca = False
     
     print("------Creating new HTK files--------")
     create_htk_files(htkFileSave, arkFileSave + "*ark")
