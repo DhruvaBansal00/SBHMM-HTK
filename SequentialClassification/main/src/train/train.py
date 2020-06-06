@@ -11,6 +11,7 @@ import sys
 import glob
 import shutil
 from argparse import ArgumentParser, Namespace
+from tqdm import tqdm
 
 from .gen_init_models_each_word import initialize_models
 from .gen_prototype import generate_prototype
@@ -78,9 +79,9 @@ def train(train_iters: list, mean: float, variance: float, transition_prob: floa
         #initialize_models('models/prototype', 'wordList', 'models/hmm0')
 
     hmm0_files = set(glob.glob('models/hmm0/*')) - {'models/hmm0/vFloors'}
-    for hmm0_file in hmm0_files:
+    for hmm0_file in tqdm(hmm0_files):
 
-        print(f'Running HRest for {hmm0_file}...')
+        # print(f'Running HRest for {hmm0_file}...')
         HRest_command = (f'HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I '
                          f'all_labels.mlf -M models/hmm1 -S lists/train.data '
                          f'{hmm0_file} >> logs/train.log')
@@ -95,11 +96,11 @@ def train(train_iters: list, mean: float, variance: float, transition_prob: floa
     os.system(HERest_command)
 
     start = 2
-    for i, n_iters in enumerate(train_iters):
+    for i, n_iters in tqdm(enumerate(train_iters)):
 
         for iter_ in range(start, n_iters):
 
-            print(f'Running HERest Iteration: {iter_}...')
+            # print(f'Running HERest Iteration: {iter_}...')
             HERest_command = (f'HERest -A -c 500.0 -v 0.0005 -A -H '
                             f'models/hmm{iter_}/newMacros -I all_labels.mlf -M '
                             f'models/hmm{iter_+1} -S lists/train.data -T 1 wordList '
