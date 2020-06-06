@@ -8,10 +8,11 @@ import shutil
 import numpy as np
 import pandas as pd
 
-def createArk(data: str, labels: str) -> None:
+def createArk(data: str, labels: str, saveDirectory: str) -> None:
+    print("Creating ARK files")
+
     dataFiles = glob.glob(data)
     labelFiles = glob.glob(labels)
-    saveDirectory = "/home/dhruva/Desktop/CopyCat/SilentSpeller/ARK/16/"
 
     if os.path.exists(saveDirectory):
         shutil.rmtree(saveDirectory)
@@ -26,7 +27,7 @@ def createArk(data: str, labels: str) -> None:
         with open(labelFiles[i], 'r') as currLabel:
             stamp = labelFiles[i].split("/")[-1].strip(".lab")
             letters = [i.strip("\n") for i in currLabel.readlines()][1:-1]
-            fileNames[stamp] = saveDirectory+user+"."+"sil0_"+"_".join(letters)+"_sil1."+stamp
+            fileNames[stamp] = saveDirectory+user+"."+"_".join(letters)+"."+stamp
             currLabel.close()
 
     for i in tqdm(range(len(dataFiles))):
@@ -45,6 +46,7 @@ def createArk(data: str, labels: str) -> None:
 
 
 def createHTK(ark_dir: str, htk_dir: str) -> None:
+    print("Creating HTK Files")
 
     if os.path.exists(htk_dir):
         shutil.rmtree(htk_dir)
@@ -66,9 +68,30 @@ def createHTK(ark_dir: str, htk_dir: str) -> None:
 
         os.system(kaldi_command)
 
-def createMLF(htk_dir: str) -> None:
-    
+def createMLF(htk_dir: str, mlf_file: str) -> None:
+    print("Create MLF File")
+
+    filenames = glob.glob(htk_dir)
+
+    with open(mlf_file, 'w') as f:
+        
+        f.write('#!MLF!#\n')
+
+        for filename in tqdm(filenames):
+
+            label = filename.split('/')[-1].replace('htk', 'lab')
+            phrase = label.split('.')[1].split('_')
+            f.write('"*/{}"\n'.format(label))
+            f.write('sil0\n')
+
+            for word in phrase:
+
+                f.write('{}\n'.format(word.lower()))
+
+            f.write('sil1\n')
+            f.write('.\n')
 
 
-createArk('/home/dhruva/Desktop/CopyCat/SilentSpeller/PCA/naoki_pca/16/*', '/home/dhruva/Desktop/CopyCat/SilentSpeller/PCA/naoki_pca/label/*')
-createHTK('/home/dhruva/Desktop/CopyCat/SilentSpeller/ARK/16/*', '/home/dhruva/Desktop/CopyCat/SilentSpeller/HTK/16/')
+createArk('/home/dhruva/Desktop/CopyCat/SilentSpeller/PCA/naoki_pca/16/*', '/home/dhruva/Desktop/CopyCat/SilentSpeller/PCA/naoki_pca/label/*', "/home/dhruva/Desktop/CopyCat/SilentSpeller/data/ark/")
+createHTK('/home/dhruva/Desktop/CopyCat/SilentSpeller/data/ark/*', '/home/dhruva/Desktop/CopyCat/SilentSpeller/data/htk/')
+createMLF('/home/dhruva/Desktop/CopyCat/SilentSpeller/data/htk/*', '/home/dhruva/Desktop/CopyCat/SilentSpeller/all_labels.mlf')
