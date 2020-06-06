@@ -59,7 +59,7 @@ if __name__ == '__main__':
     parser.add_argument('--include_word_position', action='store_true')
 
     #Arguments for testing
-    parser.add_argument('--start', type=int, default=-10)
+    parser.add_argument('--start', type=int, default=-2)
     parser.add_argument('--end', type=int, default=-1)
     parser.add_argument('--method', default='recognition')
     

@@ -96,9 +96,9 @@ def train(train_iters: list, mean: float, variance: float, transition_prob: floa
     os.system(HERest_command)
 
     start = 2
-    for i, n_iters in tqdm(enumerate(train_iters)):
+    for i, n_iters in enumerate(train_iters):
 
-        for iter_ in range(start, n_iters):
+        for iter_ in tqdm(range(start, n_iters)):
 
             # print(f'Running HERest Iteration: {iter_}...')
             HERest_command = (f'HERest -A -c 500.0 -v 0.0005 -A -H '
