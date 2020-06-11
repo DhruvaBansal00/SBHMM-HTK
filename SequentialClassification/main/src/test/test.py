@@ -40,7 +40,7 @@ def test(start: int, end: int, method: str) -> None:
         # HVite_str = (f'HVite -A -H $macros -f -m -S lists/test.data -i $results '
         #              f'-p -10.0 -w wordNet.txt -s 25 dict wordList')
         HVite_str = (f'HVite -A -H $macros -m -S lists/test.data -i '
-                     f'$results -w wordNet.txt -s 25 dict wordList')
+                     f'$results -p -10.0 -w wordNet.txt -s 25 dict wordList')
 
         HVite_cmd = Template(HVite_str)
 
