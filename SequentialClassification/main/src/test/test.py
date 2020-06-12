@@ -9,7 +9,7 @@ import glob
 import shutil
 from string import Template
 
-def test(start: int, end: int, method: str) -> None:
+def test(start: int, end: int, method: str, insertion_penalty: int) -> None:
     """Tests the HMM using HTK. Calls HVite and HResults. Can perform
     either recognition or verification. 
 
@@ -40,7 +40,7 @@ def test(start: int, end: int, method: str) -> None:
         # HVite_str = (f'HVite -A -H $macros -f -m -S lists/test.data -i $results '
         #              f'-p -10.0 -w wordNet.txt -s 25 dict wordList')
         HVite_str = (f'HVite -A -H $macros -m -S lists/test.data -i '
-                     f'$results -p -10.0 -w wordNet.txt -s 25 dict wordList')
+                     f'$results -p {insertion_penalty} -w wordNet.txt -s 25 dict wordList')
 
         HVite_cmd = Template(HVite_str)
 
@@ -53,7 +53,7 @@ def test(start: int, end: int, method: str) -> None:
 
         HVite_str = (f'HVite -a -o N -T 1 -H $macros -S '
                      f'lists/test.data -i $results -m -y lab -t 250.0 -s 1.0 '
-                     f'-p 0.0 -I all_labels.mlf -s 25 dict wordList')
+                     f'-p {insertion_penalty} -I all_labels.mlf -s 25 dict wordList')
         HVite_cmd = Template(HVite_str)
         HResults_cmd = Template('')
 
@@ -61,7 +61,7 @@ def test(start: int, end: int, method: str) -> None:
 
         HVite_str = (f'HVite -a -o N -T 1 -H $macros -m -f -S '
                      f'lists/train.data -i $results -m -y lab -t 250.0 -s 1.0 '
-                     f'-p 0.0 -I all_labels.mlf -s 25 dict wordList '
+                     f'-p {insertion_penalty} -I all_labels.mlf -s 25 dict wordList '
                      f'>/dev/null 2>&1')
         HVite_cmd = Template(HVite_str)
         HResults_cmd = Template('')

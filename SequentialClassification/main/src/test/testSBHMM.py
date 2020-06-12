@@ -18,7 +18,7 @@ from src.prepare_data.ark_reader import read_ark_files
 from src.prepare_data.ark_creation import _create_ark_file
 from src.prepare_data.htk_creation import create_htk_files
 
-def testSBHMM(start: int, end: int, method: str, classifiers: [], pca_components: int, no_pca: bool) -> None:
+def testSBHMM(start: int, end: int, method: str, classifiers: [], pca_components: int, no_pca: bool, insertion_penalty: int) -> None:
 
     print("-------Testing SBHMM-----------")
     testDataFile = "lists/test.data"
@@ -64,7 +64,7 @@ def testSBHMM(start: int, end: int, method: str, classifiers: [], pca_components
         testData.close()
 
     print("------Executing HVITE Command-------")
-    test(start, end, method)
+    test(start, end, method, insertion_penalty)
 
         
 
