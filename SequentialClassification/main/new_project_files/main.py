@@ -57,6 +57,8 @@ if __name__ == '__main__':
     parser.add_argument('--sbhmm_iters', nargs='*', type=int, default=[20, 50, 80])
     parser.add_argument('--include_word_level_states', action='store_true')
     parser.add_argument('--include_word_position', action='store_true')
+    parser.add_argument('--parallel_classifier_training', action='store_true')
+    parser.add_argument('--parallel_jobs', default=4, type=int)
 
     #Arguments for testing
     parser.add_argument('--start', type=int, default=-2)
@@ -98,7 +100,9 @@ if __name__ == '__main__':
         create_data_lists(htk_filepaths, htk_filepaths, args.phrase_len)
         
         if args.train_sbhmm:
-            classifiers = trainSBHMM(args.sbhmm_cycles, args.train_iters, args.mean, args.variance, args.transition_prob, args.device, args.pca_components, args.sbhmm_iters, args.include_word_level_states, args.include_word_position, args.no_pca)
+            classifiers = trainSBHMM(args.sbhmm_cycles, args.train_iters, args.mean, args.variance, args.transition_prob, args.device, 
+                        args.pca_components, args.sbhmm_iters, args.include_word_level_states, args.include_word_position, args.no_pca, 
+                        args.insertion_penalty, args.parallel_jobs, args.parallel_classifier_training)
             testSBHMM(args.start, args.end, args.method, classifiers, args.pca_components, args.no_pca, args.insertion_penalty)
         else:
             train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
@@ -168,7 +172,9 @@ if __name__ == '__main__':
             create_data_lists(train_data, test_data, args.phrase_len)
 
             if args.train_sbhmm:
-                classifiers = trainSBHMM(args.sbhmm_cycles, args.train_iters, args.mean, args.variance, args.transition_prob, args.device, args.pca_components, args.sbhmm_iters, args.include_word_level_states, args.include_word_position, args.no_pca)
+                classifiers = trainSBHMM(args.sbhmm_cycles, args.train_iters, args.mean, args.variance, args.transition_prob, args.device,
+                            args.pca_components, args.sbhmm_iters, args.include_word_level_states, args.include_word_position, args.no_pca,
+                            args.insertion_penalty, args.parallel_jobs, args.parallel_classifier_training)
                 testSBHMM(args.start, args.end, args.method, classifiers, args.pca_components, args.no_pca, args.insertion_penalty)
             else:
                 train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
@@ -223,7 +229,9 @@ if __name__ == '__main__':
 
         create_data_lists(train_data, test_data, args.phrase_len)
         if args.train_sbhmm:
-            classifiers = trainSBHMM(args.sbhmm_cycles, args.train_iters, args.mean, args.variance, args.transition_prob, args.device, args.pca_components, args.sbhmm_iters, args.include_word_level_states, args.include_word_position, args.no_pca)
+            classifiers = trainSBHMM(args.sbhmm_cycles, args.train_iters, args.mean, args.variance, args.transition_prob, args.device,
+                            args.pca_components, args.sbhmm_iters, args.include_word_level_states, args.include_word_position, 
+                            args.no_pca, args.insertion_penalty, args.parallel_jobs, args.parallel_classifier_training)
             testSBHMM(args.start, args.end, args.method, classifiers, args.pca_components, args.no_pca, args.insertion_penalty)
         else:
             train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
