@@ -99,7 +99,7 @@ def getDataSetForTrainingClass(dataset: dict, currClass: int) -> (list, list):
 def trainAdaboostClassifier(X, Y, seed):
     return AdaBoostClassifier(n_estimators=100, random_state=seed).fit(X, Y)
 
-def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, include_index: bool, trainMultipleClassifiers: bool = True, random_state: int = 42, n_jobs, parallel) -> object:
+def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, include_index: bool, n_jobs: int, parallel: bool, trainMultipleClassifiers: bool = True, random_state: int = 42) -> object:
     classLabels = getClassTree(phrases, include_state, include_index)
     dataset = dataSetReader(classLabels, phrases, arkFileLoc, include_state, include_index)
 
@@ -145,14 +145,13 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
 
 class AdaBoostedClassifierEnsemble(object):
     
-    def __init__(self, phrases, arkFileLoc, include_state, include_index, trainMultipleClassifiers=True, random_state=42, n_jobs, parallel):
+    def __init__(self, phrases, arkFileLoc, include_state, include_index, n_jobs, parallel, trainMultipleClassifiers=True, random_state=42):
         self.phrases = phrases
         self.trainMultipleClassifiers = trainMultipleClassifiers
         self.random_state = random_state
 
-        self.classifier = getTrainedClassifier(self.phrases, arkFileLoc, include_state, include_index, 
-                        trainMultipleClassifiers=self.trainMultipleClassifiers, random_state=self.random_state,
-                        n_jobs=n_jobs, parallel=parallel)
+        self.classifier = getTrainedClassifier(self.phrases, arkFileLoc, include_state, include_index, n_jobs=n_jobs, parallel=parallel,
+                        trainMultipleClassifiers=self.trainMultipleClassifiers, random_state=self.random_state)
     
     def getTransformedFeatures(self, features):
 

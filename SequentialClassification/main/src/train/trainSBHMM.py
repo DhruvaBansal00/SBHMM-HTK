@@ -28,7 +28,7 @@ from src.prepare_data.htk_creation import create_htk_files
 def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: float, 
             transition_prob: float, device: int, pca_components: int, sbhmm_iters: list, 
             include_state: bool, include_index: bool, no_pca: bool, insertion_penalty: int,
-            n_jobs=4, parallel=False) -> None:
+            n_jobs: int, parallel: bool) -> None:
     """Trains the SBHMM using HTK. First completes a loop of
     training HMM as usual. Then completes as many iterations of 
     adaboosting + HMM training as specified.
