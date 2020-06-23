@@ -97,7 +97,7 @@ def getDataSetForTrainingClass(dataset: dict, currClass: int) -> (list, list):
 
 
 def trainAdaboostClassifier(X, Y, seed):
-    return AdaBoostClassifier(n_estimators=100, random_state=seed).fit(X, Y)
+    return AdaBoostClassifier(n_estimators=50, random_state=seed).fit(X, Y)
 
 def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, include_index: bool, n_jobs: int, parallel: bool, trainMultipleClassifiers: bool = True, random_state: int = 42) -> object:
     classLabels = getClassTree(phrases, include_state, include_index)
@@ -110,15 +110,15 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
             classifer = Parallel(n_jobs=n_jobs, verbose=100)(delayed(trainAdaboostClassifier)(getDataSetForTrainingClass(dataset, classLabel)[0],
                         getDataSetForTrainingClass(dataset, classLabel)[1], random_state) for classLabel in dataset)
         else:
-            classifer = [AdaBoostClassifier(n_estimators=100, random_state=random_state) for classLabel in dataset]
+            classifer = [AdaBoostClassifier(n_estimators=50, random_state=random_state) for classLabel in dataset]
 
             for classLabel in tqdm(dataset):
                 # print("Training binary classifier for class " + str(classLabel))
                 X, Y = getDataSetForTrainingClass(dataset, classLabel)
                 X, Y = shuffle(X, Y, random_state=random_state)
                 classifer[classLabel].fit(X, Y)
-                print("Classifier " + str(classLabel) + " accepted training score = " + str(classifer[classLabel].score(dataset[classLabel], [1 for i in range(len(dataset[classLabel]))])))
-                print("Number accepted = "+str(len(dataset[classLabel])))
+                # print("Classifier " + str(classLabel) + " accepted training score = " + str(classifer[classLabel].score(dataset[classLabel], [1 for i in range(len(dataset[classLabel]))])))
+                # print("Number accepted = "+str(len(dataset[classLabel])))
         
         print("Classifier Training Completed")
     else:
