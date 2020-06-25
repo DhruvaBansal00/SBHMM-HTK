@@ -99,7 +99,8 @@ def getDataSetForTrainingClass(dataset: dict, currClass: int) -> (list, list):
 def trainAdaboostClassifier(X, Y, seed):
     return AdaBoostClassifier(n_estimators=50, random_state=seed).fit(X, Y)
 
-def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, include_index: bool, n_jobs: int, parallel: bool, trainMultipleClassifiers: bool = True, random_state: int = 42) -> object:
+def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, include_index: bool, n_jobs: int, 
+                        parallel: bool, trainMultipleClassifiers: bool = True, random_state: int = 42) -> object:
     classLabels = getClassTree(phrases, include_state, include_index)
     dataset = dataSetReader(classLabels, phrases, arkFileLoc, include_state, include_index)
 
@@ -107,8 +108,13 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
 
     if trainMultipleClassifiers:
         if parallel:
-            classifer = Parallel(n_jobs=n_jobs, verbose=100)(delayed(trainAdaboostClassifier)(getDataSetForTrainingClass(dataset, classLabel)[0],
-                        getDataSetForTrainingClass(dataset, classLabel)[1], random_state) for classLabel in dataset)
+            labels = [classLabel for classLabel in dataset]
+            iteration = 0
+            classifier = []
+            for iteration in tqdm(range(stop=len(labels), step=n_jobs)):
+                currLabels = [labels[i] for i in range(start=iteration, stop=min(len(labels) - 1, iteration + n_jobs))]
+                classifier += Parallel(n_jobs=len(currLabels), verbose=100)(delayed(trainAdaboostClassifier)(getDataSetForTrainingClass(dataset, currLabel)[0],
+                            getDataSetForTrainingClass(dataset, currLabel)[1], random_state) for currLabel in currLabels)
         else:
             classifer = [AdaBoostClassifier(n_estimators=50, random_state=random_state) for classLabel in dataset]
 
@@ -117,7 +123,8 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
                 X, Y = getDataSetForTrainingClass(dataset, classLabel)
                 X, Y = shuffle(X, Y, random_state=random_state)
                 classifer[classLabel].fit(X, Y)
-                # print("Classifier " + str(classLabel) + " accepted training score = " + str(classifer[classLabel].score(dataset[classLabel], [1 for i in range(len(dataset[classLabel]))])))
+                # print("Classifier " + str(classLabel) + " accepted training score = " + str(classifer[classLabel].score(dataset[classLabel], 
+                # [1 for i in range(len(dataset[classLabel]))])))
                 # print("Number accepted = "+str(len(dataset[classLabel])))
         
         print("Classifier Training Completed")
