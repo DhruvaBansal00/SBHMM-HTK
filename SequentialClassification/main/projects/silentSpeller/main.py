@@ -51,7 +51,7 @@ if __name__ == '__main__':
 
     #Arguments for SBHMM
     parser.add_argument('--train_sbhmm', action='store_true')    
-    parser.add_argument('--sbhmm_cycles', type=int, default=3)
+    parser.add_argument('--sbhmm_cycles', type=int, default=1)
     parser.add_argument('--pca_components', type=int, default=50)
     parser.add_argument('--no_pca', action='store_true')
     parser.add_argument('--sbhmm_iters', nargs='*', type=int, default=[20, 50, 80])
