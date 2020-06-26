@@ -105,11 +105,11 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
     dataset = dataSetReader(classLabels, phrases, arkFileLoc, include_state, include_index)
 
     print("Training AdaBoosted Decision Tree Classifiers")
+    classifier = []
 
     if trainMultipleClassifiers:
         if parallel:
             labels = [classLabel for classLabel in dataset]
-            classifier = []
             for iteration in tqdm(range(0, len(labels), n_jobs)):
                 currLabels = [labels[i] for i in range(iteration, min(len(labels), iteration + n_jobs))]
                 classifier += Parallel(n_jobs=len(currLabels))(delayed(trainAdaboostClassifier)(getDataSetForTrainingClass(dataset, currLabel)[0],
@@ -146,7 +146,7 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
             # print("Number accepted = "+str(len(dataset[classLabel])))
 
     
-    return classifer
+    return classifier
     
 
 class AdaBoostedClassifierEnsemble(object):

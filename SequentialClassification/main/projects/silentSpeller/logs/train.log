@@ -4,9 +4,10 @@ Stream 1
        0.38     0.43     0.29     0.45     0.44     0.46     0.42     0.41     0.42     0.50     0.50     0.48 ...
  Variance Vector 
        2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00     2.00 ...
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/d 
 HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/q 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/prototype 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/f 
-HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/k 
 HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/o 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/sil1 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/f 
+HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/i 
 HRest -A -i 60 -C configs/hrest.conf -v 0.1 -I all_labels.mlf -M models/hmm1 -S lists/train.data models/hmm0/x 
