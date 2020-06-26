@@ -13,6 +13,7 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 from sklearn.decomposition import PCA
+from joblib import Parallel, delayed
 
 from .train import train
 from src.test import test
@@ -22,6 +23,19 @@ from src.prepare_data.ark_creation import _create_ark_file
 from src.prepare_data.htk_creation import create_htk_files
 
 
+def createNewArkFile(arkFile: str, trainedClassifier: object, pca_components: int, no_pca: bool, arkFileSave: str):
+    content = read_ark_files(arkFile)
+    newContent = trainedClassifier.getTransformedFeatures(content)
+    
+    if not no_pca:
+        pca = PCA(n_components=pca_components)
+        newContent = pca.fit_transform(newContent)
+
+    num_features = newContent.shape[1]
+    arkFileName = arkFile.split("/")[-1]
+    arkFileSavePath = arkFileSave + arkFileName
+
+    _create_ark_file(pd.DataFrame(data=newContent), arkFileSavePath, arkFileName.replace(".ark", ""))
 
 
 
@@ -72,20 +86,14 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
 
         print("Creating new .ark Files")
         num_features = 0
-        for arkFile in tqdm(arkFiles):
-
-            content = read_ark_files(arkFile)
-            newContent = trainedClassifier.getTransformedFeatures(content)
-            
-            if not no_pca:
-                pca = PCA(n_components=pca_components)
-                newContent = pca.fit_transform(newContent)
-
-            num_features = newContent.shape[1]
-            arkFileName = arkFile.split("/")[-1]
-            arkFileSavePath = arkFileSave + arkFileName
-
-            _create_ark_file(pd.DataFrame(data=newContent), arkFileSavePath, arkFileName.replace(".ark", ""))
+        if parallel:
+            for iteration in tqdm(range(0, len(arkFiles), n_jobs)):
+                currArkFiles = [i for i in range(iteration, min(iteration + n_jobs, len(arkFiles)))]
+                Parallel(n_jobs=len(currArkFiles))(delayed(createNewArkFile)(arkFile, trainedClassifier, pca_components, no_pca, arkFileSave)
+                         for arkFile in currArkFiles)
+        else:
+            for arkFile in tqdm(arkFiles):
+                createNewArkFile(arkFile, trainedClassifier, pca_components, no_pca, arkFileSave)
         
         print("Creating new .htk Files")
         create_htk_files(htkFileSave, arkFileSave + "*ark")
