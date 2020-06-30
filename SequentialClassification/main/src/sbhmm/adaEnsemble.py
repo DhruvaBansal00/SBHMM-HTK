@@ -109,7 +109,7 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
 
     if trainMultipleClassifiers:
         if parallel:
-            labels = [classLabel for classLabel in dataset][0]
+            labels = [[classLabel for classLabel in dataset][0]]
             for iteration in tqdm(range(0, len(labels), n_jobs)):
                 currLabels = [labels[i] for i in range(iteration, min(len(labels), iteration + n_jobs))]
                 classifier += Parallel(n_jobs=len(currLabels))(delayed(trainAdaboostClassifier)(getDataSetForTrainingClass(dataset, currLabel)[0],
