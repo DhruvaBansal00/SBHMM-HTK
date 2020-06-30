@@ -159,14 +159,16 @@ class AdaBoostedClassifierEnsemble(object):
         self.classifier = getTrainedClassifier(self.phrases, arkFileLoc, include_state, include_index, n_jobs=n_jobs, parallel=parallel,
                         trainMultipleClassifiers=self.trainMultipleClassifiers, random_state=self.random_state)
     
+    def callDecisionFunction(self, index, features):
+        return self.classifier[index].decision_function(features)
+    
     def getTransformedFeatures(self, features, parallel, n_jobs):
 
         if self.trainMultipleClassifiers:
             transformation = []
 
             if parallel:
-                transformation.extend(Parallel(n_jobs=n_jobs))(delayed(self.classifier[i].decision_function)(features)
-                     for i in range(len(self.classifier)))
+                transformation.extend(Parallel(n_jobs=n_jobs))(delayed(self.callDecisionFunction)(i, features) for i in range(len(self.classifier)))
             else:
                 transformation = np.zeros((features.shape[0], len(self.classifier)))
                 for i in range(len(self.classifier)):
