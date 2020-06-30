@@ -159,12 +159,19 @@ class AdaBoostedClassifierEnsemble(object):
         self.classifier = getTrainedClassifier(self.phrases, arkFileLoc, include_state, include_index, n_jobs=n_jobs, parallel=parallel,
                         trainMultipleClassifiers=self.trainMultipleClassifiers, random_state=self.random_state)
     
-    def getTransformedFeatures(self, features):
+    def getTransformedFeatures(self, features, parallel, n_jobs):
 
         if self.trainMultipleClassifiers:
-            transformation = np.zeros((features.shape[0], len(self.classifier)))
-            for i in range(len(self.classifier)):
-                transformation[:, i] = self.classifier[i].decision_function(features).flatten()
+            transformation = []
+
+            if parallel:
+                transformation.extend(Parallel(n_jobs=n_jobs))(delayed(self.classifier[i].decision_function)(features)
+                     for i in range(len(self.classifier)))
+            else:
+                transformation = np.zeros((features.shape[0], len(self.classifier)))
+                for i in range(len(self.classifier)):
+                    transformation[:, i] = self.classifier[i].decision_function(features).flatten()
+                
             return np.array(transformation)
         else:
             raise NotImplementedError("This feature hasn't been implemented since accuracies are really low")

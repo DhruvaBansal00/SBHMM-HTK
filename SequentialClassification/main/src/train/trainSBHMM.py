@@ -23,9 +23,10 @@ from src.prepare_data.ark_creation import _create_ark_file
 from src.prepare_data.htk_creation import create_htk_files
 
 
-def createNewArkFile(arkFile: str, trainedClassifier: object, pca_components: int, no_pca: bool, arkFileSave: str):
+def createNewArkFile(arkFile: str, trainedClassifier: object, pca_components: int, no_pca: bool, 
+                    arkFileSave: str, parallel: bool, n_jobs: int):
     content = read_ark_files(arkFile)
-    newContent = trainedClassifier.getTransformedFeatures(content)
+    newContent = trainedClassifier.getTransformedFeatures(content, parallel, n_jobs)
     
     if not no_pca:
         pca = PCA(n_components=pca_components)
@@ -86,14 +87,9 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
 
         print("Creating new .ark Files")
         num_features = 0
-        if parallel:
-            for iteration in tqdm(range(0, len(arkFiles), n_jobs)):
-                currArkFiles = [i for i in range(iteration, min(iteration + n_jobs, len(arkFiles)))]
-                Parallel(n_jobs=len(currArkFiles))(delayed(createNewArkFile)(arkFile, trainedClassifier, pca_components, no_pca, arkFileSave)
-                         for arkFile in currArkFiles)
-        else:
-            for arkFile in tqdm(arkFiles):
-                createNewArkFile(arkFile, trainedClassifier, pca_components, no_pca, arkFileSave)
+        
+        for arkFile in tqdm(arkFiles):
+            createNewArkFile(arkFile, trainedClassifier, pca_components, no_pca, arkFileSave, parallel, n_jobs)
         
         print("Creating new .htk Files")
         create_htk_files(htkFileSave, arkFileSave + "*ark")
