@@ -37,6 +37,7 @@ def createNewArkFile(arkFile: str, trainedClassifier: object, pca_components: in
     arkFileSavePath = arkFileSave + arkFileName
 
     _create_ark_file(pd.DataFrame(data=newContent), arkFileSavePath, arkFileName.replace(".ark", ""))
+    return num_features
 
 
 
@@ -89,7 +90,7 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
         num_features = 0
         
         for arkFile in tqdm(arkFiles):
-            createNewArkFile(arkFile, trainedClassifier, pca_components, no_pca, arkFileSave, parallel, n_jobs)
+            num_features = createNewArkFile(arkFile, trainedClassifier, pca_components, no_pca, arkFileSave, parallel, n_jobs)
         
         print("Creating new .htk Files")
         create_htk_files(htkFileSave, arkFileSave + "*ark")
