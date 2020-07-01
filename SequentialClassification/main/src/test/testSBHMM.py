@@ -18,7 +18,8 @@ from src.prepare_data.ark_reader import read_ark_files
 from src.prepare_data.ark_creation import _create_ark_file
 from src.prepare_data.htk_creation import create_htk_files
 
-def testSBHMM(start: int, end: int, method: str, classifiers: [], pca_components: int, no_pca: bool, insertion_penalty: int) -> None:
+def testSBHMM(start: int, end: int, method: str, classifiers: [], pca_components: int, no_pca: bool, insertion_penalty: int, 
+            parallel: bool, n_jobs: int) -> None:
 
     print("-------Testing SBHMM-----------")
     testDataFile = "lists/test.data"
@@ -48,7 +49,7 @@ def testSBHMM(start: int, end: int, method: str, classifiers: [], pca_components
         content = read_ark_files(arkFile)
         newContent = content
         for classifier in classifiers:
-            newContent = classifier.getTransformedFeatures(newContent)
+            newContent = classifier.getTransformedFeatures(newContent, parallel, n_jobs)
             if not no_pca:
                 pca = PCA(n_components=pca_components)
                 newContent = pca.fit_transform(newContent)
