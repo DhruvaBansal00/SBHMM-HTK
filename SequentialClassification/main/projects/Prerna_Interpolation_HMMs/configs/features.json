@@ -207,5 +207,5 @@
         "delta_horizontal_hand_dist",
         "delta_vertical_hand_dist"
     ],
-    "features_dir": null
+    "features_dir": "/home/thad/Desktop/AndroidCaptureApp/mp_feats_20-03-25_prerna/*/*/*.data"
 }

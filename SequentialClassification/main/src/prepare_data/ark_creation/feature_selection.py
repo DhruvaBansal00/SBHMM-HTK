@@ -256,6 +256,8 @@ def select_features(input_filepath: str, features_to_extract: list,
 
     df = df.replace(0, np.nan)
 
+
+
     if select_hands:
 
         try:
@@ -296,5 +298,7 @@ def select_features(input_filepath: str, features_to_extract: list,
     df = df.dropna(axis=0)
     df = df * scale
     df = df.round(6)
+
+    #print(df)
 
     return df
