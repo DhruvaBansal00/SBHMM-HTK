@@ -10,23 +10,23 @@ from json_data import load_json
 
 def gaussian(x, mu, var):
     """Calculates the output value y for a given guassian and input value x using the following formula:
-        f(x) = 1 / (sqrt(2 * PI * variance)) * E^(-((x - mu)^2 / (2 * variance))) 
+        f(x) = 1 / (sqrt(2 * PI * variance)) * E^(-((x - mu)^2 / (2 * variance))) .
 
     Parameters
     ----------
     x : float
-        The input x value to the function
+        The input x value to the function.
 
     mu : float
-        The mean of the guassian 
+        The mean of the guassian.
 
     var : float
-        The variance of the guassian
+        The variance of the guassian.
 
     Returns
     -------
     y : float
-        The output y value from the function defined above
+        The output y value from the function defined above.
 
     """
     return (1 / (np.sqrt(2 * np.pi * var))) * (np.power(np.e, -(np.power((x - mu), 2) / (2 * var))))
@@ -59,7 +59,8 @@ def calculate_bhattacharyya_distance(macros_data, save_dir, words, feature_label
     """
 
 def find_confused_word(macros_data, save_dir, words, feature_labels, confusion_matrix_filepath, threshold):
-    """Prebuilt function that finds pair of confused words that exceeds the threshold from the confusion matrix and calls calculate_bhattacharyya_distance on all the feature labels. 
+    """Prebuilt function that finds pair of confused words that exceeds the threshold from the confusion matrix
+        and calls calculate_bhattacharyya_distance on all the feature labels. 
 
     Parameters
     ----------
@@ -144,7 +145,8 @@ def bhattacharyya_distance(feature_config_filepath, feature_config_key, macros_f
         File path to the confusion matrix file that is generated from testing HMM.
 
     threshold : float
-        If the percentage of times a word is mislabeled exceeds the threshold, then the two words are confused (ground truth, HMM predicted classification).
+        If the percentage of times a word is mislabeled exceeds the threshold,
+        then the two words are confused (ground truth, HMM predicted classification).
 
     NOT USED CURRENTLY:
     mode : int
@@ -214,7 +216,8 @@ if __name__=='__main__':
         File path to the confusion matrix file that is generated from testing HMM.
 
     threshold : float
-        If the percentage of times a word is mislabeled exceeds the threshold, then the two words are confused (ground truth, HMM predicted classification).
+        If the percentage of times a word is mislabeled exceeds the threshold,
+        then the two words are confused (ground truth, HMM predicted classification).
 
     NOT USED CURRENTLY:
     mode : int
