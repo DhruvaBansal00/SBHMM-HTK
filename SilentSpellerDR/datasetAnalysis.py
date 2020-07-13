@@ -47,7 +47,7 @@ def getLabelFrequency(arkLocation: str):
 
     return dataLenFreq
 
-def trimDataSet(arkLocation: str, htkLocation: str, maxLength: int):
+def trimDataSet(arkLocation: str, htkLocation: str, maxLength: int, maxNum: int):
     arkFolder = "ark"
     htkFolder = "htk"
     mlfFile = "all_labels.mlf"
@@ -61,16 +61,21 @@ def trimDataSet(arkLocation: str, htkLocation: str, maxLength: int):
 
     arkFiles = glob.glob(arkLocation)
     htkFiles = glob.glob(htkLocation)
+    arkFiles.sort()
+    htkFiles.sort()
+
+    total = 0
 
     for i in range(len(arkFiles)):
-        if len(getDataName(arkFiles[i])) < maxLength:
+        if len(getDataName(arkFiles[i])) < maxLength and total < maxNum:
             copyFile(arkFiles[i], arkFolder)
-        
-        if len(getDataName(htkFiles[i])) < maxLength:
             copyFile(htkFiles[i], htkFolder)
+            total += 1
+        
+        # if len(getDataName(htkFiles[i])) < maxLength:
     
     createMLF(htkFolder+"/*", mlfFile)
 
 if __name__ == "__main__":
 
-    trimDataSet("/home/dhruva/Desktop/CopyCat/SilentSpeller/data/ark/*", "/home/dhruva/Desktop/CopyCat/SilentSpeller/data/htk/*", 10)
+    trimDataSet("/home/dhruva/Desktop/CopyCat/SilentSpeller/data/ark/*", "/home/dhruva/Desktop/CopyCat/SilentSpeller/data/htk/*", 10, 100)
