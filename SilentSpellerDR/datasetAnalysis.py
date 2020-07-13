@@ -9,17 +9,68 @@ import shutil
 import numpy as np
 import pandas as pd
 
+from createArkHtk import createMLF
+
+def checkAndDelete(folder: str):
+    if os.path.exists(folder):
+        shutil.rmtree(folder)
+
+def create(folder: str):
+    os.mkdir(folder)
+
+def getDataName(path: str):
+    return path.split("/")[-1].split(".")[1]
+
+def copyFile(source: str, destFolder: str):
+    shutil.copy(source, destFolder) 
+
 def getLabelFrequency(arkLocation: str):
 
     dataFiles = glob.glob(arkLocation)
-    dataFiles = [i.split("/")[-1].split(".")[1] for i in dataFiles]
+    dataFiles = [getDataName(i) for i in dataFiles]
     dataFreq = {}
+    dataLenFreq = {}
+    dataLen = {}
     for dataFile in dataFiles:
         if dataFile in dataFreq:
             dataFreq[dataFile] += 1
         else:
             dataFreq[dataFile] = 1
-    
-    print(dataFreq)
 
-getLabelFrequency("/home/dhruva/Desktop/CopyCat/SilentSpeller/data/ark/*")
+        if len(dataFile) in dataLenFreq:
+            dataLenFreq[len(dataFile)] += 1
+        else:
+            dataLenFreq[len(dataFile)] = 1
+
+        if dataFile not in dataLen:
+            dataLen[dataFile] = len(dataFile)
+
+    return dataLenFreq
+
+def trimDataSet(arkLocation: str, htkLocation: str, maxLength: int):
+    arkFolder = "ark"
+    htkFolder = "htk"
+    mlfFile = "all_labels.mlf"
+
+    dataLenFreq = getLabelFrequency(arkLocation)
+    print("Data Length Frequency = " + str(dataLenFreq))
+    checkAndDelete(arkFolder)
+    checkAndDelete(htkFolder)
+    create(arkFolder)
+    create(htkFolder)
+
+    arkFiles = glob.glob(arkLocation)
+    htkFiles = glob.glob(htkLocation)
+
+    for i in range(len(arkFiles)):
+        if len(getDataName(arkFiles[i])) < maxLength:
+            copyFile(arkFiles[i], arkFolder)
+        
+        if len(getDataName(htkFiles[i])) < maxLength:
+            copyFile(htkFiles[i], htkFolder)
+    
+    createMLF(htkFolder+"/*", mlfFile)
+
+if __name__ == "__main__":
+
+    trimDataSet("/home/dhruva/Desktop/CopyCat/SilentSpeller/data/ark/*", "/home/dhruva/Desktop/CopyCat/SilentSpeller/data/htk/*", 10)
