@@ -12,6 +12,7 @@ import shutil
 import pandas as pd
 
 from .feature_selection import select_features
+from .interpolate_feature_data import interpolate_feature_data
 
 
 def _create_ark_file(df: pd.DataFrame, ark_filepath: str, title: str) -> None:
@@ -38,7 +39,7 @@ def _create_ark_file(df: pd.DataFrame, ark_filepath: str, title: str) -> None:
         out.write(']')
 
 
-def create_ark_files(features_config: dict, verbose: bool = False) -> None:
+def create_ark_files(features_config: dict, verbose: bool = False, is_select_features: bool = False) -> None:
     """Creates .ark files needed as intermediate step to creating .htk
     files
 
@@ -60,13 +61,20 @@ def create_ark_files(features_config: dict, verbose: bool = False) -> None:
         
     features_filepaths = glob.glob(features_config['features_dir'])
 
+    if is_select_features:
+        print("select_features data")
+    else:
+        print("interpolate_features data")
+
     for features_filepath in features_filepaths:
 
         if verbose:
             print(features_filepath)
         
-        features_df = select_features(
-            features_filepath, features_config['selected_features'])
+        if is_select_features:
+            features_df = select_features(features_filepath, features_config['selected_features']) # Interpolation (mediapipe.data filepath, features to extract)
+        else:
+            features_df = interpolate_feature_data(features_filepath, features_config['selected_features']) # Interpolation (mediapipe.data filepath, features to extract)
 
         if features_df is not None:
             ark_filename = features_filepath.split('/')[-1].replace('data', 'ark')

@@ -6,7 +6,7 @@ save_results
 """
 import os
 
-from .json import load_json, dump_json
+from .json_data import load_json, dump_json
 
 
 def save_results(results_dict: dict, results_file: str) -> None:

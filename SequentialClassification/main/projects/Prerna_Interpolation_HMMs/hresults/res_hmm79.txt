@@ -1,0 +1,54 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/res_hmm79.mlf 
+Aligned transcription: data/htk/Prerna.snake_below_bed.1582398236369.lab vs data/htk/Prerna.snake_below_bed.1582398236369.rec
+ LAB: snake  below bed 
+ REC: monkey below bed 
+Aligned transcription: data/htk/Prerna.monkey_below_wagon.1582399813172.lab vs data/htk/Prerna.monkey_below_wagon.1582399813172.rec
+ LAB: monkey below wagon   
+ REC: monkey below flowers 
+Aligned transcription: data/htk/Prerna.monkey_below_wagon.1582397944977.lab vs data/htk/Prerna.monkey_below_wagon.1582397944977.rec
+ LAB: monkey below wagon   
+ REC: monkey below flowers 
+Aligned transcription: data/htk/Prerna.lion_above_flowers.1582399893411.lab vs data/htk/Prerna.lion_above_flowers.1582399893411.rec
+ LAB: lion      above flowers 
+ REC: alligator above flowers 
+Aligned transcription: data/htk/Prerna.snake_above_box.1582398873217.lab vs data/htk/Prerna.snake_above_box.1582398873217.rec
+ LAB: snake     above box 
+ REC: alligator above box 
+Aligned transcription: data/htk/Prerna.alligator_in_wagon.1582399574738.lab vs data/htk/Prerna.alligator_in_wagon.1582399574738.rec
+ LAB: alligator in wagon   
+ REC: alligator in flowers 
+Aligned transcription: data/htk/Prerna.snake_in_flowers.1582398984628.lab vs data/htk/Prerna.snake_in_flowers.1582398984628.rec
+ LAB: snake     in flowers 
+ REC: alligator in flowers 
+Aligned transcription: data/htk/Prerna.lion_above_flowers.1582399796270.lab vs data/htk/Prerna.lion_above_flowers.1582399796270.rec
+ LAB: lion      above flowers 
+ REC: alligator above flowers 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Tue Jul  7 21:28:43 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/res_hmm79.mlf                                  |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |  125  |  97.87   2.13   0.00   0.00   2.13   6.40 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   a   b   b   b   c   f   i   l   m   s   w   w 
+       b   l   e   e   o   h   l   n   i   o   n   a   a 
+       o   l   d   l   x   a   o       o   n   a   g   l 
+       v   i       o       i   w       n   k   k   o   l 
+       e   g       w       r   e           e   e   n      Del [ %c / %e]
+abov  60   0   0   0   0   0   0   0   0   0   0   0   0    0
+alli   0  30   0   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0  20   0   0   0   0   0   0   0   0   0   0    0
+belo   0   0   0  35   0   0   0   0   0   0   0   0   0    0
+ box   0   0   0   0  20   0   0   0   0   0   0   0   0    0
+chai   0   0   0   0   0  20   0   0   0   0   0   0   0    0
+flow   0   0   0   0   0   0  20   0   0   0   0   0   0    0
+  in   0   0   0   0   0   0   0  30   0   0   0   0   0    0
+lion   0   2   0   0   0   0   0   0  28   0   0   0   0    0 [93.3/0.5]
+monk   0   0   0   0   0   0   0   0   0  35   0   0   0    0
+snak   0   2   0   0   0   0   0   0   0   1  27   0   0    0 [90.0/0.8]
+wago   0   0   0   0   0   0   3   0   0   0   0  22   0    0 [88.0/0.8]
+wall   0   0   0   0   0   0   0   0   0   0   0   0  20    0
+Ins    0   0   0   0   0   0   0   0   0   0   0   0   0
