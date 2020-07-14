@@ -167,12 +167,12 @@ class AdaBoostedClassifierEnsemble(object):
         if self.trainMultipleClassifiers:
             transformation = []
 
-            if parallel:
-                transformation = Parallel(n_jobs=n_jobs)(delayed(self.callDecisionFunction)(i, features) for i in range(len(self.classifier)))
-            else:
-                transformation = np.zeros((features.shape[0], len(self.classifier)))
-                for i in range(len(self.classifier)):
-                    transformation[:, i] = self.classifier[i].decision_function(features).flatten()
+            # if parallel:
+            #     transformation = Parallel(n_jobs=n_jobs)(delayed(self.callDecisionFunction)(i, features) for i in range(len(self.classifier)))
+            # else:
+            transformation = np.zeros((features.shape[0], len(self.classifier)))
+            for i in range(len(self.classifier)):
+                transformation[:, i] = self.classifier[i].decision_function(features).flatten()
                 
             return np.array(transformation)
         else:
