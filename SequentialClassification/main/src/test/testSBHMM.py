@@ -48,7 +48,7 @@ def testSBHMM(start: int, end: int, method: str, classifiers: [], pca_components
         content = read_ark_files(arkFile)
         newContent = content
         for classifier in classifiers:
-            newContent = classifier.getTransformedFeatures(newContent)
+            newContent = classifier.getTransformedFeatures(newContent, parallel, n_jobs)
             if not no_pca:
                 pca = PCA(n_components=pca_components)
                 newContent = pca.fit_transform(newContent)
