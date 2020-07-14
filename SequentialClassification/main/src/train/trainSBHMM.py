@@ -37,6 +37,7 @@ def createNewArkFile(arkFile: str, trainedClassifier: object, pca_components: in
     arkFileSavePath = arkFileSave + arkFileName
 
     _create_ark_file(pd.DataFrame(data=newContent), arkFileSavePath, arkFileName.replace(".ark", ""))
+    return num_features
 
 
 
