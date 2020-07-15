@@ -92,7 +92,6 @@ def getDataSetForTrainingClass(dataset: dict, currClass: int) -> (list, list):
             labels.extend([1 for i in range(dataset[classLabel].shape[0])])
         else:
             labels.extend([0 for i in range(dataset[classLabel].shape[0])])
-    
     return np.array(features), np.array(labels)
 
 
@@ -160,7 +159,7 @@ class AdaBoostedClassifierEnsemble(object):
                         trainMultipleClassifiers=self.trainMultipleClassifiers, random_state=self.random_state)
     
     def callDecisionFunction(self, index, features):
-        return self.classifier[index].decision_function(features)
+        return self.classifier[index].predict_log_proba(features)[:, 1]
     
     def getTransformedFeatures(self, features, parallel, n_jobs):
 
@@ -172,8 +171,8 @@ class AdaBoostedClassifierEnsemble(object):
             # else:
             transformation = np.zeros((features.shape[0], len(self.classifier)))
             for i in range(len(self.classifier)):
-                transformation[:, i] = self.classifier[i].decision_function(features).flatten()
-                
+                transformation[:, i] = self.callDecisionFunction(i, features)
+]                
             return np.array(transformation)
         else:
             raise NotImplementedError("This feature hasn't been implemented since accuracies are really low")

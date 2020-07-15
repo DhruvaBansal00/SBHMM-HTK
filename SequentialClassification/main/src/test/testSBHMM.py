@@ -18,7 +18,8 @@ from src.prepare_data.ark_reader import read_ark_files
 from src.prepare_data.ark_creation import _create_ark_file
 from src.prepare_data.htk_creation import create_htk_files
 
-def testSBHMM(start: int, end: int, method: str, classifiers: [], pca_components: int, no_pca: bool, insertion_penalty: int) -> None:
+def testSBHMM(start: int, end: int, method: str, classifiers: [], pca_components: int, no_pca: bool, insertion_penalty: int,
+            n_jobs: int, parallel: bool) -> None:
 
     print("-------Testing SBHMM-----------")
     testDataFile = "lists/test.data"
