@@ -98,6 +98,12 @@ def getDataSetForTrainingClass(dataset: dict, currClass: int) -> (list, list):
 def trainAdaboostClassifier(X, Y, seed):
     return AdaBoostClassifier(n_estimators=50, random_state=seed).fit(X, Y)
 
+def calculateClassifierAcc(classifier: object, dataset: dict):
+    print("Calculating Classifier Ensemble Accuracy")
+
+    labels = [classLabel for classLabel in dataset]
+    labels.sort()
+
 def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, include_index: bool, n_jobs: int, 
                         parallel: bool, trainMultipleClassifiers: bool = True, random_state: int = 42) -> object:
     classLabels = getClassTree(phrases, include_state, include_index)
@@ -109,6 +115,8 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
     if trainMultipleClassifiers:
         if parallel:
             labels = [classLabel for classLabel in dataset]
+            labels.sort()
+            print("Dataset labels = " + str(labels))
             for iteration in tqdm(range(0, len(labels), n_jobs)):
                 currLabels = [labels[i] for i in range(iteration, min(len(labels), iteration + n_jobs))]
                 classifier += Parallel(n_jobs=len(currLabels))(delayed(trainAdaboostClassifier)(getDataSetForTrainingClass(dataset, currLabel)[0],
@@ -144,7 +152,7 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
             # print("Classifier " + str(classLabel) + " accepted training score = " + str(classifier.score(dataset[classLabel], [classLabel for i in range(len(dataset[classLabel]))])))
             # print("Number accepted = "+str(len(dataset[classLabel])))
 
-    
+    calculateClassifierAcc(classifier, dataset)
     return classifier
     
 
@@ -171,8 +179,7 @@ class AdaBoostedClassifierEnsemble(object):
             # else:
             transformation = np.zeros((features.shape[0], len(self.classifier)))
             for i in range(len(self.classifier)):
-                transformation[:, i] = self.callDecisionFunction(i, features)
-]                
+                transformation[:, i] = self.callDecisionFunction(i, features)                
             return np.array(transformation)
         else:
             raise NotImplementedError("This feature hasn't been implemented since accuracies are really low")
