@@ -8,7 +8,7 @@ from src.prepare_data.ark_reader import read_ark_files
 import glob
 import numpy as np
 from tqdm import tqdm
-
+from sklearn.metrics import accuracy_score
 
     
 #structure -> word.name -> index -> state.name -> class
@@ -103,6 +103,22 @@ def calculateClassifierAcc(classifier: object, dataset: dict):
 
     labels = [classLabel for classLabel in dataset]
     labels.sort()
+
+    X = []
+    Y = []
+    for label in labels:
+        for feature in dataset[label]:
+            X.append(feature)
+            Y.append(label)
+
+    transformation = np.zeros((len(X), len(classifier)))
+    for i, unitClassifier in enumerate(classifier):
+        transformation[:, i] = unitClassifier.predict_log_proba(X)[:, 1]
+    
+    predictions = np.argmax(transformation, axis=0)
+    score = accuracy_score(Y, predictions)
+    print("Classifier Accuracy is = " + str(score))
+
 
 def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, include_index: bool, n_jobs: int, 
                         parallel: bool, trainMultipleClassifiers: bool = True, random_state: int = 42) -> object:
