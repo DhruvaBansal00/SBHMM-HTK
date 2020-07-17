@@ -123,10 +123,12 @@ def calculateClassifierAcc(classifier: object, dataset: dict, trainMultipleClass
     predictions = np.argmax(transformation, axis=1)
     score = accuracy_score(Y, predictions)
     print("Classifier Accuracy is = " + str(score))
+    return X, Y
 
 
 def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, include_index: bool, n_jobs: int, 
                         parallel: bool, trainMultipleClassifiers: bool = True, random_state: int = 42) -> object:
+    np.set_printoptions(threshold=sys.maxsize)
     classLabels = getClassTree(phrases, include_state, include_index)
     dataset = dataSetReader(classLabels, phrases, arkFileLoc, include_state, include_index)
 
@@ -160,11 +162,13 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
         features = np.array(features)
         labels = np.array(labels)
 
-        classifier = KNeighborsClassifier(n_neighbors=10)
+        classifier = KNeighborsClassifier(n_neighbors=5)
         classifier.fit(features, labels)
 
     print("Classifier Training Completed")
-    calculateClassifierAcc(classifier, dataset, trainMultipleClassifiers)
+    X, Y = calculateClassifierAcc(classifier, dataset, trainMultipleClassifiers)
+    # print("Train and Test Feature diff = " + str(features - X))
+    # print("Train and Test Labels diff = " + str(labels - Y))
     return classifier
     
 
