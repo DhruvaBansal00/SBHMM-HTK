@@ -151,7 +151,21 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
                 X, Y = shuffle(X, Y, random_state=random_state)
                 classifer[classLabel].fit(X, Y)        
     else:
-        print("Training Master KNN Classifier")
+        # print("Training Master KNN Classifier")
+        # features = []
+        # labels = []
+        # classes = [i for i in dataset]
+        # classes.sort()
+        # for classLabel in classes:
+        #     features.extend(dataset[classLabel])
+        #     labels.extend([classLabel for i in range(dataset[classLabel].shape[0])])
+        # features = np.array(features)
+        # labels = np.array(labels)
+
+        # classifier = KNeighborsClassifier(n_neighbors=5)
+        # classifier.fit(features, labels)
+
+        print("Training Master Adaboost Classifier")
         features = []
         labels = []
         classes = [i for i in dataset]
@@ -162,7 +176,7 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
         features = np.array(features)
         labels = np.array(labels)
 
-        classifier = KNeighborsClassifier(n_neighbors=5)
+        classifier = AdaBoostClassifier(n_estimators=200, random_state=random_state)
         classifier.fit(features, labels)
 
     print("Classifier Training Completed")
