@@ -166,7 +166,7 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
         classifier.fit(features, labels)
 
     print("Classifier Training Completed")
-    X, Y = calculateClassifierAcc(classifier, dataset, trainMultipleClassifiers)
+    # X, Y = calculateClassifierAcc(classifier, dataset, trainMultipleClassifiers)
     # print("Train and Test Feature diff = " + str(features - X))
     # print("Train and Test Labels diff = " + str(labels - Y))
     return classifier

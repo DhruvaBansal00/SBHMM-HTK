@@ -53,7 +53,7 @@ def trimDataSet(arkLocation: str, htkLocation: str, maxLength: int, maxNum: int)
     mlfFile = "all_labels.mlf"
 
     dataLenFreq = getLabelFrequency(arkLocation)
-    print("Data Length Frequency = " + str(dataLenFreq))
+    # print("Data Length Frequency = " + str(dataLenFreq))
     checkAndDelete(arkFolder)
     checkAndDelete(htkFolder)
     create(arkFolder)
@@ -78,4 +78,4 @@ def trimDataSet(arkLocation: str, htkLocation: str, maxLength: int, maxNum: int)
 
 if __name__ == "__main__":
 
-    trimDataSet("/home/dhruva/Desktop/CopyCat/SilentSpeller/data/ark/*", "/home/dhruva/Desktop/CopyCat/SilentSpeller/data/htk/*", 10, 100)
+    trimDataSet("/home/dhruva/Desktop/CopyCat/SilentSpeller/data/ark/*", "/home/dhruva/Desktop/CopyCat/SilentSpeller/data/htk/*", 10000000, 10000000000)
