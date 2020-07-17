@@ -1,4 +1,4 @@
-HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/res_hmm49.mlf 
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/res_hmm50.mlf 
 Aligned transcription: data/htk/Naoki.b_a_c_k.2289.lab vs data/htk/Naoki.b_a_c_k.2289.rec
  LAB: b a c k 
  REC: b a n k 
@@ -12,9 +12,9 @@ Aligned transcription: data/htk/Naoki.a_m.686.lab vs data/htk/Naoki.a_m.686.rec
  LAB: a   m 
  REC: a l l 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Fri Jul 17 21:26:01 2020            |
+    | HTK Results Analysis at Fri Jul 17 21:26:14 2020            |
     | Ref: all_labels.mlf                                         |
-    | Rec: results/res_hmm49.mlf                                  |
+    | Rec: results/res_hmm50.mlf                                  |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
