@@ -1,5 +1,6 @@
 from .classes import State, Word, Phrase
 from sklearn.ensemble import AdaBoostClassifier
+from sklearn.neighbors import KNeighborsClassifier
 import sys
 from sklearn.utils import shuffle
 from joblib import Parallel, delayed
@@ -98,7 +99,7 @@ def getDataSetForTrainingClass(dataset: dict, currClass: int) -> (list, list):
 def trainAdaboostClassifier(X, Y, seed):
     return AdaBoostClassifier(n_estimators=50, random_state=seed).fit(X, Y)
 
-def calculateClassifierAcc(classifier: object, dataset: dict):
+def calculateClassifierAcc(classifier: object, dataset: dict, trainMultipleClassifiers: bool):
     print("Calculating Classifier Ensemble Accuracy")
 
     labels = [classLabel for classLabel in dataset]
@@ -110,12 +111,16 @@ def calculateClassifierAcc(classifier: object, dataset: dict):
         for feature in dataset[label]:
             X.append(feature)
             Y.append(label)
-
-    transformation = np.zeros((len(X), len(classifier)))
-    for i, unitClassifier in enumerate(classifier):
-        transformation[:, i] = unitClassifier.predict_log_proba(X)[:, 1]
     
-    predictions = np.argmax(transformation, axis=0)
+    if trainMultipleClassifiers:
+        transformation = np.zeros((len(X), len(classifier)))
+        for i, unitClassifier in enumerate(classifier):
+            transformation[:, i] = unitClassifier.predict_log_proba(X)[:, 1]
+    
+    else:
+        transformation = classifier.predict_proba(X)
+    
+    predictions = np.argmax(transformation, axis=1)
     score = accuracy_score(Y, predictions)
     print("Classifier Accuracy is = " + str(score))
 
@@ -125,14 +130,13 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
     classLabels = getClassTree(phrases, include_state, include_index)
     dataset = dataSetReader(classLabels, phrases, arkFileLoc, include_state, include_index)
 
-    print("Training AdaBoosted Decision Tree Classifiers")
     classifier = []
 
     if trainMultipleClassifiers:
+        print("Training AdaBoosted Decision Tree Classifiers")
         if parallel:
             labels = [classLabel for classLabel in dataset]
             labels.sort()
-            print("Dataset labels = " + str(labels))
             for iteration in tqdm(range(0, len(labels), n_jobs)):
                 currLabels = [labels[i] for i in range(iteration, min(len(labels), iteration + n_jobs))]
                 classifier += Parallel(n_jobs=len(currLabels))(delayed(trainAdaboostClassifier)(getDataSetForTrainingClass(dataset, currLabel)[0],
@@ -141,34 +145,26 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
             classifer = [AdaBoostClassifier(n_estimators=50, random_state=random_state) for classLabel in dataset]
 
             for classLabel in tqdm(dataset):
-                # print("Training binary classifier for class " + str(classLabel))
                 X, Y = getDataSetForTrainingClass(dataset, classLabel)
                 X, Y = shuffle(X, Y, random_state=random_state)
-                classifer[classLabel].fit(X, Y)
-                # print("Classifier " + str(classLabel) + " accepted training score = " + str(classifer[classLabel].score(dataset[classLabel], 
-                # [1 for i in range(len(dataset[classLabel]))])))
-                # print("Number accepted = "+str(len(dataset[classLabel])))
-        
-        print("Classifier Training Completed")
+                classifer[classLabel].fit(X, Y)        
     else:
+        print("Training Master KNN Classifier")
         features = []
         labels = []
-        for classLabel in dataset:
+        classes = [i for i in dataset]
+        classes.sort()
+        for classLabel in classes:
             features.extend(dataset[classLabel])
             labels.extend([classLabel for i in range(dataset[classLabel].shape[0])])
         features = np.array(features)
         labels = np.array(labels)
 
-        classifier = AdaBoostClassifier(n_estimators=100, random_state=random_state)
+        classifier = KNeighborsClassifier(n_neighbors=10)
         classifier.fit(features, labels)
-        
-        for classLabel in dataset:
-            labelDataset = [classLabel for i in range(len(dataset[classLabel]))]
-            print(labelDataset)
-            # print("Classifier " + str(classLabel) + " accepted training score = " + str(classifier.score(dataset[classLabel], [classLabel for i in range(len(dataset[classLabel]))])))
-            # print("Number accepted = "+str(len(dataset[classLabel])))
 
-    calculateClassifierAcc(classifier, dataset)
+    print("Classifier Training Completed")
+    calculateClassifierAcc(classifier, dataset, trainMultipleClassifiers)
     return classifier
     
 
@@ -189,13 +185,9 @@ class AdaBoostedClassifierEnsemble(object):
 
         if self.trainMultipleClassifiers:
             transformation = []
-
-            # if parallel:
-            #     transformation = Parallel(n_jobs=n_jobs)(delayed(self.callDecisionFunction)(i, features) for i in range(len(self.classifier)))
-            # else:
             transformation = np.zeros((features.shape[0], len(self.classifier)))
             for i in range(len(self.classifier)):
                 transformation[:, i] = self.callDecisionFunction(i, features)                
             return np.array(transformation)
         else:
-            raise NotImplementedError("This feature hasn't been implemented since accuracies are really low")
+            return self.classifier.predict_proba(features)

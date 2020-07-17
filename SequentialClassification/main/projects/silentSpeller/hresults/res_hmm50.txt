@@ -1,0 +1,85 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/res_hmm50.mlf 
+Aligned transcription: data/htkSBHMMTest/Naoki.b_a_c_k.1125.lab vs data/htkSBHMMTest/Naoki.b_a_c_k.1125.rec
+ LAB: b a c k 
+ REC: b a n k 
+Aligned transcription: data/htkSBHMMTest/Naoki.a_n_d.1589.lab vs data/htkSBHMMTest/Naoki.a_n_d.1589.rec
+ LAB:   a n d 
+ REC: s a   d 
+Aligned transcription: data/htkSBHMMTest/Naoki.a_m.1850.lab vs data/htkSBHMMTest/Naoki.a_m.1850.rec
+ LAB: a m 
+ REC: a s 
+Aligned transcription: data/htkSBHMMTest/Naoki.b_a_c_k.2289.lab vs data/htkSBHMMTest/Naoki.b_a_c_k.2289.rec
+ LAB: b a c k 
+ REC: b a n k 
+Aligned transcription: data/htkSBHMMTest/Naoki.a_f_t_e_r.2139.lab vs data/htkSBHMMTest/Naoki.a_f_t_e_r.2139.rec
+ LAB:   a f t e r 
+ REC: w a   t e r 
+Aligned transcription: data/htkSBHMMTest/Naoki.b_o_s_s.232.lab vs data/htkSBHMMTest/Naoki.b_o_s_s.232.rec
+ LAB: b o s s 
+ REC: b o y s 
+Aligned transcription: data/htkSBHMMTest/Naoki.b_a_r_e.1969.lab vs data/htkSBHMMTest/Naoki.b_a_r_e.1969.rec
+ LAB: b a r e 
+ REC:   a r e 
+Aligned transcription: data/htkSBHMMTest/Naoki.a_p_p_l_e.819.lab vs data/htkSBHMMTest/Naoki.a_p_p_l_e.819.rec
+ LAB: a p p l e 
+ REC:   p i l e 
+Aligned transcription: data/htkSBHMMTest/Naoki.b_o_n_e.1378.lab vs data/htkSBHMMTest/Naoki.b_o_n_e.1378.rec
+ LAB: b o n e 
+ REC:   o n e 
+Aligned transcription: data/htkSBHMMTest/Naoki.a_p_p_l_e.1983.lab vs data/htkSBHMMTest/Naoki.a_p_p_l_e.1983.rec
+ LAB:   a p p l e 
+ REC: g a   p     
+Aligned transcription: data/htkSBHMMTest/Naoki.a_f_t_e_r.975.lab vs data/htkSBHMMTest/Naoki.a_f_t_e_r.975.rec
+ LAB:   a f t e r 
+ REC: l a   t e r 
+Aligned transcription: data/htkSBHMMTest/Naoki.a_m.686.lab vs data/htkSBHMMTest/Naoki.a_m.686.rec
+ LAB: a m 
+ REC: a   
+Aligned transcription: data/htkSBHMMTest/Naoki.b_e_e_s.2001.lab vs data/htkSBHMMTest/Naoki.b_e_e_s.2001.rec
+ LAB: b e e s 
+ REC: b   u s 
+Aligned transcription: data/htkSBHMMTest/Naoki.b_a_l_l.1542.lab vs data/htkSBHMMTest/Naoki.b_a_l_l.1542.rec
+ LAB: b a l l 
+ REC:   a l l 
+Aligned transcription: data/htkSBHMMTest/Naoki.b_e_e_s.837.lab vs data/htkSBHMMTest/Naoki.b_e_e_s.837.rec
+ LAB: b e e s 
+ REC: b   u s 
+Aligned transcription: data/htkSBHMMTest/Naoki.a.1801.lab vs data/htkSBHMMTest/Naoki.a.1801.rec
+ LAB: a     
+ REC: a t e 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Fri Jul 17 14:57:55 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/res_hmm50.mlf                                  |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |  100  |  94.90   1.79   3.32   1.53   6.63  16.00 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   b   d   e   g   h   i   k   l   n   o   p   r   s   t   u   w   y 
+                                                                             
+                                                                             
+                                                                              Del [ %c / %e]
+   a  69   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    1
+   b   0  55   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    3
+   c   0   0   0   0   0   0   0   0   0   2   0   0   0   0   0   0   0   0    0 [ 0.0/0.5]
+   d   0   0  12   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+   e   0   0   0  47   0   0   0   0   0   0   0   0   0   0   0   2   0   0    3 [95.9/0.5]
+   f   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    2
+   g   0   0   0   0   8   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+   h   0   0   0   0   0   6   0   0   0   0   0   0   0   0   0   0   0   0    0
+   i   0   0   0   0   0   0  18   0   0   0   0   0   0   0   0   0   0   0    0
+   k   0   0   0   0   0   0   0  12   0   0   0   0   0   0   0   0   0   0    0
+   l   0   0   0   0   0   0   0   0  25   0   0   0   0   0   0   0   0   0    1
+   m   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0    1 [ 0.0/0.3]
+   n   0   0   0   0   0   0   0   0   0  13   0   0   0   0   0   0   0   0    1
+   o   0   0   0   0   0   0   0   0   0   0  14   0   0   0   0   0   0   0    0
+   p   0   0   0   0   0   0   1   0   0   0   0   2   0   0   0   0   0   0    1 [66.7/0.3]
+   r   0   0   0   0   0   0   0   0   0   0   0   0  18   0   0   0   0   0    0
+   s   0   0   0   0   0   0   0   0   0   0   0   0   0  33   0   0   0   1    0 [97.1/0.3]
+   t   0   0   0   0   0   0   0   0   0   0   0   0   0   0  22   0   0   0    0
+   u   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0   0    0
+   w   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0    0
+   y   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   6    0
+Ins    0   0   0   1   1   0   0   0   1   0   0   0   0   1   1   0   1   0
