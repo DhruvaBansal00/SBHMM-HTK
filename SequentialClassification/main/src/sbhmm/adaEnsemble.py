@@ -162,7 +162,7 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
         features = np.array(features)
         labels = np.array(labels)
 
-        classifier = KNeighborsClassifier(n_neighbors=5)
+        classifier = KNeighborsClassifier(n_neighbors=50)
         classifier.fit(features, labels)
 
     print("Classifier Training Completed")
