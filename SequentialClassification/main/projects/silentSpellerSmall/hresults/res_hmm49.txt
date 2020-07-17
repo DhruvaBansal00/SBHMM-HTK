@@ -1,0 +1,40 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/res_hmm49.mlf 
+Aligned transcription: data/htkSBHMMTest/Naoki.b_a_c_k.2289.lab vs data/htkSBHMMTest/Naoki.b_a_c_k.2289.rec
+ LAB: b a c k 
+ REC: b a n k 
+Aligned transcription: data/htkSBHMMTest/Naoki.a_n.456.lab vs data/htkSBHMMTest/Naoki.a_n.456.rec
+ LAB: a n   
+ REC: a n d 
+Aligned transcription: data/htkSBHMMTest/Naoki.a_m.686.lab vs data/htkSBHMMTest/Naoki.a_m.686.rec
+ LAB: a   m 
+ REC: a l l 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Fri Jul 17 21:23:56 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/res_hmm49.mlf                                  |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |   10  |  94.44   5.56   0.00   5.56  11.11  30.00 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   b   d   e   g   h   i   k   l   n   r   s   t 
+                                                         
+                                                         
+                                                          Del [ %c / %e]
+   a   5   0   0   0   0   0   0   0   0   0   0   0   0    0
+   b   0   7   0   0   0   0   0   0   0   0   0   0   0    0
+   c   0   0   0   0   0   0   0   0   0   1   0   0   0    0 [ 0.0/2.8]
+   d   0   0   1   0   0   0   0   0   0   0   0   0   0    0
+   e   0   0   0   6   0   0   0   0   0   0   0   0   0    0
+   g   0   0   0   0   1   0   0   0   0   0   0   0   0    0
+   h   0   0   0   0   0   1   0   0   0   0   0   0   0    0
+   i   0   0   0   0   0   0   2   0   0   0   0   0   0    0
+   k   0   0   0   0   0   0   0   1   0   0   0   0   0    0
+   l   0   0   0   0   0   0   0   0   2   0   0   0   0    0
+   m   0   0   0   0   0   0   0   0   1   0   0   0   0    0 [ 0.0/2.8]
+   n   0   0   0   0   0   0   0   0   0   2   0   0   0    0
+   r   0   0   0   0   0   0   0   0   0   0   2   0   0    0
+   s   0   0   0   0   0   0   0   0   0   0   0   2   0    0
+   t   0   0   0   0   0   0   0   0   0   0   0   0   2    0
+Ins    0   0   1   0   0   0   0   0   1   0   0   0   0
