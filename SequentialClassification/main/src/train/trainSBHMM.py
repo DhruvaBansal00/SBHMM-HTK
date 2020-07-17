@@ -68,7 +68,7 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
         resultFile = glob.glob('results/*.mlf')[-1]
 
         trainedClassifier = getClassifierFromStateAlignment(resultFile, arkFileLoc, include_state=include_state, 
-                        include_index=include_index, n_jobs=n_jobs, parallel=parallel)
+                        include_index=include_index, n_jobs=n_jobs, parallel=parallel, trainMultipleClassifiers=iters != 0)
         classifiers.append(trainedClassifier)
         
         arkFileSave = "data/arkSBHMM"+str(iters)+"/"
