@@ -1,4 +1,4 @@
-HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/res_hmm50.mlf 
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/res_hmm49.mlf 
 Aligned transcription: data/htkSBHMMTest/Naoki.m_e_t.340.lab vs data/htkSBHMMTest/Naoki.m_e_t.340.rec
  LAB: m e t 
  REC:   a t 
@@ -40,7 +40,7 @@ Aligned transcription: data/htkSBHMMTest/Naoki.b_u_t.1046.lab vs data/htkSBHMMTe
  REC: b   e 
 Aligned transcription: data/htkSBHMMTest/Naoki.p_e_e_k.582.lab vs data/htkSBHMMTest/Naoki.p_e_e_k.582.rec
  LAB:   p e e k 
- REC: m a k e   
+ REC: t a k e   
 Aligned transcription: data/htkSBHMMTest/Naoki.p_e_e_r_i_n_g.486.lab vs data/htkSBHMMTest/Naoki.p_e_e_r_i_n_g.486.rec
  LAB: p e e r i n g 
  REC:     b r i n g 
@@ -141,9 +141,9 @@ Aligned transcription: data/htkSBHMMTest/Naoki.a_s_k_e_d.2120.lab vs data/htkSBH
  LAB:   a s k e d 
  REC: p i c k e t 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Sat Jul 18 01:57:00 2020            |
+    | HTK Results Analysis at Sat Jul 18 03:59:54 2020            |
     | Ref: all_labels.mlf                                         |
-    | Rec: results/res_hmm50.mlf                                  |
+    | Rec: results/res_hmm49.mlf                                  |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
@@ -180,4 +180,4 @@ Aligned transcription: data/htkSBHMMTest/Naoki.a_s_k_e_d.2120.lab vs data/htkSBH
    x   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3   0   0    0
    y   0   1   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0  16   0    0 [84.2/0.2]
    z   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3    0
-Ins    1   0   1   2   4   1   0   1   1   0   0   0   2   0   2   2   0   0   1   4   0   0   1   0   0   0
+Ins    1   0   1   2   4   1   0   1   1   0   0   0   1   0   2   2   0   0   1   5   0   0   1   0   0   0
