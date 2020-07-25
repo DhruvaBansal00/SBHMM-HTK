@@ -40,7 +40,7 @@ def parse(res_file: str) -> list:
 	return phrases
 	
 
-def getClassifierFromStateAlignment(resultFile: str, arkFolder: str = "data/ark/", include_state: bool = True, include_index: bool = True, n_jobs=4, parallel=False) -> object:
+def getClassifierFromStateAlignment(resultFile: str, arkFolder: str = "data/ark/", include_state: bool = True, include_index: bool = True, n_jobs: int = 4, parallel: bool = False, trainMultipleClassifiers: bool = True) -> object:
 
 	curr_res_file = open(resultFile, "r")
 	curr_res_file.readline()
@@ -48,5 +48,5 @@ def getClassifierFromStateAlignment(resultFile: str, arkFolder: str = "data/ark/
 	phrases = parse(curr_res_file)
 
 	adaBoostedClassifier = AdaBoostedClassifierEnsemble(phrases, arkFolder, include_state, include_index, n_jobs=n_jobs, parallel=parallel,
-						trainMultipleClassifiers=True, random_state=42)
+						trainMultipleClassifiers=trainMultipleClassifiers, random_state=42)
 	return adaBoostedClassifier

@@ -1,5 +1,6 @@
 from .classes import State, Word, Phrase
 from sklearn.ensemble import AdaBoostClassifier
+from sklearn.neighbors import KNeighborsClassifier
 import sys
 from sklearn.utils import shuffle
 from joblib import Parallel, delayed
@@ -8,7 +9,7 @@ from src.prepare_data.ark_reader import read_ark_files
 import glob
 import numpy as np
 from tqdm import tqdm
-
+from sklearn.metrics import accuracy_score
 
     
 #structure -> word.name -> index -> state.name -> class
@@ -64,7 +65,6 @@ def dataSetReader(classLabels: dict, phrases: list, arkFileLoc: str, include_sta
     for phrase in phrases:
         currPhraseArk = arkFileLoc+phrase.name+".ark"
         content = read_ark_files(currPhraseArk)
-
         timeToFrame = content.shape[0]/phrase.end  ##aka frame rate
 
         for index, word in enumerate(phrase.words):
@@ -92,24 +92,52 @@ def getDataSetForTrainingClass(dataset: dict, currClass: int) -> (list, list):
             labels.extend([1 for i in range(dataset[classLabel].shape[0])])
         else:
             labels.extend([0 for i in range(dataset[classLabel].shape[0])])
-    
     return np.array(features), np.array(labels)
 
 
 def trainAdaboostClassifier(X, Y, seed):
     return AdaBoostClassifier(n_estimators=50, random_state=seed).fit(X, Y)
 
+def calculateClassifierAcc(classifier: object, dataset: dict, trainMultipleClassifiers: bool):
+    print("Calculating Classifier Accuracy")
+
+    labels = [classLabel for classLabel in dataset]
+    labels.sort()
+
+    X = []
+    Y = []
+    for label in labels:
+        for feature in dataset[label]:
+            X.append(feature)
+            Y.append(label)
+    
+    if trainMultipleClassifiers:
+        transformation = np.zeros((len(X), len(classifier)))
+        for i, unitClassifier in enumerate(classifier):
+            transformation[:, i] = unitClassifier.predict_log_proba(X)[:, 1]
+    
+    else:
+        transformation = classifier.predict_proba(X)
+    
+    predictions = np.argmax(transformation, axis=1)
+    score = accuracy_score(Y, predictions)
+    print("Classifier Accuracy is = " + str(score))
+    return X, Y
+
+
 def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, include_index: bool, n_jobs: int, 
                         parallel: bool, trainMultipleClassifiers: bool = True, random_state: int = 42) -> object:
+    np.set_printoptions(threshold=sys.maxsize)
     classLabels = getClassTree(phrases, include_state, include_index)
     dataset = dataSetReader(classLabels, phrases, arkFileLoc, include_state, include_index)
 
-    print("Training AdaBoosted Decision Tree Classifiers")
     classifier = []
 
     if trainMultipleClassifiers:
+        print("Training AdaBoosted Decision Tree Classifiers")
         if parallel:
             labels = [classLabel for classLabel in dataset]
+            labels.sort()
             for iteration in tqdm(range(0, len(labels), n_jobs)):
                 currLabels = [labels[i] for i in range(iteration, min(len(labels), iteration + n_jobs))]
                 classifier += Parallel(n_jobs=len(currLabels))(delayed(trainAdaboostClassifier)(getDataSetForTrainingClass(dataset, currLabel)[0],
@@ -118,34 +146,28 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
             classifer = [AdaBoostClassifier(n_estimators=50, random_state=random_state) for classLabel in dataset]
 
             for classLabel in tqdm(dataset):
-                # print("Training binary classifier for class " + str(classLabel))
                 X, Y = getDataSetForTrainingClass(dataset, classLabel)
                 X, Y = shuffle(X, Y, random_state=random_state)
-                classifer[classLabel].fit(X, Y)
-                # print("Classifier " + str(classLabel) + " accepted training score = " + str(classifer[classLabel].score(dataset[classLabel], 
-                # [1 for i in range(len(dataset[classLabel]))])))
-                # print("Number accepted = "+str(len(dataset[classLabel])))
-        
-        print("Classifier Training Completed")
+                classifer[classLabel].fit(X, Y)        
     else:
+        print("Training Master KNN Classifier")
         features = []
         labels = []
-        for classLabel in dataset:
+        classes = [i for i in dataset]
+        classes.sort()
+        for classLabel in classes:
             features.extend(dataset[classLabel])
             labels.extend([classLabel for i in range(dataset[classLabel].shape[0])])
         features = np.array(features)
         labels = np.array(labels)
 
-        classifier = AdaBoostClassifier(n_estimators=100, random_state=random_state)
+        classifier = KNeighborsClassifier(n_neighbors=50)
         classifier.fit(features, labels)
-        
-        for classLabel in dataset:
-            labelDataset = [classLabel for i in range(len(dataset[classLabel]))]
-            print(labelDataset)
-            # print("Classifier " + str(classLabel) + " accepted training score = " + str(classifier.score(dataset[classLabel], [classLabel for i in range(len(dataset[classLabel]))])))
-            # print("Number accepted = "+str(len(dataset[classLabel])))
 
-    
+    print("Classifier Training Completed")
+    # X, Y = calculateClassifierAcc(classifier, dataset, trainMultipleClassifiers)
+    # print("Train and Test Feature diff = " + str(features - X))
+    # print("Train and Test Labels diff = " + str(labels - Y))
     return classifier
     
 
@@ -160,20 +182,15 @@ class AdaBoostedClassifierEnsemble(object):
                         trainMultipleClassifiers=self.trainMultipleClassifiers, random_state=self.random_state)
     
     def callDecisionFunction(self, index, features):
-        return self.classifier[index].decision_function(features)
+        return self.classifier[index].predict_log_proba(features)[:, 1]
     
     def getTransformedFeatures(self, features, parallel, n_jobs):
 
         if self.trainMultipleClassifiers:
             transformation = []
-
-            if parallel:
-                transformation = Parallel(n_jobs=n_jobs)(delayed(self.callDecisionFunction)(i, features) for i in range(len(self.classifier)))
-            else:
-                transformation = np.zeros((features.shape[0], len(self.classifier)))
-                for i in range(len(self.classifier)):
-                    transformation[:, i] = self.classifier[i].decision_function(features).flatten()
-                
+            transformation = np.zeros((features.shape[0], len(self.classifier)))
+            for i in range(len(self.classifier)):
+                transformation[:, i] = self.callDecisionFunction(i, features)                
             return np.array(transformation)
         else:
-            raise NotImplementedError("This feature hasn't been implemented since accuracies are really low")
+            return self.classifier.predict_proba(features)
