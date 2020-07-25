@@ -65,7 +65,6 @@ def dataSetReader(classLabels: dict, phrases: list, arkFileLoc: str, include_sta
     for phrase in phrases:
         currPhraseArk = arkFileLoc+phrase.name+".ark"
         content = read_ark_files(currPhraseArk)
-
         timeToFrame = content.shape[0]/phrase.end  ##aka frame rate
 
         for index, word in enumerate(phrase.words):
