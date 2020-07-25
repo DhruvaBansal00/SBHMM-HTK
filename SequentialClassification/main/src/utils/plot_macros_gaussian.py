@@ -3,54 +3,55 @@ import numpy as np
 import math
 import argparse
 import os
+import shutil
 from get_confusion_matrix import get_confusion_matrix
+from json_data import load_json
 
 def gaussian(x, mu, var):
     """Calculates the output value y for a given guassian and input value x using the following formula:
-        f(x) = 1 / (sqrt(2 * PI * variance)) * E^(-((x - mu)^2 / (2 * variance))) 
+        f(x) = 1 / (sqrt(2 * PI * variance)) * E^(-((x - mu)^2 / (2 * variance))) .
 
     Parameters
     ----------
     x : float
-        The input x value to the function
+        The input x value to the function.
 
     mu : float
-        The mean of the guassian 
+        The mean of the guassian.
 
     var : float
-        The variance of the guassian
+        The variance of the guassian.
 
     Returns
     -------
     y : float
-        The output y value from the function defined above
+        The output y value from the function defined above.
 
     """
     return (1 / (np.sqrt(2 * np.pi * var))) * (np.power(np.e, -(np.power((x - mu), 2) / (2 * var))))
 
 
-def get_macros(feature_config_filepath, macros_filepath):
+def get_macros(feature_labels, macros_filepath):
     """Processes raw macros data extracted from HMMs and coverts the data into a dictionary macros_data:
-        [word][state_number][mixture_number][mean/variance/gconst/mixture_weight][if mean/var then feature label]
+        [word][state_number][mixture_number][mean/variance/gconst/mixture_weight][if mean/var then feature label].
 
     Parameters
     ----------
-    feature_config_filepath : str
-        File path to the feature config file that lists the features used  when testing and training the HMM
+    feature_labels : list of str
+        List of features from the feature config file used when testing and training the HMM.
 
     macros_filepath : str
-        File path to the corresponding newMacros result file that is generated from running HMM
+        File path to the corresponding newMacros result file that is generated from running HMM.
 
     Returns
     -------
     macros_data : dictionary
         The data extracted from the newMacros file in the following format:
-        [word][state_number][mixture_number][mean/variance/gconst/mixture_weight][if mean/variance then feature_label]
+        [word][state_number][mixture_number][mean/variance/gconst/mixture_weight][if mean/variance then feature_label].
 
     """
     macros_data = {}
     macro_lines = [ line.rstrip() for line in open(macros_filepath, "r") ]
-    feature_labels = [ feature_label.rstrip() for feature_label in open(feature_config_filepath) ]
 
     i = 0
     while i != len(macro_lines):
@@ -94,33 +95,31 @@ def get_macros(feature_config_filepath, macros_filepath):
             i += 1
     return macros_data
 
-def generate_graph(feature_config_filepath, macros_filepath, save_dir, words, feature_label):
-    """Generates a single graph consisting of guassian mixture model plot(s) for each word for each state
+def generate_graph(macros_data, save_dir, words, feature_label):
+    """Generates a single graph consisting of guassian mixture model plot(s) for each word for each state.
 
     Parameters
     ----------
-    feature_config_filepath : str
-        File path to the feature config file that lists the features used  when testing and training the HMM
-
-    macros_filepath : str
-        File path to the corresponding newMacros result file that is generated from running HMM
+    macros_data : dictionary
+        The data extracted from the newMacros file in the following format:
+        [word][state_number][mixture_number][mean/variance/gconst/mixture_weight][if mean/variance then feature_label].
 
     save_dir : str
-        The directory where the graph plots are saved
+        The directory where the graph plots are saved.
 
     words : list of str
-        A list of words that will be plotted on the same graph 
+        A list of words that will be plotted on the same graph.
 
     feature_label : str
-        The feature that the graph represents
+        The feature that the graph represents.
 
     Returns
     -------
     None
-        On success, a single graph is generated in the specified save directory
+        On success, a single graph is generated in the specified save directory.
 
     """
-    macros_data = get_macros(feature_config_filepath, macros_filepath)
+
     linestyles = ['-','--', ':', '-.']
     linecolors = ['b', 'g', 'r', 'c', 'm', 'y', 'k']
     words_str = ", ".join(words)
@@ -156,132 +155,181 @@ def generate_graph(feature_config_filepath, macros_filepath, save_dir, words, fe
             plt.plot(x, y, label="state {}, word {}".format(state, word), color=linecolors[color % 7], linestyle=linestyles[line % 4])
         
     plt.legend(loc="upper left")
-    ax.set_title('Word(s): {}. Feature: {}'.format(words_str, feature_label))    
+    ax.set_title('Word(s): {}. Feature: {}'.format(words_str, feature_label))   
+    ax.set_xlabel('x')
+    ax.set_ylabel('y') 
     ax.set_xlim([fig_min, fig_max])
 
     gaussian_peaks = np.array(gaussian_peaks)
-    #ax.set_ylim([0, min(gaussian_peaks.mean() + 2*gaussian_peaks.std(), np.amax(gaussian_peaks) + 1)])
+    ax.set_ylim([0, min(gaussian_peaks.mean() + gaussian_peaks.std(), np.amax(gaussian_peaks) + 1)])
 
     fig.savefig(save_dir + '/{}:{}.png'.format(words_str.replace(', ','_'), feature_label))
     plt.close(fig)
 
 
-def each_word_and_feature_graphs(feature_config_filepath, macros_filepath, save_dir, words, feature_labels):
+def each_word_and_feature_graphs(macros_data, save_dir, words, feature_labels):
     """Prebuilt function that generates a new graph for each pair combination (word, feature_label).
-        Each graph consists of guassian plot(s) for each state
+        Each graph consists of guassian plot(s) for each state.
 
     Parameters
     ----------
-    feature_config_filepath : str
-        File path to the feature config file that lists the features used  when testing and training the HMM
-
-    macros_filepath : str
-        File path to the corresponding newMacros result file that is generated from running HMM
+    macros_data : dictionary
+        The data extracted from the newMacros file in the following format:
+        [word][state_number][mixture_number][mean/variance/gconst/mixture_weight][if mean/variance then feature_label].
 
     save_dir : str
-        The directory where the graph plots are saved
+        The directory where the graph plots are saved.
 
-    words: list of str
-        A list of words which will each have its own graph
-        If empty list, then all words are utilized
+    words : list of str
+        A list of words which will each have its own graph.
 
     feature_labels : list of str
-        A list of features which will each have its own graph
-        If empty list, then all features are utilized
+        A list of features which will each have its own graph.
 
     Returns
     -------
     None
         On success, a graph for each unique combination of word and feature_label is generated in the specified save directory.
-        len(feature_labels) * len(words) graphs in total are generated
+        len(feature_labels) * len(words) graphs in total are generated.
 
     """
-    if not feature_labels:
-        feature_labels = [ feature_label.rstrip() for feature_label in open(feature_config_filepath) ]
-
-    if not words:
-        words = get_macros(feature_config_filepath, macros_filepath).keys()
 
     for word in words:
+        word_dir = os.path.join(save_dir, word)
+        if not os.path.exists(word_dir):
+            os.makedirs(word_dir)
         for feature_label in feature_labels:
-            if 'landmark' in feature_label and int(feature_label.split('_')[-2]) >= 1: continue
             print("graph for word {} for feature {}".format(word, feature_label))
-            generate_graph(feature_config_filepath, macros_filepath, save_dir, [word], feature_label)
+            generate_graph(macros_data, word_dir, [word], feature_label)
         
 
-def each_confused_word_and_feature_graphs(feature_config_filepath, macros_filepath, save_dir, feature_labels, confusion_matrix_filepath, threshold):
+def each_confused_word_and_feature_graphs(macros_data, save_dir, words, feature_labels, confusion_matrix_filepath, threshold):
     """Prebuilt function that finds pair of confused words that exceeds the threshold from the confusion matrix. 
-        Each pair of words for each feature_label generates a new graph. Each graph consists of guassian plot(s) for each state and both words
+        Each pair of words for each feature_label generates a new graph. Each graph consists of guassian plot(s) for each state and both words.
 
     Parameters
     ----------
-    feature_config_filepath : str
-        File path to the feature config file that lists the features used  when testing and training the HMM
-
-    macros_filepath : str
-        File path to the corresponding newMacros result file that is generated from running HMM
+    macros_data : dictionary
+        The data extracted from the newMacros file in the following format:
+        [word][state_number][mixture_number][mean/variance/gconst/mixture_weight][if mean/variance then feature_label].
 
     save_dir : str
-        The directory where the graph plots are saved
+        The directory where the graph plots are saved.
+
+    words : list of str
+        A list of words which will each have its own graph if two words are confused.
 
     feature_labels : list of str
-        A list of features which will each have its own graph
-        If empty list, then all features are utilized
+        A list of features which will each have its own graph.
     
     confusion_matrix_filepath : str
-        File path to the confusion matrix file that is generated from testing HMM
+        File path to the confusion matrix file that is generated from testing HMM.
 
     threshold : float
-        If the percentage of times a word is mislabeled exceeds the threshold, then the two words are confused (ground_truth, HMM classification)
+        If the percentage of times a word is mislabeled exceeds the threshold, then the two words are confused (ground_truth, HMM classification).
 
     Returns
     -------
     None
         On success, a graph for each unique pair of confused words and feature_label is generated in the specified save directory.
-        Depending on the threshold and confusion matrix, no graphs may be generated
+        Depending on the threshold and confusion matrix, no graphs may be generated.
 
     """
-    if not feature_labels:
-        feature_labels = [ feature_label.rstrip() for feature_label in open(feature_config_filepath) ]
 
-    # confusion_matrix_dict: [ground_truth_word (vertical_axis_of_confusion_matrix)][predicted_word (horizontal_axis_of_confusion_matrix)]
-    words = get_macros(feature_config_filepath, macros_filepath).keys()
+    # confusion_matrix_dict: [ground_truth_word (vertical_axis_of_confusion_matrix)][predicted_word (horizontal_axis_of_confusion_matrix)].
     confusion_matrix_dict = get_confusion_matrix(confusion_matrix_filepath)['matrix']
 
     for row in confusion_matrix_dict.keys():
         total = sum(confusion_matrix_dict[row].values())
-        if "Ins" in row or total == 0: continue
+        if not total: continue
 
         for col in confusion_matrix_dict[row]:
-            if not (row in col or col in row) and confusion_matrix_dict[row][col] / float(total) > float(threshold):
+            if not (row in col or col in row) and confusion_matrix_dict[row][col] / float(total) >= float(threshold):
                 row_word = None
                 col_word = None
                 for word in words:
                     if row in word: row_word = word
                     if col in word: col_word = word
+                
+                if not row_word or not col_word: continue
+
+                word_dir = os.path.join(save_dir, '_'.join([row_word, col_word]))
+                if not os.path.exists(word_dir):
+                    os.makedirs(word_dir)    
+
                 for feature_label in feature_labels:
                     print("graph for confused words ({}, {}) for feature {}".format(row_word, col_word, feature_label))
-                    generate_graph(feature_config_filepath, macros_filepath, save_dir, [row_word, col_word], feature_label)
+                    generate_graph(macros_data, word_dir, [row_word, col_word], feature_label)
 
-def plot_macros_gaussian(feature_config_filepath, macros_filepath, save_dir, words, feature_labels, confusion_matrix_filepath, threshold, mode):
+def plot_macros_gaussian(feature_config_filepath, feature_config_key, macros_filepath, save_dir, words, feature_labels, confusion_matrix_filepath, threshold, mode):
+    """Function that preprocesses the macros data. Furthermore, calls one of two prebuilt functions depending on the mode to generate Gaussians for the newMacros data.
 
+    Parameters
+    ----------
+    feature_config_filepath : str
+        File path to the feature config file that consists of a json dictionary with different lists of features.
+
+    feature_config_key : str
+        The features that were selected from the feature_config_filepath when testing and training the HMM.
+
+    macros_filepath : str
+        File path to the corresponding newMacros result file that is generated from running HMM.
+
+    save_dir : str
+        The directory where the graph plots will be saved too.
+
+    words : list of str
+        A list of sign words to use when plotting data.
+        If empty list, then all words from the newMacros file are utilized.
+
+    feature_labels : list of str
+        A list of features to use when plotting data.
+        If empty list, then all feature labels from feature_config are utilized.
+    
+    confusion_matrix_filepath : str
+        File path to the confusion matrix file that is generated from testing HMM.
+
+    threshold : float
+        If the percentage of times a word is mislabeled exceeds the threshold, then the two words are confused (ground truth, HMM predicted classification).
+
+    mode : int
+        If mode == 0, then plot each word and each feature seperately.
+        If mode == 1, then plot each confused pair of words together for each feature.
+
+    Returns
+    -------
+    None
+        On success, various graph(s) of gaussians are generated. Depending on the parameters, no graphs may be generated.
+
+    """
     gaussian_dir = os.path.join(save_dir, 'visualization', 'gaussian', str(mode))
-    if not os.path.exists(gaussian_dir):
-        os.makedirs(gaussian_dir)
+    if os.path.exists(gaussian_dir):
+        shutil.rmtree(gaussian_dir)
+    os.makedirs(gaussian_dir)
+
+    all_features = load_json(feature_config_filepath)[str(feature_config_key)]
+    macros_data = get_macros(all_features, macros_filepath)
+
+    if not feature_labels:
+        feature_labels = all_features
+
+    if not words:
+        words = macros_data.keys()
 
     if mode == 0:
-        each_word_and_feature_graphs(feature_config_filepath, macros_filepath, gaussian_dir, words, feature_labels)
+        each_word_and_feature_graphs(macros_data, gaussian_dir, words, feature_labels)
     elif mode == 1:
-        each_confused_word_and_feature_graphs(feature_config_filepath, macros_filepath, gaussian_dir, feature_labels, confusion_matrix_filepath, threshold)
+        each_confused_word_and_feature_graphs(macros_data, gaussian_dir, words, feature_labels, confusion_matrix_filepath, threshold)
 
 if __name__=='__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--feature_config_filepath', default = '/home/thad/copycat/copycat-ml/main/projects/prerna_20-03-25/configs/features.config')
-    parser.add_argument('--macros_filepath', default = '/home/thad/copycat/copycat-ml/main/projects/prerna_20-03-25/models/hmm45/newMacros')
-    parser.add_argument('--save_dir', default = '/home/thad/copycat/copycat-ml/main/projects/prerna_20-03-25/')
-    parser.add_argument('--words', default = [])
-    parser.add_argument('--feature_labels', default = [])
-    parser.add_argument('--confusion_matrix_filepath', default = '/home/thad/copycat/copycat-ml/main/projects/prerna_20-03-25/hresults/res_hmm45.txt')
+    parser.add_argument('--feature_config_filepath', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs/configs/features.json')
+    parser.add_argument('--feature_config_key', type = str, default = 'selected_features')
+    parser.add_argument('--macros_filepath', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs/models/hmm80/newMacros')
+    parser.add_argument('--save_dir', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs/')
+    parser.add_argument('--words', nargs='*', type = str, default = [])
+    parser.add_argument('--feature_labels', nargs='*', type = str, default = [])
+    parser.add_argument('--confusion_matrix_filepath', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs/hresults/res_hmm80.txt')
     parser.add_argument('--threshold', type = float, default = 0.05)
     parser.add_argument('--mode', type = int, default = 0)
     args = parser.parse_args()
@@ -291,31 +339,35 @@ if __name__=='__main__':
     Parameters
     ----------
     feature_config_filepath : str
-        File path to the feature config file that lists the features used  when testing and training the HMM
+        File path to the feature config file that consists of a json dictionary with different lists of features.
+
+    feature_config_key : str
+        The features that were selected from the feature_config_filepath when testing and training the HMM.
 
     macros_filepath : str
-        File path to the corresponding newMacros result file that is generated from running HMM
+        File path to the corresponding newMacros result file that is generated from running HMM.
 
     save_dir : str
-    	The directory where the graph plots are saved
+        The directory where the graph plots will be saved too.
 
-	words: list of str
-		A list of words which will each have its own graph
-		If empty list, then all words are utilized
+    words : list of str
+        A list of sign words to use when plotting data.
+        If empty list, then all words from the newMacros file are utilized.
 
-   	feature_labels : list of str
-   		A list of features which will each have its own graph
-   		If empty list, then all features are utilized
+    feature_labels : list of str
+        A list of features to use when plotting data.
+        If empty list, then all feature labels from feature_config are utilized.
 
-   	confusion_matrix_filepath : str
-   		File path to the confusion matrix file that is generated from testing HMM
+    confusion_matrix_filepath : str
+        File path to the confusion matrix file that is generated from testing HMM.
 
-   	threshold : float
-   		If the percentage of times a word is mislabeled exceeds the threshold, then the two words are confused (ground_truth, HMM classification)
+    threshold : float
+        If the percentage of times a word is mislabeled exceeds the threshold, then the two words are confused (ground truth, HMM predicted classification).
 
-   	mode : int
-   		If mode == 0, then plot each word and each feature seperately
-   		If mode == 1, then plot each confused pair of words together for each feature
+    mode : int
+        If mode == 0, then plot each word and each feature seperately.
+        If mode == 1, then plot each confused pair of words together for each feature.
 
     """
-    plot_macros_gaussian(args.feature_config_filepath, args.macros_filepath, args.save_dir, args.words, args.feature_labels, args.confusion_matrix_filepath, args.threshold, args.mode)
+
+    plot_macros_gaussian(args.feature_config_filepath, args.feature_config_key, args.macros_filepath, args.save_dir, args.words, args.feature_labels, args.confusion_matrix_filepath, args.threshold, args.mode)
