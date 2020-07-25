@@ -92,6 +92,6 @@ def createMLF(htk_dir: str, mlf_file: str) -> None:
 
 if __name__ == "__main__":
 
-    createArk('/home/dhruva/Desktop/CopyCat/SilentSpeller/PCA/naoki_pca/16/*', '/home/dhruva/Desktop/CopyCat/SilentSpeller/PCA/naoki_pca/label/*', "/home/dhruva/Desktop/CopyCat/SilentSpeller/data/ark/")
+    createArk('/home/dhruva/Desktop/CopyCat/SilentSpeller/gt2k_2328_16/data/*', '/home/dhruva/Desktop/CopyCat/SilentSpeller/gt2k_2328_16/label/*', "/home/dhruva/Desktop/CopyCat/SilentSpeller/data/ark/")
     createHTK('/home/dhruva/Desktop/CopyCat/SilentSpeller/data/ark/*', '/home/dhruva/Desktop/CopyCat/SilentSpeller/data/htk/')
     createMLF('/home/dhruva/Desktop/CopyCat/SilentSpeller/data/htk/*', '/home/dhruva/Desktop/CopyCat/SilentSpeller/all_labels.mlf')
