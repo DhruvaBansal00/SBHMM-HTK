@@ -2,10 +2,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 import argparse
+import json
 import os
 from get_confusion_matrix import get_confusion_matrix
 from plot_macros_gaussian import get_macros
 from json_data import load_json
+from scipy.integrate import quad
 
 
 def gaussian(x, mu, var):
@@ -31,7 +33,19 @@ def gaussian(x, mu, var):
     """
     return (1 / (np.sqrt(2 * np.pi * var))) * (np.power(np.e, -(np.power((x - mu), 2) / (2 * var))))
 
-def calculate_bhattacharyya_distance(macros_data, save_dir, words, feature_label):
+def integrand(x, mu_list1, var_list1, weight_list1, mu_list2, var_list2, weight_list2):
+    gaussian_sum1 = 0
+    for i in range(len(mu_list1)):
+        gaussian_sum1 += weight_list1[i] * gaussian(x, mu_list1[i], var_list1[i])
+    gaussian_sum2 = 0
+    for i in range(len(mu_list1)):
+        gaussian_sum2 += weight_list2[i] * gaussian(x, mu_list2[i], var_list2[i])
+    return np.power(gaussian_sum1 * gaussian_sum2, 0.5)
+
+def bhattacharyya(integrand, mu_list1, var_list1, weight_list1, mu_list2, var_list2, weight_list2, lower, upper):
+    return quad(integrand, lower, upper, args=(mu_list1, var_list1, weight_list1, mu_list2, var_list2, weight_list2))
+
+def calculate_bhattacharyya_distance(macros_data, words, feature_label):
     """Calculates the Bhattacharyya Distance for a specific feature label of the two confused words.
     Compares mixture gaussian model of (word[0] feature_label state_number_i) with (word[1] feature_label state_number_i) for each i in range(num_states).
 
@@ -42,9 +56,6 @@ def calculate_bhattacharyya_distance(macros_data, save_dir, words, feature_label
         The data extracted from the newMacros file in the following format:
         [word][state_number][mixture_number][mean/variance/gconst/mixture_weight][if mean/variance then feature_label].
 
-    save_dir : str
-        The directory where the file with Bhattacharyya distances will be saved too.
-
     words : list of str
         A list of filtered sign words to generate data on (if some pair of words exceed the threshold).
 
@@ -53,12 +64,30 @@ def calculate_bhattacharyya_distance(macros_data, save_dir, words, feature_label
 
     Returns
     -------
-    bhattacharyya_distance : float
-        The output bhattacharyya_distance value for the specific feature label of the two confused words.
+    bhatt_dist_list : list of float
+        The output bhattacharyya distance values for the specific feature label of the two confused words for each state.
 
     """
 
-def find_confused_word(macros_data, save_dir, words, feature_labels, confusion_matrix_filepath, threshold):
+    bhatt_dist_list = []
+
+    for state in range(2, min(len(macros_data[words[0]]), len(macros_data[words[1]])) + 2):
+        mu_list1 = [ macros_data[words[0]][state][mix]['mean'][feature_label] for mix in macros_data[words[0]][state].keys() ]
+        var_list1 = [ macros_data[words[0]][state][mix]['variance'][feature_label] for mix in macros_data[words[0]][state].keys() ]
+        weight_list1 = [ macros_data[words[0]][state][mix]['mixture_weight'] for mix in macros_data[words[0]][state].keys() ]
+
+        mu_list2 = [ macros_data[words[1]][state][mix]['mean'][feature_label] for mix in macros_data[words[1]][state].keys() ]
+        var_list2 = [ macros_data[words[1]][state][mix]['variance'][feature_label] for mix in macros_data[words[1]][state].keys() ]
+        weight_list2 = [ macros_data[words[1]][state][mix]['mixture_weight'] for mix in macros_data[words[1]][state].keys() ]
+
+        #print(var_list1)
+        bhatt_dist_value = bhattacharyya(integrand, mu_list1, var_list1, weight_list1, mu_list2, var_list2, weight_list2, -20.0, 20.0)[0]
+        bhatt_dist_value = round(bhatt_dist_value, 3)
+        bhatt_dist_list.append(bhatt_dist_value)
+
+    return bhatt_dist_list
+
+def find_confused_word(macros_data, words, feature_labels, confusion_matrix_filepath, threshold):
     """Prebuilt function that finds pair of confused words that exceeds the threshold from the confusion matrix
         and calls calculate_bhattacharyya_distance on all the feature labels. 
 
@@ -67,9 +96,6 @@ def find_confused_word(macros_data, save_dir, words, feature_labels, confusion_m
     macros_data : dictionary
         The data extracted from the newMacros file in the following format:
         [word][state_number][mixture_number][mean/variance/gconst/mixture_weight][if mean/variance then feature_label].
-
-    save_dir : str
-        The directory where the file with Bhattacharyya distances will be saved too.
 
     words : list of str
         A list of filtered sign words to generate data on (if some pair of words exceed the threshold).
@@ -85,14 +111,17 @@ def find_confused_word(macros_data, save_dir, words, feature_labels, confusion_m
 
     Returns
     -------
-    None
-        On success, a file with the Bhattacharyya Distance for each unique pair of confused words and feature_label is generated in the specified save directory.
-        Depending on the threshold and confusion matrix, the file may be empty.
+    bhatt_dist_dict : dictionary
+        The dictionary for all confused words for the specific feature label for each state.
+        Depending on the threshold and confusion matrix, the dictionary may be empty.
+        [str(word[0]_word[1])][feature_label][state_number/average].
 
     """
 
     # confusion_matrix_dict: [ground_truth_word (vertical_axis_of_confusion_matrix)][predicted_word (horizontal_axis_of_confusion_matrix)].
     confusion_matrix_dict = get_confusion_matrix(confusion_matrix_filepath)['matrix']
+
+    bhatt_dist_dict = {}
 
     for row in confusion_matrix_dict.keys():
         total = sum(confusion_matrix_dict[row].values())
@@ -105,16 +134,24 @@ def find_confused_word(macros_data, save_dir, words, feature_labels, confusion_m
                 for word in words:
                     if row in word: row_word = word
                     if col in word: col_word = word
-                
+
                 if not row_word or not col_word: continue
 
-                word_dir = os.path.join(save_dir, '_'.join([row_word, col_word]))
-                if not os.path.exists(word_dir):
-                    os.makedirs(word_dir)    
+                confused_words = '_'.join([row_word, col_word]) 
+
+                bhatt_dist_dict[confused_words] = {}
 
                 for feature_label in feature_labels:
                     print("Bhattacharyya Distance for confused words ({}, {}) for feature {}".format(row_word, col_word, feature_label))
-                    calculate_bhattacharyya_distance(macros_data, word_dir, [row_word, col_word], feature_label)
+                    bhatt_dist_dict[confused_words][feature_label] = {}
+                    bhatt_dist_list = calculate_bhattacharyya_distance(macros_data, [row_word, col_word], feature_label)
+
+                    for state_num, bhatt_dist in enumerate(bhatt_dist_list): 
+                        bhatt_dist_dict[confused_words][feature_label][state_num + 2] = bhatt_dist
+
+                    bhatt_dist_dict[confused_words][feature_label]['average'] = round(sum(bhatt_dist_list) / float(len(bhatt_dist_list)), 3)
+
+    return bhatt_dist_dict
 
 def bhattacharyya_distance(feature_config_filepath, feature_config_key, macros_filepath, save_dir, words, feature_labels, confusion_matrix_filepath, threshold, mode):
     """Function that calculates Bhattacharyya Distance using newMacros data.
@@ -159,10 +196,9 @@ def bhattacharyya_distance(feature_config_filepath, feature_config_key, macros_f
         On success, generates a file that consists of good features from the Bhattacharyya Distance.
 
     """
-    # gaussian_dir = os.path.join(save_dir, 'visualization', 'gaussian', str(mode))
-    # if os.path.exists(gaussian_dir):
-    #     shutil.rmtree(gaussian_dir)
-    # os.makedirs(gaussian_dir)
+    gaussian_dir = os.path.join(save_dir, 'visualization', 'gaussian', '1')
+    if not os.path.exists(gaussian_dir):
+        os.makedirs(gaussian_dir)
 
     all_features = load_json(feature_config_filepath)[str(feature_config_key)]
     macros_data = get_macros(all_features, macros_filepath)
@@ -173,7 +209,39 @@ def bhattacharyya_distance(feature_config_filepath, feature_config_key, macros_f
     if not words:
         words = macros_data.keys()
 
-    find_confused_word(feature_config_filepath, macros_filepath, gaussian_dir, feature_labels, confusion_matrix_filepath, threshold)
+    bhatt_dist_dict = find_confused_word(macros_data, words, feature_labels, confusion_matrix_filepath, threshold)
+
+    feature_dict = {}
+
+    for feature_label in feature_labels:
+        total = 0
+        print(feature_label)
+        for confused_word in bhatt_dist_dict.keys():
+            print(confused_word)
+            total += bhatt_dist_dict[confused_word][feature_label]['average']
+        print(total, len(bhatt_dist_dict.keys()))
+        if not total: continue
+        feature_dict[feature_label] = round(total / float(len(bhatt_dist_dict.keys())), 3)
+
+
+    confused_word_dict = {}
+
+    for confused_word in bhatt_dist_dict.keys():
+        confused_word_dict[confused_word] = sorted(bhatt_dist_dict[confused_word].items(), key = lambda kv:(kv[1]['average'], kv[0]))
+    print(confused_word_dict)
+
+    bhatt_dist_dict = confused_word_dict
+    bhatt_dist_dict['features'] = feature_dict
+    bhatt_dist_dict['features'] = sorted(bhatt_dist_dict['features'].items(), key = lambda kv:(kv[1], kv[0]))
+
+
+
+    # write the bhatt score to a file in the respective directory
+    bhatt_filepath = os.path.join(gaussian_dir, "bhatt_dist.json")
+    with open(bhatt_filepath, "w") as file:
+        file.write(json.dumps(bhatt_dist_dict, indent=4)) 
+
+    #print(bhatt_dist_dict)
 
 if __name__=='__main__':
     parser = argparse.ArgumentParser()
@@ -184,7 +252,7 @@ if __name__=='__main__':
     parser.add_argument('--words', nargs='*', type = str, default = [])
     parser.add_argument('--feature_labels', nargs='*', type = str, default = [])
     parser.add_argument('--confusion_matrix_filepath', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs/hresults/res_hmm80.txt')
-    parser.add_argument('--threshold', type = float, default = 0.05)
+    parser.add_argument('--threshold', type = float, default = 0.1)
     parser.add_argument('--mode', type = int, default = 0)
     args = parser.parse_args()
 
