@@ -79,8 +79,8 @@ def _add_delta_col(df: pd.DataFrame, col: str) -> pd.DataFrame:
 
 def select_features(input_filepath: str, features_to_extract: list,
                     interpolation_method: str = 'spline', order: int = 3,
-                    center_on_face: bool = True, is_2d: bool = True,
-                    scale: int = 10) -> pd.DataFrame:
+                    center_on_face: bool = False, is_2d: bool = True,
+                    scale: int = 100) -> pd.DataFrame:
     """Processes raw features extracted from MediaPipe/Kinect, and
     selects the specified features for use during training of HMMs.
 

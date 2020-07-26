@@ -205,7 +205,31 @@
         "horizontal_hand_dist", 
         "vertical_hand_dist", 
         "delta_horizontal_hand_dist", 
-        "delta_vertical_hand_dist"
+        "delta_vertical_hand_dist",
+        "delta_left_landmark_4_x",
+        "delta_left_landmark_4_y",
+        "delta_left_landmark_6_x",
+        "delta_left_landmark_6_y",
+        "delta_left_landmark_8_x",
+        "delta_left_landmark_8_y",
+        "left_landmark_16_x",
+        "left_landmark_16_y",
+        "left_landmark_18_x",
+        "left_landmark_18_y",
+        "left_landmark_20_x",
+        "left_landmark_20_y",
+        "delta_right_landmark_0_x",
+        "delta_right_landmark_0_y",
+        "delta_right_landmark_1_x",
+        "delta_right_landmark_1_y",
+        "delta_right_landmark_2_x",
+        "delta_right_landmark_2_y",
+        "right_landmark_7_x",
+        "right_landmark_7_y",
+        "right_landmark_9_x",
+        "right_landmark_9_y",
+        "right_landmark_11_x",
+        "right_landmark_11_y"
     ],
-    "features_dir": "data/ark/*.ark"
+    "features_dir": "/home/dhruva/Desktop/CopyCat/July_Mediapipe_Features/*/*/*.data"
 }

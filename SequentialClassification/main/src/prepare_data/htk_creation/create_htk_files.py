@@ -7,6 +7,7 @@ create_htk_files
 import os
 import glob
 import shutil
+import tqdm
 
 
 
@@ -20,7 +21,7 @@ def create_htk_files(htk_dir: str = os.path.join('data', 'htk'), ark_dir: str = 
 
     ark_files = glob.glob(ark_dir)
 
-    for ark_file in ark_files:
+    for ark_file in tqdm.tqdm(ark_files):
         
         kaldi_command = (f'~/kaldi/src/featbin/copy-feats-to-htk '
                          f'--output-dir={htk_dir} '
