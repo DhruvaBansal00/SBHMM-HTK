@@ -126,7 +126,7 @@ def calculateClassifierAcc(classifier: object, dataset: dict, trainMultipleClass
 
 
 def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, include_index: bool, n_jobs: int, 
-                        parallel: bool, trainMultipleClassifiers: bool = True, random_state: int = 42) -> object:
+                        parallel: bool, knn_neighbors: int, trainMultipleClassifiers: bool = True, random_state: int = 42) -> object:
     np.set_printoptions(threshold=sys.maxsize)
     classLabels = getClassTree(phrases, include_state, include_index)
     dataset = dataSetReader(classLabels, phrases, arkFileLoc, include_state, include_index)
@@ -161,7 +161,7 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
         features = np.array(features)
         labels = np.array(labels)
 
-        classifier = KNeighborsClassifier(n_neighbors=50)
+        classifier = KNeighborsClassifier(n_neighbors=knn_neighbors)
         classifier.fit(features, labels)
 
     print("Classifier Training Completed")
@@ -173,13 +173,13 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
 
 class ClassifierTransformer(object):
     
-    def __init__(self, phrases, arkFileLoc, include_state, include_index, n_jobs, parallel, trainMultipleClassifiers=True, random_state=42):
+    def __init__(self, phrases, arkFileLoc, include_state, include_index, n_jobs, parallel, knn_neighbors, trainMultipleClassifiers=True, random_state=42):
         self.phrases = phrases
         self.trainMultipleClassifiers = trainMultipleClassifiers
         self.random_state = random_state
 
         self.classifier = getTrainedClassifier(self.phrases, arkFileLoc, include_state, include_index, n_jobs=n_jobs, parallel=parallel,
-                        trainMultipleClassifiers=self.trainMultipleClassifiers, random_state=self.random_state)
+                        knn_neighbors=knn_neighbors, trainMultipleClassifiers=self.trainMultipleClassifiers, random_state=self.random_state)
     
     def callDecisionFunction(self, index, features):
         return self.classifier[index].predict_log_proba(features)[:, 1]

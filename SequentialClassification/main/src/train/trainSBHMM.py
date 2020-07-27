@@ -44,7 +44,7 @@ def createNewArkFile(arkFile: str, trainedClassifier: object, pca_components: in
 def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: float, 
             transition_prob: float, device: int, pca_components: int, sbhmm_iters: list, 
             include_state: bool, include_index: bool, no_pca: bool, hmm_insertion_penalty: float, sbhmm_insertion_penalty: float,
-            n_jobs: int, parallel: bool, trainMultipleClassifiers: bool) -> None:
+            n_jobs: int, parallel: bool, trainMultipleClassifiers: bool, knn_neighbors: int, beam_threshold: float) -> object:
     """Trains the SBHMM using HTK. First completes a loop of
     training HMM as usual. Then completes as many iterations of 
     KNN + HMM training as specified.
@@ -64,11 +64,12 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
     classifiers = []
 
     for iters in range(sbhmm_cycles):
-        test(-2, -1, "alignment", hmm_insertion_penalty if iters == 0 else sbhmm_insertion_penalty) #Save state alignments for each phrase in the results folder
+        test(-2, -1, "alignment", hmm_insertion_penalty if iters == 0 else sbhmm_insertion_penalty, beam_threshold=beam_threshold) #Save state alignments for each phrase in the results folder
         resultFile = glob.glob('results/*.mlf')[-1]
 
         trainedClassifier = getClassifierFromStateAlignment(resultFile, arkFileLoc, include_state=include_state, 
-                        include_index=include_index, n_jobs=n_jobs, parallel=parallel, trainMultipleClassifiers=trainMultipleClassifiers)
+                        include_index=include_index, n_jobs=n_jobs, parallel=parallel, trainMultipleClassifiers=trainMultipleClassifiers,
+                        knn_neighbors=knn_neighbors)
         classifiers.append(trainedClassifier)
         
         arkFileSave = "data/arkSBHMM"+str(iters)+"/"
