@@ -1,6 +1,6 @@
 """Main file used to prepare training data, train, and test HMMs.
-    HMM EX = python3 main.py --test_type standard --train_iters 25 50 --users Naoki
-    SBHMM EX = python3 main.py --test_type standard --train_iters 25 50 --sbhmm_iters 25 50 --users Naoki --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -70 --sbhmm_insertion_penalty -115
+    HMM EX = python3 main.py --test_type standard --train_iters 25 50 --users Linda Prerna
+    SBHMM EX = python3 main.py --test_type standard --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Linda Prerna --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -70 --sbhmm_insertion_penalty -115
 """
 import sys
 import glob

@@ -56,7 +56,7 @@ def getClassTree(phrases: list, include_state: bool, include_index: bool) -> dic
                             currClass += 1         
 
             index += 1
-
+    
     print("Total classes = " + str(currClass))
     return wordToDict
 
