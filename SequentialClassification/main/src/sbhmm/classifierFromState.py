@@ -1,5 +1,5 @@
 from .classes import State, Word, Phrase
-from .adaEnsemble import AdaBoostedClassifierEnsemble
+from .boostingClassifiers import ClassifierTransformer
 
 #get phrase assumes that the readline will return the path to the current phrase
 def getPhrase(res_file: str) -> Phrase:
@@ -47,6 +47,6 @@ def getClassifierFromStateAlignment(resultFile: str, arkFolder: str = "data/ark/
 
 	phrases = parse(curr_res_file)
 
-	adaBoostedClassifier = AdaBoostedClassifierEnsemble(phrases, arkFolder, include_state, include_index, n_jobs=n_jobs, parallel=parallel,
+	classifierTransformer = ClassifierTransformer(phrases, arkFolder, include_state, include_index, n_jobs=n_jobs, parallel=parallel,
 						trainMultipleClassifiers=trainMultipleClassifiers, random_state=42)
-	return adaBoostedClassifier
+	return classifierTransformer

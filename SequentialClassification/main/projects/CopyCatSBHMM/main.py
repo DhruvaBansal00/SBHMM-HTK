@@ -63,11 +63,14 @@ if __name__ == '__main__':
     parser.add_argument('--parallel_classifier_training', action='store_true')
     parser.add_argument('--parallel_jobs', default=4, type=int)
     parser.add_argument('--sbhmm_insertion_penalty', default=-10)
+    parser.add_argument('--neighbors', default=50)
+    parser.add_argument('--multiple_classifiers', action='store_true')
 
     #Arguments for testing
     parser.add_argument('--start', type=int, default=-2)
     parser.add_argument('--end', type=int, default=-1)
     parser.add_argument('--method', default='recognition')
+    parser.add_argument('--beam_threshold', default=2000)
     
     args = parser.parse_args()
     ########################################################################################
@@ -105,7 +108,8 @@ if __name__ == '__main__':
         if args.train_sbhmm:
             classifiers = trainSBHMM(args.sbhmm_cycles, args.train_iters, args.mean, args.variance, args.transition_prob, args.device, 
                         args.pca_components, args.sbhmm_iters, args.include_word_level_states, args.include_word_position, args.no_pca, 
-                        args.hmm_insertion_penalty, args.sbhmm_insertion_penalty, args.parallel_jobs, args.parallel_classifier_training)
+                        args.hmm_insertion_penalty, args.sbhmm_insertion_penalty, args.parallel_jobs, args.parallel_classifier_training,
+                        args.multiple_classifiers)
             testSBHMM(args.start, args.end, args.method, classifiers, args.pca_components, args.no_pca, args.sbhmm_insertion_penalty,
                     args.parallel_jobs, args.parallel_classifier_training)
         else:

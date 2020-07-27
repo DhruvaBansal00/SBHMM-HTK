@@ -171,7 +171,7 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
     return classifier
     
 
-class AdaBoostedClassifierEnsemble(object):
+class ClassifierTransformer(object):
     
     def __init__(self, phrases, arkFileLoc, include_state, include_index, n_jobs, parallel, trainMultipleClassifiers=True, random_state=42):
         self.phrases = phrases
