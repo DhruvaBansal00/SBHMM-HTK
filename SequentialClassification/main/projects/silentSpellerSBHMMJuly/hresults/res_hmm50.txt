@@ -1,0 +1,138 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/res_hmm50.mlf 
+Aligned transcription: data/htkSBHMMTest/Naoki.t_o_o.1715.lab vs data/htkSBHMMTest/Naoki.t_o_o.1715.rec
+ LAB: t o o 
+ REC: t   o 
+Aligned transcription: data/htkSBHMMTest/Naoki.t_o_p.2225.lab vs data/htkSBHMMTest/Naoki.t_o_p.2225.rec
+ LAB:   t o   p 
+ REC: d r o v e 
+Aligned transcription: data/htkSBHMMTest/Naoki.d_a_t_e.1045.lab vs data/htkSBHMMTest/Naoki.d_a_t_e.1045.rec
+ LAB: d a t   e 
+ REC:     t h e 
+Aligned transcription: data/htkSBHMMTest/Naoki.a_g_r_e_e.2305.lab vs data/htkSBHMMTest/Naoki.a_g_r_e_e.2305.rec
+ LAB: a g r e e 
+ REC: h e r   e 
+Aligned transcription: data/htkSBHMMTest/Naoki.r_o_a_d_s.2023.lab vs data/htkSBHMMTest/Naoki.r_o_a_d_s.2023.rec
+ LAB: r o a d s 
+ REC: r i s e s 
+Aligned transcription: data/htkSBHMMTest/Naoki.f_o_x.1285.lab vs data/htkSBHMMTest/Naoki.f_o_x.1285.rec
+ LAB: f o x 
+ REC: s i x 
+Aligned transcription: data/htkSBHMMTest/Naoki.g_i_v_e.1888.lab vs data/htkSBHMMTest/Naoki.g_i_v_e.1888.rec
+ LAB: g i v e 
+ REC: g a m e 
+Aligned transcription: data/htkSBHMMTest/Naoki.t_e_a_c_h_i_n_g.19.lab vs data/htkSBHMMTest/Naoki.t_e_a_c_h_i_n_g.19.rec
+ LAB: t e a c h i n g 
+ REC:   d a s h i n g 
+Aligned transcription: data/htkSBHMMTest/Naoki.a_d_u_l_t.511.lab vs data/htkSBHMMTest/Naoki.a_d_u_l_t.511.rec
+ LAB: a d u l t 
+ REC:   h o l d 
+Aligned transcription: data/htkSBHMMTest/Naoki.p_l_a_y.48.lab vs data/htkSBHMMTest/Naoki.p_l_a_y.48.rec
+ LAB: p l a y 
+ REC: p   a y 
+Aligned transcription: data/htkSBHMMTest/Naoki.t_o_e_s.1051.lab vs data/htkSBHMMTest/Naoki.t_o_e_s.1051.rec
+ LAB: t o e s 
+ REC: d o e s 
+Aligned transcription: data/htkSBHMMTest/Naoki.d_o_w.573.lab vs data/htkSBHMMTest/Naoki.d_o_w.573.rec
+ LAB:   d o w       
+ REC: g r o w i n g 
+Aligned transcription: data/htkSBHMMTest/Naoki.a_n.574.lab vs data/htkSBHMMTest/Naoki.a_n.574.rec
+ LAB: a n   
+ REC: e n d 
+Aligned transcription: data/htkSBHMMTest/Naoki.w_o_r_e.1492.lab vs data/htkSBHMMTest/Naoki.w_o_r_e.1492.rec
+ LAB: w   o r e 
+ REC: w h e r e 
+Aligned transcription: data/htkSBHMMTest/Naoki.a_g_e_s.588.lab vs data/htkSBHMMTest/Naoki.a_g_e_s.588.rec
+ LAB: a g e   s 
+ REC: s h e d s 
+Aligned transcription: data/htkSBHMMTest/Naoki.s_u_b_u_r_b_s.1558.lab vs data/htkSBHMMTest/Naoki.s_u_b_u_r_b_s.1558.rec
+ LAB: s u b u r b s 
+ REC:   c o u r t s 
+Aligned transcription: data/htkSBHMMTest/Naoki.f_r_e_u_d.411.lab vs data/htkSBHMMTest/Naoki.f_r_e_u_d.411.rec
+ LAB: f r e u d 
+ REC:   r e   d 
+Aligned transcription: data/htkSBHMMTest/Naoki.d_o_o_r.1380.lab vs data/htkSBHMMTest/Naoki.d_o_o_r.1380.rec
+ LAB: d o o r   
+ REC:     t r y 
+Aligned transcription: data/htkSBHMMTest/Naoki.d_i_r_e_c_t_i_o_n.204.lab vs data/htkSBHMMTest/Naoki.d_i_r_e_c_t_i_o_n.204.rec
+ LAB:   d i r e c t i o n 
+ REC: c o r r e c t i o n 
+Aligned transcription: data/htkSBHMMTest/Naoki.p_r_o_b_l_e_m.1878.lab vs data/htkSBHMMTest/Naoki.p_r_o_b_l_e_m.1878.rec
+ LAB: p r o b l e m   
+ REC: p r o b l e m s 
+Aligned transcription: data/htkSBHMMTest/Naoki.p_e_e_r_i_n_g.7.lab vs data/htkSBHMMTest/Naoki.p_e_e_r_i_n_g.7.rec
+ LAB: p e e r i n g 
+ REC:     b r i n g 
+Aligned transcription: data/htkSBHMMTest/Naoki.u_s_e.416.lab vs data/htkSBHMMTest/Naoki.u_s_e.416.rec
+ LAB:     u s e 
+ REC: v o i c e 
+Aligned transcription: data/htkSBHMMTest/Naoki.a_s_k_e_d.1445.lab vs data/htkSBHMMTest/Naoki.a_s_k_e_d.1445.rec
+ LAB:   a s k e d 
+ REC: j a c k e t 
+Aligned transcription: data/htkSBHMMTest/Naoki.t_h_a_n.2258.lab vs data/htkSBHMMTest/Naoki.t_h_a_n.2258.rec
+ LAB: t h a n   
+ REC: t h i n g 
+Aligned transcription: data/htkSBHMMTest/Naoki.p_e_a_n_u_t_s.792.lab vs data/htkSBHMMTest/Naoki.p_e_a_n_u_t_s.792.rec
+ LAB: p e a n u t s 
+ REC: b e       e s 
+Aligned transcription: data/htkSBHMMTest/Naoki.s_p_a_c_e.1153.lab vs data/htkSBHMMTest/Naoki.s_p_a_c_e.1153.rec
+ LAB: s p a   c e   
+ REC:   c a n c e r 
+Aligned transcription: data/htkSBHMMTest/Naoki.s_u_n_n_y.1326.lab vs data/htkSBHMMTest/Naoki.s_u_n_n_y.1326.rec
+ LAB: s u n n   y 
+ REC: c a n n o t 
+Aligned transcription: data/htkSBHMMTest/Naoki.s_p_a_c_e.2317.lab vs data/htkSBHMMTest/Naoki.s_p_a_c_e.2317.rec
+ LAB: s       p a c e 
+ REC: s e n t e n c e 
+Aligned transcription: data/htkSBHMMTest/Naoki.i_d_e_a.151.lab vs data/htkSBHMMTest/Naoki.i_d_e_a.151.rec
+ LAB: i d e a   
+ REC:   h e a d 
+Aligned transcription: data/htkSBHMMTest/Naoki.v_a_n_i_l_l_a.679.lab vs data/htkSBHMMTest/Naoki.v_a_n_i_l_l_a.679.rec
+ LAB: v a n i l l a 
+ REC: p e n a l t y 
+Aligned transcription: data/htkSBHMMTest/Naoki.d_r_y.1794.lab vs data/htkSBHMMTest/Naoki.d_r_y.1794.rec
+ LAB: d r     y 
+ REC: d r i v e 
+Aligned transcription: data/htkSBHMMTest/Naoki.i_n.1219.lab vs data/htkSBHMMTest/Naoki.i_n.1219.rec
+ LAB: i n 
+ REC: a n 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Mon Jul 27 20:10:33 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/res_hmm50.mlf                                  |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |  233  |  95.14   3.52   1.34   1.83   6.69  13.73 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   b   c   d   e   f   g   h   i   j   k   l   m   n   o   p   q   r   s   t   u   v   w   x   y   z 
+                                                                                                             
+                                                                                                             
+                                                                                                              Del [ %c / %e]
+   a  90   0   0   0   2   0   0   1   1   0   0   0   0   1   0   0   0   0   2   0   0   0   0   0   1   0    3 [91.8/0.6]
+   b   0  19   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   1   0   0   0   0   0   0    0 [90.5/0.1]
+   c   0   0  55   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0    0 [98.2/0.1]
+   d   0   0   0  52   1   0   0   2   0   0   0   0   0   0   1   0   0   1   0   1   0   0   0   0   0   0    2 [89.7/0.4]
+   e   0   1   0   1  194  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    2 [99.0/0.1]
+   f   0   0   0   0   0  18   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0    1 [94.7/0.1]
+   g   0   0   0   0   1   0  31   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0 [93.9/0.1]
+   h   0   0   0   0   0   0   0  36   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+   i   3   0   0   0   0   0   0   0  96   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0    1 [96.0/0.3]
+   j   0   0   0   0   0   0   0   0   0   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+   k   0   0   0   0   0   0   0   0   0   0  14   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+   l   0   0   0   0   0   0   0   0   0   0   0  77   0   0   0   0   0   0   0   1   0   0   0   0   0   0    1 [98.7/0.1]
+   m   0   0   0   0   0   0   0   0   0   0   0   0  34   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+   n   0   0   0   0   0   0   0   0   0   0   0   0   0  103  0   0   0   0   0   0   0   0   0   0   0   0    1
+   o   0   0   0   0   1   0   0   0   2   0   0   0   0   0  86   0   0   0   0   1   0   0   0   0   0   0    2 [95.6/0.3]
+   p   0   1   1   0   2   0   0   0   0   0   0   0   0   0   0  38   0   0   0   0   0   0   0   0   0   0    1 [90.5/0.3]
+   q   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   4   0   0   0   0   0   0   0   0   0    0
+   r   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  105  0   0   0   0   0   0   0   0    0
+   s   0   0   3   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  99   0   0   0   0   0   0   0    2 [97.1/0.2]
+   t   0   0   0   2   1   0   0   0   0   0   0   0   0   0   0   0   0   1   0  86   0   0   0   0   0   0    1 [95.6/0.3]
+   u   1   0   1   0   0   0   0   0   1   0   0   0   0   0   1   0   0   0   0   0  38   0   0   0   0   0    2 [90.5/0.3]
+   v   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   1   0   0   0   0   0  12   0   0   0   0    0 [85.7/0.1]
+   w   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  26   0   0   0    0
+   x   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0   0    0
+   y   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0  25   0    0 [92.6/0.1]
+   z   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3    0
+Ins    0   0   1   4   1   0   3   2   2   1   0   0   0   3   2   0   0   1   1   1   0   3   0   0   1   0
