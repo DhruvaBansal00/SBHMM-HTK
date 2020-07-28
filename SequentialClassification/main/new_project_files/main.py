@@ -1,6 +1,7 @@
 """Main file used to prepare training data, train, and test HMMs.
-    HMM EX = python3 main.py --test_type standard --train_iters 25 50 --users Linda Prerna | python3 main.py --test_type cross_val --train_iters 25 50 --users Prerna Linda
-    SBHMM EX = python3 main.py --test_type standard --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Linda Prerna --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -70 --sbhmm_insertion_penalty -115
+    HMM EX = python3 main.py --test_type standard --train_iters 25 50 75 --users Prerna Linda | python3 main.py --test_type cross_val --train_iters 25 50 75 --users Prerna Linda --cross_val_method kfold --n_splits 10
+    SBHMM EX = python3 main.py --test_type standard --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Prerna Linda --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -70 --sbhmm_insertion_penalty -115 --neighbors 70
+    SBHMM CV = python3 main.py --test_type cross_val --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Prerna Linda --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -70 --sbhmm_insertion_penalty -115 --neighbors 70 --cross_val_method kfold --n_splits 10
 """
 import sys
 import glob
@@ -65,7 +66,7 @@ if __name__ == '__main__':
     parser.add_argument('--sbhmm_insertion_penalty', default=-10)
     parser.add_argument('--neighbors', default=50)
     parser.add_argument('--multiple_classifiers', action='store_true')
-    parser.add_argument('--beam_threshold', default=2000.0)
+    parser.add_argument('--beam_threshold', default=3000.0)
 
     #Arguments for testing
     parser.add_argument('--start', type=int, default=-2)
