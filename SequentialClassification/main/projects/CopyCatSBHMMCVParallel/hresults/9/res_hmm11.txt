@@ -93,7 +93,7 @@ Aligned transcription: data/9/htk/Linda.orange_monkey_below_grey_flowers.1587956
  LAB: orange monkey below grey flowers 
  REC: white  monkey below blue flowers 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Wed Jul 29 20:47:14 2020            |
+    | HTK Results Analysis at Wed Jul 29 21:07:41 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/9/res_hmm11.mlf                                |
     |=============================================================|

@@ -99,7 +99,7 @@ Aligned transcription: data/7/htk/Linda.orange_monkey_below_grey_flowers.1587957
  LAB: orange monkey below grey flowers 
  REC: black  monkey below      wall    
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Wed Jul 29 20:45:12 2020            |
+    | HTK Results Analysis at Wed Jul 29 21:05:38 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/7/res_hmm11.mlf                                |
     |=============================================================|

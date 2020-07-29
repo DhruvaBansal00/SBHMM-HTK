@@ -99,7 +99,7 @@ Aligned transcription: data/6/htk/Linda.alligator_above_chair.1587939440575.lab 
  LAB: alligator above chair 
  REC: alligator below chair 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Wed Jul 29 20:44:51 2020            |
+    | HTK Results Analysis at Wed Jul 29 21:05:21 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/6/res_hmm11.mlf                                |
     |=============================================================|

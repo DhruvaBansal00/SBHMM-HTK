@@ -1,12 +1,14 @@
 """Main file used to prepare training data, train, and test HMMs.
     HMM EX = python3 main.py --test_type standard --train_iters 25 50 75 --users Prerna Linda | python3 main.py --test_type cross_val --train_iters 25 50 75 --users Prerna Linda --cross_val_method kfold --n_splits 10
     SBHMM EX = python3 main.py --test_type standard --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Prerna Linda --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -70 --sbhmm_insertion_penalty -115 --neighbors 70
-    SBHMM CV = python3 main.py --test_type cross_val --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Prerna Linda --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -70 --sbhmm_insertion_penalty -115 --neighbors 70 --cross_val_method kfold --n_splits 10
+    SBHMM CV = python3 main.py --test_type cross_val --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Linda Prerna --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -85 --sbhmm_insertion_penalty -85 --neighbors 70 --cross_val_method kfold --n_splits 10 --beam_threshold 2000.0
+    SBHMM CV Parallel = python3 main.py --test_type cross_val --train_iters 25 50 75 100 --sbhmm_iters 25 50 75 --users Prerna Linda --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -70 --sbhmm_insertion_penalty -115 --neighbors 70 --cross_val_method kfold --n_splits 10 --cv_parallel
 """
 import sys
 import glob
 import argparse
 import os
+import shutil
 
 import numpy as np
 from sklearn.model_selection import (
@@ -17,6 +19,54 @@ from src.prepare_data import prepare_data
 from src.train import create_data_lists, train, trainSBHMM
 from src.utils import get_results, save_results, load_json, get_arg_groups
 from src.test import test, testSBHMM
+from joblib import Parallel, delayed
+from statistics import mean
+
+def copyFiles(fileNames: list, newFolder: str, originalFolder: str, ext: str):
+    if os.path.exists(newFolder):
+        shutil.rmtree(newFolder)
+    os.makedirs(newFolder)
+
+    for currFile in fileNames:
+        shutil.copyfile(os.path.join(originalFolder, currFile+ext), os.path.join(newFolder, currFile+ext))
+
+def crossValFold(train_data: list, test_data: list, args: object, fold: int):
+    print(f"Current split = {str(fold)}")
+    ogDataFolder = "data"
+    currDataFolder = os.path.join("data", str(fold))
+    trainFiles = [i.split("/")[-1].strip(".htk") for i in train_data]
+    testFiles = [i.split("/")[-1].strip(".htk") for i in test_data]
+    allFiles = trainFiles + testFiles
+
+    copyFiles(allFiles, os.path.join(currDataFolder, "ark"), os.path.join(ogDataFolder, "ark"), ".ark")
+    copyFiles(allFiles, os.path.join(currDataFolder, "htk"), os.path.join(ogDataFolder, "htk"), ".htk")
+    create_data_lists([os.path.join(currDataFolder, "htk", i+".htk") for i in trainFiles], [
+                    os.path.join(currDataFolder, "htk", i+".htk") for i in testFiles], args.phrase_len, fold)
+    
+    if args.train_sbhmm:
+        classifiers = trainSBHMM(args.sbhmm_cycles, args.train_iters, args.mean, args.variance, args.transition_prob, args.device, 
+                args.pca_components, args.sbhmm_iters, args.include_word_level_states, args.include_word_position, args.no_pca, 
+                args.hmm_insertion_penalty, args.sbhmm_insertion_penalty, args.parallel_jobs, args.parallel_classifier_training,
+                args.multiple_classifiers, args.neighbors, args.beam_threshold, os.path.join(str(fold), ""))
+        testSBHMM(args.start, args.end, args.method, classifiers, args.pca_components, args.no_pca, args.sbhmm_insertion_penalty, 
+                args.parallel_jobs, args.parallel_classifier_training, os.path.join(str(fold), ""))
+    else:
+        train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device, fold=os.path.join(str(fold), ""))
+        test(args.start, args.end, args.method, args.hmm_insertion_penalty, fold=os.path.join(str(fold), ""))
+
+    if args.train_sbhmm:
+        hresults_file = f'hresults/{os.path.join(str(fold), "")}res_hmm{args.sbhmm_iters[-1]-1}.txt'
+    else:
+        hresults_file = f'hresults/{os.path.join(str(fold), "")}res_hmm{args.train_iters[-1]-1}.txt'    
+
+    results = get_results(hresults_file)
+
+    print(f'Current Word Error: {results["error"]}')
+    print(f'Current Sentence Error: {results["sentence_error"]}')
+
+    return [results['error'], results['sentence_error']]
+
+    
 
 
 if __name__ == '__main__':
@@ -40,6 +90,7 @@ if __name__ == '__main__':
                                                   'stratified'])
     parser.add_argument('--n_splits', required='cross_val' in sys.argv,
                         type=int, default=10)
+    parser.add_argument('--cv_parallel', action='store_true')
     parser.add_argument('--test_size', type=float, default=0.1)
 
     #Arguments for save_data()
@@ -123,6 +174,48 @@ if __name__ == '__main__':
             all_results['average']['sentence_error'] = all_results['fold_0']['sentence_error']
 
             print('Test on Train Results')
+    
+    elif args.test_type == 'cross_val' and args.cv_parallel:
+        print("You have invoked parallel cross validation. Be prepared for dancing progress bars!")
+
+        if len(args.users) == 0:
+            htk_filepaths = glob.glob('data/htk/*htk')
+        else:
+            htk_filepaths = []
+            for user in args.users:
+                htk_filepaths.extend(glob.glob(os.path.join("data/htk", '*{}*.htk'.format(user))))
+
+        if(args.device==0):
+            phrases = [' '.join(filepath.split('.')[1].split("_"))
+               for filepath
+               in htk_filepaths]
+        else:
+            # uncomment for prerna
+            # phrases = [' '.join(filepath.split('/')[-1].split('.')[0].split('_')[0:-1]) 
+            #     for filepath 
+            #     in htk_filepaths]
+            # for linda
+            phrases = []
+            for filepath in htk_filepaths:
+                if('error' in ' '.join(filepath.split('/')[-1].split('.')[0])):
+                    phrases.append(' '.join(filepath.split('/')[-1].split('.')[0].split('_')[0:-3]))
+                else:
+                    phrases.append(' '.join(filepath.split('/')[-1].split('.')[0].split('_')[0:-2]))
+        
+        unique_phrases = set(phrases)
+        group_map = {phrase: i for i, phrase in enumerate(unique_phrases)}
+        groups = [group_map[phrase] for phrase in phrases]
+        cross_val = cross_val_method(n_splits=args.n_splits)
+
+        if use_groups:
+            splits = list(cross_val.split(htk_filepaths, phrases, groups))
+        else:
+            splits = list(cross_val.split(htk_filepaths, phrases))
+        
+        stats = Parallel(n_jobs=args.parallel_jobs)(delayed(crossValFold)(np.array(htk_filepaths)[splits[currFold][0]], np.array(htk_filepaths)[splits[currFold][1]], args, currFold) for currFold in range(len(splits)))
+        
+        all_results['average']['error'] = mean([i[0] for i in stats])
+        all_results['average']['sentence_error'] = mean([i[1] for i in stats])
 
     elif args.test_type == 'cross_val':
 

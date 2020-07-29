@@ -102,7 +102,7 @@ Aligned transcription: data/3/htk/Linda.orange_snake_below_blue_flowers.15879444
  LAB: orange snake  below blue flowers 
  REC: black  monkey below blue flowers 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Wed Jul 29 20:36:22 2020            |
+    | HTK Results Analysis at Wed Jul 29 20:56:47 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/3/res_hmm10.mlf                                |
     |=============================================================|

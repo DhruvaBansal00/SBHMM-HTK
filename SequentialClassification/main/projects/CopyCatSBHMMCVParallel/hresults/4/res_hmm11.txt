@@ -102,7 +102,7 @@ Aligned transcription: data/4/htk/Linda.monkey_in_orange_flowers.1587939059024.l
  LAB: monkey in orange flowers 
  REC: monkey    below  wall    
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Wed Jul 29 20:41:08 2020            |
+    | HTK Results Analysis at Wed Jul 29 21:01:29 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/4/res_hmm11.mlf                                |
     |=============================================================|

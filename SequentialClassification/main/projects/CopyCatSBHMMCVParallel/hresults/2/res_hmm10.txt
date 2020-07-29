@@ -45,7 +45,7 @@ Aligned transcription: data/2/htk/Prerna.lion_above_wall.1582398059329.lab vs da
  LAB: lion  above wall 
  REC: snake above wall 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Wed Jul 29 20:41:42 2020            |
+    | HTK Results Analysis at Wed Jul 29 21:02:06 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/2/res_hmm10.mlf                                |
     |=============================================================|

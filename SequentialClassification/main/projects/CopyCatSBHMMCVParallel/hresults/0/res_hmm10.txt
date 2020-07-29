@@ -75,7 +75,7 @@ Aligned transcription: data/0/htk/Prerna.monkey_in_box.1582398203382.lab vs data
  LAB: monkey in    box 
  REC: monkey below box 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Wed Jul 29 20:40:33 2020            |
+    | HTK Results Analysis at Wed Jul 29 21:01:01 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/0/res_hmm10.mlf                                |
     |=============================================================|

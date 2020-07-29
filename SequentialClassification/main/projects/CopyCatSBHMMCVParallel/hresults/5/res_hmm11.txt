@@ -78,7 +78,7 @@ Aligned transcription: data/5/htk/Linda.lion_below_orange_chair.1587953626405.la
  LAB: lion below orange chair 
  REC: lion below blue   chair 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Wed Jul 29 20:44:33 2020            |
+    | HTK Results Analysis at Wed Jul 29 21:04:41 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/5/res_hmm11.mlf                                |
     |=============================================================|

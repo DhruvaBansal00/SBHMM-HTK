@@ -31,7 +31,7 @@ def copyFiles(fileNames: list, newFolder: str, originalFolder: str, ext: str):
         shutil.copyfile(os.path.join(originalFolder, currFile+ext), os.path.join(newFolder, currFile+ext))
 
 def crossValFold(train_data: list, test_data: list, args: object, fold: int):
-    print(f"Current split = {str(fold)}. CV Parallel loop")
+    print(f"Current split = {str(fold)}")
     ogDataFolder = "data"
     currDataFolder = os.path.join("data", str(fold))
     trainFiles = [i.split("/")[-1].strip(".htk") for i in train_data]
@@ -176,6 +176,7 @@ if __name__ == '__main__':
             print('Test on Train Results')
     
     elif args.test_type == 'cross_val' and args.cv_parallel:
+        print("You have invoked parallel cross validation. Be prepared for dancing progress bars!")
 
         if len(args.users) == 0:
             htk_filepaths = glob.glob('data/htk/*htk')

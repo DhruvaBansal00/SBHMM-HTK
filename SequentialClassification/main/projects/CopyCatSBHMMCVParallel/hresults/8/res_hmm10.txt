@@ -81,7 +81,7 @@ Aligned transcription: data/8/htk/Linda.alligator_in_orange_flowers.158795369510
  LAB: alligator in orange flowers 
  REC: alligator    above  flowers 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Wed Jul 29 20:46:02 2020            |
+    | HTK Results Analysis at Wed Jul 29 21:06:31 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/8/res_hmm10.mlf                                |
     |=============================================================|
