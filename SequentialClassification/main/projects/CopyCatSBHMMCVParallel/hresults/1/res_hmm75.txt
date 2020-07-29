@@ -1,0 +1,42 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/1/res_hmm75.mlf 
+Aligned transcription: data/1/htkSBHMMTest/Prerna.snake_in_flowers.1582398186775.lab vs data/1/htkSBHMMTest/Prerna.snake_in_flowers.1582398186775.rec
+ LAB: snake in flowers 
+ REC: snake in wagon   
+Aligned transcription: data/1/htkSBHMMTest/Prerna.alligator_above_bed.1582397995158.lab vs data/1/htkSBHMMTest/Prerna.alligator_above_bed.1582397995158.rec
+ LAB:       alligator above bed 
+ REC: white alligator above bed 
+Aligned transcription: data/1/htkSBHMMTest/Prerna.alligator_above_bed.1582398352681.lab vs data/1/htkSBHMMTest/Prerna.alligator_above_bed.1582398352681.rec
+ LAB: alligator above bed 
+ REC: alligator in    bed 
+Aligned transcription: data/1/htkSBHMMTest/Prerna.monkey_below_bed.1582399430631.lab vs data/1/htkSBHMMTest/Prerna.monkey_below_bed.1582399430631.rec
+ LAB: monkey below bed  
+ REC: monkey below wall 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Thu Jul 30 01:16:39 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/1/res_hmm75.mlf                                |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |   41  |  97.56   2.44   0.00   0.81   3.25   9.76 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   a   b   b   b   c   f   i   l   m   s   w   w   w 
+       b   l   e   e   o   h   l   n   i   o   n   a   a   h 
+       o   l   d   l   x   a   o       o   n   a   g   l   i 
+       v   i       o       i   w       n   k   k   o   l   t 
+       e   g       w       r   e           e   e   n       e  Del [ %c / %e]
+abov  17   0   0   0   0   0   0   1   0   0   0   0   0   0    0 [94.4/0.8]
+alli   0  14   0   0   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0   7   0   0   0   0   0   0   0   0   0   1   0    0 [87.5/0.8]
+belo   0   0   0  12   0   0   0   0   0   0   0   0   0   0    0
+ box   0   0   0   0   6   0   0   0   0   0   0   0   0   0    0
+chai   0   0   0   0   0   6   0   0   0   0   0   0   0   0    0
+flow   0   0   0   0   0   0   4   0   0   0   0   1   0   0    0 [80.0/0.8]
+  in   0   0   0   0   0   0   0  11   0   0   0   0   0   0    0
+lion   0   0   0   0   0   0   0   0   8   0   0   0   0   0    0
+monk   0   0   0   0   0   0   0   0   0  13   0   0   0   0    0
+snak   0   0   0   0   0   0   0   0   0   0   6   0   0   0    0
+wago   0   0   0   0   0   0   0   0   0   0   0  13   0   0    0
+wall   0   0   0   0   0   0   0   0   0   0   0   0   3   0    0
+Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   1
