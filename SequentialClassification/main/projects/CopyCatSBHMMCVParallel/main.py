@@ -27,6 +27,7 @@ def copyFiles(fileNames: list, newFolder: str, originalFolder: str, ext: str):
         shutil.copyfile(os.path.join(originalFolder, currFile+ext), os.path.join(newFolder, currFile+ext))
 
 def crossValFold(train_data: list, test_data: list, args: object, fold: int):
+    print(f"Current split = {str(fold)}")
     ogDataFolder = "data"
     currDataFolder = os.path.join("data", str(fold))
     trainFiles = [i.split("/")[-1].strip(".htk") for i in train_data]
@@ -48,6 +49,19 @@ def crossValFold(train_data: list, test_data: list, args: object, fold: int):
     else:
         train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
         test(args.start, args.end, args.method, args.hmm_insertion_penalty)
+
+    if args.train_sbhmm:
+        hresults_file = f'hresults/{os.path.join(str(fold), "")}res_hmm{args.sbhmm_iters[-1]-1}.txt'
+    else:
+        hresults_file = f'hresults/{os.path.join(str(fold), "")}res_hmm{args.train_iters[-1]-1}.txt'    
+
+    results = get_results(hresults_file)
+    all_results[f'fold_{i}'] = results
+    all_results[f'fold_{i}']['phrase'] = phrase
+    all_results[f'fold_{i}']['phrase_count'] = phrase_count
+
+    print(f'Current Word Error: {results["error"]}')
+    print(f'Current Sentence Error: {results["sentence_error"]}')
 
     
 
@@ -73,6 +87,7 @@ if __name__ == '__main__':
                                                   'stratified'])
     parser.add_argument('--n_splits', required='cross_val' in sys.argv,
                         type=int, default=10)
+    parser.add_argument('--cv_parallel', action='store_true')
     parser.add_argument('--test_size', type=float, default=0.1)
 
     #Arguments for save_data()
@@ -156,6 +171,47 @@ if __name__ == '__main__':
             all_results['average']['sentence_error'] = all_results['fold_0']['sentence_error']
 
             print('Test on Train Results')
+    
+    elif args.test_type == 'cross_val' and args.cv_parallel:
+
+        if len(args.users) == 0:
+            htk_filepaths = glob.glob('data/htk/*htk')
+        else:
+            htk_filepaths = []
+            for user in args.users:
+                htk_filepaths.extend(glob.glob(os.path.join("data/htk", '*{}*.htk'.format(user))))
+
+        if(args.device==0):
+            phrases = [' '.join(filepath.split('.')[1].split("_"))
+               for filepath
+               in htk_filepaths]
+        else:
+            # uncomment for prerna
+            # phrases = [' '.join(filepath.split('/')[-1].split('.')[0].split('_')[0:-1]) 
+            #     for filepath 
+            #     in htk_filepaths]
+            # for linda
+            phrases = []
+            for filepath in htk_filepaths:
+                if('error' in ' '.join(filepath.split('/')[-1].split('.')[0])):
+                    phrases.append(' '.join(filepath.split('/')[-1].split('.')[0].split('_')[0:-3]))
+                else:
+                    phrases.append(' '.join(filepath.split('/')[-1].split('.')[0].split('_')[0:-2]))
+        
+        unique_phrases = set(phrases)
+        group_map = {phrase: i for i, phrase in enumerate(unique_phrases)}
+        groups = [group_map[phrase] for phrase in phrases]
+        cross_val = cross_val_method(n_splits=args.n_splits)
+
+        if use_groups:
+            splits = list(cross_val.split(htk_filepaths, phrases, groups))
+        else:
+            splits = list(cross_val.split(htk_filepaths, phrases))
+        
+        for i, (train_index, test_index) in enumerate(splits):
+            train_data = np.array(htk_filepaths)[train_index]
+            test_data = np.array(htk_filepaths)[test_index]
+            crossValFold(train_data, test_data, args, i)
 
     elif args.test_type == 'cross_val':
 
