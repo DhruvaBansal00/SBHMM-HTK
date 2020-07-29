@@ -64,16 +64,16 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
     classifiers = []
 
     for iters in range(sbhmm_cycles):
-        test(-2, -1, "alignment", hmm_insertion_penalty if iters == 0 else sbhmm_insertion_penalty, beam_threshold=beam_threshold) #Save state alignments for each phrase in the results folder
-        resultFile = glob.glob('results/*.mlf')[-1]
+        test(-2, -1, "alignment", hmm_insertion_penalty if iters == 0 else sbhmm_insertion_penalty, beam_threshold=beam_threshold, fold=fold) #Save state alignments for each phrase in the results folder
+        resultFile = glob.glob(f'results/{fold}*.mlf')[-1]
 
         trainedClassifier = getClassifierFromStateAlignment(resultFile, arkFileLoc, include_state=include_state, 
                         include_index=include_index, n_jobs=n_jobs, parallel=parallel, trainMultipleClassifiers=trainMultipleClassifiers,
                         knn_neighbors=int(knn_neighbors))
         classifiers.append(trainedClassifier)
         
-        arkFileSave = "data/arkSBHMM"+str(iters)+"/"
-        htkFileSave = "data/htkSBHMM"+str(iters)+"/"
+        arkFileSave = f"data/{fold}arkSBHMM"+str(iters)+"/"
+        htkFileSave = f"data/{fold}htkSBHMM"+str(iters)+"/"
         if os.path.exists(arkFileSave):
             shutil.rmtree(arkFileSave)
 

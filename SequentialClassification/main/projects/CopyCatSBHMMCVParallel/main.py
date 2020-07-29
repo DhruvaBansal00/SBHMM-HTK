@@ -42,7 +42,7 @@ def crossValFold(train_data: list, test_data: list, args: object, fold: int):
         classifiers = trainSBHMM(args.sbhmm_cycles, args.train_iters, args.mean, args.variance, args.transition_prob, args.device, 
                 args.pca_components, args.sbhmm_iters, args.include_word_level_states, args.include_word_position, args.no_pca, 
                 args.hmm_insertion_penalty, args.sbhmm_insertion_penalty, args.parallel_jobs, args.parallel_classifier_training,
-                args.multiple_classifiers, args.neighbors, args.beam_threshold)
+                args.multiple_classifiers, args.neighbors, args.beam_threshold, os.path.join(str(fold), ""))
         testSBHMM(args.start, args.end, args.method, classifiers, args.pca_components, args.no_pca, args.sbhmm_insertion_penalty, 
                 args.parallel_jobs, args.parallel_classifier_training)
     else:

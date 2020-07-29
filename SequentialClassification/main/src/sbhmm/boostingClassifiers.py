@@ -127,7 +127,6 @@ def calculateClassifierAcc(classifier: object, dataset: dict, trainMultipleClass
 
 def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, include_index: bool, n_jobs: int, 
                         parallel: bool, knn_neighbors: int, trainMultipleClassifiers: bool = True, random_state: int = 42) -> object:
-    np.set_printoptions(threshold=sys.maxsize)
     classLabels = getClassTree(phrases, include_state, include_index)
     dataset = dataSetReader(classLabels, phrases, arkFileLoc, include_state, include_index)
 
