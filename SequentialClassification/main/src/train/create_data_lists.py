@@ -29,8 +29,8 @@ def create_data_lists(train_data: list, test_data: list, phrase_len: int = 0, fo
 	"""
 	#TODO: Add filter for phrase length
 
-	if not os.path.exists('lists'):
-		os.mkdir('lists')
+	if not os.path.exists(f'lists/{str(fold)}'):
+		os.mkdir(f'lists/{str(fold)}')
 
 	all_data_filepath = os.path.join('lists', 'all.data') if fold is None else os.path.join('lists', str(fold), 'all.data')
 	train_data_filepath = os.path.join('lists', 'train.data') if fold is None else os.path.join('lists', str(fold), 'train.data')

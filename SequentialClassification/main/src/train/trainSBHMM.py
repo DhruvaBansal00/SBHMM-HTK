@@ -56,7 +56,7 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
         parser.
     """
     print("----------------Starting SBHMM training with basic HMM for alignment-------------------")
-    train(train_iters, mean, variance, transition_prob, device)
+    train(train_iters, mean, variance, transition_prob, device, fold=fold)
     arkFileLoc = f"data/{fold}ark/"
     htkFileLoc = f"data/{fold}htk/"
     trainDataFile = f"lists/{fold}train.data"
@@ -104,7 +104,7 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
             trainData.close()
 
         print("Training HMM on new feature space")
-        train(sbhmm_iters, mean, variance, transition_prob, device, num_features=num_features)
+        train(sbhmm_iters, mean, variance, transition_prob, device, num_features=num_features, fold=fold)
 
     return classifiers
 

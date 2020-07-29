@@ -1,7 +1,8 @@
 """Main file used to prepare training data, train, and test HMMs.
     HMM EX = python3 main.py --test_type standard --train_iters 25 50 75 --users Prerna Linda | python3 main.py --test_type cross_val --train_iters 25 50 75 --users Prerna Linda --cross_val_method kfold --n_splits 10
     SBHMM EX = python3 main.py --test_type standard --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Prerna Linda --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -70 --sbhmm_insertion_penalty -115 --neighbors 70
-    SBHMM CV = python3 main.py --test_type cross_val --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Linda Prerna --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -85 --sbhmm_insertion_penalty -85 --neighbors 100 --cross_val_method kfold --n_splits 10 --beam_threshold 2000.0
+    SBHMM CV = python3 main.py --test_type cross_val --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Linda Prerna --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -85 --sbhmm_insertion_penalty -85 --neighbors 70 --cross_val_method kfold --n_splits 10 --beam_threshold 2000.0
+    SBHMM CV Parallel = python3 main.py --test_type cross_val --train_iters 25 50 75 100 --sbhmm_iters 25 50 75 --users Prerna Linda --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -70 --sbhmm_insertion_penalty -115 --neighbors 70 --cross_val_method kfold --n_splits 10 --cv_parallel
 """
 import sys
 import glob
@@ -20,14 +21,15 @@ from src.utils import get_results, save_results, load_json, get_arg_groups
 from src.test import test, testSBHMM
 
 def copyFiles(fileNames: list, newFolder: str, originalFolder: str, ext: str):
-    shutil.rmtree(newFolder)
+    if os.path.exists(newFolder):
+        shutil.rmtree(newFolder)
     os.makedirs(newFolder)
 
     for currFile in fileNames:
         shutil.copyfile(os.path.join(originalFolder, currFile+ext), os.path.join(newFolder, currFile+ext))
 
 def crossValFold(train_data: list, test_data: list, args: object, fold: int):
-    print(f"Current split = {str(fold)}")
+    print(f"Current split = {str(fold)}. CV Parallel loop")
     ogDataFolder = "data"
     currDataFolder = os.path.join("data", str(fold))
     trainFiles = [i.split("/")[-1].strip(".htk") for i in train_data]
@@ -45,10 +47,10 @@ def crossValFold(train_data: list, test_data: list, args: object, fold: int):
                 args.hmm_insertion_penalty, args.sbhmm_insertion_penalty, args.parallel_jobs, args.parallel_classifier_training,
                 args.multiple_classifiers, args.neighbors, args.beam_threshold, os.path.join(str(fold), ""))
         testSBHMM(args.start, args.end, args.method, classifiers, args.pca_components, args.no_pca, args.sbhmm_insertion_penalty, 
-                args.parallel_jobs, args.parallel_classifier_training)
+                args.parallel_jobs, args.parallel_classifier_training, os.path.join(str(fold), ""))
     else:
-        train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device)
-        test(args.start, args.end, args.method, args.hmm_insertion_penalty)
+        train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device, os.path.join(str(fold), ""))
+        test(args.start, args.end, args.method, args.hmm_insertion_penalty, os.path.join(str(fold), ""))
 
     if args.train_sbhmm:
         hresults_file = f'hresults/{os.path.join(str(fold), "")}res_hmm{args.sbhmm_iters[-1]-1}.txt'
