@@ -1,0 +1,105 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/0/res_hmm10.mlf 
+Aligned transcription: data/0/htk/Prerna.monkey_below_bed.1582398272502.lab vs data/0/htk/Prerna.monkey_below_bed.1582398272502.rec
+ LAB: monkey below bed   
+ REC: monkey below chair 
+Aligned transcription: data/0/htk/Prerna.snake_below_bed.1582399387184.lab vs data/0/htk/Prerna.snake_below_bed.1582399387184.rec
+ LAB: snake below bed  
+ REC: snake below wall 
+Aligned transcription: data/0/htk/Prerna.snake_below_chair.1582397578030.lab vs data/0/htk/Prerna.snake_below_chair.1582397578030.rec
+ LAB: snake below chair 
+ REC: snake below box   
+Aligned transcription: data/0/htk/Prerna.alligator_in_box.1582398152646.lab vs data/0/htk/Prerna.alligator_in_box.1582398152646.rec
+ LAB: alligator in    box 
+ REC: alligator above box 
+Aligned transcription: data/0/htk/Prerna.lion_below_chair.1582398588951.lab vs data/0/htk/Prerna.lion_below_chair.1582398588951.rec
+ LAB: lion below chair 
+ REC: lion above box   
+Aligned transcription: data/0/htk/Prerna.alligator_in_wagon.1582399877088.lab vs data/0/htk/Prerna.alligator_in_wagon.1582399877088.rec
+ LAB: alligator in    wagon 
+ REC: alligator above wagon 
+Aligned transcription: data/0/htk/Prerna.alligator_in_box.1582398509476.lab vs data/0/htk/Prerna.alligator_in_box.1582398509476.rec
+ LAB: alligator in    box 
+ REC: alligator above box 
+Aligned transcription: data/0/htk/Prerna.snake_below_chair.1582399415958.lab vs data/0/htk/Prerna.snake_below_chair.1582399415958.rec
+ LAB: snake below chair 
+ REC: snake below box   
+Aligned transcription: data/0/htk/Prerna.snake_above_wall.1582397214703.lab vs data/0/htk/Prerna.snake_above_wall.1582397214703.rec
+ LAB: snake above wall 
+ REC: lion  above wall 
+Aligned transcription: data/0/htk/Prerna.alligator_in_wagon.1582399669141.lab vs data/0/htk/Prerna.alligator_in_wagon.1582399669141.rec
+ LAB: alligator in    wagon 
+ REC: alligator above wagon 
+Aligned transcription: data/0/htk/Prerna.snake_in_flowers.1582399326581.lab vs data/0/htk/Prerna.snake_in_flowers.1582399326581.rec
+ LAB: snake in    flowers 
+ REC: snake above wagon   
+Aligned transcription: data/0/htk/Prerna.lion_above_bed.1582397109094.lab vs data/0/htk/Prerna.lion_above_bed.1582397109094.rec
+ LAB: lion above bed 
+ REC: lion above box 
+Aligned transcription: data/0/htk/Prerna.monkey_in_box.1582397494996.lab vs data/0/htk/Prerna.monkey_in_box.1582397494996.rec
+ LAB: monkey in    box 
+ REC: monkey above box 
+Aligned transcription: data/0/htk/Prerna.snake_below_chair.1582398255874.lab vs data/0/htk/Prerna.snake_below_chair.1582398255874.rec
+ LAB: snake below chair 
+ REC: snake below box   
+Aligned transcription: data/0/htk/Prerna.snake_in_flowers.1582398541488.lab vs data/0/htk/Prerna.snake_in_flowers.1582398541488.rec
+ LAB: snake in    flowers 
+ REC: snake above flowers 
+Aligned transcription: data/0/htk/Prerna.alligator_above_bed.1582397088236.lab vs data/0/htk/Prerna.alligator_above_bed.1582397088236.rec
+ LAB: alligator above bed 
+ REC: alligator in    box 
+Aligned transcription: data/0/htk/Prerna.alligator_above_chair.1582398320369.lab vs data/0/htk/Prerna.alligator_above_chair.1582398320369.rec
+ LAB: alligator above chair 
+ REC: alligator above box   
+Aligned transcription: data/0/htk/Prerna.monkey_above_chair.1582398921461.lab vs data/0/htk/Prerna.monkey_above_chair.1582398921461.rec
+ LAB: monkey above chair 
+ REC: monkey above box   
+Aligned transcription: data/0/htk/Prerna.monkey_above_chair.1582397338164.lab vs data/0/htk/Prerna.monkey_above_chair.1582397338164.rec
+ LAB: monkey above chair 
+ REC: monkey below box   
+Aligned transcription: data/0/htk/Prerna.lion_above_box.1582397142516.lab vs data/0/htk/Prerna.lion_above_box.1582397142516.rec
+ LAB: lion above box 
+ REC: lion in    box 
+Aligned transcription: data/0/htk/Prerna.monkey_below_bed.1582399067780.lab vs data/0/htk/Prerna.monkey_below_bed.1582399067780.rec
+ LAB: monkey below bed  
+ REC: monkey above wall 
+Aligned transcription: data/0/htk/Prerna.snake_in_flowers.1582397474198.lab vs data/0/htk/Prerna.snake_in_flowers.1582397474198.rec
+ LAB: snake in flowers 
+ REC: lion  in flowers 
+Aligned transcription: data/0/htk/Prerna.snake_in_flowers.1582399545327.lab vs data/0/htk/Prerna.snake_in_flowers.1582399545327.rec
+ LAB: snake in    flowers 
+ REC: snake above flowers 
+Aligned transcription: data/0/htk/Prerna.snake_below_chair.1582398620877.lab vs data/0/htk/Prerna.snake_below_chair.1582398620877.rec
+ LAB: snake below chair 
+ REC: snake below box   
+Aligned transcription: data/0/htk/Prerna.monkey_in_box.1582398203382.lab vs data/0/htk/Prerna.monkey_in_box.1582398203382.rec
+ LAB: monkey in    box 
+ REC: monkey below box 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Wed Jul 29 20:40:33 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/0/res_hmm10.mlf                                |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |   41  |  75.61  24.39   0.00   0.00  24.39  60.98 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   a   b   b   b   c   f   i   l   m   s   w   w 
+       b   l   e   e   o   h   l   n   i   o   n   a   a 
+       o   l   d   l   x   a   o       o   n   a   g   l 
+       v   i       o       i   w       n   k   k   o   l 
+       e   g       w       r   e           e   e   n      Del [ %c / %e]
+abov  16   0   0   1   0   0   0   2   0   0   0   0   0    0 [84.2/2.4]
+alli   0   9   0   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0   2   0   2   1   0   0   0   0   0   0   2    0 [28.6/4.1]
+belo   2   0   0  10   0   0   0   0   0   0   0   0   0    0 [83.3/1.6]
+ box   0   0   0   0   7   0   0   0   0   0   0   0   0    0
+chai   0   0   0   0   8   0   0   0   0   0   0   0   0    0 [ 0.0/6.5]
+flow   0   0   0   0   0   0   5   0   0   0   0   1   0    0 [83.3/0.8]
+  in   8   0   0   1   0   0   0   1   0   0   0   0   0    0 [10.0/7.3]
+lion   0   0   0   0   0   0   0   0   7   0   0   0   0    0
+monk   0   0   0   0   0   0   0   0   0  11   0   0   0    0
+snak   0   0   0   0   0   0   0   0   2   0  12   0   0    0 [85.7/1.6]
+wago   0   0   0   0   0   0   0   0   0   0   0   5   0    0
+wall   0   0   0   0   0   0   0   0   0   0   0   0   8    0
+Ins    0   0   0   0   0   0   0   0   0   0   0   0   0

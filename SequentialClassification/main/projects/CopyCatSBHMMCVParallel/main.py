@@ -20,6 +20,7 @@ from src.train import create_data_lists, train, trainSBHMM
 from src.utils import get_results, save_results, load_json, get_arg_groups
 from src.test import test, testSBHMM
 from joblib import Parallel, delayed
+from statistics import mean
 
 def copyFiles(fileNames: list, newFolder: str, originalFolder: str, ext: str):
     if os.path.exists(newFolder):
@@ -59,12 +60,11 @@ def crossValFold(train_data: list, test_data: list, args: object, fold: int):
         hresults_file = f'hresults/{os.path.join(str(fold), "")}res_hmm{args.train_iters[-1]-1}.txt'    
 
     results = get_results(hresults_file)
-    all_results[f'fold_{i}'] = results
-    all_results[f'fold_{i}']['phrase'] = phrase
-    all_results[f'fold_{i}']['phrase_count'] = phrase_count
 
     print(f'Current Word Error: {results["error"]}')
     print(f'Current Sentence Error: {results["sentence_error"]}')
+
+    return [results['error'], results['sentence_error']]
 
     
 
@@ -211,11 +211,10 @@ if __name__ == '__main__':
         else:
             splits = list(cross_val.split(htk_filepaths, phrases))
         
-        Parallel(n_jobs=args.parallel_jobs)(delayed(crossValFold)(np.array(htk_filepaths)[splits[currFold][0]], np.array(htk_filepaths)[splits[currFold][1]], args, currFold) for currFold in range(len(splits)))
-        # for i, (train_index, test_index) in enumerate(splits):
-        #     train_data = np.array(htk_filepaths)[train_index]
-        #     test_data = np.array(htk_filepaths)[test_index]
-        #     crossValFold(train_data, test_data, args, i)
+        stats = Parallel(n_jobs=args.parallel_jobs)(delayed(crossValFold)(np.array(htk_filepaths)[splits[currFold][0]], np.array(htk_filepaths)[splits[currFold][1]], args, currFold) for currFold in range(len(splits)))
+        
+        all_results['average']['error'] = mean([i[0] for i in stats])
+        all_results['average']['sentence_error'] = mean([i[1] for i in stats])
 
     elif args.test_type == 'cross_val':
 
