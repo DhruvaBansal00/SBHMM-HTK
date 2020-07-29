@@ -1,0 +1,406 @@
+python3 main.py --test_type cross_val --train_iters 25 50 75 100 --users Prerna Linda --cross_val_method kfold --n_splits 10 --hmm_insertion_penalty -80
+Current split = 0
+-------------- Training HMM --------------
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [04:55<00:00, 14.05s/it]
+HRest Complete
+Running HERest Iteration: 1...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [01:15<00:00,  3.26s/it]
+HERest Complete
+Running HHed Iteration: 25...
+HHEd -A -H models/hmm24/newMacros -M models/hmm25 configs/hhed0.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:46<00:00,  4.25s/it]
+HERest Complete
+Running HHed Iteration: 50...
+HHEd -A -H models/hmm49/newMacros -M models/hmm50 configs/hhed1.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:13<00:00,  5.34s/it]
+HERest Complete
+Running HHed Iteration: 75...
+HHEd -A -H models/hmm74/newMacros -M models/hmm75 configs/hhed2.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:54<00:00,  6.96s/it]
+HERest Complete
+HParse -A -T 1 grammar.txt wordNet.txt 
+Creating HParse net from file grammar.txt
+Generating Lattice with 32 nodes and 59 links
+Writing Word Lattice to wordNet.txt
+HVite -A -H models/hmm99/newMacros -m -S lists/test.data -i results/res_hmm99.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+HVite -A -H models/hmm100/newMacros -m -S lists/test.data -i results/res_hmm100.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+Current Word Error: 10.57
+Current Sentence Error: 24.39
+Current split = 1
+-------------- Training HMM --------------
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [04:15<00:00, 12.15s/it]
+HRest Complete
+Running HERest Iteration: 1...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [01:19<00:00,  3.44s/it]
+HERest Complete
+Running HHed Iteration: 25...
+HHEd -A -H models/hmm24/newMacros -M models/hmm25 configs/hhed0.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:46<00:00,  4.24s/it]
+HERest Complete
+Running HHed Iteration: 50...
+HHEd -A -H models/hmm49/newMacros -M models/hmm50 configs/hhed1.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:11<00:00,  5.25s/it]
+HERest Complete
+Running HHed Iteration: 75...
+HHEd -A -H models/hmm74/newMacros -M models/hmm75 configs/hhed2.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:53<00:00,  6.92s/it]
+HERest Complete
+HParse -A -T 1 grammar.txt wordNet.txt 
+Creating HParse net from file grammar.txt
+Generating Lattice with 32 nodes and 59 links
+Writing Word Lattice to wordNet.txt
+HVite -A -H models/hmm99/newMacros -m -S lists/test.data -i results/res_hmm99.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+HVite -A -H models/hmm100/newMacros -m -S lists/test.data -i results/res_hmm100.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+Current Word Error: 2.44
+Current Sentence Error: 4.88
+Current split = 2
+-------------- Training HMM --------------
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [05:46<00:00, 16.51s/it]
+HRest Complete
+Running HERest Iteration: 1...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [01:20<00:00,  3.51s/it]
+HERest Complete
+Running HHed Iteration: 25...
+HHEd -A -H models/hmm24/newMacros -M models/hmm25 configs/hhed0.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:51<00:00,  4.44s/it]
+HERest Complete
+Running HHed Iteration: 50...
+HHEd -A -H models/hmm49/newMacros -M models/hmm50 configs/hhed1.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:03<00:00,  4.93s/it]
+HERest Complete
+Running HHed Iteration: 75...
+HHEd -A -H models/hmm74/newMacros -M models/hmm75 configs/hhed2.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:44<00:00,  6.57s/it]
+HERest Complete
+HParse -A -T 1 grammar.txt wordNet.txt 
+Creating HParse net from file grammar.txt
+Generating Lattice with 32 nodes and 59 links
+Writing Word Lattice to wordNet.txt
+HVite -A -H models/hmm99/newMacros -m -S lists/test.data -i results/res_hmm99.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+HVite -A -H models/hmm100/newMacros -m -S lists/test.data -i results/res_hmm100.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+Current Word Error: 9.76
+Current Sentence Error: 21.95
+Current split = 3
+-------------- Training HMM --------------
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [01:56<00:00,  5.56s/it]
+HRest Complete
+Running HERest Iteration: 1...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [01:17<00:00,  3.38s/it]
+HERest Complete
+Running HHed Iteration: 25...
+HHEd -A -H models/hmm24/newMacros -M models/hmm25 configs/hhed0.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:47<00:00,  4.28s/it]
+HERest Complete
+Running HHed Iteration: 50...
+HHEd -A -H models/hmm49/newMacros -M models/hmm50 configs/hhed1.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:03<00:00,  4.93s/it]
+HERest Complete
+Running HHed Iteration: 75...
+HHEd -A -H models/hmm74/newMacros -M models/hmm75 configs/hhed2.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:35<00:00,  6.22s/it]
+HERest Complete
+HParse -A -T 1 grammar.txt wordNet.txt 
+Creating HParse net from file grammar.txt
+Generating Lattice with 32 nodes and 59 links
+Writing Word Lattice to wordNet.txt
+HVite -A -H models/hmm99/newMacros -m -S lists/test.data -i results/res_hmm99.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+HVite -A -H models/hmm100/newMacros -m -S lists/test.data -i results/res_hmm100.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+Current Word Error: 21.82
+Current Sentence Error: 43.9
+Current split = 4
+-------------- Training HMM --------------
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [02:31<00:00,  7.21s/it]
+HRest Complete
+Running HERest Iteration: 1...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [01:20<00:00,  3.50s/it]
+HERest Complete
+Running HHed Iteration: 25...
+HHEd -A -H models/hmm24/newMacros -M models/hmm25 configs/hhed0.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:42<00:00,  4.08s/it]
+HERest Complete
+Running HHed Iteration: 50...
+HHEd -A -H models/hmm49/newMacros -M models/hmm50 configs/hhed1.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:53<00:00,  4.53s/it]
+HERest Complete
+Running HHed Iteration: 75...
+HHEd -A -H models/hmm74/newMacros -M models/hmm75 configs/hhed2.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:32<00:00,  6.10s/it]
+HERest Complete
+HParse -A -T 1 grammar.txt wordNet.txt 
+Creating HParse net from file grammar.txt
+Generating Lattice with 32 nodes and 59 links
+Writing Word Lattice to wordNet.txt
+HVite -A -H models/hmm99/newMacros -m -S lists/test.data -i results/res_hmm99.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+HVite -A -H models/hmm100/newMacros -m -S lists/test.data -i results/res_hmm100.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+Current Word Error: 16.56
+Current Sentence Error: 39.02
+Current split = 5
+-------------- Training HMM --------------
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [02:44<00:00,  7.83s/it]
+HRest Complete
+Running HERest Iteration: 1...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [01:16<00:00,  3.32s/it]
+HERest Complete
+Running HHed Iteration: 25...
+HHEd -A -H models/hmm24/newMacros -M models/hmm25 configs/hhed0.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:47<00:00,  4.30s/it]
+HERest Complete
+Running HHed Iteration: 50...
+HHEd -A -H models/hmm49/newMacros -M models/hmm50 configs/hhed1.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:50<00:00,  4.42s/it]
+HERest Complete
+Running HHed Iteration: 75...
+HHEd -A -H models/hmm74/newMacros -M models/hmm75 configs/hhed2.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:21<00:00,  5.66s/it]
+HERest Complete
+HParse -A -T 1 grammar.txt wordNet.txt 
+Creating HParse net from file grammar.txt
+Generating Lattice with 32 nodes and 59 links
+Writing Word Lattice to wordNet.txt
+HVite -A -H models/hmm99/newMacros -m -S lists/test.data -i results/res_hmm99.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+HVite -A -H models/hmm100/newMacros -m -S lists/test.data -i results/res_hmm100.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+Current Word Error: 11.95
+Current Sentence Error: 26.83
+Current split = 6
+-------------- Training HMM --------------
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [02:01<00:00,  5.79s/it]
+HRest Complete
+Running HERest Iteration: 1...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [01:14<00:00,  3.25s/it]
+HERest Complete
+Running HHed Iteration: 25...
+HHEd -A -H models/hmm24/newMacros -M models/hmm25 configs/hhed0.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:42<00:00,  4.11s/it]
+HERest Complete
+Running HHed Iteration: 50...
+HHEd -A -H models/hmm49/newMacros -M models/hmm50 configs/hhed1.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:00<00:00,  4.83s/it]
+HERest Complete
+Running HHed Iteration: 75...
+HHEd -A -H models/hmm74/newMacros -M models/hmm75 configs/hhed2.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:36<00:00,  6.25s/it]
+HERest Complete
+HParse -A -T 1 grammar.txt wordNet.txt 
+Creating HParse net from file grammar.txt
+Generating Lattice with 32 nodes and 59 links
+Writing Word Lattice to wordNet.txt
+HVite -A -H models/hmm99/newMacros -m -S lists/test.data -i results/res_hmm99.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+HVite -A -H models/hmm100/newMacros -m -S lists/test.data -i results/res_hmm100.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+Current Word Error: 21.15
+Current Sentence Error: 51.22
+Current split = 7
+-------------- Training HMM --------------
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [02:10<00:00,  6.23s/it]
+HRest Complete
+Running HERest Iteration: 1...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [01:17<00:00,  3.35s/it]
+HERest Complete
+Running HHed Iteration: 25...
+HHEd -A -H models/hmm24/newMacros -M models/hmm25 configs/hhed0.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:46<00:00,  4.25s/it]
+HERest Complete
+Running HHed Iteration: 50...
+HHEd -A -H models/hmm49/newMacros -M models/hmm50 configs/hhed1.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:07<00:00,  5.12s/it]
+HERest Complete
+Running HHed Iteration: 75...
+HHEd -A -H models/hmm74/newMacros -M models/hmm75 configs/hhed2.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:36<00:00,  6.28s/it]
+HERest Complete
+HParse -A -T 1 grammar.txt wordNet.txt 
+Creating HParse net from file grammar.txt
+Generating Lattice with 32 nodes and 59 links
+Writing Word Lattice to wordNet.txt
+HVite -A -H models/hmm99/newMacros -m -S lists/test.data -i results/res_hmm99.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+HVite -A -H models/hmm100/newMacros -m -S lists/test.data -i results/res_hmm100.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+Current Word Error: 30.49
+Current Sentence Error: 43.9
+Current split = 8
+-------------- Training HMM --------------
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [02:21<00:00,  6.71s/it]
+HRest Complete
+Running HERest Iteration: 1...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [01:21<00:00,  3.54s/it]
+HERest Complete
+Running HHed Iteration: 25...
+HHEd -A -H models/hmm24/newMacros -M models/hmm25 configs/hhed0.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:37<00:00,  3.90s/it]
+HERest Complete
+Running HHed Iteration: 50...
+HHEd -A -H models/hmm49/newMacros -M models/hmm50 configs/hhed1.conf wordList 
+ WARNING [-2637]  HeaviestMix: mix 2 in black has v.small gConst [-541.724121] in HHEd
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:05<00:00,  5.03s/it]
+HERest Complete
+Running HHed Iteration: 75...
+HHEd -A -H models/hmm74/newMacros -M models/hmm75 configs/hhed2.conf wordList 
+ WARNING [-2637]  HeaviestMix: mix 2 in black has v.small gConst [-541.724121] in HHEd
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:38<00:00,  6.34s/it]
+HERest Complete
+HParse -A -T 1 grammar.txt wordNet.txt 
+Creating HParse net from file grammar.txt
+Generating Lattice with 32 nodes and 59 links
+Writing Word Lattice to wordNet.txt
+HVite -A -H models/hmm99/newMacros -m -S lists/test.data -i results/res_hmm99.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+HVite -A -H models/hmm100/newMacros -m -S lists/test.data -i results/res_hmm100.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+Current Word Error: 22.84
+Current Sentence Error: 51.22
+Current split = 9
+-------------- Training HMM --------------
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+Running HCompV...
+HCompV Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 21/21 [01:57<00:00,  5.62s/it]
+HRest Complete
+Running HERest Iteration: 1...
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 23/23 [01:11<00:00,  3.11s/it]
+HERest Complete
+Running HHed Iteration: 25...
+HHEd -A -H models/hmm24/newMacros -M models/hmm25 configs/hhed0.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:43<00:00,  4.15s/it]
+HERest Complete
+Running HHed Iteration: 50...
+HHEd -A -H models/hmm49/newMacros -M models/hmm50 configs/hhed1.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [01:56<00:00,  4.68s/it]
+HERest Complete
+Running HHed Iteration: 75...
+HHEd -A -H models/hmm74/newMacros -M models/hmm75 configs/hhed2.conf wordList 
+HHed Complete
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25/25 [02:29<00:00,  5.97s/it]
+HERest Complete
+HParse -A -T 1 grammar.txt wordNet.txt 
+Creating HParse net from file grammar.txt
+Generating Lattice with 32 nodes and 59 links
+Writing Word Lattice to wordNet.txt
+HVite -A -H models/hmm99/newMacros -m -S lists/test.data -i results/res_hmm99.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+HVite -A -H models/hmm100/newMacros -m -S lists/test.data -i results/res_hmm100.mlf -p -80 -w wordNet.txt -s 25 dict wordList 
+Current Word Error: 17.5
+Current Sentence Error: 40.0
+Cross-Validation Results
+Average Error: 16.9749
+Average Sentence Error: 34.72

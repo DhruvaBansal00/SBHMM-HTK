@@ -12,7 +12,7 @@ import argparse
 from random import shuffle
 
 
-def create_data_lists(train_data: list, test_data: list, phrase_len: int = 0) -> None:
+def create_data_lists(train_data: list, test_data: list, phrase_len: int = 0, fold: int = None) -> None:
 	"""Creates train.data, test.data, and all.data, which contain the
 	phrases in the dataset.
 
@@ -32,9 +32,9 @@ def create_data_lists(train_data: list, test_data: list, phrase_len: int = 0) ->
 	if not os.path.exists('lists'):
 		os.mkdir('lists')
 
-	all_data_filepath = os.path.join('lists', 'all.data')
-	train_data_filepath = os.path.join('lists', 'train.data')
-	test_data_filepath = os.path.join('lists', 'test.data')
+	all_data_filepath = os.path.join('lists', 'all.data') if fold is None else os.path.join('lists', str(fold), 'all.data')
+	train_data_filepath = os.path.join('lists', 'train.data') if fold is None else os.path.join('lists', str(fold), 'train.data')
+	test_data_filepath = os.path.join('lists', 'test.data') if fold is None else os.path.join('lists', str(fold), 'test.data')
 
 	with open(all_data_filepath, 'w') as all_data_list, \
 		 open(train_data_filepath, 'w') as train_data_list, \
