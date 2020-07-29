@@ -65,7 +65,7 @@ def testSBHMM(start: int, end: int, method: str, classifiers: [], pca_components
         testData.close()
 
     print("------Executing HVITE Command-------")
-    test(start, end, method, sbhmm_interstion_penalty)
+    test(start, end, method, sbhmm_interstion_penalty, fold=fold)
 
         
 
