@@ -19,15 +19,15 @@ from src.prepare_data.ark_creation import _create_ark_file
 from src.prepare_data.htk_creation import create_htk_files
 
 def testSBHMM(start: int, end: int, method: str, classifiers: [], pca_components: int, no_pca: bool,
-            sbhmm_interstion_penalty: float, n_jobs: int, parallel: bool) -> None:
+            sbhmm_interstion_penalty: float, n_jobs: int, parallel: bool, fold: str = "") -> None:
 
     print("-------Testing SBHMM-----------")
-    testDataFile = "lists/test.data"
-    htkFileLoc = "data/htk/"
-    arkFileLoc = "data/ark/"
+    testDataFile = f"lists/{fold}test.data"
+    htkFileLoc = f"data/{fold}htk/"
+    arkFileLoc = f"data/{fold}ark/"
 
-    arkFileSave = "data/arkSBHMMTest/"
-    htkFileSave = "data/htkSBHMMTest/"
+    arkFileSave = f"data/{fold}arkSBHMMTest/"
+    htkFileSave = f"data/{fold}htkSBHMMTest/"
 
     if os.path.exists(arkFileSave):
             shutil.rmtree(arkFileSave)

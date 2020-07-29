@@ -98,7 +98,7 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
         arkFileLoc = arkFileSave
         htkFileLoc = htkFileSave
 
-        print("Re-writing lists/train.data")
+        print(f"Re-writing lists/{fold}train.data")
         with open(trainDataFile, 'w') as trainData:
             trainData.writelines(newHtkFiles)
             trainData.close()
