@@ -35,7 +35,7 @@ def train(train_iters: list, mean: float, variance: float, transition_prob: floa
 
     if os.path.exists(f'logs/{fold}'):
         if os.path.exists(f'logs/{fold}train.log'):
-            os.remove(f'logs{fold}/train.log')
+            os.remove(f'logs/{fold}train.log')
 
     os.makedirs(f'models/{fold}')
 

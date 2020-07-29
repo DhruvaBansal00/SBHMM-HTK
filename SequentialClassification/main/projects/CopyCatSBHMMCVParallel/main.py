@@ -19,6 +19,7 @@ from src.prepare_data import prepare_data
 from src.train import create_data_lists, train, trainSBHMM
 from src.utils import get_results, save_results, load_json, get_arg_groups
 from src.test import test, testSBHMM
+from joblib import Parallel, delayed
 
 def copyFiles(fileNames: list, newFolder: str, originalFolder: str, ext: str):
     if os.path.exists(newFolder):
@@ -38,8 +39,8 @@ def crossValFold(train_data: list, test_data: list, args: object, fold: int):
 
     copyFiles(allFiles, os.path.join(currDataFolder, "ark"), os.path.join(ogDataFolder, "ark"), ".ark")
     copyFiles(allFiles, os.path.join(currDataFolder, "htk"), os.path.join(ogDataFolder, "htk"), ".htk")
-    create_data_lists([os.path.join(currDataFolder, "htk", i+".htk") for i in train_data], [
-                    os.path.join(currDataFolder, "htk", i+".htk") for i in test_data], args.phrase_len, fold)
+    create_data_lists([os.path.join(currDataFolder, "htk", i+".htk") for i in trainFiles], [
+                    os.path.join(currDataFolder, "htk", i+".htk") for i in testFiles], args.phrase_len, fold)
     
     if args.train_sbhmm:
         classifiers = trainSBHMM(args.sbhmm_cycles, args.train_iters, args.mean, args.variance, args.transition_prob, args.device, 
@@ -49,8 +50,8 @@ def crossValFold(train_data: list, test_data: list, args: object, fold: int):
         testSBHMM(args.start, args.end, args.method, classifiers, args.pca_components, args.no_pca, args.sbhmm_insertion_penalty, 
                 args.parallel_jobs, args.parallel_classifier_training, os.path.join(str(fold), ""))
     else:
-        train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device, os.path.join(str(fold), ""))
-        test(args.start, args.end, args.method, args.hmm_insertion_penalty, os.path.join(str(fold), ""))
+        train(args.train_iters, args.mean, args.variance, args.transition_prob, args.device, fold=os.path.join(str(fold), ""))
+        test(args.start, args.end, args.method, args.hmm_insertion_penalty, fold=os.path.join(str(fold), ""))
 
     if args.train_sbhmm:
         hresults_file = f'hresults/{os.path.join(str(fold), "")}res_hmm{args.sbhmm_iters[-1]-1}.txt'
@@ -210,10 +211,11 @@ if __name__ == '__main__':
         else:
             splits = list(cross_val.split(htk_filepaths, phrases))
         
-        for i, (train_index, test_index) in enumerate(splits):
-            train_data = np.array(htk_filepaths)[train_index]
-            test_data = np.array(htk_filepaths)[test_index]
-            crossValFold(train_data, test_data, args, i)
+        Parallel(n_jobs=args.parallel_jobs)(delayed(crossValFold)(np.array(htk_filepaths)[splits[currFold][0]], np.array(htk_filepaths)[splits[currFold][1]], args, currFold) for currFold in range(len(splits)))
+        # for i, (train_index, test_index) in enumerate(splits):
+        #     train_data = np.array(htk_filepaths)[train_index]
+        #     test_data = np.array(htk_filepaths)[test_index]
+        #     crossValFold(train_data, test_data, args, i)
 
     elif args.test_type == 'cross_val':
 
