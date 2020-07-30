@@ -7,50 +7,49 @@ from make_mediapipe_video import make_mediapipe_video
 from make_features_table import make_features_table
 from json_data import load_json
 
-def make_visualization_videos(base_image_dir, base_features_dir, users, base_project_dir, feature_type, table_video, video_type_lists, frame_rate):
+def make_visualization_videos(input_frames_directory, input_mediapipe_directory, users, output_project_directory, feature_type, table_video, visualization_types, frame_rate):
 
-	image_dirs = []
-	for (dirpath, dirnames,_) in os.walk(base_image_dir):
-		if len(dirpath.split('/')) == 9:
-			image_dirs += [os.path.join(dirpath)]
+	features_config = load_json(os.path.join(output_project_directory, 'configs/features.json'))
+	features = features_config[feature_type]
 
-	features = load_json(os.path.join(base_project_dir, 'configs/features.json'))[feature_type]
+	if len(users) == 0:
+		features_filepaths = glob.glob(os.path.join(input_mediapipe_directory, '**/*.data'), recursive = True)
+	else:
+		features_filepaths = []
+		for user in users:
+			features_filepaths.extend(glob.glob(os.path.join(input_mediapipe_directory, '*{}*'.format(user), '**/*.data'), recursive = True))
+
+	print(features_filepaths)
 
 	if table_video:
-		print("making feature table for each trial")
-		if len(glob.glob(os.path.join(base_project_dir, 'visualization', 'tables', 'trials', '*'))) <= 1:
-			make_features_table(base_features_dir, users, base_project_dir, 'trials')
+		print("Making feature table for each trial")
+		make_features_table(input_mediapipe_directory, users, output_project_directory, 'trials')
 
-	for image_directory in image_dirs:
-		shared_directory = os.path.join(image_directory.split("/")[-2], image_directory.split("/")[-1]) # the type of phrase and trial: phrase/trial_number
+	 
+	for features_filepath in features_filepaths:
+		filename = features_filepath.split('/')[-1]
+		session, phrase, trial, _ = filename.split('.')
+		
+		frames_directory = os.path.join(input_frames_directory, session, phrase, trial, '*.png')
+		save_directory = os.path.join(output_project_directory, 'visualization/videos', session, phrase, trial)
+		table_filepath = os.path.join(output_project_directory, 'visualization/tables/trials', session, phrase, trial, '{}.{}.{}.png'.format(session, phrase, trial))
 
-		image_directory_filepath = os.path.join(base_image_dir, shared_directory) # path to png images of this trial
-		feature_directory_filepath = glob.glob(os.path.join(base_features_dir, shared_directory, '*.data'))[0] # path to raw mediapipe data 
-		save_directory_filepath = os.path.join(base_project_dir, 'visualization/videos', shared_directory) # path to where the images/video should be saved
-
-		print("Processing {}".format(save_directory_filepath))
-
-		#print(shared_directory, image_directory_filepath, feature_directory_filepath, save_directory_filepath)
-
-		if not os.path.exists(save_directory_filepath):
-			os.makedirs(save_directory_filepath)
-			print("Making Directory {}".format(save_directory_filepath))
-			make_mediapipe_video(image_directory_filepath, feature_directory_filepath, save_directory_filepath, features, shared_directory, table_video, video_type_lists, frame_rate)
-
-
+		if not os.path.exists(save_directory):
+			os.makedirs(save_directory)
+			make_mediapipe_video(frames_directory, features_filepath, save_directory, features, table_video, table_filepath, visualization_types, frame_rate)
 
 
 if __name__ == '__main__':
 
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--base_image_dir', default = '/home/thad/Desktop/AndroidCaptureApp/DATA/Prerna_04_07_20/')
-	parser.add_argument('--base_features_dir', default = '/media/thad/Seagate Backup Plus Drive/July_Mediapipe_Features')
+	parser.add_argument('--input_frames_directory', type = str, default = '/mnt/ExtremeSSD/ProcessingPipeline/DATA/Frames')
+	parser.add_argument('--input_mediapipe_directory', type = str, default = '/mnt/ExtremeSSD/ProcessingPipeline/DATA/Mediapipe_Data_July_2020')
 	parser.add_argument('--users', default = ['Prerna'])
-	parser.add_argument('--base_project_dir', default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs')
-	parser.add_argument('--feature_type', default = 'visualization_features')
+	parser.add_argument('--output_project_directory', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/July2020Mediapipe')
+	parser.add_argument('--feature_type', type = str, default = 'visualization_features')
 	parser.add_argument('--table_video', action = 'store_true')
-	parser.add_argument('--video_type_lists', default = [['mediapipe']])
-	parser.add_argument('--frame_rate', default = 5)
+	parser.add_argument('--visualization_types', default = [['mediapipe']])
+	parser.add_argument('--frame_rate', type = int, default = 5)
 	args = parser.parse_args()
 
-	make_visualization_videos(args.base_image_dir, args.base_features_dir, args.users, args.base_project_dir, args.feature_type, args.table_video, args.video_type_lists, args.frame_rate)
+	make_visualization_videos(args.input_frames_directory, args.input_mediapipe_directory, args.users, args.output_project_directory, args.feature_type, args.table_video, args.visualization_types, args.frame_rate)

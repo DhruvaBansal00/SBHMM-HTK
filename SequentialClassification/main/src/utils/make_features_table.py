@@ -5,12 +5,13 @@ import matplotlib.pyplot as plt
 import sys
 import json
 import argparse
+import shutil
 
-def make_features_table(data_dir, users, save_dir, mode):
+def make_features_table(input_mediapipe_directory, users, output_project_directory, mode):
 
-    # data_dir: the mediapipe data set directory
+    # input_mediapipe_directory: the mediapipe data set directory
 
-    # save_dir: the location where the tables are saved (actual directory will be <save_dir>/tables/<mode>)
+    # output_project_directory: the location where the tables are saved (actual directory will be <save_dir>/tables/<mode>)
 
     # mode options: [trials, phrases, words, all].
     #  - trials: creates a table for each unique trial
@@ -22,32 +23,36 @@ def make_features_table(data_dir, users, save_dir, mode):
 
     # make output path
 
+#os.path.join(output_project_directory, 'visualization/tables/trials', session, phrase, trial, '{}.{}.{}.png'.format(session, phrase, trial))
+
     if not (mode == 'trials' or mode == 'phrases' or mode == 'words' or mode == 'all'):
         return
 
-    tables_dir = os.path.join(save_dir, 'visualization', 'tables', mode)
-    if not os.path.exists(tables_dir):
-        os.makedirs(tables_dir)
+    base_tables_directory = os.path.join(output_project_directory, 'visualization/tables', mode)
 
-    os.chdir(tables_dir)
+    if os.path.exists(base_tables_directory):
+        shutil.rmtree(base_tables_directory)
 
-    data_files_list = []
-    for user in users:
-        data_files_list += glob.glob(os.path.join(data_dir, '*/*/*{}*.data'.format(user)))
-    if not users:
-        data_files_list = glob.glob(os.path.join(data_dir, '*/*/*.data'))
+    os.makedirs(base_tables_directory)
+
+    if len(users) == 0:
+        features_filepaths = glob.glob(os.path.join(input_mediapipe_directory, '**/*.data'), recursive = True)
+    else:
+        features_filepaths = []
+        for user in users:
+            features_filepaths.extend(glob.glob(os.path.join(input_mediapipe_directory, '*{}*'.format(user), '**/*.data'), recursive = True))
 
     # to hold the score
     boxes_score_dict = {'boxes': {}, 'landmarks': {}, 'faces': {}}
 
     if mode == 'trials':
 
-        for data_file in data_files_list:
+        for features_filepath in features_filepaths:
             
-            print("Creating table for {}".format(data_file))
+            print("Creating table for {}".format(features_filepath))
 
             # get frequnecy of data for current data file 
-            result_table = make_table(data_file)
+            result_table = make_table(features_filepath)
 
             # find percent of data detected and round to 4 decimal places
             data_length = np.sum(result_table, axis=0)[0]
@@ -55,32 +60,39 @@ def make_features_table(data_dir, users, save_dir, mode):
             result_table = np.round(result_table, 4)
 
             # make plot for table
-            table_file_name = data_file.split('/')[-1].replace('.data', '')
-            table_dir = os.path.join(data_file.split('/')[-3], data_file.split('/')[-2])
-            #print(table_file_name, table_dir)
+            feature_filename = features_filepath.split('/')[-1]
+            session, phrase, trial = feature_filename.split('.')[0:3]
 
-            make_plot(result_table, table_file_name, table_dir = table_dir)
+            table_filename = '{}.{}.{}.png'.format(session, phrase, trial)
+            table_directory = os.path.join(base_tables_directory, session, phrase, trial)
+
+            # print(table_filename, table_dir)
+
+            make_plot(result_table, table_filename = table_filename, table_directory = table_directory)
 
             # score among trials between [0, 1]
-            boxes_score_dict['boxes'][table_file_name] = round(result_table[1][0] * 0.5 + result_table[2][0], 4) # 1_hand * 0.5 + 2_hand
-            boxes_score_dict['landmarks'][table_file_name] = round(result_table[1][1] * 0.5 + result_table[2][1], 4) # 1_landmark * 0.5 + 2_landmark
-            boxes_score_dict['faces'][table_file_name] = round(result_table[1][2], 4) # 1_face            
+            boxes_score_dict['boxes'][table_filename] = round(result_table[1][0] * 0.5 + result_table[2][0], 4) # 1_hand * 0.5 + 2_hand
+            boxes_score_dict['landmarks'][table_filename] = round(result_table[1][1] * 0.5 + result_table[2][1], 4) # 1_landmark * 0.5 + 2_landmark
+            boxes_score_dict['faces'][table_filename] = round(result_table[1][2], 4) # 1_face            
     
     elif mode == 'phrases':
 
         phrase_dict = {}
-        for data_file in data_files_list:
-            phrase = data_file.split('/')[-1].split('.')[1]
-            if phrase not in phrase_dict:
-                phrase_dict[phrase] = []
-            phrase_dict[phrase].append(data_file)
+        for features_filepath in features_filepaths:
+            
+            phrase = features_filepath.split('/')[-1].split('.')[1]
+
+            try: phrase_dict[phrase].append(features_filepath)
+            except KeyError: phrase_dict[phrase] = [features_filepath]
 
         for phrase in phrase_dict:
             result_table = np.array([[0 for i in range(3)] for j in range(4)])
-            for data_file in phrase_dict[phrase]:
+            for features_filepath in phrase_dict[phrase]:
                 # get frequnecy of data for current data file 
-                current_table = make_table(data_file)
-                result_table += current_table 
+                current_table = make_table(features_filepath)
+                result_table += current_table
+                feature_filename = features_filepath.split('/')[-1]
+                session, phrase, trial = feature_filename.split('.')[0:3]
 
             # find percent of data detected and round to 4 decimal places
             data_length = np.sum(result_table, axis=0)[0]
@@ -88,7 +100,9 @@ def make_features_table(data_dir, users, save_dir, mode):
             result_table = np.round(result_table, 4)
 
             # make plot for table
-            make_plot(result_table, phrase)
+            table_filename = '{}.{}.png'.format(session, phrase)
+            table_directory = os.path.join(base_tables_directory, session, phrase)
+            make_plot(result_table, table_filename = table_filename, table_directory = table_directory)
 
             # score among phrases between [0, 1]
             boxes_score_dict['boxes'][phrase] = round(result_table[1][0] * 0.5 + result_table[2][0], 4) # 1_hand * 0.5 + 2_hand
@@ -97,7 +111,7 @@ def make_features_table(data_dir, users, save_dir, mode):
             
     elif mode == 'words':
         word_dict = {}
-        for data_file in data_files_list:
+        for data_file in features_filepaths:
             phrase = data_file.split('/')[-1].split('.')[1]
             words = phrase.split("_")
             for word in words:
@@ -128,7 +142,7 @@ def make_features_table(data_dir, users, save_dir, mode):
 
     elif mode == 'all':
         result_table = np.array([[0 for i in range(3)] for j in range(4)])
-        for data_file in data_files_list:
+        for data_file in features_filepaths:
 
             # get frequnecy of data for current data file
             current_table = make_table(data_file)
@@ -165,8 +179,8 @@ def _load_json(json_file):
         data = json.loads(data_file.read())
     return data
 
-def make_table(data_file):
-    curr_data = _load_json(data_file)
+def make_table(features_filepath):
+    curr_data = _load_json(features_filepath)
     if not curr_data:
         return None
     curr_data = {int(key): value for key, value in curr_data.items()}
@@ -197,7 +211,7 @@ def make_table(data_file):
             table[len(curr_data[i]["faces"])][2] += 1
     return table
 
-def make_plot(table, table_title, table_dir = ""):
+def make_plot(table, table_filename, table_directory):
 
     # make string table
     strtable = [['' for i in range(3)] for j in range(4)]
@@ -223,14 +237,14 @@ def make_plot(table, table_title, table_dir = ""):
 
     plt.table(cellText=strtable, rowLabels=["0", "1", "2", ">2"], colLabels=columns, loc='bottom', bbox=[0, -0.4, 1, 0.25], cellLoc='center')
 
-    plt.title(label=table_title)
+    plt.title(label=table_filename)
 
-    if len(table_dir) and not os.path.exists(table_dir):
-        os.makedirs(table_dir)
+    if len(table_directory) and not os.path.exists(table_directory):
+        os.makedirs(table_directory)
         
-    save_dir = os.path.join(table_dir, table_title)
+    save_dir = os.path.join(table_directory, table_filename)
 
-    plt.savefig('{}.png'.format(save_dir)) 
+    plt.savefig('{}'.format(save_dir)) 
 
 
 if __name__ == '__main__':

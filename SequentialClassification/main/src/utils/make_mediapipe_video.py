@@ -13,32 +13,29 @@ from mediapipe_feature_data import mediapipe_feature_data
 from interpolate_feature_data import interpolate_feature_data
 from kalman_feature_data import kalman_feature_data
 
-def make_mediapipe_video(image_dir, features_filepath, save_dir, features, shared_directory, table_video, video_type_lists, frame_rate):
+def make_mediapipe_video(frames_directory, features_filepath, save_directory, features, table_video, table_filepath, visualization_types, frame_rate):
 
 
     """Generates visualization video(s) for a specific recording (trial) for the following types of dataframes: mediapipe, interpolate, and kalman.
 
     Parameters
     ----------
-    image_dir : str
+    frames_directory : str
         Directory path of raw images for the specific trial that were recorded from a capture device
 
     features_filepath : str
         File path to raw mediapipe data for the specific trial
 
-    save_dir : str
+    save_directory : str
         Directory path where the video(s) will be saved 
 
-    select_features_filepath : str
-        File path to the features that should be selected from the raw mediapipe feature data for the visualization video(s)
-
-    shared_directory : str (might remove later as it can be generated)
-        The name of the phrase and trial number for the specific recording: "<phrase>/<trial_number>"
+    features : list of str
+       The names of the features to display in the visualization video(s)
 
     table_video : bool
         Whether or not to output video(s) for the specific trial with a table of feature information on the right-hand side
 
-    video_type_lists : 2D list of str
+    visualization_types : 2D list of str
         Each element is a list of strings that describes the type of dataframes to include in the specific video. Each element will generate a seperate video
         options: 'mediapipe', 'interpolate', 'kalman'
         -- ex. [['mediapipe'], ['interpolate'], ['kalman'], ['mediapipe', 'interpolate', 'kalman']]
@@ -49,40 +46,35 @@ def make_mediapipe_video(image_dir, features_filepath, save_dir, features, share
 
     Returns
     -------
-    Generates video(s) for visualization purposes for a specific trial 
+    Generates visualization video(s) for a specific input video 
 
     """
-
-    # FEATURES_TO_EXTRACT = ['left_hand_x', 'left_hand_y', 'left_hand_w', 'left_hand_h', 'right_hand_x', 'right_hand_y', 'right_hand_w', 'right_hand_h', 'left_landmark_0_x', 'left_landmark_0_y', 'left_landmark_1_x', 'left_landmark_1_y']
+    print("Making Visualization Video for {}".format(save_directory))
 
     mediapipe_feature_df = mediapipe_feature_data(features_filepath, features, drop_na = False)
-    #interpolate_feature_df = interpolate_feature_data(features_filepath, features, drop_na = False)
-    #kalman_feature_df = kalman_feature_data(features_filepath, features, drop_na = False)
+    interpolate_feature_df = interpolate_feature_data(features_filepath, features, drop_na = False)
+    kalman_feature_df = kalman_feature_data(features_filepath, features, drop_na = False)
     
     # A dictionary with the three different types of feature data DataFrame 
-    #df_dict = {'mediapipe': mediapipe_feature_df, 'interpolate': interpolate_feature_df, 'kalman': kalman_feature_df}
-    df_dict = {'mediapipe': mediapipe_feature_df}
-
-    # List of images for the specific recording
-    image_filepaths = sorted(glob.glob(os.path.join(image_dir, '*png')))
+    feature_df_dict = {'mediapipe': mediapipe_feature_df, 'interpolate': interpolate_feature_df, 'kalman': kalman_feature_df}
 
     # A dictionary that has its key as the root word of each type of feature: {left_hand: [left_hand_x, left_hand_y, left_hand_w, left_hand_h], right_hand: [right_hand_x, ...] ...}
-
     features_to_extract_dict = {}
     for feature in features:
-        if 'rot' in feature or 'dist' in feature or 'delta' in feature or 'top' in feature or 'bot' in feature:
-            continue
+        if 'rot' in feature or 'dist' in feature or 'delta' in feature or 'top' in feature or 'bot' in feature: continue
+
         feature_key = '_'.join(feature.split("_")[0:-1])
-        if feature_key not in features_to_extract_dict:
-            features_to_extract_dict[feature_key] = []
-        features_to_extract_dict[feature_key].append(feature)
+        
+        try: features_to_extract_dict[feature_key].append(feature)
+        except KeyError: features_to_extract_dict[feature_key] = [feature]
 
-    print("creating video(s) for {}".format(shared_directory))
+    # List of images for the specific recording
+    frames_filepaths = sorted(glob.glob(frames_directory))
 
-    for video_type in video_type_lists:
-        draw_features(video_type, image_filepaths, features_to_extract_dict, df_dict, save_dir, shared_directory, table_video)
-        save_video(video_type, save_dir, shared_directory, frame_rate)
-        delete_images(len(image_filepaths))
+    for visualization_type in visualization_types:
+        draw_features(visualization_type, frames_filepaths, features_to_extract_dict, feature_df_dict, save_directory, table_video, table_filepath)
+        save_video(visualization_type, save_directory, table_filepath.split('/')[-1], frame_rate)
+        delete_images(len(frames_filepaths))
 
 
 def calculate_coordinates(data, height, width, feature_type):
@@ -120,23 +112,24 @@ def delete_images(num_frames):
         filename = f'frame_{i:03d}.png'
         os.remove(filename)
 
-def save_video(video_type, save_dir, shared_directory, frame_rate = 5):
-    os.chdir(save_dir)
+def save_video(visualization_type, save_directory, table_filename, frame_rate = 5):
+    os.chdir(save_directory)
 
-    video_name_0 = '_'.join(video_type)
-    video_name_1 = shared_directory.replace('/','_')
+    visual_types = '_'.join(visualization_type)
+    session, phrase, trial = table_filename.split('.')[0:3]
 
-    os.system('ffmpeg -r {} -f image2 -s 1024x768 -i frame_%03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p {}_{}.mp4'.format(frame_rate, video_name_0, video_name_1))
+    video_filename = '.'.join((session, phrase, trial, visual_types, 'mp4'))
 
-def draw_features(video_type, image_filepaths, features_to_extract_dict, df_dict, save_dir, shared_directory, table_video):
+    os.system('ffmpeg -r {} -f image2 -s 1024x768 -i frame_%03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p {}'.format(frame_rate, video_filename))
 
-    height, width, _ = cv2.imread(image_filepaths[0]).shape
+def draw_features(visualization_type, frames_filepaths, features_to_extract_dict, feature_df_dict, save_directory, table_video, table_filepath):
 
-    for i, image_filepath in enumerate(image_filepaths):
+    height, width, _ = cv2.imread(frames_filepaths[0]).shape
+
+    for i, frame_filepath in enumerate(frames_filepaths):
         filename = f'frame_{i:03d}.png'
-        image = cv2.imread(image_filepath)
-        #print(filename)
-        height, width, _ = cv2.imread(image_filepaths[i]).shape
+        image = cv2.imread(frame_filepath)
+        height, width, _ = image.shape
 
         for feature in features_to_extract_dict.items():
 
@@ -144,7 +137,7 @@ def draw_features(video_type, image_filepaths, features_to_extract_dict, df_dict
             feature_key_to_extract = feature[1]
             color = (0, 0, 0)
         
-            for df_type in video_type:
+            for df_type in visualization_type:
                 if 'right' in feature_key:
                     color = (255, 0, 0) # blue
                     if 'interpolate' in df_type:
@@ -163,29 +156,22 @@ def draw_features(video_type, image_filepaths, features_to_extract_dict, df_dict
                         color = (255, 255, 255) # white
 
                 if 'hand' in feature_key:          
-                    x, y, w, h = calculate_coordinates(df_dict[str(df_type)].loc[i, feature_key_to_extract].values, height, width, 'hand')
+                    x, y, w, h = calculate_coordinates(feature_df_dict[str(df_type)].loc[i, feature_key_to_extract].values, height, width, 'hand')
                     if x and y and w and h:
                         cv2.rectangle(image, (x, y), (x + w, y + h), color, 2)
                 elif 'landmark' in feature_key or 'face' in feature_key:
                     label = 'landmark' if 'landmark' in feature_key else 'face'
-                    x, y = calculate_coordinates(df_dict[str(df_type)].loc[i, feature_key_to_extract].values, height, width, label)
+                    x, y = calculate_coordinates(feature_df_dict[str(df_type)].loc[i, feature_key_to_extract].values, height, width, label)
                     if x and y:
                         cv2.circle(image, (x, y), 3, color, -1)
 
         if table_video:
-            visualization_directory = '/'.join(save_dir.split('/')[:-3]) # directory path to <base_project>/visualization
-            table_trial_directory = os.path.join(visualization_directory, 'tables/trials/', shared_directory) # directory path to <base_project>/visualization/tables/trials/<phrase>/<trial>
-            table_filename = shared_directory.replace('/', '.')
-
-            table_filepath = glob.glob(os.path.join(table_trial_directory, '*.png'))[0] # the path to the .png table
             table_image = cv2.imread(table_filepath)
             resized_table_image = cv2.resize(table_image, (width, height)) # the resized table image
-
             image = cv2.hconcat([image, resized_table_image]) # concatenate the feature image with the table
 
-        save_image_filepath = os.path.join(save_dir, filename)
-        cv2.imwrite(save_image_filepath, image)        
-
+        new_frame_filepath = os.path.join(save_directory, filename)
+        cv2.imwrite(new_frame_filepath, image)        
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
