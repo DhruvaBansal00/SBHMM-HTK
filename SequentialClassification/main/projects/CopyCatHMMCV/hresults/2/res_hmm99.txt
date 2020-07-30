@@ -1,0 +1,74 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/2/res_hmm99.mlf 
+Aligned transcription: data/2/htk/Prerna.alligator_above_bed.1582398739748.lab vs data/2/htk/Prerna.alligator_above_bed.1582398739748.rec
+ LAB: alligator above bed   
+ REC: alligator above wagon 
+Aligned transcription: data/2/htk/Prerna.snake_in_flowers.1582398186775.lab vs data/2/htk/Prerna.snake_in_flowers.1582398186775.rec
+ LAB: snake in    flowers 
+ REC: snake above wagon   
+Aligned transcription: data/2/htk/Prerna.alligator_in_wagon.1582399311039.lab vs data/2/htk/Prerna.alligator_in_wagon.1582399311039.rec
+ LAB: alligator in    wagon 
+ REC: alligator above wagon 
+Aligned transcription: data/2/htk/Prerna.lion_above_wall.1582399207106.lab vs data/2/htk/Prerna.lion_above_wall.1582399207106.rec
+ LAB: lion above wall 
+ REC: lion above box  
+Aligned transcription: data/2/htk/Linda.white_alligator_above_blue_wall.1587943747147.lab vs data/2/htk/Linda.white_alligator_above_blue_wall.1587943747147.rec
+ LAB: white alligator above  blue  wall  
+ REC:                 monkey below wagon 
+Aligned transcription: data/2/htk/Linda.monkey_above_white_wall.1587957301696.lab vs data/2/htk/Linda.monkey_above_white_wall.1587957301696.rec
+ LAB: monkey above white  wall 
+ REC: monkey above orange wall 
+Aligned transcription: data/2/htk/Linda.alligator_above_blue_wagon.1587939567235.lab vs data/2/htk/Linda.alligator_above_blue_wagon.1587939567235.rec
+ LAB:      alligator above blue   wagon 
+ REC: blue alligator above orange bed   
+Aligned transcription: data/2/htk/Linda.black_lion_in_blue_wagon.1587953425075.lab vs data/2/htk/Linda.black_lion_in_blue_wagon.1587953425075.rec
+ LAB: black lion in blue wagon 
+ REC:       lion in blue wagon 
+Aligned transcription: data/2/htk/Linda.monkey_below_blue_chair.1587939696670.lab vs data/2/htk/Linda.monkey_below_blue_chair.1587939696670.rec
+ LAB: monkey below blue chair 
+ REC: monkey above blue chair 
+Aligned transcription: data/2/htk/Linda.alligator_in_orange_flowers.1587944205903.lab vs data/2/htk/Linda.alligator_in_orange_flowers.1587944205903.rec
+ LAB: alligator in orange flowers 
+ REC: monkey    in orange flowers 
+Aligned transcription: data/2/htk/Linda.monkey_in_blue_box.1587943695332.lab vs data/2/htk/Linda.monkey_in_blue_box.1587943695332.rec
+ LAB: monkey in blue                 box 
+ REC:           blue alligator below box 
+Aligned transcription: data/2/htk/Linda.alligator_above_black_wall.1587954445913.lab vs data/2/htk/Linda.alligator_above_black_wall.1587954445913.rec
+ LAB: alligator above black  wall 
+ REC: alligator above orange wall 
+Aligned transcription: data/2/htk/Linda.blue_monkey_above_grey_box.1587939376570.lab vs data/2/htk/Linda.blue_monkey_above_grey_box.1587939376570.rec
+ LAB: blue monkey above grey box 
+ REC:      monkey       in   box 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Thu Jul 30 11:50:50 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/2/res_hmm99.mlf                                |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |   41  |  85.23  10.07   4.70   2.01  16.78  31.71 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w 
+       b   l   e   e   l   l   o   h   l   r   n   i   o   r   n   a   a 
+       o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l 
+       v   i       o   c   e       i   w   y       n   k   n   k   o   l 
+       e   g       w   k           r   e               e   g   e   n      Del [ %c / %e]
+abov  18   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0    1 [94.7/0.7]
+alli   0  11   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0    1 [91.7/0.7]
+ bed   0   0   6   0   0   0   0   0   0   0   0   0   0   0   0   1   0    0 [85.7/0.7]
+belo   1   0   0  10   0   0   0   0   0   0   0   0   0   0   0   0   0    0 [90.9/0.7]
+blac   0   0   0   0   2   0   0   0   0   0   0   0   0   1   0   0   0    1 [66.7/0.7]
+blue   0   0   0   1   0   7   0   0   0   0   0   0   0   1   0   0   0    1 [77.8/1.3]
+ box   0   0   0   0   0   0   7   0   0   0   0   0   0   0   0   0   0    0
+chai   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0   0   0    0
+flow   0   0   0   0   0   0   0   0   3   0   0   0   0   0   0   1   0    0 [75.0/0.7]
+grey   0   0   0   0   0   0   0   0   0   5   1   0   0   0   0   0   0    0 [83.3/0.7]
+  in   2   0   0   0   0   0   0   0   0   0   7   0   0   0   0   0   0    1 [77.8/1.3]
+lion   0   0   0   0   0   0   0   0   0   0   0   9   0   0   0   0   0    0
+monk   0   0   0   0   0   0   0   0   0   0   0   0  11   0   0   0   0    1
+oran   0   0   0   0   0   0   0   0   0   0   0   0   0   4   0   0   0    0
+snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0   0    0
+wago   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   5   0    0 [83.3/0.7]
+wall   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   1   7    0 [77.8/1.3]
+whit   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0    1 [ 0.0/0.7]
+Ins    0   1   0   1   0   1   0   0   0   0   0   0   0   0   0   0   0
