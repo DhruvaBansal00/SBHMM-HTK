@@ -73,7 +73,7 @@ def make_features_table(input_mediapipe_directory, users, output_project_directo
             # score among trials between [0, 1]
             boxes_score_dict['boxes'][table_filename] = round(result_table[1][0] * 0.5 + result_table[2][0], 4) # 1_hand * 0.5 + 2_hand
             boxes_score_dict['landmarks'][table_filename] = round(result_table[1][1] * 0.5 + result_table[2][1], 4) # 1_landmark * 0.5 + 2_landmark
-            boxes_score_dict['faces'][table_filename] = round(result_table[1][2], 4) # 1_face            
+            boxes_score_dict['faces'][table_filename] = round(result_table[1][2], 4) # 1_face
     
     elif mode == 'phrases':
 
@@ -170,7 +170,8 @@ def make_features_table(input_mediapipe_directory, users, output_project_directo
     # print(boxes_score_dict)
 
     # write the boxes score to a file in the respective tables directory
-    with open("{}_score.json".format(mode), "w") as file:
+    score_filepath = os.path.join(base_tables_directory, '{}_score.json'.format(mode))
+    with open(score_filepath, "w") as file:
         file.write(json.dumps(boxes_score_dict, indent=4)) 
 
 
