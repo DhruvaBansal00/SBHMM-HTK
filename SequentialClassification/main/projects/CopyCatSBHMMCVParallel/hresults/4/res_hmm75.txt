@@ -1,27 +1,21 @@
 HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/4/res_hmm75.mlf 
-Aligned transcription: data/4/htkSBHMMTest/Linda.black_monkey_in_white_flowers.1587944627714.lab vs data/4/htkSBHMMTest/Linda.black_monkey_in_white_flowers.1587944627714.rec
- LAB: black monkey in white  flowers 
- REC: black monkey in orange flowers 
-Aligned transcription: data/4/htkSBHMMTest/Linda.white_lion_above_orange_wall.1587953404383.lab vs data/4/htkSBHMMTest/Linda.white_lion_above_orange_wall.1587953404383.rec
- LAB: white lion above orange wall 
- REC: white lion above orange bed  
 Aligned transcription: data/4/htkSBHMMTest/Linda.black_lion_above_grey_bed.1587944179075.lab vs data/4/htkSBHMMTest/Linda.black_lion_above_grey_bed.1587944179075.rec
- LAB: black lion above grey bed 
- REC:       lion above grey bed 
+ LAB: black lion   above grey bed 
+ REC: blue  monkey above grey bed 
 Aligned transcription: data/4/htkSBHMMTest/Linda.lion_below_orange_chair.1587944596738.lab vs data/4/htkSBHMMTest/Linda.lion_below_orange_chair.1587944596738.rec
- LAB:       lion  below orange chair 
- REC: black snake below orange chair 
+ LAB: lion  below orange chair 
+ REC: snake below orange chair 
 Aligned transcription: data/4/htkSBHMMTest/Linda.black_lion_in_blue_wagon.1587945361408.lab vs data/4/htkSBHMMTest/Linda.black_lion_in_blue_wagon.1587945361408.rec
  LAB: black lion  in blue wagon 
  REC: black snake in blue wagon 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Thu Jul 30 13:27:09 2020            |
+    | HTK Results Analysis at Thu Jul 30 19:48:36 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/4/res_hmm75.mlf                                |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |   41  |  96.71   2.63   0.66   0.66   3.95  12.20 |
+    | Sum/Avg |   41  |  97.37   2.63   0.00   0.00   2.63   7.32 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -33,18 +27,18 @@ abov  19   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    
 alli   0  10   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
  bed   0   0   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
 belo   0   0   0  14   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blac   0   0   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0   0    1
+blac   0   0   0   0   5   1   0   0   0   0   0   0   0   0   0   0   0   0    0 [83.3/0.7]
 blue   0   0   0   0   0   8   0   0   0   0   0   0   0   0   0   0   0   0    0
  box   0   0   0   0   0   0   6   0   0   0   0   0   0   0   0   0   0   0    0
 chai   0   0   0   0   0   0   0  10   0   0   0   0   0   0   0   0   0   0    0
 flow   0   0   0   0   0   0   0   0   5   0   0   0   0   0   0   0   0   0    0
 grey   0   0   0   0   0   0   0   0   0   5   0   0   0   0   0   0   0   0    0
   in   0   0   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0    0
-lion   0   0   0   0   0   0   0   0   0   0   0   9   0   0   2   0   0   0    0 [81.8/1.3]
+lion   0   0   0   0   0   0   0   0   0   0   0   8   1   0   2   0   0   0    0 [72.7/2.0]
 monk   0   0   0   0   0   0   0   0   0   0   0   0  12   0   0   0   0   0    0
 oran   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0   0   0   0    0
 snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0   8   0   0   0    0
 wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0   0    0
-wall   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0    0 [85.7/0.7]
-whit   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   2    0 [66.7/0.7]
-Ins    0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0
+wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0    0
+whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3    0
+Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0

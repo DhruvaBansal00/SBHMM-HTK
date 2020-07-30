@@ -2,7 +2,7 @@
     HMM EX = python3 main.py --test_type standard --train_iters 25 50 75 --users Prerna Linda | python3 main.py --test_type cross_val --train_iters 25 50 75 --users Prerna Linda --cross_val_method kfold --n_splits 10
     SBHMM EX = python3 main.py --test_type standard --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Prerna Linda --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -70 --sbhmm_insertion_penalty -115 --neighbors 70
     SBHMM CV = python3 main.py --test_type cross_val --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Linda Prerna --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -85 --sbhmm_insertion_penalty -85 --neighbors 70 --cross_val_method kfold --n_splits 10 --beam_threshold 2000.0
-    SBHMM CV Parallel = python3 main.py --test_type cross_val --train_iters 25 50 75 100 --sbhmm_iters 25 50 75 --users Prerna Linda --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -70 --sbhmm_insertion_penalty -115 --neighbors 70 --cross_val_method kfold --n_splits 10 --cv_parallel
+    SBHMM CV Parallel = python3 main.py --test_type cross_val --train_iters 25 50 75 100 --sbhmm_iters 25 50 75 --users Prerna Linda --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --hmm_insertion_penalty -80 --sbhmm_insertion_penalty -100 --neighbors 73 --cross_val_method stratified --n_splits 10 --beam_threshold 3000.0 --cv_parallel --parallel_jobs 10
 """
 import sys
 import glob
@@ -186,7 +186,7 @@ if __name__ == '__main__':
                 htk_filepaths.extend(glob.glob(os.path.join("data/htk", '*{}*.htk'.format(user))))
 
         if(args.device==0):
-            phrases = [' '.join(filepath.split('.')[1].split("_"))
+            phrases = [filepath.split('/')[-1].split(".")[0] + " " + ' '.join(filepath.split('/')[-1].split(".")[1].split("_"))
                for filepath
                in htk_filepaths]
         else:
