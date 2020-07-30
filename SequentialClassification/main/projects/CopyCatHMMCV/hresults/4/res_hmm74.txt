@@ -33,7 +33,7 @@ Aligned transcription: data/4/htk/Linda.black_lion_in_blue_wagon.1587945361408.l
  LAB: black lion in blue wagon 
  REC:       lion in blue wagon 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Thu Jul 30 10:48:34 2020            |
+    | HTK Results Analysis at Thu Jul 30 15:05:29 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/4/res_hmm74.mlf                                |
     |=============================================================|

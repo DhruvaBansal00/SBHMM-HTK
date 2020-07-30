@@ -54,7 +54,7 @@ Aligned transcription: data/8/htk/Linda.snake_below_chair.1587943510584.lab vs d
  LAB:      snake  below chair 
  REC: blue monkey in    box   
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Thu Jul 30 10:57:35 2020            |
+    | HTK Results Analysis at Thu Jul 30 15:10:34 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/8/res_hmm74.mlf                                |
     |=============================================================|

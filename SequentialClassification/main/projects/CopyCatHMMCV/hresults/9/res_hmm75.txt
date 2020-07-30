@@ -63,7 +63,7 @@ Aligned transcription: data/9/htk/Linda.lion_above_blue_bed.1587954753442.lab vs
  LAB:       lion      above blue bed 
  REC: black alligator above      bed 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Thu Jul 30 10:55:38 2020            |
+    | HTK Results Analysis at Thu Jul 30 15:09:20 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/9/res_hmm75.mlf                                |
     |=============================================================|

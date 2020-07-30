@@ -1,0 +1,59 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/7/res_hmm75.mlf 
+Aligned transcription: data/7/htkSBHMMTest/Linda.snake_in_flowers.1587939337554.lab vs data/7/htkSBHMMTest/Linda.snake_in_flowers.1587939337554.rec
+ LAB:      snake in     flowers 
+ REC: lion above orange box     
+Aligned transcription: data/7/htkSBHMMTest/Linda.alligator_in_wagon.1587943617201.lab vs data/7/htkSBHMMTest/Linda.alligator_in_wagon.1587943617201.rec
+ LAB: alligator in    wagon 
+ REC: alligator below wagon 
+Aligned transcription: data/7/htkSBHMMTest/Linda.monkey_in_orange_flowers.1587939059024.lab vs data/7/htkSBHMMTest/Linda.monkey_in_orange_flowers.1587939059024.rec
+ LAB: monkey in    orange flowers 
+ REC: monkey below white  chair   
+Aligned transcription: data/7/htkSBHMMTest/Linda.snake_above_box.1587943894718.lab vs data/7/htkSBHMMTest/Linda.snake_above_box.1587943894718.rec
+ LAB: snake  above box 
+ REC: monkey above box 
+Aligned transcription: data/7/htkSBHMMTest/Linda.white_snake_in_blue_flowers.1587943997324.lab vs data/7/htkSBHMMTest/Linda.white_snake_in_blue_flowers.1587943997324.rec
+ LAB: white snake  in    blue flowers 
+ REC: black monkey above grey chair   
+Aligned transcription: data/7/htkSBHMMTest/Linda.white_lion_in_grey_box.1587943450148.lab vs data/7/htkSBHMMTest/Linda.white_lion_in_grey_box.1587943450148.rec
+ LAB: white lion   in    grey box 
+ REC: white monkey above grey box 
+Aligned transcription: data/7/htkSBHMMTest/Linda.lion_below_blue_bed.1587953374095.lab vs data/7/htkSBHMMTest/Linda.lion_below_blue_bed.1587953374095.rec
+ LAB:       lion below blue bed 
+ REC: white lion below blue bed 
+Aligned transcription: data/7/htkSBHMMTest/Linda.snake_below_bed.1587957767388.lab vs data/7/htkSBHMMTest/Linda.snake_below_bed.1587957767388.rec
+ LAB: snake below bed 
+ REC: snake above bed 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Thu Jul 30 13:30:03 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/7/res_hmm75.mlf                                |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |   41  |  89.33  10.67   0.00   1.33  12.00  19.51 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
+       b   l   e   e   l   l   o   h   l   r   n   i   o   r   n   a   a   h 
+       o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
+       v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
+       e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
+abov  18   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+alli   0   8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+belo   1   0   0  13   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0 [92.9/0.7]
+blac   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blue   0   0   0   0   0   7   0   0   0   1   0   0   0   0   0   0   0   0    0 [87.5/0.7]
+ box   0   0   0   0   0   0   6   0   0   0   0   0   0   0   0   0   0   0    0
+chai   0   0   0   0   0   0   0   7   0   0   0   0   0   0   0   0   0   0    0
+flow   0   0   0   0   0   0   1   2   6   0   0   0   0   0   0   0   0   0    0 [66.7/2.0]
+grey   0   0   0   0   0   0   0   0   0   7   0   0   0   0   0   0   0   0    0
+  in   2   0   0   2   0   0   0   0   0   0   4   0   0   1   0   0   0   0    0 [44.4/3.3]
+lion   0   0   0   0   0   0   0   0   0   0   0  11   1   0   0   0   0   0    0 [91.7/0.7]
+monk   0   0   0   0   0   0   0   0   0   0   0   0   9   0   0   0   0   0    0
+oran   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0   0   0   1    0 [85.7/0.7]
+snak   1   0   0   0   0   0   0   0   0   0   0   0   2   0   9   0   0   0    0 [75.0/2.0]
+wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0   0    0
+wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0    0
+whit   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   2    0 [66.7/0.7]
+Ins    0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   1

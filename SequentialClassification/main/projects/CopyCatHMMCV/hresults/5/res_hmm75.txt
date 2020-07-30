@@ -48,7 +48,7 @@ Aligned transcription: data/5/htk/Linda.alligator_below_grey_bed.1587939889187.l
  LAB: alligator below grey bed  
  REC: alligator below grey wall 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Thu Jul 30 10:39:11 2020            |
+    | HTK Results Analysis at Thu Jul 30 15:00:41 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/5/res_hmm75.mlf                                |
     |=============================================================|

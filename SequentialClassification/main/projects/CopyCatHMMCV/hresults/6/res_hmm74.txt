@@ -51,7 +51,7 @@ Aligned transcription: data/6/htk/Linda.snake_below_chair.1587938746925.lab vs d
  LAB:       snake  below chair 
  REC: black monkey below chair 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Thu Jul 30 10:42:49 2020            |
+    | HTK Results Analysis at Thu Jul 30 15:02:29 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/6/res_hmm74.mlf                                |
     |=============================================================|

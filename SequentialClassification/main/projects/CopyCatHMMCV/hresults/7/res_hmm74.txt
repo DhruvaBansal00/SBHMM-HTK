@@ -54,7 +54,7 @@ Aligned transcription: data/7/htk/Linda.lion_above_orange_bed.1587953660605.lab 
  LAB: lion above orange bed  
  REC: lion above orange wall 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Thu Jul 30 10:44:40 2020            |
+    | HTK Results Analysis at Thu Jul 30 15:03:25 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/7/res_hmm74.mlf                                |
     |=============================================================|
