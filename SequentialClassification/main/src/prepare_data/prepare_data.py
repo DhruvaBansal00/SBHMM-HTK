@@ -17,7 +17,7 @@ from . import create_ark_files, create_htk_files
 from .generate_text_files import generate_text_files
 
 
-def prepare_data(features_config: dict, device: int = 0) -> None:
+def prepare_data(features_config: dict, device: int = 0, users = []) -> None:
     """Prepares training data. Creates .ark files, .htk files, wordList,
     dict, grammar, and all_labels.mlf.
 
@@ -32,11 +32,11 @@ def prepare_data(features_config: dict, device: int = 0) -> None:
     else: 
         if(device==0):
             print('Creating .ark files...')
-            create_ark_files(features_config, verbose=False, is_select_features=True)
+            create_ark_files(features_config, users, verbose=False, is_select_features=True)
             print('.ark files created')
         else:
             print('.ark files have already been created')
-
+        
         print('Creating .htk files')
         create_htk_files()
         print('.htk files created')

@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     #Arguments for create_data_lists()
     parser.add_argument('--test_type', type=str, default='test_on_train',
-                        choices=['test_on_train', 'cross_val', 'standard'])
+                        choices=['none', 'test_on_train', 'cross_val', 'standard'])
     parser.add_argument('--users', nargs='*', default=[])
     parser.add_argument('--phrase_len', type=int, default=0)
     parser.add_argument('--random_state', type=int, default=24)
@@ -88,7 +88,7 @@ if __name__ == '__main__':
 
     if args.prepare_data:
 
-        prepare_data(features_config, args.device)
+        prepare_data(features_config, args.device, args.users)
 
     if args.test_type == 'test_on_train':
         

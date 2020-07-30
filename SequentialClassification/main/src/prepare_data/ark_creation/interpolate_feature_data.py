@@ -46,7 +46,7 @@ def _add_delta_col(df: pd.DataFrame, col: str) -> pd.DataFrame:
     
     return df
 
-def interpolate_feature_data(features_filepath, features_to_extract, center_on_face: bool = True, is_2d: bool = True, scale: int = 10):
+def interpolate_feature_data(features_filepath, features, center_on_face: bool = True, is_2d: bool = True, scale: int = 10, drop_na: bool = True):
 
     """Processes raw features extracted from MediaPipe, assigns an ID to track the features, and
     then interpolates using averages for the specified features for visualization.
@@ -56,7 +56,7 @@ def interpolate_feature_data(features_filepath, features_to_extract, center_on_f
     features_filepath : str
         File path of raw mediapipe feature data to be processed
 
-    features_to_extract : list
+    features : list of str
         Names of columns to be selected after processing features.
 
     Returns
@@ -195,13 +195,13 @@ def interpolate_feature_data(features_filepath, features_to_extract, center_on_f
 
         df = _add_delta_col(df, col)
 
-    df = df[features_to_extract]
-    df = df.dropna(axis=0)
+    df = df.loc[:, df.columns.isin(features)]
+    if drop_na: df = df.dropna(axis=0)
     df = df * scale
     df = df.round(6)    
 
-    # print("Interpolated DataFrame: ")
-    # print(df)
+    print("Interpolated DataFrame: ")
+    print(df)
 
     return df
 
@@ -826,7 +826,7 @@ def assign_hand_feature_id(data_file, no_interpolate_3_bbox, feature_type):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--features_filepath', default = '/home/thad/Desktop/AndroidCaptureApp/mp_feats_20-03-25_prerna/alligator_in_box/1582398952685/Prerna.alligator_in_box.1582398952685.data')
-    parser.add_argument('--features_to_extract', default='/home/thad/copycat/copycat-ml/main/projects/prerna_3_23_20/configs/features.config')    
+    parser.add_argument('--features', default=[])    
     args = parser.parse_args()
 
-    interpolate_feature_data(args.features_filepath, args.features_to_extract)
+    interpolate_feature_data(args.features_filepath, args.features)

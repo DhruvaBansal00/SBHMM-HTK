@@ -79,8 +79,8 @@ def _add_delta_col(df: pd.DataFrame, col: str) -> pd.DataFrame:
 
 def select_features(input_filepath: str, features_to_extract: list,
                     interpolation_method: str = 'spline', order: int = 3,
-                    center_on_face: bool = True, is_2d: bool = True,
-                    scale: int = 10) -> pd.DataFrame:
+                    center_on_face: bool = False, is_2d: bool = True,
+                    scale: int = 10, drop_na: bool = True, do_interpolate: bool = True) -> pd.DataFrame:
     """Processes raw features extracted from MediaPipe/Kinect, and
     selects the specified features for use during training of HMMs.
 
@@ -222,11 +222,18 @@ def select_features(input_filepath: str, features_to_extract: list,
                                in feature 
                                for feature 
                                in features_to_extract])
+    select_faces = np.any(['face' 
+                                in feature
+                                for feature
+                                in features_to_extract])    
 
     if select_hands and not np.any(hands):
         return None
 
     if select_landmarks and not np.any(landmarks):
+        return None
+
+    if select_faces and not np.any(faces):
         return None
 
     hands_ = ['left_hand', 'right_hand']
@@ -248,17 +255,24 @@ def select_features(input_filepath: str, features_to_extract: list,
                     for coordinate 
                     in coordinates]
 
-    cols = hand_cols + landmark_cols
+    faces_ = ['face_{}'.format(i) for i in range(6)]
+    coordinates = ['x', 'y']
+    face_cols = ['{}_{}'.format(face, coordinate)
+                for face
+                in faces_
+                for coordinate
+                in coordinates]
+
+    cols = hand_cols + landmark_cols + face_cols
     hands = np.concatenate([hands[0], hands[1]], axis=1)
     landmarks = np.concatenate([landmarks[0], landmarks[1]], axis=1)
-    all_features = np.concatenate([hands, landmarks], axis=1)
+    faces_to_display = faces[np.argmax([len(set(np.nonzero(faces[i])[0])) for i in range(n_faces)])]
+    all_features = np.concatenate([hands, landmarks, faces_to_display], axis=1)
     df = pd.DataFrame(all_features, columns=cols)
 
     df = df.replace(0, np.nan)
 
-
-
-    if select_hands:
+    if select_hands and do_interpolate:
 
         try:
             df[hand_cols] = df[hand_cols].interpolate(interpolation_method, order=order)
@@ -266,7 +280,7 @@ def select_features(input_filepath: str, features_to_extract: list,
             print(input_filepath)
             return None
 
-    if select_landmarks:
+    if select_landmarks and do_interpolate:
 
         try:
             df[landmark_cols] = df[landmark_cols].interpolate(interpolation_method, order=order)
@@ -294,11 +308,10 @@ def select_features(input_filepath: str, features_to_extract: list,
 
         df = _add_delta_col(df, col)
 
-    df = df[features_to_extract]
-    df = df.dropna(axis=0)
+    df = df.loc[:, df.columns.isin(features_to_extract)]
+    if drop_na:
+        df = df.dropna(axis=0)
     df = df * scale
     df = df.round(6)
-
-    #print(df)
 
     return df

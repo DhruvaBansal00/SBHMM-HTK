@@ -54,15 +54,14 @@ def _get_unique_words(features_dir: str, device: int) -> set:
     """
 
     unique_words = set()
-    filenames = glob.glob(features_dir)
-
+    features_filepaths = glob.glob(os.path.join(features_dir, '**/*.data'), recursive = True)
     split_index = 1
     if(device==1):
         split_index = 0
 
-    for filename in filenames:
-
-        phrase = filename.split('/')[-1].split('.')[split_index].split('_')
+    for features_filepath in features_filepaths:
+        filename = features_filepath.split('/')[-1]
+        phrase = filename.split('.')[split_index].split('_')
         phrase = [word.lower() for word in phrase]
         unique_words = unique_words.union(phrase)
 
@@ -155,14 +154,14 @@ def _generate_grammar(features_dir: str, device: int) -> None:
     objects = set()
     adjectives = set()
     max_phrase_len = 0
-    filenames = glob.glob(features_dir)
+    features_filepaths = glob.glob(os.path.join(features_dir, '**/*.data'), recursive = True)
     split_index = 1
     if(device==1):
         split_index = 0
 
-    for filename in filenames:
-
-        phrase = filename.split('/')[-1].split('.')[split_index].split('_')
+    for features_filepath in features_filepaths:
+        filename = features_filepath.split('/')[-1]
+        phrase = filename.split('.')[split_index].split('_')
         phrase = [word.lower() for word in phrase]
         phrase_len = len(phrase)
         max_phrase_len = max(phrase_len, max_phrase_len)

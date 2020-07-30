@@ -39,7 +39,7 @@ def _create_ark_file(df: pd.DataFrame, ark_filepath: str, title: str) -> None:
         out.write(']')
 
 
-def create_ark_files(features_config: dict, verbose: bool = False, is_select_features: bool = False) -> None:
+def create_ark_files(features_config: dict, users = [], verbose: bool = False, is_select_features: bool = True) -> None:
     """Creates .ark files needed as intermediate step to creating .htk
     files
 
@@ -58,13 +58,18 @@ def create_ark_files(features_config: dict, verbose: bool = False, is_select_fea
         shutil.rmtree(ark_dir)
 
     os.makedirs(ark_dir)
-        
-    features_filepaths = glob.glob(features_config['features_dir'])
+    
+    if len(users) == 0:
+        features_filepaths = glob.glob(os.path.join(features_config['features_dir'], '**/*.data'), recursive = True)
+    else:
+        features_filepaths = []
+        for user in users:
+            features_filepaths.extend(glob.glob(os.path.join(features_config['features_dir'], '*{}*'.format(user), '**/*.data'), recursive = True))
 
     if is_select_features:
-        print("select_features data")
+        print("Generating ark/htk using select_features data model")
     else:
-        print("interpolate_features data")
+        print("Generating ark/htk using interpolate_features data model")
 
     for features_filepath in features_filepaths:
 
@@ -72,7 +77,7 @@ def create_ark_files(features_config: dict, verbose: bool = False, is_select_fea
             print(features_filepath)
         
         if is_select_features:
-            features_df = select_features(features_filepath, features_config['selected_features']) # Interpolation (mediapipe.data filepath, features to extract)
+            features_df = select_features(features_filepath, features_config['selected_features']) # Select Features (mediapipe.data filepath, features to extract)
         else:
             features_df = interpolate_feature_data(features_filepath, features_config['selected_features']) # Interpolation (mediapipe.data filepath, features to extract)
 

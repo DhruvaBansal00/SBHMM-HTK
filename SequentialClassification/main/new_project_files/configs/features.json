@@ -207,5 +207,5 @@
         "delta_horizontal_hand_dist",
         "delta_vertical_hand_dist"
     ],
-    "features_dir": "/media/thad/Seagate Backup Plus Drive/MediaPipe_Features/*/*/*richa*"
+    "features_dir": "/mnt/ExtremeSSD/ProcessingPipeline/DATA/Mediapipe_Data_July_2020"
 }
