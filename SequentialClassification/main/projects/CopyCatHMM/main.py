@@ -356,6 +356,13 @@ if __name__ == '__main__':
             all_results['average']['sentence_error'] = all_results['fold_0']['sentence_error']
 
             print('Standard Train/Test Split Results')
+        
+        if True:
+            create_data_lists(train_data, train_data, args.phrase_len)
+            test(args.start, args.end, args.method, args.hmm_insertion_penalty)
+            print(f"Train word error = {get_results(hresults_file)['error']}")
+            print(f"Train word error = {get_results(hresults_file)['sentence_error']}")
+
 
     if args.method == "recognition":
         
