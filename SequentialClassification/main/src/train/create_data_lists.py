@@ -28,13 +28,13 @@ def create_data_lists(train_data: list, test_data: list, phrase_len: int = 0, fo
 		Only include phrases of the specified length.
 	"""
 	#TODO: Add filter for phrase length
+	masterFolder = 'lists' if fold is None else f'lists/{str(fold)}'
+	if not os.path.exists(masterFolder):
+		os.mkdir(masterFolder)
 
-	if not os.path.exists(f'lists/{str(fold)}'):
-		os.mkdir(f'lists/{str(fold)}')
-
-	all_data_filepath = os.path.join('lists', 'all.data') if fold is None else os.path.join('lists', str(fold), 'all.data')
-	train_data_filepath = os.path.join('lists', 'train.data') if fold is None else os.path.join('lists', str(fold), 'train.data')
-	test_data_filepath = os.path.join('lists', 'test.data') if fold is None else os.path.join('lists', str(fold), 'test.data')
+	all_data_filepath = os.path.join(masterFolder, 'all.data')
+	train_data_filepath = os.path.join(masterFolder, 'train.data')
+	test_data_filepath = os.path.join(masterFolder, 'test.data')
 
 	with open(all_data_filepath, 'w') as all_data_list, \
 		 open(train_data_filepath, 'w') as train_data_list, \
