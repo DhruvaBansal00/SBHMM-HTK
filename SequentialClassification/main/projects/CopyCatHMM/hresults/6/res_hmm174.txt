@@ -1,0 +1,101 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/6/res_hmm174.mlf 
+Aligned transcription: data/6/htk/02-22-20_Prerna_Android.monkey_below_bed.0000000001.lab vs data/6/htk/02-22-20_Prerna_Android.monkey_below_bed.0000000001.rec
+ LAB: monkey below bed 
+ REC: monkey above bed 
+Aligned transcription: data/6/htk/02-22-20_Prerna_Android.snake_in_flowers.0000000007.lab vs data/6/htk/02-22-20_Prerna_Android.snake_in_flowers.0000000007.rec
+ LAB: snake in flowers 
+ REC: snake in wagon   
+Aligned transcription: data/6/htk/02-22-20_Prerna_Android.monkey_below_wagon.0000000008.lab vs data/6/htk/02-22-20_Prerna_Android.monkey_below_wagon.0000000008.rec
+ LAB: monkey below      wagon 
+ REC: monkey below blue wall  
+Aligned transcription: data/6/htk/04-29-20_Linda_Android.snake_in_grey_wagon.0000000001.lab vs data/6/htk/04-29-20_Linda_Android.snake_in_grey_wagon.0000000001.rec
+ LAB: snake in grey wagon 
+ REC: lion  in grey wagon 
+Aligned transcription: data/6/htk/04-29-20_Linda_Android.grey_alligator_below_blue_flowers.0000000001.lab vs data/6/htk/04-29-20_Linda_Android.grey_alligator_below_blue_flowers.0000000001.rec
+ LAB: grey alligator below blue flowers 
+ REC: grey alligator in    blue flowers 
+Aligned transcription: data/6/htk/04-29-20_Linda_Android.lion_above_orange_bed.0000000001.lab vs data/6/htk/04-29-20_Linda_Android.lion_above_orange_bed.0000000001.rec
+ LAB: lion   above orange bed  
+ REC: monkey below orange wall 
+Aligned transcription: data/6/htk/04-29-20_Linda_Android.alligator_above_black_wall.0000000002.lab vs data/6/htk/04-29-20_Linda_Android.alligator_above_black_wall.0000000002.rec
+ LAB: alligator above black  wall 
+ REC: alligator above orange wall 
+Aligned transcription: data/6/htk/04-29-20_Linda_Android.lion_below_orange_chair.0000000003.lab vs data/6/htk/04-29-20_Linda_Android.lion_below_orange_chair.0000000003.rec
+ LAB: lion below orange chair 
+ REC: lion below blue   chair 
+Aligned transcription: data/6/htk/04-29-20_Linda_Android.snake_in_flowers.0000000000.lab vs data/6/htk/04-29-20_Linda_Android.snake_in_flowers.0000000000.rec
+ LAB: snake in    flowers 
+ REC: snake above flowers 
+Aligned transcription: data/6/htk/04-29-20_Linda_Android.orange_snake_below_blue_flowers.0000000002.lab vs data/6/htk/04-29-20_Linda_Android.orange_snake_below_blue_flowers.0000000002.rec
+ LAB: orange snake below blue flowers 
+ REC:        snake below      flowers 
+Aligned transcription: data/6/htk/04-29-20_Linda_Android.alligator_in_orange_flowers.0000000001.lab vs data/6/htk/04-29-20_Linda_Android.alligator_in_orange_flowers.0000000001.rec
+ LAB: alligator in    orange flowers 
+ REC: monkey    above orange flowers 
+Aligned transcription: data/6/htk/04-29-20_Linda_Android.orange_alligator_in_grey_flowers.0000000002.lab vs data/6/htk/04-29-20_Linda_Android.orange_alligator_in_grey_flowers.0000000002.rec
+ LAB: orange alligator in grey flowers 
+ REC: orange alligator in grey wall    
+Aligned transcription: data/6/htk/04-29-20_Linda_Android.black_snake_below_blue_chair.0000000005.lab vs data/6/htk/04-29-20_Linda_Android.black_snake_below_blue_chair.0000000005.rec
+ LAB: black snake below blue chair 
+ REC: black snake below      wagon 
+Aligned transcription: data/6/htk/04-29-20_Linda_Android.white_lion_above_orange_wall.0000000004.lab vs data/6/htk/04-29-20_Linda_Android.white_lion_above_orange_wall.0000000004.rec
+ LAB: white lion above orange wall 
+ REC:       lion above orange wall 
+Aligned transcription: data/6/htk/07-24-20_Matthew_4K.black_lion_in_blue_wagon.0000000003.lab vs data/6/htk/07-24-20_Matthew_4K.black_lion_in_blue_wagon.0000000003.rec
+ LAB: black lion in blue wagon 
+ REC:       lion in blue wagon 
+Aligned transcription: data/6/htk/07-24-20_Matthew_4K.lion_above_blue_bed.0000000004.lab vs data/6/htk/07-24-20_Matthew_4K.lion_above_blue_bed.0000000004.rec
+ LAB: lion  above blue bed 
+ REC: snake above blue bed 
+Aligned transcription: data/6/htk/07-24-20_Matthew_4K.white_lion_in_grey_box.0000000000.lab vs data/6/htk/07-24-20_Matthew_4K.white_lion_in_grey_box.0000000000.rec
+ LAB: white lion      in grey box 
+ REC: white alligator in grey box 
+Aligned transcription: data/6/htk/07-24-20_Matthew_4K.lion_above_flowers.0000000000.lab vs data/6/htk/07-24-20_Matthew_4K.lion_above_flowers.0000000000.rec
+ LAB: lion  above flowers 
+ REC: snake above flowers 
+Aligned transcription: data/6/htk/07-24-20_Matthew_4K.black_lion_above_grey_bed.0000000001.lab vs data/6/htk/07-24-20_Matthew_4K.black_lion_above_grey_bed.0000000001.rec
+ LAB: black lion      above grey bed 
+ REC: black alligator above grey bed 
+Aligned transcription: data/6/htk/07-24-20_Matthew_4K.orange_snake_below_blue_flowers.0000000004.lab vs data/6/htk/07-24-20_Matthew_4K.orange_snake_below_blue_flowers.0000000004.rec
+ LAB: orange snake below blue flowers 
+ REC:        snake below      bed     
+Aligned transcription: data/6/htk/07-24-20_Matthew_4K.snake_in_grey_wagon.0000000003.lab vs data/6/htk/07-24-20_Matthew_4K.snake_in_grey_wagon.0000000003.rec
+ LAB: snake in    grey wagon 
+ REC: snake above grey wagon 
+Aligned transcription: data/6/htk/07-24-20_Matthew_4K.black_monkey_in_white_flowers.0000000001.lab vs data/6/htk/07-24-20_Matthew_4K.black_monkey_in_white_flowers.0000000001.rec
+ LAB: black monkey in    white flowers 
+ REC: black monkey above white flowers 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Sat Aug  1 12:53:04 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/6/res_hmm174.mlf                               |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |   70  |  89.06   8.30   2.64   0.38  11.32  31.43 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
+       b   l   e   e   l   l   o   h   l   r   n   i   o   r   n   a   a   h 
+       o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
+       v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
+       e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
+abov  27   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0 [96.4/0.4]
+alli   0  17   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0    0 [94.4/0.4]
+ bed   0   0  10   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0    0 [90.9/0.4]
+belo   1   0   0  19   0   0   0   0   0   0   1   0   0   0   0   0   0   0    0 [90.5/0.8]
+blac   0   0   0   0   7   0   0   0   0   0   0   0   0   1   0   0   0   0    1 [87.5/0.4]
+blue   0   0   0   0   0  14   0   0   0   0   0   0   0   0   0   0   0   0    3
+ box   0   0   0   0   0   0   9   0   0   0   0   0   0   0   0   0   0   0    0
+chai   0   0   0   0   0   0   0  12   0   0   0   0   0   0   0   1   0   0    0 [92.3/0.4]
+flow   0   0   1   0   0   0   0   0  12   0   0   0   0   0   0   1   1   0    0 [80.0/1.1]
+grey   0   0   0   0   0   0   0   0   0  11   0   0   0   0   0   0   0   0    0
+  in   4   0   0   0   0   0   0   0   0   0  17   0   0   0   0   0   0   0    0 [81.0/1.5]
+lion   0   2   0   0   0   0   0   0   0   0   0  14   1   0   2   0   0   0    0 [73.7/1.9]
+monk   0   0   0   0   0   0   0   0   0   0   0   0  16   0   0   0   0   0    0
+oran   0   0   0   0   0   1   0   0   0   0   0   0   0  11   0   0   0   0    2 [91.7/0.4]
+snak   0   0   0   0   0   0   0   0   0   0   0   1   0   0  16   0   0   0    0 [94.1/0.4]
+wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  11   1   0    0 [91.7/0.4]
+wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  10   0    0
+whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3    1
+Ins    0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0
