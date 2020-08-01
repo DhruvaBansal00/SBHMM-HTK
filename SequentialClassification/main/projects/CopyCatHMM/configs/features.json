@@ -289,5 +289,5 @@
         "right_landmark_20_x",
         "right_landmark_20_y"
     ],
-    "features_dir": "/home/dhruva/Desktop/CopyCat/ProcessingPipeline/DATA/Mediapipe_Data_July_2020/*/*/*/*.data"
+    "features_dir": "/mnt/ExtremeSSD/ProcessingPipeline/DATA/Mediapipe_Data_July_2020/*/*/*/*.data"
 }
