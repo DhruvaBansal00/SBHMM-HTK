@@ -52,7 +52,7 @@ def make_mediapipe_video(frames_directory, features_filepath, save_directory, fe
     print("Making Visualization Video for {}".format(save_directory))
 
     mediapipe_feature_df = mediapipe_feature_data(features_filepath, features, drop_na = False)
-    interpolate_feature_df = interpolate_feature_data(features_filepath, features, drop_na = False)
+    interpolate_feature_df = interpolate_feature_data(features_filepath, features, center_on_face = False, scale = 1, drop_na = False)
     kalman_feature_df = kalman_feature_data(features_filepath, features, drop_na = False)
     
     # A dictionary with the three different types of feature data DataFrame 
