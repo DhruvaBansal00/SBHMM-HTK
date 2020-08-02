@@ -44,10 +44,10 @@ def createNewArkFile(arkFile: str, trainedClassifier: object, pca_components: in
 def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: float, 
             transition_prob: float, device: int, pca_components: int, sbhmm_iters: list, 
             include_state: bool, include_index: bool, no_pca: bool, hmm_insertion_penalty: float, sbhmm_insertion_penalty: float,
-            n_jobs: int, parallel: bool) -> None:
+            n_jobs: int, parallel: bool, trainMultipleClassifiers: bool, knn_neighbors: str, beam_threshold: float, fold: str = "") -> object:
     """Trains the SBHMM using HTK. First completes a loop of
     training HMM as usual. Then completes as many iterations of 
-    adaboosting + HMM training as specified.
+    KNN + HMM training as specified.
 
     Parameters
     ----------
@@ -56,23 +56,24 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
         parser.
     """
     print("----------------Starting SBHMM training with basic HMM for alignment-------------------")
-    train(train_iters, mean, variance, transition_prob, device)
-    arkFileLoc = "data/ark/"
-    htkFileLoc = "data/htk/"
-    trainDataFile = "lists/train.data"
+    train(train_iters, mean, variance, transition_prob, device, fold=fold)
+    arkFileLoc = f"data/{fold}ark/"
+    htkFileLoc = f"data/{fold}htk/"
+    trainDataFile = f"lists/{fold}train.data"
     
     classifiers = []
 
     for iters in range(sbhmm_cycles):
-        test(-2, -1, "alignment", hmm_insertion_penalty if iters == 0 else sbhmm_insertion_penalty) #Save state alignments for each phrase in the results folder
-        resultFile = glob.glob('results/*.mlf')[-1]
+        test(-2, -1, "alignment", hmm_insertion_penalty if iters == 0 else sbhmm_insertion_penalty, beam_threshold=beam_threshold, fold=fold) #Save state alignments for each phrase in the results folder
+        resultFile = glob.glob(f'results/{fold}*.mlf')[-1]
 
         trainedClassifier = getClassifierFromStateAlignment(resultFile, arkFileLoc, include_state=include_state, 
-                        include_index=include_index, n_jobs=n_jobs, parallel=parallel, trainMultipleClassifiers=False)
+                        include_index=include_index, n_jobs=n_jobs, parallel=parallel, trainMultipleClassifiers=trainMultipleClassifiers,
+                        knn_neighbors=int(knn_neighbors))
         classifiers.append(trainedClassifier)
         
-        arkFileSave = "data/arkSBHMM"+str(iters)+"/"
-        htkFileSave = "data/htkSBHMM"+str(iters)+"/"
+        arkFileSave = f"data/{fold}arkSBHMM"+str(iters)+"/"
+        htkFileSave = f"data/{fold}htkSBHMM"+str(iters)+"/"
         if os.path.exists(arkFileSave):
             shutil.rmtree(arkFileSave)
 
@@ -97,13 +98,13 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
         arkFileLoc = arkFileSave
         htkFileLoc = htkFileSave
 
-        print("Re-writing lists/train.data")
+        print(f"Re-writing lists/{fold}train.data")
         with open(trainDataFile, 'w') as trainData:
             trainData.writelines(newHtkFiles)
             trainData.close()
 
         print("Training HMM on new feature space")
-        train(sbhmm_iters, mean, variance, transition_prob, device, num_features=num_features)
+        train(sbhmm_iters, mean, variance, transition_prob, device, num_features=num_features, fold=fold)
 
     return classifiers
 

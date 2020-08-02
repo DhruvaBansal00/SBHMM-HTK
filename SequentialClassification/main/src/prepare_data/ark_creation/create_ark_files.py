@@ -8,6 +8,7 @@ create_ark_files
 import os
 import glob
 import shutil
+import tqdm
 
 import pandas as pd
 
@@ -71,7 +72,7 @@ def create_ark_files(features_config: dict, users = [], verbose: bool = False, i
     else:
         print("Generating ark/htk using interpolate_features data model")
 
-    for features_filepath in features_filepaths:
+    for features_filepath in tqdm.tqdm(features_filepaths):
 
         if verbose:
             print(features_filepath)

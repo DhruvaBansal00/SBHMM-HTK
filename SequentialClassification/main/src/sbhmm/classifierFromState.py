@@ -1,5 +1,5 @@
 from .classes import State, Word, Phrase
-from .adaEnsemble import AdaBoostedClassifierEnsemble
+from .boostingClassifiers import ClassifierTransformer
 
 #get phrase assumes that the readline will return the path to the current phrase
 def getPhrase(res_file: str) -> Phrase:
@@ -40,13 +40,14 @@ def parse(res_file: str) -> list:
 	return phrases
 	
 
-def getClassifierFromStateAlignment(resultFile: str, arkFolder: str = "data/ark/", include_state: bool = True, include_index: bool = True, n_jobs: int = 4, parallel: bool = False, trainMultipleClassifiers: bool = True) -> object:
+def getClassifierFromStateAlignment(resultFile: str, arkFolder: str, include_state: bool = True, include_index: bool = True,
+								 n_jobs: int = 4, parallel: bool = False, trainMultipleClassifiers: bool = True, knn_neighbors: float = 50) -> object:
 
 	curr_res_file = open(resultFile, "r")
 	curr_res_file.readline()
 
 	phrases = parse(curr_res_file)
 
-	adaBoostedClassifier = AdaBoostedClassifierEnsemble(phrases, arkFolder, include_state, include_index, n_jobs=n_jobs, parallel=parallel,
-						trainMultipleClassifiers=trainMultipleClassifiers, random_state=42)
-	return adaBoostedClassifier
+	classifierTransformer = ClassifierTransformer(phrases, arkFolder, include_state, include_index, n_jobs=n_jobs, parallel=parallel,
+						knn_neighbors=knn_neighbors, trainMultipleClassifiers=trainMultipleClassifiers, random_state=42)
+	return classifierTransformer
