@@ -78,9 +78,9 @@ def create_ark_files(features_config: dict, users = [], verbose: bool = False, i
             print(features_filepath)
         
         if is_select_features:
-            features_df = select_features(features_filepath, features_config['selected_features']) # Select Features (mediapipe.data filepath, features to extract)
+            features_df = select_features(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = True, scale = 10, drop_na = True) # Select Features (mediapipe.data filepath, features to extract)
         else:
-            features_df = interpolate_feature_data(features_filepath, features_config['selected_features']) # Interpolation (mediapipe.data filepath, features to extract)
+            features_df = interpolate_feature_data(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = True, scale = 10, drop_na = True) # Interpolation (mediapipe.data filepath, features to extract)
 
         if features_df is not None:
             ark_filename = features_filepath.split('/')[-1].replace('data', 'ark')

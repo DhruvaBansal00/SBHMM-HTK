@@ -29,7 +29,7 @@ if __name__ == '__main__':
     #Arguments for create_data_lists()
     parser.add_argument('--test_type', type=str, default='none',
                         choices=['none', 'test_on_train', 'cross_val', 'standard'])
-    parser.add_argument('--users', nargs='*', default=['Android'])
+    parser.add_argument('--users', nargs='*', default=['07-24-20_Matthew_4K'])
     parser.add_argument('--phrase_len', type=int, default=0)
     parser.add_argument('--random_state', type=int, default=24)
     parser.add_argument('--cross_val_method', required='cross_val' in sys.argv,
@@ -90,9 +90,10 @@ if __name__ == '__main__':
 
         prepare_data(features_config, args.device, args.users)
 
-    if args.test_type == 'none': sys.exit()
+    if args.test_type == 'none':
+        sys.exit()
 
-    if args.test_type == 'test_on_train':
+    elif args.test_type == 'test_on_train':
         
         if len(args.users) == 0:
             htk_filepaths = glob.glob('data/htk/*htk')

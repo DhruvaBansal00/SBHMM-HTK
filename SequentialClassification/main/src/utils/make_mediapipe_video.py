@@ -141,15 +141,15 @@ def draw_features(visualization_type, frames_filepaths, features_to_extract_dict
                 if 'right' in feature_key:
                     color = (255, 0, 0) # blue
                     if 'interpolate' in df_type:
-                        color = (0, 255, 255) # yellow
-                    if 'kalman' in df_type:
                         color = (0, 255, 0) # green
+                    if 'kalman' in df_type:
+                        color = (0, 255, 255) # yellow
                 if 'left' in feature_key:
                     color = (0, 0, 255) # red
                     if 'interpolate' in df_type:
-                        color = (0, 128, 255) # orange
-                    if 'kalman' in df_type:
                         color = (153, 0, 153) # purple
+                    if 'kalman' in df_type:
+                        color = (0, 128, 255) # orange
                 elif 'face' in feature_key:
                     color = (255, 255, 0) # light blue
                     if 'interpolate' in df_type:

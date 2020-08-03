@@ -46,7 +46,7 @@ def _add_delta_col(df: pd.DataFrame, col: str) -> pd.DataFrame:
     
     return df
 
-def interpolate_feature_data(features_filepath, features, center_on_face: bool = True, is_2d: bool = True, scale: int = 10, drop_na: bool = True):
+def interpolate_feature_data(features_filepath, features, center_on_face: bool = False, is_2d: bool = True, scale: int = 10, drop_na: bool = True):
 
     """Processes raw features extracted from MediaPipe, assigns an ID to track the features, and
     then interpolates using averages for the specified features for visualization.

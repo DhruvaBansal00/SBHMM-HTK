@@ -48,7 +48,7 @@ if __name__ == '__main__':
 	parser.add_argument('--output_project_directory', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/July2020Mediapipe')
 	parser.add_argument('--feature_type', type = str, default = 'visualization_features')
 	parser.add_argument('--table_video', action = 'store_true')
-	parser.add_argument('--visualization_types', default = [['mediapipe']])
+	parser.add_argument('--visualization_types', default = [['mediapipe'], ['interpolate']])
 	parser.add_argument('--frame_rate', type = int, default = 5)
 	args = parser.parse_args()
 
