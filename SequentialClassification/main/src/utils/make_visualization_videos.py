@@ -44,7 +44,7 @@ if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--input_frames_directory', type = str, default = '/mnt/ExtremeSSD/ProcessingPipeline/DATA/Frames')
 	parser.add_argument('--input_mediapipe_directory', type = str, default = '/mnt/ExtremeSSD/ProcessingPipeline/DATA/Mediapipe_Data_July_2020')
-	parser.add_argument('--users', default = ['7-27-20_prerna_test'])
+	parser.add_argument('--users', default = ['02-22-20_Prerna_Android'])
 	parser.add_argument('--output_project_directory', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/July2020Mediapipe')
 	parser.add_argument('--feature_type', type = str, default = 'visualization_features')
 	parser.add_argument('--table_video', action = 'store_true')
