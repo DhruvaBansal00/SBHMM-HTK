@@ -16,7 +16,7 @@ import glob
 from io import TextIOWrapper
 
 
-def generate_text_files(features_dir: str, device: int) -> None:
+def generate_text_files(features_dir: str) -> None:
     """Creates all text files needed to train/test HMMs with HTK,
     including wordList, dict, grammar, and all_labels.mlf.
     
@@ -27,18 +27,18 @@ def generate_text_files(features_dir: str, device: int) -> None:
         extracted from training data.
     """
 
-    unique_words = _get_unique_words(features_dir, device)
+    unique_words = _get_unique_words(features_dir)
 
     _generate_word_list(unique_words)
 
     _generate_word_dict(unique_words)
 
-    _generate_grammar(features_dir, device)
+    _generate_grammar(features_dir)
 
-    _generate_mlf_file(device)
+    _generate_mlf_file()
 
 
-def _get_unique_words(features_dir: str, device: int) -> set:
+def _get_unique_words(features_dir: str) -> set:
     """Gets all unique words from a data set.
 
     Parameters
@@ -57,8 +57,6 @@ def _get_unique_words(features_dir: str, device: int) -> set:
     filenames = glob.glob(features_dir)
 
     split_index = 1
-    if(device==1):
-        split_index = 0
 
     for filename in filenames:
 
@@ -139,7 +137,7 @@ def _write_grammar_line(
     f.write('{};\n'.format(words[-1]))
 
 
-def _generate_grammar(features_dir: str, device: int) -> None:
+def _generate_grammar(features_dir: str) -> None:
     """Creates rule-based grammar depending on the length of the longest
     phrase of the dataset.
 
@@ -157,8 +155,6 @@ def _generate_grammar(features_dir: str, device: int) -> None:
     max_phrase_len = 0
     filenames = glob.glob(features_dir)
     split_index = 1
-    if(device==1):
-        split_index = 0
 
     for filename in filenames:
 
@@ -231,7 +227,7 @@ def _generate_grammar(features_dir: str, device: int) -> None:
     f.close()
 
 
-def _generate_mlf_file(device: int) -> None:
+def _generate_mlf_file() -> None:
     """Creates all_labels.mlf file that contains every phrase in the 
     dataset.
     """
@@ -247,14 +243,6 @@ def _generate_mlf_file(device: int) -> None:
 
             label = filename.split('/')[-1].replace('htk', 'lab')
             phrase = label.split('.')[1].split('_')
-            if(device==1):
-                # uncomment for Prerna
-                # phrase = label.split('.')[0].split('_')[0:-1]
-                # for Linda
-                if('error' in label.split('.')[0]):
-                    phrase = label.split('.')[0].split('_')[0:-3]
-                else:
-                    phrase = label.split('.')[0].split('_')[0:-2]
 
             f.write('"*/{}"\n'.format(label))
             f.write('sil0\n')

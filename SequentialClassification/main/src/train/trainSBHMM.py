@@ -42,7 +42,7 @@ def createNewArkFile(arkFile: str, trainedClassifier: object, pca_components: in
 
 
 def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: float, 
-            transition_prob: float, device: int, pca_components: int, sbhmm_iters: list, 
+            transition_prob: float, pca_components: int, sbhmm_iters: list, 
             include_state: bool, include_index: bool, no_pca: bool, hmm_insertion_penalty: float, sbhmm_insertion_penalty: float,
             n_jobs: int, parallel: bool, trainMultipleClassifiers: bool, knn_neighbors: str, beam_threshold: float, fold: str = "") -> object:
     """Trains the SBHMM using HTK. First completes a loop of
@@ -56,7 +56,7 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
         parser.
     """
     print("----------------Starting SBHMM training with basic HMM for alignment-------------------")
-    train(train_iters, mean, variance, transition_prob, device, fold=fold)
+    train(train_iters, mean, variance, transition_prob, fold=fold)
     arkFileLoc = f"data/{fold}ark/"
     htkFileLoc = f"data/{fold}htk/"
     trainDataFile = f"lists/{fold}train.data"
@@ -104,7 +104,7 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
             trainData.close()
 
         print("Training HMM on new feature space")
-        train(sbhmm_iters, mean, variance, transition_prob, device, num_features=num_features, fold=fold)
+        train(sbhmm_iters, mean, variance, transition_prob, num_features=num_features, fold=fold)
 
     return classifiers
 
