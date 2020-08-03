@@ -1,0 +1,32 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/res_hmm100.mlf 
+Aligned transcription: data/htk/02-22-20_Prerna_Android.alligator_in_box.0000000000.lab vs data/htk/02-22-20_Prerna_Android.alligator_in_box.0000000000.rec
+ LAB: alligator in    box 
+ REC: alligator above box 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Tue Aug  4 02:25:46 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/res_hmm100.mlf                                 |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |   13  |  97.44   2.56   0.00   0.00   2.56   7.69 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   a   b   b   b   f   i   l   m   s   w   w 
+       b   l   e   e   o   l   n   i   o   n   a   a 
+       o   l   d   l   x   o       o   n   a   g   l 
+       v   i       o       w       n   k   k   o   l 
+       e   g       w       e           e   e   n      Del [ %c / %e]
+abov   6   0   0   0   0   0   0   0   0   0   0   0    0
+alli   0   4   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0   3   0   0   0   0   0   0   0   0   0    0
+belo   0   0   0   5   0   0   0   0   0   0   0   0    0
+ box   0   0   0   0   1   0   0   0   0   0   0   0    0
+flow   0   0   0   0   0   3   0   0   0   0   0   0    0
+  in   1   0   0   0   0   0   1   0   0   0   0   0    0 [50.0/2.6]
+lion   0   0   0   0   0   0   0   3   0   0   0   0    0
+monk   0   0   0   0   0   0   0   0   3   0   0   0    0
+snak   0   0   0   0   0   0   0   0   0   3   0   0    0
+wago   0   0   0   0   0   0   0   0   0   0   3   0    0
+wall   0   0   0   0   0   0   0   0   0   0   0   3    0
+Ins    0   0   0   0   0   0   0   0   0   0   0   0
