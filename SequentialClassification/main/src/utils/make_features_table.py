@@ -62,7 +62,6 @@ def make_features_table(input_mediapipe_directory, users, output_project_directo
             # make plot for table
             feature_filename = features_filepath.split('/')[-1]
             session, phrase, trial = feature_filename.split('.')[0:3]
-            
             table_filename = '{}.{}.{}.png'.format(session, phrase, trial)
             table_directory = os.path.join(base_tables_directory, session, phrase, trial)
             make_plot(result_table, table_filename = table_filename, table_directory = table_directory)
@@ -153,6 +152,8 @@ def make_features_table(input_mediapipe_directory, users, output_project_directo
         data_length = np.sum(result_table, axis=0)[0]
         result_table = np.divide(result_table, float(data_length))
         result_table = np.round(result_table, 4)
+        feature_filename = features_filepaths[0].split('/')[-1]
+        session, phrase, trial = feature_filename.split('.')[0:3]
 
         # make string table
         table_filename = '{}.png'.format(session)
@@ -173,7 +174,7 @@ def make_features_table(input_mediapipe_directory, users, output_project_directo
     # print(boxes_score_dict)
 
     # write the boxes score to a file in the respective tables directory
-    score_filepath = os.path.join(base_tables_directory, session, '{}_score.json'.fomrat(mode))
+    score_filepath = os.path.join(base_tables_directory, session, '{}_score.json'.format(mode))
     with open(score_filepath, "w") as file:
         file.write(json.dumps(boxes_score_dict, indent=4)) 
 
@@ -254,9 +255,9 @@ def make_plot(table, table_filename, table_directory):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--base_features_dir', default = '/media/thad/Seagate Backup Plus Drive/July_Mediapipe_Features')
-    parser.add_argument('--users', default=['Prerna'])
-    parser.add_argument('--base_project_dir', default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs')
+    parser.add_argument('--base_features_dir', default = '/mnt/ExtremeSSD/ProcessingPipeline/DATA/Mediapipe_Data_July_2020')
+    parser.add_argument('--users', default=['Linda'])
+    parser.add_argument('--base_project_dir', default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/July2020Mediapipe')
     parser.add_argument('--mode', default = 'all')
     args = parser.parse_args()
 
