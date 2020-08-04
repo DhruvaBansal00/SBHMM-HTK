@@ -62,12 +62,9 @@ def make_features_table(input_mediapipe_directory, users, output_project_directo
             # make plot for table
             feature_filename = features_filepath.split('/')[-1]
             session, phrase, trial = feature_filename.split('.')[0:3]
-
+            
             table_filename = '{}.{}.{}.png'.format(session, phrase, trial)
             table_directory = os.path.join(base_tables_directory, session, phrase, trial)
-
-            # print(table_filename, table_dir)
-
             make_plot(result_table, table_filename = table_filename, table_directory = table_directory)
 
             # score among trials between [0, 1]
@@ -110,21 +107,23 @@ def make_features_table(input_mediapipe_directory, users, output_project_directo
             boxes_score_dict['faces'][phrase] = round(result_table[1][2], 4) # 1_face
             
     elif mode == 'words':
+
         word_dict = {}
-        for data_file in features_filepaths:
-            phrase = data_file.split('/')[-1].split('.')[1]
+        for features_filepath in features_filepaths:
+
+            phrase = features_filepath.split('/')[-1].split('.')[1]
             words = phrase.split("_")
             for word in words:
-                if word not in word_dict:
-                    word_dict[word] = []
-                word_dict[word].append(data_file)
+
+                try: word_dict[word].append(features_filepath)
+                except KeyError: word_dict[word] = [features_filepath]
 
         for word in word_dict:
             result_table = np.array([[0 for i in range(3)] for j in range(4)])
-            for data_file in word_dict[word]:
+            for features_filepath in word_dict[word]:
 
                 # get frequnecy of data for current data file 
-                current_table = make_table(data_file)
+                current_table = make_table(features_filepath)
                 result_table += current_table 
 
             # find percent of data detected and round to 4 decimal places
@@ -133,7 +132,9 @@ def make_features_table(input_mediapipe_directory, users, output_project_directo
             result_table = np.round(result_table, 4)
 
             # make plot for table
-            make_plot(result_table, word)
+            table_filename = '{}.{}.png'.format(session, word)
+            table_directory = os.path.join(base_tables_directory, session, word)
+            make_plot(result_table, table_filename = table_filename, table_directory = table_directory)
 
             # score among words between [0, 1]
             boxes_score_dict['boxes'][word] = round(result_table[1][0] * 0.5 + result_table[2][0], 4) # 1_hand * 0.5 + 2_hand
@@ -142,10 +143,10 @@ def make_features_table(input_mediapipe_directory, users, output_project_directo
 
     elif mode == 'all':
         result_table = np.array([[0 for i in range(3)] for j in range(4)])
-        for data_file in features_filepaths:
+        for features_filepath in features_filepaths:
 
             # get frequnecy of data for current data file
-            current_table = make_table(data_file)
+            current_table = make_table(features_filepath)
             result_table += current_table 
 
         # find percent of data detected and round to 4 decimal places
@@ -154,7 +155,9 @@ def make_features_table(input_mediapipe_directory, users, output_project_directo
         result_table = np.round(result_table, 4)
 
         # make string table
-        make_plot(result_table, "full_summary")
+        table_filename = '{}.png'.format(session)
+        table_directory = os.path.join(base_tables_directory, session)
+        make_plot(result_table, table_filename = table_filename, table_directory = table_directory)
 
         # score among dataset between [0, 1]
         boxes_score_dict['boxes'][mode] = round(result_table[1][0] * 0.5 + result_table[2][0], 4) # 1_hand * 0.5 + 2_hand
@@ -170,7 +173,7 @@ def make_features_table(input_mediapipe_directory, users, output_project_directo
     # print(boxes_score_dict)
 
     # write the boxes score to a file in the respective tables directory
-    score_filepath = os.path.join(base_tables_directory, '{}_score.json'.format(mode))
+    score_filepath = os.path.join(base_tables_directory, session, '{}_score.json'.fomrat(mode))
     with open(score_filepath, "w") as file:
         file.write(json.dumps(boxes_score_dict, indent=4)) 
 
