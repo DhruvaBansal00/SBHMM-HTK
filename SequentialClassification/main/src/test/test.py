@@ -9,7 +9,7 @@ import glob
 import shutil
 from string import Template
 
-def test(start: int, end: int, method: str, insertion_penalty: int, beam_threshold: float = 2000.0, fold: str = "") -> None:
+def test(start: int, end: int, method: str, insertion_penalty: int, beam_threshold: int = 2000, fold: str = "") -> None:
     """Tests the HMM using HTK. Calls HVite and HResults. Can perform
     either recognition or verification. 
 
@@ -63,6 +63,7 @@ def test(start: int, end: int, method: str, insertion_penalty: int, beam_thresho
                      f'lists/{fold}train.data -i $results -t {beam_threshold} '
                      f'-p {insertion_penalty} -I all_labels.mlf -s 25 dict wordList '
                      f'>/dev/null 2>&1')
+        print(HVite_str)
         HVite_cmd = Template(HVite_str)
         HResults_cmd = Template('')
 
