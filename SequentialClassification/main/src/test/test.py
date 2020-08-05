@@ -63,7 +63,6 @@ def test(start: int, end: int, method: str, insertion_penalty: int, beam_thresho
                      f'lists/{fold}train.data -i $results -t {beam_threshold} '
                      f'-p {insertion_penalty} -I all_labels.mlf -s 25 dict wordList '
                      f'>/dev/null 2>&1')
-        print(HVite_str)
         HVite_cmd = Template(HVite_str)
         HResults_cmd = Template('')
 
