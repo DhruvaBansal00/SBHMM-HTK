@@ -256,7 +256,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--base_features_dir', default = '/mnt/ExtremeSSD/ProcessingPipeline/DATA/Mediapipe_Data_July_2020')
-    parser.add_argument('--users', default=['Linda'])
+    parser.add_argument('--users', default=['08-06-20_Linda_4k'])
     parser.add_argument('--base_project_dir', default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/July2020Mediapipe')
     parser.add_argument('--mode', default = 'all')
     args = parser.parse_args()
