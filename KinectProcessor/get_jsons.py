@@ -15,4 +15,4 @@ def produceJSONS(source: str, destination: str):
         destinationFile = os.path.join(destination, name)
         runOfflineProcessor(video, destinationFile)
 
-produceJSONS('/home/dhruva/Desktop/CopyCat/**/*.mkv', '/home/dhruva/Desktop/CopyCat/Media/kinectJson')
+produceJSONS('/mnt/ExtremeSSD/4K-kinect-recordings/kinect/full4-kinect/*.mkv', '/mnt/ExtremeSSD/ProcessingPipeline/DATA/Kinect_Data_July_2020')
