@@ -40,7 +40,7 @@ def _create_ark_file(df: pd.DataFrame, ark_filepath: str, title: str) -> None:
         out.write(']')
 
 
-def create_ark_files(features_config: dict, verbose: bool = False, is_select_features: bool = True) -> None:
+def create_ark_files(features_config: dict, users: list, verbose: bool, is_select_features: bool) -> None:
     """Creates .ark files needed as intermediate step to creating .htk
     files
 
@@ -59,13 +59,20 @@ def create_ark_files(features_config: dict, verbose: bool = False, is_select_fea
         shutil.rmtree(ark_dir)
 
     os.makedirs(ark_dir)
-        
-    features_filepaths = glob.glob(features_config['features_dir'])
     
-    if is_select_features:
-        print("select_features data")
+    if not users:
+        features_filepaths = glob.glob(os.path.join(features_config['features_dir'], '**/*.data'), recursive = True)
+        features_filepaths.extend(glob.glob(os.path.join(features_config['features_dir'], '**/*.json'), recursive = True))
     else:
-        print("interpolate_features data")
+        features_filepaths = []
+        for user in users:
+            features_filepaths.extend(glob.glob(os.path.join(features_config['features_dir'], '*{}*'.format(user), '**/*.data'), recursive = True))
+            features_filepaths.extend(glob.glob(os.path.join(features_config['features_dir'], '*{}*'.format(user), '**/*.json'), recursive = True))
+
+    if is_select_features:
+        print("Generating ark/htk using select_features data model")
+    else:
+        print("Generating ark/htk using interpolate_features data model")
 
     for features_filepath in tqdm.tqdm(features_filepaths):
 
@@ -84,9 +91,9 @@ def create_ark_files(features_config: dict, verbose: bool = False, is_select_fea
             feature_extraction_kinect(features_filepath, features_config['selected_features'], ark_filepath)
         
         elif is_select_features:
-            features_df = select_features(features_filepath, features_config['selected_features']) # Interpolation (mediapipe.data filepath, features to extract)
+            features_df = select_features(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = True, scale = 10, drop_na = True)
         else:
-            features_df = interpolate_feature_data(features_filepath, features_config['selected_features']) # Interpolation (mediapipe.data filepath, features to extract)
+            features_df = interpolate_feature_data(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = True, scale = 10, drop_na = True)
 
         if features_df is not None:
             _create_ark_file(features_df, ark_filepath, title)

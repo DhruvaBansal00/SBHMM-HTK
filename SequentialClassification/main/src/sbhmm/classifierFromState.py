@@ -40,7 +40,7 @@ def parse(res_file: str) -> list:
 	return phrases
 	
 
-def getClassifierFromStateAlignment(resultFile: str, arkFolder: str, include_state: bool = True, include_index: bool = True,
+def getClassifierFromStateAlignment(resultFile: str, arkFolder: str, classifier: str, include_state: bool = True, include_index: bool = True,
 								 n_jobs: int = 4, parallel: bool = False, trainMultipleClassifiers: bool = True, knn_neighbors: float = 50) -> object:
 
 	curr_res_file = open(resultFile, "r")
@@ -49,5 +49,5 @@ def getClassifierFromStateAlignment(resultFile: str, arkFolder: str, include_sta
 	phrases = parse(curr_res_file)
 
 	classifierTransformer = ClassifierTransformer(phrases, arkFolder, include_state, include_index, n_jobs=n_jobs, parallel=parallel,
-						knn_neighbors=knn_neighbors, trainMultipleClassifiers=trainMultipleClassifiers, random_state=42)
+						knn_neighbors=knn_neighbors, classifierAlgo=classifier, trainMultipleClassifiers=trainMultipleClassifiers, random_state=42)
 	return classifierTransformer
