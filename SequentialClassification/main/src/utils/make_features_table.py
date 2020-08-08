@@ -7,7 +7,7 @@ import json
 import argparse
 import shutil
 
-def make_features_table(input_mediapipe_directory, users, output_project_directory, mode):
+def make_features_table(input_mediapipe_directory: str, users: list, output_project_directory: str, mode: str):
 
     # input_mediapipe_directory: the mediapipe data set directory
 
@@ -23,8 +23,6 @@ def make_features_table(input_mediapipe_directory, users, output_project_directo
 
     # make output path
 
-#os.path.join(output_project_directory, 'visualization/tables/trials', session, phrase, trial, '{}.{}.{}.png'.format(session, phrase, trial))
-
     if not (mode == 'trials' or mode == 'phrases' or mode == 'words' or mode == 'all'):
         return
 
@@ -35,7 +33,7 @@ def make_features_table(input_mediapipe_directory, users, output_project_directo
 
     os.makedirs(base_tables_directory)
 
-    if len(users) == 0:
+    if not users:
         features_filepaths = glob.glob(os.path.join(input_mediapipe_directory, '**/*.data'), recursive = True)
     else:
         features_filepaths = []
@@ -255,10 +253,10 @@ def make_plot(table, table_filename, table_directory):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--base_features_dir', default = '/mnt/ExtremeSSD/ProcessingPipeline/DATA/Mediapipe_Data_July_2020')
-    parser.add_argument('--users', default=['08-06-20_Linda_4k'])
-    parser.add_argument('--base_project_dir', default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/July2020Mediapipe')
-    parser.add_argument('--mode', default = 'all')
+    parser.add_argument('--input_mediapipe_directory', type = str, default = '/mnt/ExtremeSSD/ProcessingPipeline/DATA/Mediapipe_Data_July_2020')
+    parser.add_argument('--users', nargs='*', default = None)
+    parser.add_argument('--output_project_directory', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/July2020Mediapipe')
+    parser.add_argument('--mode', type = str, default = 'all')
     args = parser.parse_args()
 
-    make_features_table(args.base_features_dir, args.users, args.base_project_dir, args.mode)
+    make_features_table(args.input_mediapipe_directory, args.users, args.output_project_directory, args.mode)

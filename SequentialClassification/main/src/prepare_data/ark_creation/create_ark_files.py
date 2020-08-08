@@ -40,7 +40,7 @@ def _create_ark_file(df: pd.DataFrame, ark_filepath: str, title: str) -> None:
         out.write(']')
 
 
-def create_ark_files(features_config: dict, users = [], verbose: bool = False, is_select_features: bool = True) -> None:
+def create_ark_files(features_config: dict, users: list, verbose: bool, is_select_features: bool) -> None:
     """Creates .ark files needed as intermediate step to creating .htk
     files
 
@@ -60,7 +60,7 @@ def create_ark_files(features_config: dict, users = [], verbose: bool = False, i
 
     os.makedirs(ark_dir)
     
-    if len(users) == 0:
+    if not users:
         features_filepaths = glob.glob(os.path.join(features_config['features_dir'], '**/*.data'), recursive = True)
     else:
         features_filepaths = []
