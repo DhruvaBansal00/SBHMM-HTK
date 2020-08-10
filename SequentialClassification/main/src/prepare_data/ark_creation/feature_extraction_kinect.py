@@ -6,13 +6,32 @@ import glob
 import sys
 import json
 import numpy as np
+import pandas as pd
+
+def feature_labels():
+  features = ['pelvis', 'spine_navel', 'spine_chest', 'neck', 'clavicle_left', 'shoulder_left', 'elbow_left', 'wrist_left', 'hand_left', 'handtip_left', 'thumb_left', 'clavicle_right', 'shoulder_right', 'elbow_right', 'wrist_right', 'hand_right', 'handtip_right', 'thumb_right', 'hip_left', 'knee_left', 'ankle_left', 'foot_left', 'hip_right', 'knee_right', 'ankle_right', 'foot_right', 'head', 'nose', 'eye_left', 'ear_left', 'eye_right', 'ear_right']
+  coordinates = ['x', 'y', 'z']
+
+  columns = []
+  for feature in features:
+    joint_positions = [f'{feature}_{coordinate}' for coordinate in coordinates]
+    relative_positions = [f'delta_{feature}_{coordinate}' for coordinate in coordinates]
+    relative_squared_dist = [f'delta_{feature}_squared_xyz']
+    joint_orientation_positions = [f'joint_orientation_{feature}_{orientation}' for orientation in ['x', 'y', 'z', 'w']] 
+    relative_to_nose = [f'delta_{feature}_to_nose_{coordinate}' for coordinate in coordinates]
+    angle_wrist_elbow = [f'angle_wrist_elbow_{hand}' for hand in ['left', 'right']]
+
+    feature_columns = joint_positions + relative_positions + relative_squared_dist + joint_orientation_positions + relative_to_nose + angle_wrist_elbow
+    columns.extend(feature_columns)
+
+  return columns
 
 # can return in a list: absolute positions, relative positions, distance from a particular joint, quaternions
 def get_features(frame, feature_set):
   features = []
   joint_positions = [frame["bodies"][0]["joint_positions"][feature_set][index] for index in range(3)]
   # if you want absolute positions uncomment
-  # features.extend(joint_positions)
+  features.extend(joint_positions)
 
   # replace feature_set with the index of the joint to want relative positions wrt for e.g. 0 for spine, 27 for nose
   new_origin_positions = [frame["bodies"][0]["joint_positions"][27][index] for index in range(3)]
@@ -28,12 +47,12 @@ def get_features(frame, feature_set):
   features.append(dist)
 
   # if you want quaternions uncomment
-  # joint_orientations = [frame["bodies"][0]["joint_orientations"][feature_set][index] for index in range(4)]
-  # features.extend(joint_orientations)
+  joint_orientations = [frame["bodies"][0]["joint_orientations"][feature_set][index] for index in range(4)]
+  features.extend(joint_orientations)
 
   return features
 
-# returns angles of right wrist to right elbow and left wrist to left elbow
+# returns angles of left wrist to left elbow and right wrist to right elbow respectively
 def angle_wrist_elbow(frame):
   origin = [frame["bodies"][0]["joint_positions"][27][index] for index in range(3)]
   elbow_left = [frame["bodies"][0]["joint_positions"][6][index] for index in range(3)]
@@ -70,47 +89,46 @@ def deltas(frame, prev_frame, feature_set):
 #     # print(frame_number)
 #     return features
 
-def feature_extraction_kinect(input_filepath: str, features_to_extract: list, ark_filepath: str):
+def feature_extraction_kinect(input_filepath: str, features_to_extract: list, scale: int = 10, drop_na: bool = True) -> pd.DataFrame:
   
-  ark_filename = ark_filepath.split('/')[-1]
-  title = ark_filename.replace('.ark', "")
-  feature_to_index_dict = {'PELVIS': 0, 'SPINE_NAVEL': 1, 'SPINE_CHEST': 2, 'NECK': 3, 'CLAVICLE_LEFT': 4, 'SHOULDER_LEFT': 5, 'ELBOW_LEFT': 6, 'WRIST_LEFT': 7, 'HAND_LEFT': 8, 'HANDTIP_LEFT': 9, 'THUMB_LEFT': 10, 'CLAVICLE_RIGHT': 11, 'SHOULDER_RIGHT': 12, 'ELBOW_RIGHT': 13, 'WRIST_RIGHT': 14, 'HAND_RIGHT': 15, 'HANDTIP_RIGHT': 16, 'THUMB_RIGHT': 17, 'HIP_LEFT': 18, 'KNEE_LEFT': 19, 'ANKLE_LEFT': 20, 'FOOT_LEFT': 21, 'HIP_RIGHT': 22, 'KNEE_RIGHT': 23, 'ANKLE_RIGHT': 24, 'FOOT_RIGHT': 25, 'HEAD': 26, 'NOSE': 27, 'EYE_LEFT': 28, 'EAR_LEFT': 29, 'EYE_RIGHT': 30, 'EAR_RIGHT': 31}
-
   with open(input_filepath, 'r') as in_file:
     data = json.load(in_file)
 
   frames = data["frames"]
 
-  with open(ark_filepath, 'w') as out_file:
+  all_features = []
+
+  prev_frame = frames[0]
+
+  for frame_number, frame in enumerate(frames):
+
+    features = []
     
-    out_file.write('{} [ '.format(title))
+    try:
+      body = frame["bodies"][0]["joint_positions"]
+    except IndexError:
+      print("did not detect a body in frame " + str(frame_number))
+    else:
+      for index in range(32): features.extend(get_features(frame, index) + deltas(frame, prev_frame, index)) # Compare with previous version...
+      
+      features.extend(angle_wrist_elbow(frame))
+      print(features, len(features))
+      features = features[1:-1] # Ensure this is right (dropping empty stuff)!
+      prev_frame = frame
 
-    prev_frame = None
+    all_features.append(features)
 
-    for frame_number, frame in enumerate(frames):
+  cols = feature_labels()
 
-      if frame_number == 0: prev_frame = frame
+  df = pd.DataFrame(all_features, columns = cols)
 
-      try:
-        body = frame["bodies"][0]["joint_positions"]
-      except IndexError:
-        print("did not detect a body in frame " + str(frame_number))
-      else:
-        for feature in features_to_extract:
-            ind = feature_to_index_dict[feature]
-            features = get_features(frame, ind) + angle_wrist_elbow(frame) + deltas(frame, prev_frame, 8) + deltas(frame, prev_frame, 9) + deltas(frame, prev_frame, 10) + deltas(frame, prev_frame, 15) + deltas(frame, prev_frame, 16) + deltas(frame, prev_frame, 17)
-            to_write = str(features)[1:-1].replace(',', '')
+  df = df.loc[:, df.columns.isin(features_to_extract)]
+  if drop_na: df = df.dropna(axis=0)
+  df = df * scale
+  df = df.round(6)
 
-            if feature == features_to_extract[-1]: to_write += '\n'
-            else: to_write += ' '
-
-            out_file.write(to_write)
-
-        prev_frame = frame
-        
-    out_file.write(']')
-    out_file.close()
-  
+  #print(f'Kinect DataFrame: {df}')
+  return df
 
   # To convert any file individually. Otherwise just use to_ark.sh 
   # print("This file converts raw data from Kinect .json to .ark")
