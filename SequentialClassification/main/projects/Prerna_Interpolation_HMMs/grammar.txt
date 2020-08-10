@@ -1,5 +1,0 @@
-$subject = snake | monkey | lion | alligator;
-$preposition = below | in | above;
-$object = wall | chair | box | wagon | flowers | bed;
-
-(SENT-START $subject $preposition $object SENT-END)

@@ -7,7 +7,6 @@
     HMM CV = python3 main.py --test_type cross_val --train_iters 25 50 75 100 120 140 160 --users 02-22-20_Prerna_Android 04-29-20_Linda_Android 07-24-20_Matthew_4K --cross_val_method stratified --n_splits 10 --cv_parallel --parallel_jobs 10  --hmm_insertion_penalty -80
     SBHMM EX = python3 main.py --test_type standard --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Prerna Linda --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -70 --sbhmm_insertion_penalty -115 --neighbors 70
     SBHMM CV = python3 main.py --test_type cross_val --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Linda Prerna --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -85 --sbhmm_insertion_penalty -85 --neighbors 70 --cross_val_method kfold --n_splits 10 --beam_threshold 2000.0
-    SBHMM EX ADA = python3 main.py --test_type standard --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users 02-22-20_Prerna_Android 07-24-20_Matthew_4K --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --hmm_insertion_penalty -70 --sbhmm_insertion_penalty -115 --classifier adaboost
     SBHMM CV Parallel = python3 main.py --test_type cross_val --train_iters 25 50 75 100 120 140 160 --sbhmm_iters 25 50 75 100 --users 02-22-20_Prerna_Android 04-29-20_Linda_Android 07-24-20_Matthew_4K --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --hmm_insertion_penalty -80 --sbhmm_insertion_penalty -80 --neighbors 70 --cross_val_method stratified --n_splits 10 --beam_threshold 3000.0 --cv_parallel --parallel_jobs 10
 """
 import sys
@@ -15,6 +14,7 @@ import glob
 import argparse
 import os
 import shutil
+import sys
 
 import numpy as np
 from sklearn.model_selection import (
@@ -40,8 +40,8 @@ def crossValFold(train_data: list, test_data: list, args: object, fold: int):
     print(f"Current split = {str(fold)}. Current Test data Size = {len(test_data)}")
     ogDataFolder = "data"
     currDataFolder = os.path.join("data", str(fold))
-    trainFiles = [i.split("/")[-1].strip(".htk") for i in train_data]
-    testFiles = [i.split("/")[-1].strip(".htk") for i in test_data]
+    trainFiles = [i.split("/")[-1].replace(".htk", "") for i in train_data]
+    testFiles = [i.split("/")[-1].replace(".htk", "") for i in test_data]
     allFiles = trainFiles + testFiles
 
     copyFiles(allFiles, os.path.join(currDataFolder, "ark"), os.path.join(ogDataFolder, "ark"), ".ark")
@@ -85,8 +85,8 @@ if __name__ == '__main__':
 
     #Arguments for create_data_lists()
     parser.add_argument('--test_type', type=str, default='test_on_train',
-                        choices=['test_on_train', 'cross_val', 'standard'])
-    parser.add_argument('--users', nargs='*', default=[])
+                        choices=['none', 'test_on_train', 'cross_val', 'standard'])
+    parser.add_argument('--users', nargs='*', default=None)
     parser.add_argument('--phrase_len', type=int, default=0)
     parser.add_argument('--random_state', type=int, default=24)
     parser.add_argument('--cross_val_method', required='cross_val' in sys.argv,
@@ -150,12 +150,15 @@ if __name__ == '__main__':
 
 
     if args.prepare_data:
-
-        prepare_data(features_config)
-
-    if args.test_type == 'test_on_train':
         
-        if len(args.users) == 0:
+        prepare_data(features_config, args.users)
+
+    if args.test_type == 'none':
+        sys.exit()
+
+    elif args.test_type == 'test_on_train':
+        
+        if not args.users:
             htk_filepaths = glob.glob('data/htk/*htk')
         else:
             htk_filepaths = []
@@ -185,7 +188,7 @@ if __name__ == '__main__':
     elif args.test_type == 'cross_val' and args.cv_parallel:
         print("You have invoked parallel cross validation. Be prepared for dancing progress bars!")
 
-        if len(args.users) == 0:
+        if not args.users:
             htk_filepaths = glob.glob('data/htk/*htk')
         else:
             htk_filepaths = []
@@ -221,7 +224,7 @@ if __name__ == '__main__':
         insertions = 0
         sentence_errors = 0
 
-        if len(args.users) == 0:
+        if not args.users:
             htk_filepaths = glob.glob('data/htk/*htk')
         else:
             htk_filepaths = []
@@ -296,7 +299,7 @@ if __name__ == '__main__':
 
     elif args.test_type == 'standard':
 
-        if len(args.users) == 0:
+        if not args.users:
             htk_filepaths = glob.glob('data/htk/*htk')
         else:
             htk_filepaths = []
