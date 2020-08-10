@@ -55,6 +55,7 @@ def _get_unique_words(features_dir: str) -> set:
 
     unique_words = set()
     features_filepaths = glob.glob(os.path.join(features_dir, '**/*.data'), recursive = True)
+    features_filepaths.extend(glob.glob(os.path.join(features_dir, '**/*.json'), recursive = True))
     split_index = 1
 
     for features_filepath in features_filepaths:
@@ -153,6 +154,7 @@ def _generate_grammar(features_dir: str) -> None:
     adjectives = set()
     max_phrase_len = 0
     features_filepaths = glob.glob(os.path.join(features_dir, '**/*.data'), recursive = True)
+    features_filepaths.extend(glob.glob(os.path.join(features_dir, '**/*.json'), recursive = True))
     split_index = 1
 
     for features_filepath in features_filepaths:

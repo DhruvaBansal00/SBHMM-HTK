@@ -54,7 +54,7 @@ def create_ark_files(features_config: dict, users: list, verbose: bool, is_selec
     """
 
     ark_dir = os.path.join('data', 'ark')
-
+    
     if os.path.exists(ark_dir):
         shutil.rmtree(ark_dir)
 
@@ -88,8 +88,7 @@ def create_ark_files(features_config: dict, users: list, verbose: bool, is_selec
         title = ark_filename.replace('.ark', "")
 
         if features_extension == 'json':
-            feature_extraction_kinect(features_filepath, features_config['selected_features'], ark_filepath)
-        
+            features_df = feature_extraction_kinect(features_filepath, features_config['selected_features'], scale = 10, drop_na = True)
         elif is_select_features:
             features_df = select_features(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = True, scale = 10, drop_na = True)
         else:

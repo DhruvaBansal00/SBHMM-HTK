@@ -19,10 +19,12 @@ def feature_labels():
     relative_squared_dist = [f'delta_{feature}_squared_xyz']
     joint_orientation_positions = [f'joint_orientation_{feature}_{orientation}' for orientation in ['x', 'y', 'z', 'w']] 
     relative_to_nose = [f'delta_{feature}_to_nose_{coordinate}' for coordinate in coordinates]
-    angle_wrist_elbow = [f'angle_wrist_elbow_{hand}' for hand in ['left', 'right']]
-
-    feature_columns = joint_positions + relative_positions + relative_squared_dist + joint_orientation_positions + relative_to_nose + angle_wrist_elbow
+    
+    feature_columns = joint_positions + relative_positions + relative_squared_dist + joint_orientation_positions + relative_to_nose
     columns.extend(feature_columns)
+
+  angle_wrist_elbow = [f'angle_wrist_elbow_{hand}' for hand in ['left', 'right']]
+  columns.extend(angle_wrist_elbow)
 
   return columns
 
@@ -49,7 +51,7 @@ def get_features(frame, feature_set):
   # if you want quaternions uncomment
   joint_orientations = [frame["bodies"][0]["joint_orientations"][feature_set][index] for index in range(4)]
   features.extend(joint_orientations)
-
+  #print("len get_features()", len(features))
   return features
 
 # returns angles of left wrist to left elbow and right wrist to right elbow respectively
@@ -79,6 +81,7 @@ def deltas(frame, prev_frame, feature_set):
   previous = [a_i - b_i for a_i, b_i in zip(previous, origin)]
   current = [a_i - b_i for a_i, b_i in zip(current, origin)]
   delta = [a_i - b_i for a_i, b_i in zip(current, previous)]
+  #print("len deltas()=>", len(delta))
   return delta
 
 # gets absolute xyz and quaternions. This is what the kinect gives us.
@@ -109,11 +112,14 @@ def feature_extraction_kinect(input_filepath: str, features_to_extract: list, sc
     except IndexError:
       print("did not detect a body in frame " + str(frame_number))
     else:
-      for index in range(32): features.extend(get_features(frame, index) + deltas(frame, prev_frame, index)) # Compare with previous version...
+      for index in range(32):
+        features.extend(get_features(frame, index) + deltas(frame, prev_frame, index)) # Compare with previous version...
+        #print("feature_ex_ki()=> ", frame_number, len(features))
       
       features.extend(angle_wrist_elbow(frame))
-      print(features, len(features))
-      features = features[1:-1] # Ensure this is right (dropping empty stuff)!
+      #print("all", len(features))
+      #print(features)
+      #features = features[1:-1] # Ensure this is right (dropping empty stuff)!
       prev_frame = frame
 
     all_features.append(features)

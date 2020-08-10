@@ -40,8 +40,8 @@ def crossValFold(train_data: list, test_data: list, args: object, fold: int):
     print(f"Current split = {str(fold)}. Current Test data Size = {len(test_data)}")
     ogDataFolder = "data"
     currDataFolder = os.path.join("data", str(fold))
-    trainFiles = [i.split("/")[-1].strip(".htk") for i in train_data]
-    testFiles = [i.split("/")[-1].strip(".htk") for i in test_data]
+    trainFiles = [i.split("/")[-1].replace(".htk", "") for i in train_data]
+    testFiles = [i.split("/")[-1].replace(".htk", "") for i in test_data]
     allFiles = trainFiles + testFiles
 
     copyFiles(allFiles, os.path.join(currDataFolder, "ark"), os.path.join(ogDataFolder, "ark"), ".ark")
