@@ -11,7 +11,7 @@ def runOfflineProcessor(source: str, dest: str):
 def produceJSONS(source: str, destination: str):
     video_list = glob.glob(source, recursive=True)
     for video in tqdm.tqdm(video_list):
-        name = video.split("/")[-1].strip(".mkv")
+        name = video.split("/")[-1].replace(".mkv", "")
         destinationFile = os.path.join(destination, name)
         runOfflineProcessor(video, destinationFile)
 
