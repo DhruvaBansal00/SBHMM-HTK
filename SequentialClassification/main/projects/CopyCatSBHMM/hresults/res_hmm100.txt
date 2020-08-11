@@ -1,0 +1,47 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/res_hmm100.mlf 
+Aligned transcription: data/htkSBHMMTest/02-22-20_Prerna_Android.lion_above_flowers.0000000009.lab vs data/htkSBHMMTest/02-22-20_Prerna_Android.lion_above_flowers.0000000009.rec
+ LAB: lion above flowers 
+ REC: lion in    flowers 
+Aligned transcription: data/htkSBHMMTest/02-22-20_Prerna_Android.monkey_in_box.0000000003.lab vs data/htkSBHMMTest/02-22-20_Prerna_Android.monkey_in_box.0000000003.rec
+ LAB: monkey in    box 
+ REC: monkey above box 
+Aligned transcription: data/htkSBHMMTest/07-24-20_Matthew_4K.snake_below_black_chair.0000000004.lab vs data/htkSBHMMTest/07-24-20_Matthew_4K.snake_below_black_chair.0000000004.rec
+ LAB: snake below black chair 
+ REC: snake below blue  chair 
+Aligned transcription: data/htkSBHMMTest/07-24-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000001.lab vs data/htkSBHMMTest/07-24-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000001.rec
+ LAB: grey alligator below blue flowers 
+ REC: grey alligator below      flowers 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Tue Aug 11 21:43:18 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/res_hmm100.mlf                                 |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |   42  |  97.24   2.07   0.69   0.00   2.76   9.52 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
+       b   l   e   e   l   l   o   h   l   r   n   i   o   r   n   a   a   h 
+       o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
+       v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
+       e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
+abov  18   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0    0 [94.7/0.7]
+alli   0  18   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0   6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+belo   0   0   0  13   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blac   0   0   0   0   2   1   0   0   0   0   0   0   0   0   0   0   0   0    0 [66.7/0.7]
+blue   0   0   0   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0    1
+ box   0   0   0   0   0   0   9   0   0   0   0   0   0   0   0   0   0   0    0
+chai   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0   0   0   0    0
+flow   0   0   0   0   0   0   0   0   6   0   0   0   0   0   0   0   0   0    0
+grey   0   0   0   0   0   0   0   0   0   5   0   0   0   0   0   0   0   0    0
+  in   1   0   0   0   0   0   0   0   0   0   9   0   0   0   0   0   0   0    0 [90.0/0.7]
+lion   0   0   0   0   0   0   0   0   0   0   0   5   0   0   0   0   0   0    0
+monk   0   0   0   0   0   0   0   0   0   0   0   0  14   0   0   0   0   0    0
+oran   0   0   0   0   0   0   0   0   0   0   0   0   0   4   0   0   0   0    0
+snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0   5   0   0   0    0
+wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0   0    0
+wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0    0
+whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1    0
+Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
