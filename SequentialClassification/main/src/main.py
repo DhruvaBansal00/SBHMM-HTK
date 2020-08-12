@@ -9,6 +9,7 @@
     SBHMM CV = python3 main.py --test_type cross_val --train_iters 25 50 75 --sbhmm_iters 25 50 75 --users Linda Prerna --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --parallel_jobs 4 --hmm_insertion_penalty -85 --sbhmm_insertion_penalty -85 --neighbors 70 --cross_val_method kfold --n_splits 10 --beam_threshold 2000.0
     SBHMM CV Parallel = python3 main.py --test_type cross_val --train_iters 25 50 75 100 120 140 160 --sbhmm_iters 25 50 75 100 --users Ishan Matthew David --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --include_word_position --parallel_classifier_training --hmm_insertion_penalty -80 --sbhmm_insertion_penalty -80 --neighbors 73 --cross_val_method stratified --n_splits 5 --beam_threshold 3000.0 --cv_parallel --parallel_jobs 10
     Prepare Data = python3 main.py --test_type none --prepare_data --users Matthew_4 Ishan_4 David_4
+    Old SBHMM CV = python3 main.py --test_type cross_val --train_iters 25 50 75 100 120 140 160 --sbhmm_iters 25 50 75 100 --users Ishan Matthew David --train_sbhmm --sbhmm_cycles 1 --no_pca --include_word_level_states --parallel_classifier_training --hmm_insertion_penalty -80 --sbhmm_insertion_penalty -80 --cross_val_method stratified --n_splits 5 --beam_threshold 3000.0 --cv_parallel --parallel_jobs 5 --multiple_classifiers
 """
 import sys
 import glob
@@ -76,8 +77,8 @@ def crossValFold(train_data: list, test_data: list, args: object, fold: int):
     
 
 
-if __name__ == '__main__':
-
+def main():
+    
     parser = argparse.ArgumentParser()
     ############################## ARGUMENTS #####################################
     #Important
