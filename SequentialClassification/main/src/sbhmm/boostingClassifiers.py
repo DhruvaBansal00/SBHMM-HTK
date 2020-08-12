@@ -159,7 +159,7 @@ def getTrainedClassifier(phrases: list, arkFileLoc: str, include_state: bool, in
             labels.extend([classLabel for i in range(dataset[classLabel].shape[0])])
         features = np.array(features)
         labels = np.array(labels)
-        if classifierAlgo is 'knn':
+        if 'knn' in classifierAlgo:
             print("Training Master KNN Classifier")
             classifier = KNeighborsClassifier(n_neighbors=knn_neighbors)
         else:
