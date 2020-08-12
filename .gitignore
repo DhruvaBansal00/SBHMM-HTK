@@ -3,5 +3,3 @@
 **.save
 SequentialClassification/main/projects/*/logs/
 SequentialClassification/main/projects/*/models/
-SequentialClassification/main/projects/*/data/
-**/data/
