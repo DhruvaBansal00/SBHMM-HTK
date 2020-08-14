@@ -94,7 +94,9 @@ def main():
     parser.add_argument('--cross_val_method', required='cross_val' in sys.argv,
                         default='kfold', choices=['kfold',
                                                   'leave_one_phrase_out',
-                                                  'stratified'])
+                                                  'stratified',
+                                                  'leave_one_user_out'
+                                                  ])
     parser.add_argument('--n_splits', required='cross_val' in sys.argv,
                         type=int, default=10)
     parser.add_argument('--cv_parallel', action='store_true')
@@ -137,8 +139,11 @@ def main():
     ########################################################################################
 
     cross_val_methods = {'kfold': (KFold, False),
-                         'leave_one_phrase_out': (LeaveOneGroupOut, True),
-                         'stratified': (StratifiedKFold, True)}
+                         'leave_one_phrase_out': (LeaveOneGroupOut(), True),
+                         'stratified': (StratifiedKFold, True),
+                         'leave_one_user_out': (LeaveOneGroupOut(), True)
+                         }
+    cvm = args.cross_val_method
     cross_val_method, use_groups = cross_val_methods[args.cross_val_method]
 
     features_config = load_json('configs/features.json')
@@ -201,10 +206,22 @@ def main():
             for filepath
             in htk_filepaths]
         
-        unique_phrases = set(phrases)
-        group_map = {phrase: i for i, phrase in enumerate(unique_phrases)}
-        groups = [group_map[phrase] for phrase in phrases]
-        cross_val = cross_val_method(n_splits=args.n_splits)
+        users = [filepath.split('/')[-1].split('.')[0].split('_')[1]
+            for filepath
+            in htk_filepaths]
+
+        if cvm == 'kfold' or cvm == 'stratified':
+            cross_val = cross_val_method(n_splits=args.n_splits)
+        elif cvm == 'leave_one_phrase_out':
+            unique_phrases = set(phrases)
+            group_map = {phrase: i for i, phrase in enumerate(unique_phrases)}
+            groups = [group_map[phrase] for phrase in phrases]
+            cross_val = cross_val_method
+        elif cvm == 'leave_one_user_out':
+            unique_users = set(users)
+            group_map = {user: i for i, user in enumerate(unique_users)}
+            groups = [group_map[user] for user in users]            
+            cross_val = cross_val_method
 
         if use_groups:
             splits = list(cross_val.split(htk_filepaths, phrases, groups))
@@ -237,10 +254,25 @@ def main():
             for filepath
             in htk_filepaths]
         
-        unique_phrases = set(phrases)
-        group_map = {phrase: i for i, phrase in enumerate(unique_phrases)}
-        groups = [group_map[phrase] for phrase in phrases]
-        cross_val = cross_val_method(n_splits=args.n_splits)
+        users = [filepath.split('/')[-1].split('.')[0].split('_')[1]
+            for filepath
+            in htk_filepaths]     
+
+        if cvm == 'kfold' or cvm == 'stratified':
+            unique_phrases = set(phrases)
+            group_map = {phrase: i for i, phrase in enumerate(unique_phrases)}
+            groups = [group_map[phrase] for phrase in phrases]      
+            cross_val = cross_val_method(n_splits=args.n_splits)
+        elif cvm == 'leave_one_phrase_out':
+            unique_phrases = set(phrases)
+            group_map = {phrase: i for i, phrase in enumerate(unique_phrases)}
+            groups = [group_map[phrase] for phrase in phrases]
+            cross_val = cross_val_method
+        elif cvm == 'leave_one_user_out':
+            unique_users = set(users)
+            group_map = {user: i for i, user in enumerate(unique_users)}
+            groups = [group_map[user] for user in users]            
+            cross_val = cross_val_method
 
         if use_groups:
             splits = list(cross_val.split(htk_filepaths, phrases, groups))
