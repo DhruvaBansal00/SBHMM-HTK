@@ -30,7 +30,7 @@ def create_data_lists(train_data: list, test_data: list, phrase_len: int = 0, fo
 	#TODO: Add filter for phrase length
 	masterFolder = 'lists' if fold is None else f'lists/{str(fold)}'
 	if not os.path.exists(masterFolder):
-		os.mkdirs(masterFolder)
+		os.makedirs(masterFolder)
 
 	all_data_filepath = os.path.join(masterFolder, 'all.data')
 	train_data_filepath = os.path.join(masterFolder, 'train.data')
