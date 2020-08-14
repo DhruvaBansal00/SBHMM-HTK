@@ -28,10 +28,8 @@ def make_features_table(input_mediapipe_directory: str, users: list, output_proj
 
     base_tables_directory = os.path.join(output_project_directory, 'visualization/tables', mode)
 
-    if os.path.exists(base_tables_directory):
-        shutil.rmtree(base_tables_directory)
-
-    os.makedirs(base_tables_directory)
+    if not os.path.exists(base_tables_directory):
+        os.makedirs(base_tables_directory)
 
     if not users:
         features_filepaths = glob.glob(os.path.join(input_mediapipe_directory, '**/*.data'), recursive = True)
