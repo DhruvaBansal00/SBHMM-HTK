@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 
 def feature_labels():
-  features = ['pelvis', 'spine_navel', 'spine_chest', 'neck', 'clavicle_left', 'shoulder_left', 'elbow_left', 'wrist_left', 'hand_left', 'handtip_left', 'thumb_left', 'clavicle_right', 'shoulder_right', 'elbow_right', 'wrist_right', 'hand_right', 'handtip_right', 'thumb_right', 'hip_left', 'knee_left', 'ankle_left', 'foot_left', 'hip_right', 'knee_right', 'ankle_right', 'foot_right', 'head', 'nose', 'eye_left', 'ear_left', 'eye_right', 'ear_right']
+  features = ['pelvis', 'spine_naval', 'spine_chest', 'neck', 'clavicle_left', 'shoulder_left', 'elbow_left', 'wrist_left', 'hand_left', 'handtip_left', 'thumb_left', 'clavicle_right', 'shoulder_right', 'elbow_right', 'wrist_right', 'hand_right', 'handtip_right', 'thumb_right', 'hip_left', 'knee_left', 'ankle_left', 'foot_left', 'hip_right', 'knee_right', 'ankle_right', 'foot_right', 'head', 'nose', 'eye_left', 'ear_left', 'eye_right', 'ear_right']
   coordinates = ['x', 'y', 'z']
 
   columns = []
@@ -141,7 +141,7 @@ def feature_extraction_kinect(input_filepath: str, features_to_extract: list, sc
   # print("Usage: python feature_extraction_kinect.py input_filepath output_filepath feature_indices")
   # print("Please input the feature set that you want to generated and seperated the index by comma: \n" +\
   #   "0:     PELVIS\n" +\
-  #   "1:     SPINE_NAVEL\n" +\
+  #   "1:     SPINE_NAVAL\n" +\
   #   "2:     SPINE_CHEST\n" +\
   #   "3:     NECK\n" +\
   #   "4:     CLAVICLE_LEFT\n" +\
