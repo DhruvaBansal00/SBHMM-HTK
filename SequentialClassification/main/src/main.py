@@ -211,6 +211,9 @@ def main():
             in htk_filepaths]
 
         if cvm == 'kfold' or cvm == 'stratified':
+            unique_phrases = set(phrases)
+            group_map = {phrase: i for i, phrase in enumerate(unique_phrases)}
+            groups = [group_map[phrase] for phrase in phrases]      
             cross_val = cross_val_method(n_splits=args.n_splits)
         elif cvm == 'leave_one_phrase_out':
             unique_phrases = set(phrases)
@@ -377,4 +380,4 @@ def main():
     # print(all_results)
     # Loads data as new run into pickle
     if args.save_results:
-        save_results(all_results, args.save_results_file)
+        save_results(all_results, args.save_results_file, 'a')

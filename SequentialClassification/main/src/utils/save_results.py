@@ -9,7 +9,7 @@ import os
 from .json_data import load_json, dump_json
 
 
-def save_results(results_dict: dict, results_file: str) -> None:
+def save_results(results_dict: dict, results_file: str, action: str = 'w') -> None:
     """Save results of training run to JSON file for post-processing.
     Will auto-increment the last index to append to an existing JSON.
 
@@ -31,4 +31,4 @@ def save_results(results_dict: dict, results_file: str) -> None:
 
         results = {1: results_dict}
         
-    dump_json(results_file, results)
+    dump_json(results_file, results, action)
