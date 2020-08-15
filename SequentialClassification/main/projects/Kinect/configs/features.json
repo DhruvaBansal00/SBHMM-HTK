@@ -560,5 +560,5 @@
         "angle_wrist_elbow_left",
         "angle_wrist_elbow_right"
     ],
-    "features_dir": "/home/pranay/Desktop/pipeline/ProcessingPipeline/DATA/Kinect_Data_July_2020"
+    "features_dir": "/mnt/ExtremeSSD/ProcessingPipeline/DATA/Kinect_Data_July_2020"
 }

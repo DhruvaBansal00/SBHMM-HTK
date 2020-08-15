@@ -70,8 +70,8 @@ for size in range(1, len(indices) + 1):
 for subset in subsets:
 	print(subset)
 	features = get_features(subset, filtered_features)
-	features_json_dict = {'all_features': all_features, 'selected_features': features, 'features_dir': "/home/pranay/Desktop/pipeline/ProcessingPipeline/DATA/Kinect_Data_July_2020"}
+	features_json_dict = {'all_features': all_features, 'selected_features': features, 'features_dir': "/mnt/ExtremeSSD/ProcessingPipeline/DATA/Kinect_Data_July_2020"}
 	dump_json('configs/features.json', features_json_dict)
 
 	# call driver with commands
-	os.system('python3 driver.py --prepare_data --save_results --test_type cross_val --users Matthew Linda David --train_iters 25 50 75 100 120 140 160 --hmm_insertion_penalty -80 --cross_val_method stratified --n_splits 5 --cv_parallel --parallel_jobs 10')
+	os.system('python3 driver.py --prepare_data --save_results --test_type cross_val --users Matthew Linda David --train_iters 25 50 75 100 120 140 160 --hmm_insertion_penalty -80 --cross_val_method stratified --n_splits 5 --cv_parallel --parallel_jobs 5')
