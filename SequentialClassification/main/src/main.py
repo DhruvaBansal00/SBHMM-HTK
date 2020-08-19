@@ -71,8 +71,10 @@ def crossValFold(train_data: list, test_data: list, args: object, fold: int):
 
     print(f'Current Word Error: {results["error"]}')
     print(f'Current Sentence Error: {results["sentence_error"]}')
+    print(f'Current Insertion Error: {results["insertions"]}')
+    print(f'Current Deletions Error: {results["deletions"]}')
 
-    return [results['error'], results['sentence_error']]
+    return [results['error'], results['sentence_error'], results['insertions'], results['deletions']]
 
     
 
@@ -235,6 +237,8 @@ def main():
         
         all_results['average']['error'] = mean([i[0] for i in stats])
         all_results['average']['sentence_error'] = mean([i[1] for i in stats])
+        all_results['average']['insertions'] = mean([i[2] for i in stats])
+        all_results['average']['deletions'] = mean([i[3] for i in stats])
 
     elif args.test_type == 'cross_val':
 
@@ -376,6 +380,10 @@ def main():
         
         print(f'Average Error: {all_results["average"]["error"]}')
         print(f'Average Sentence Error: {all_results["average"]["sentence_error"]}')
+        
+        if args.test_type == 'cross_val' and args.cv_parallel:
+            print(f'Average Insertions: {all_results["average"]["insertions"]}')
+            print(f'Average Deletions: {all_results["average"]["deletions"]}')
 
     # print(all_results)
     # Loads data as new run into pickle
