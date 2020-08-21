@@ -74,7 +74,7 @@ def crossValFold(train_data: list, test_data: list, args: object, fold: int):
     print(f'Current Insertion Error: {results["insertions"]}')
     print(f'Current Deletions Error: {results["deletions"]}')
 
-    test(-1, -1, "alignment", args.hmm_insertion_penalty, beam_threshold=args.beam_threshold, fold=os.path.join("alignment", str(fold), ""))
+    test(-1, -1, "alignment", args.hmm_insertion_penalty, beam_threshold=args.beam_threshold, fold=os.path.join(str(fold), ""))
 
     return [results['error'], results['sentence_error'], results['insertions'], results['deletions']]
 
