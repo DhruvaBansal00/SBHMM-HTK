@@ -55,10 +55,15 @@ def generate_prototype(n_states: int, n_features: int, output_filepath: str,
         row = ['0.0'] + ['1.0'] + ['0.0']*(n_states - 2)
         f.write(' '.join(row) + '\n')
 
-        for i in range(1, n_states-1):
+        for i in range(1, n_states-2):
 
-            row = ['0.0']*i + [str(transition_prob), str(1-transition_prob)] + ['0.0']*(n_states - i - 2)
+            # row = ['0.0']*i + [str(transition_prob), str(1-transition_prob)] + ['0.0']*(n_states - i - 2)
+            # f.write(' '.join(row) + '\n')
+            row = ['0.0']*i + [str(0.8*transition_prob), str((1-transition_prob)*0.8)] + [str(0.2/(n_states - i - 2.0))]*(n_states - i - 2)
             f.write(' '.join(row) + '\n')
+
+        row = ['0.0']*(n_states - 2) + [str(transition_prob), str(1-transition_prob)]
+        f.write(' '.join(row) + '\n')
 
         f.write(' '.join(['0.0']*n_states) + '\n')
         f.write('<EndHMM>\n')

@@ -111,7 +111,7 @@ def main():
     #Arguments for training
     parser.add_argument('--train_iters', nargs='*', type=int, default=[20, 50, 80])
     parser.add_argument('--mean', type=float, default=0.0)
-    parser.add_argument('--variance', type=float, default=1.0)
+    parser.add_argument('--variance', type=float, default=0.00001)
     parser.add_argument('--transition_prob', type=float, default=0.6)
     parser.add_argument('--hmm_insertion_penalty', default=-10)
 

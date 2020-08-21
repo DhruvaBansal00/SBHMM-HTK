@@ -1,0 +1,575 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/5/res_hmm240.mlf 
+Aligned transcription: data/5/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000004.lab vs data/5/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000004.rec
+ LAB: white lion above orange wall 
+ REC: white lion in    orange wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_grey_wall.0000000004.lab vs data/5/htk/08-10-20_David_4K.lion_above_grey_wall.0000000004.rec
+ LAB: lion above grey wall 
+ REC: lion in    grey wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.black_lion_in_blue_wagon.0000000002.lab vs data/5/htk/08-10-20_David_4K.black_lion_in_blue_wagon.0000000002.rec
+ LAB: black lion in blue  wagon 
+ REC: black lion in black wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_above_wall.0000000004.lab vs data/5/htk/08-10-20_David_4K.snake_above_wall.0000000004.rec
+ LAB:        snake above wall 
+ REC: orange snake above wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.black_lion_above_grey_bed.0000000001.lab vs data/5/htk/08-10-20_David_4K.black_lion_above_grey_bed.0000000001.rec
+ LAB: black lion  above grey bed 
+ REC: black snake above grey bed 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_in_box.0000000002.lab vs data/5/htk/08-10-20_David_4K.monkey_in_box.0000000002.rec
+ LAB: monkey in    box 
+ REC: monkey above box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_in_orange_flowers.0000000002.lab vs data/5/htk/08-10-20_David_4K.alligator_in_orange_flowers.0000000002.rec
+ LAB: alligator in    orange flowers 
+ REC: alligator below orange flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_bed.0000000001.lab vs data/5/htk/08-10-20_David_4K.alligator_above_bed.0000000001.rec
+ LAB: alligator above      bed   
+ REC: alligator above blue wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_below_chair.0000000004.lab vs data/5/htk/08-10-20_David_4K.lion_below_chair.0000000004.rec
+ LAB:        lion  below chair 
+ REC: orange snake below chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_in_blue_box.0000000004.lab vs data/5/htk/08-10-20_David_4K.monkey_in_blue_box.0000000004.rec
+ LAB: monkey in blue  box 
+ REC: monkey in black box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_below_orange_chair.0000000000.lab vs data/5/htk/08-10-20_David_4K.lion_below_orange_chair.0000000000.rec
+ LAB:       lion  below orange chair 
+ REC: black snake below orange chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_below_blue_bed.0000000004.lab vs data/5/htk/08-10-20_David_4K.lion_below_blue_bed.0000000004.rec
+ LAB: lion below blue  bed   
+ REC: lion below black wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.black_alligator_above_orange_wagon.0000000001.lab vs data/5/htk/08-10-20_David_4K.black_alligator_above_orange_wagon.0000000001.rec
+ LAB: black alligator above orange wagon 
+ REC: black alligator above orange bed   
+Aligned transcription: data/5/htk/08-10-20_David_4K.white_alligator_above_blue_wall.0000000003.lab vs data/5/htk/08-10-20_David_4K.white_alligator_above_blue_wall.0000000003.rec
+ LAB: white alligator above blue  wall 
+ REC: white alligator above black wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_in_orange_flowers.0000000005.lab vs data/5/htk/08-10-20_David_4K.monkey_in_orange_flowers.0000000005.rec
+ LAB: monkey in    orange flowers 
+ REC: monkey above orange flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_blue_bed.0000000004.lab vs data/5/htk/08-10-20_David_4K.lion_above_blue_bed.0000000004.rec
+ LAB:       lion  above blue  bed   
+ REC: black snake below black wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_chair.0000000002.lab vs data/5/htk/08-10-20_David_4K.alligator_above_chair.0000000002.rec
+ LAB: alligator above      chair 
+ REC: alligator above blue chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000003.lab vs data/5/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000003.rec
+ LAB: white lion  above orange wall 
+ REC: black snake below orange wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.black_lion_above_grey_bed.0000000002.lab vs data/5/htk/08-10-20_David_4K.black_lion_above_grey_bed.0000000002.rec
+ LAB: black lion above grey bed   
+ REC: black lion in    grey wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000004.lab vs data/5/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000004.rec
+ LAB: alligator above blue  wagon 
+ REC: alligator above black wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_below_blue_bed.0000000003.lab vs data/5/htk/08-10-20_David_4K.lion_below_blue_bed.0000000003.rec
+ LAB: lion below blue bed   
+ REC: lion below blue wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_above_white_wall.0000000000.lab vs data/5/htk/08-10-20_David_4K.monkey_above_white_wall.0000000000.rec
+ LAB: monkey above white wall 
+ REC: monkey in    white wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000000.lab vs data/5/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000000.rec
+ LAB: alligator above blue  wagon 
+ REC: alligator above black wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.black_snake_below_blue_chair.0000000004.lab vs data/5/htk/08-10-20_David_4K.black_snake_below_blue_chair.0000000004.rec
+ LAB: black snake below blue  chair 
+ REC: black snake below black chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_bed.0000000001.lab vs data/5/htk/08-10-20_David_4K.snake_below_bed.0000000001.rec
+ LAB: snake below      bed   
+ REC: snake below blue wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000001.lab vs data/5/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000001.rec
+ LAB: white lion above orange wall 
+ REC: white lion in    orange wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_above_box.0000000004.lab vs data/5/htk/08-10-20_David_4K.snake_above_box.0000000004.rec
+ LAB:        snake above box 
+ REC: orange snake above box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_chair.0000000001.lab vs data/5/htk/08-10-20_David_4K.snake_below_chair.0000000001.rec
+ LAB:        snake  below        chair 
+ REC: orange monkey below orange chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_above_wall.0000000003.lab vs data/5/htk/08-10-20_David_4K.monkey_above_wall.0000000003.rec
+ LAB: monkey above wall 
+ REC: monkey in    wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_flowers.0000000004.lab vs data/5/htk/08-10-20_David_4K.lion_above_flowers.0000000004.rec
+ LAB: lion above       flowers 
+ REC: lion above white flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_below_grey_bed.0000000003.lab vs data/5/htk/08-10-20_David_4K.alligator_below_grey_bed.0000000003.rec
+ LAB: alligator below grey bed   
+ REC: alligator below grey wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_above_box.0000000002.lab vs data/5/htk/08-10-20_David_4K.snake_above_box.0000000002.rec
+ LAB:        snake above box 
+ REC: orange snake in    box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_box.0000000004.lab vs data/5/htk/08-10-20_David_4K.lion_above_box.0000000004.rec
+ LAB:       lion  above box 
+ REC: black snake in    box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.orange_snake_below_blue_flowers.0000000005.lab vs data/5/htk/08-10-20_David_4K.orange_snake_below_blue_flowers.0000000005.rec
+ LAB: orange snake below blue  flowers 
+ REC: orange snake below black bed     
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_flowers.0000000000.lab vs data/5/htk/08-10-20_David_4K.lion_above_flowers.0000000000.rec
+ LAB:             lion  above flowers 
+ REC: black snake below black flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_below_blue_chair.0000000004.lab vs data/5/htk/08-10-20_David_4K.monkey_below_blue_chair.0000000004.rec
+ LAB: monkey below blue  chair 
+ REC: monkey below black chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.black_snake_below_blue_chair.0000000003.lab vs data/5/htk/08-10-20_David_4K.black_snake_below_blue_chair.0000000003.rec
+ LAB: black snake below blue  chair 
+ REC: black snake below black chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_bed.0000000003.lab vs data/5/htk/08-10-20_David_4K.alligator_above_bed.0000000003.rec
+ LAB: alligator above bed   
+ REC: alligator above wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.white_alligator_above_blue_wall.0000000002.lab vs data/5/htk/08-10-20_David_4K.white_alligator_above_blue_wall.0000000002.rec
+ LAB: white alligator above blue  wall 
+ REC: blue  alligator above black wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.grey_alligator_below_blue_flowers.0000000005.lab vs data/5/htk/08-10-20_David_4K.grey_alligator_below_blue_flowers.0000000005.rec
+ LAB: grey alligator below blue  flowers 
+ REC: grey alligator below black flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.black_snake_below_blue_chair.0000000000.lab vs data/5/htk/08-10-20_David_4K.black_snake_below_blue_chair.0000000000.rec
+ LAB: black snake below blue  chair 
+ REC: black snake below black chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.grey_snake_below_blue_chair.0000000003.lab vs data/5/htk/08-10-20_David_4K.grey_snake_below_blue_chair.0000000003.rec
+ LAB: grey snake below blue  chair 
+ REC: grey snake below black chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_in_wagon.0000000002.lab vs data/5/htk/08-10-20_David_4K.alligator_in_wagon.0000000002.rec
+ LAB: alligator in    wagon 
+ REC: alligator above wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_grey_wall.0000000000.lab vs data/5/htk/08-10-20_David_4K.lion_above_grey_wall.0000000000.rec
+ LAB:       lion  above grey wall 
+ REC: black snake above grey wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_bed.0000000000.lab vs data/5/htk/08-10-20_David_4K.alligator_above_bed.0000000000.rec
+ LAB: alligator above bed   
+ REC: alligator below wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.black_monkey_in_white_flowers.0000000000.lab vs data/5/htk/08-10-20_David_4K.black_monkey_in_white_flowers.0000000000.rec
+ LAB: black monkey in white  flowers 
+ REC: black monkey in orange flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_blue_chair.0000000002.lab vs data/5/htk/08-10-20_David_4K.snake_below_blue_chair.0000000002.rec
+ LAB: snake below blue chair 
+ REC: snake below blue wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.grey_monkey_below_orange_chair.0000000002.lab vs data/5/htk/08-10-20_David_4K.grey_monkey_below_orange_chair.0000000002.rec
+ LAB: grey monkey below orange chair 
+ REC: grey monkey below black  chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_orange_wagon.0000000003.lab vs data/5/htk/08-10-20_David_4K.alligator_above_orange_wagon.0000000003.rec
+ LAB:      alligator above orange wagon 
+ REC: blue alligator below orange wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_above_wall.0000000004.lab vs data/5/htk/08-10-20_David_4K.monkey_above_wall.0000000004.rec
+ LAB: monkey above wall 
+ REC: monkey in    wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.orange_alligator_in_grey_flowers.0000000002.lab vs data/5/htk/08-10-20_David_4K.orange_alligator_in_grey_flowers.0000000002.rec
+ LAB: orange alligator in    grey flowers 
+ REC: orange alligator above grey flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_in_wagon.0000000001.lab vs data/5/htk/08-10-20_David_4K.alligator_in_wagon.0000000001.rec
+ LAB: alligator in    wagon 
+ REC: alligator below wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_above_wall.0000000005.lab vs data/5/htk/08-10-20_David_4K.snake_above_wall.0000000005.rec
+ LAB:        snake above wall 
+ REC: orange snake above wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_above_box.0000000003.lab vs data/5/htk/08-10-20_David_4K.snake_above_box.0000000003.rec
+ LAB:        snake above box 
+ REC: orange snake in    box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_blue_chair.0000000001.lab vs data/5/htk/08-10-20_David_4K.snake_below_blue_chair.0000000001.rec
+ LAB: snake below blue  chair 
+ REC: snake below black box   
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000001.lab vs data/5/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000001.rec
+ LAB: alligator above blue  wagon 
+ REC: alligator above black wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.white_alligator_above_blue_wall.0000000001.lab vs data/5/htk/08-10-20_David_4K.white_alligator_above_blue_wall.0000000001.rec
+ LAB: white  alligator above blue  wall 
+ REC: orange alligator above black wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_in_flowers.0000000001.lab vs data/5/htk/08-10-20_David_4K.snake_in_flowers.0000000001.rec
+ LAB: snake in      flowers 
+ REC: snake in blue bed     
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_below_chair.0000000003.lab vs data/5/htk/08-10-20_David_4K.lion_below_chair.0000000003.rec
+ LAB:        lion  below chair 
+ REC: orange snake below chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_box.0000000001.lab vs data/5/htk/08-10-20_David_4K.lion_above_box.0000000001.rec
+ LAB:        lion  above box 
+ REC: orange snake in    box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_blue_bed.0000000003.lab vs data/5/htk/08-10-20_David_4K.lion_above_blue_bed.0000000003.rec
+ LAB: lion  above blue bed   
+ REC: snake in    blue wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_blue_chair.0000000003.lab vs data/5/htk/08-10-20_David_4K.snake_below_blue_chair.0000000003.rec
+ LAB: snake below blue  chair 
+ REC: snake below black chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.orange_monkey_below_grey_flowers.0000000002.lab vs data/5/htk/08-10-20_David_4K.orange_monkey_below_grey_flowers.0000000002.rec
+ LAB: orange monkey below grey   flowers 
+ REC: orange monkey below orange wagon   
+Aligned transcription: data/5/htk/08-10-20_David_4K.orange_monkey_in_grey_box.0000000004.lab vs data/5/htk/08-10-20_David_4K.orange_monkey_in_grey_box.0000000004.rec
+ LAB: orange monkey in    grey box 
+ REC: orange monkey above grey box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.grey_alligator_below_blue_flowers.0000000000.lab vs data/5/htk/08-10-20_David_4K.grey_alligator_below_blue_flowers.0000000000.rec
+ LAB: grey alligator below blue flowers 
+ REC: grey alligator below blue wagon   
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000003.lab vs data/5/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000003.rec
+ LAB: alligator above blue  wagon 
+ REC: alligator above black wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_wall.0000000002.lab vs data/5/htk/08-10-20_David_4K.alligator_above_wall.0000000002.rec
+ LAB: alligator       above wall 
+ REC: alligator below grey  wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_orange_bed.0000000000.lab vs data/5/htk/08-10-20_David_4K.lion_above_orange_bed.0000000000.rec
+ LAB: lion above orange bed   
+ REC: lion above orange wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_in_wagon.0000000003.lab vs data/5/htk/08-10-20_David_4K.alligator_in_wagon.0000000003.rec
+ LAB: alligator in    wagon 
+ REC: alligator above wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.grey_snake_below_blue_chair.0000000000.lab vs data/5/htk/08-10-20_David_4K.grey_snake_below_blue_chair.0000000000.rec
+ LAB: grey snake below blue  chair 
+ REC: grey snake below black chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_bed.0000000004.lab vs data/5/htk/08-10-20_David_4K.snake_below_bed.0000000004.rec
+ LAB: snake below        bed 
+ REC: snake below orange bed 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_in_orange_flowers.0000000000.lab vs data/5/htk/08-10-20_David_4K.alligator_in_orange_flowers.0000000000.rec
+ LAB: alligator in    orange flowers 
+ REC: alligator above orange bed     
+Aligned transcription: data/5/htk/08-10-20_David_4K.white_snake_in_blue_flowers.0000000003.lab vs data/5/htk/08-10-20_David_4K.white_snake_in_blue_flowers.0000000003.rec
+ LAB: white snake in blue  flowers 
+ REC: white snake    below bed     
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_blue_bed.0000000001.lab vs data/5/htk/08-10-20_David_4K.lion_above_blue_bed.0000000001.rec
+ LAB: lion above blue bed   
+ REC: lion above blue wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000000.lab vs data/5/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000000.rec
+ LAB: white lion above orange wall 
+ REC: white lion below orange wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_flowers.0000000003.lab vs data/5/htk/08-10-20_David_4K.lion_above_flowers.0000000003.rec
+ LAB:             lion  above flowers 
+ REC: black snake below blue  bed     
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_blue_flowers.0000000000.lab vs data/5/htk/08-10-20_David_4K.snake_below_blue_flowers.0000000000.rec
+ LAB:        snake below blue  flowers 
+ REC: orange snake below black flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_below_blue_bed.0000000002.lab vs data/5/htk/08-10-20_David_4K.lion_below_blue_bed.0000000002.rec
+ LAB: lion below blue  bed 
+ REC: lion below black bed 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_above_box.0000000005.lab vs data/5/htk/08-10-20_David_4K.snake_above_box.0000000005.rec
+ LAB:        snake above       box 
+ REC: orange snake above white box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_in_orange_flowers.0000000000.lab vs data/5/htk/08-10-20_David_4K.monkey_in_orange_flowers.0000000000.rec
+ LAB: monkey in    orange flowers 
+ REC: monkey above orange flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_blue_bed.0000000002.lab vs data/5/htk/08-10-20_David_4K.lion_above_blue_bed.0000000002.rec
+ LAB:       lion  above blue  bed 
+ REC: black snake above black bed 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_bed.0000000002.lab vs data/5/htk/08-10-20_David_4K.alligator_above_bed.0000000002.rec
+ LAB: alligator above       bed 
+ REC: alligator above black bed 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000002.lab vs data/5/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000002.rec
+ LAB: alligator above blue  wall 
+ REC: alligator above black wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_wall.0000000003.lab vs data/5/htk/08-10-20_David_4K.alligator_above_wall.0000000003.rec
+ LAB: alligator above      wall 
+ REC: alligator above grey wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_grey_wall.0000000001.lab vs data/5/htk/08-10-20_David_4K.lion_above_grey_wall.0000000001.rec
+ LAB:       lion      above grey wall 
+ REC: black alligator above grey wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000002.lab vs data/5/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000002.rec
+ LAB:      alligator above blue wagon 
+ REC: grey alligator above blue wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.orange_alligator_in_grey_flowers.0000000004.lab vs data/5/htk/08-10-20_David_4K.orange_alligator_in_grey_flowers.0000000004.rec
+ LAB: orange alligator in    grey  flowers 
+ REC: orange alligator above black bed     
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_in_orange_flowers.0000000003.lab vs data/5/htk/08-10-20_David_4K.alligator_in_orange_flowers.0000000003.rec
+ LAB: alligator in orange flowers 
+ REC: alligator in orange wagon   
+Aligned transcription: data/5/htk/08-10-20_David_4K.blue_monkey_above_grey_box.0000000004.lab vs data/5/htk/08-10-20_David_4K.blue_monkey_above_grey_box.0000000004.rec
+ LAB: blue monkey above grey box 
+ REC: blue monkey in    grey box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_bed.0000000001.lab vs data/5/htk/08-10-20_David_4K.lion_above_bed.0000000001.rec
+ LAB:             lion above  bed   
+ REC: black snake in   orange wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_chair.0000000001.lab vs data/5/htk/08-10-20_David_4K.alligator_above_chair.0000000001.rec
+ LAB: alligator above chair 
+ REC: alligator in    chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_bed.0000000005.lab vs data/5/htk/08-10-20_David_4K.alligator_above_bed.0000000005.rec
+ LAB: alligator above        bed 
+ REC: alligator above orange bed 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_in_flowers.0000000002.lab vs data/5/htk/08-10-20_David_4K.snake_in_flowers.0000000002.rec
+ LAB:        snake in      flowers 
+ REC: orange snake in blue flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.grey_alligator_below_blue_flowers.0000000001.lab vs data/5/htk/08-10-20_David_4K.grey_alligator_below_blue_flowers.0000000001.rec
+ LAB: grey alligator below blue  flowers 
+ REC: grey alligator below black flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.white_snake_in_blue_flowers.0000000000.lab vs data/5/htk/08-10-20_David_4K.white_snake_in_blue_flowers.0000000000.rec
+ LAB: white snake in blue flowers 
+ REC: white snake in blue wagon   
+Aligned transcription: data/5/htk/08-10-20_David_4K.orange_snake_below_blue_flowers.0000000000.lab vs data/5/htk/08-10-20_David_4K.orange_snake_below_blue_flowers.0000000000.rec
+ LAB: orange snake below blue  flowers 
+ REC: orange snake below black flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_above_wall.0000000002.lab vs data/5/htk/08-10-20_David_4K.snake_above_wall.0000000002.rec
+ LAB:        snake above wall 
+ REC: orange snake above wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_bed.0000000002.lab vs data/5/htk/08-10-20_David_4K.lion_above_bed.0000000002.rec
+ LAB: lion    above bed   
+ REC: lion in black wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_above_wall.0000000003.lab vs data/5/htk/08-10-20_David_4K.snake_above_wall.0000000003.rec
+ LAB:        snake above wall 
+ REC: orange snake above wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.grey_alligator_below_blue_flowers.0000000002.lab vs data/5/htk/08-10-20_David_4K.grey_alligator_below_blue_flowers.0000000002.rec
+ LAB: grey alligator below blue  flowers 
+ REC: grey alligator below black bed     
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_above_chair.0000000002.lab vs data/5/htk/08-10-20_David_4K.monkey_above_chair.0000000002.rec
+ LAB: monkey above chair 
+ REC: monkey in    chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_below_blue_bed.0000000001.lab vs data/5/htk/08-10-20_David_4K.lion_below_blue_bed.0000000001.rec
+ LAB: lion below blue  bed 
+ REC: lion below black bed 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_blue_bed.0000000000.lab vs data/5/htk/08-10-20_David_4K.lion_above_blue_bed.0000000000.rec
+ LAB: lion above blue  bed   
+ REC: lion above black wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_below_blue_bed.0000000000.lab vs data/5/htk/08-10-20_David_4K.lion_below_blue_bed.0000000000.rec
+ LAB: lion below blue  bed 
+ REC: lion below black bed 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_above_wall.0000000001.lab vs data/5/htk/08-10-20_David_4K.monkey_above_wall.0000000001.rec
+ LAB: monkey above wall 
+ REC: monkey in    wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_above_box.0000000000.lab vs data/5/htk/08-10-20_David_4K.snake_above_box.0000000000.rec
+ LAB:        snake above box 
+ REC: orange snake above box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_below_bed.0000000002.lab vs data/5/htk/08-10-20_David_4K.monkey_below_bed.0000000002.rec
+ LAB: monkey below        bed 
+ REC: monkey below orange bed 
+Aligned transcription: data/5/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000005.lab vs data/5/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000005.rec
+ LAB: white lion above orange wall 
+ REC: black lion below orange wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_in_flowers.0000000000.lab vs data/5/htk/08-10-20_David_4K.snake_in_flowers.0000000000.rec
+ LAB:        snake in flowers 
+ REC: orange snake in flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_in_wagon.0000000004.lab vs data/5/htk/08-10-20_David_4K.alligator_in_wagon.0000000004.rec
+ LAB: alligator       in    wagon 
+ REC: alligator below white wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_box.0000000003.lab vs data/5/htk/08-10-20_David_4K.lion_above_box.0000000003.rec
+ LAB:       lion  above box 
+ REC: black snake above box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_below_orange_chair.0000000005.lab vs data/5/htk/08-10-20_David_4K.lion_below_orange_chair.0000000005.rec
+ LAB:       lion  below orange chair 
+ REC: black snake below orange chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_bed.0000000000.lab vs data/5/htk/08-10-20_David_4K.lion_above_bed.0000000000.rec
+ LAB:       lion      above bed   
+ REC: black alligator in    wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_below_bed.0000000003.lab vs data/5/htk/08-10-20_David_4K.monkey_below_bed.0000000003.rec
+ LAB: monkey below bed   
+ REC: monkey below wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_in_flowers.0000000003.lab vs data/5/htk/08-10-20_David_4K.snake_in_flowers.0000000003.rec
+ LAB:        snake in flowers 
+ REC: orange snake in flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.white_snake_in_blue_flowers.0000000001.lab vs data/5/htk/08-10-20_David_4K.white_snake_in_blue_flowers.0000000001.rec
+ LAB: white snake in blue  flowers 
+ REC: white snake in black flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.orange_monkey_in_grey_box.0000000000.lab vs data/5/htk/08-10-20_David_4K.orange_monkey_in_grey_box.0000000000.rec
+ LAB: orange monkey in    grey box 
+ REC: orange monkey above grey box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_below_blue_chair.0000000000.lab vs data/5/htk/08-10-20_David_4K.monkey_below_blue_chair.0000000000.rec
+ LAB: monkey below blue  chair 
+ REC: monkey below black chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_in_grey_wagon.0000000004.lab vs data/5/htk/08-10-20_David_4K.snake_in_grey_wagon.0000000004.rec
+ LAB:        snake in    grey wagon 
+ REC: orange snake above grey wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_wall.0000000000.lab vs data/5/htk/08-10-20_David_4K.lion_above_wall.0000000000.rec
+ LAB:       lion  above wall 
+ REC: black snake below wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.orange_snake_below_blue_flowers.0000000003.lab vs data/5/htk/08-10-20_David_4K.orange_snake_below_blue_flowers.0000000003.rec
+ LAB: orange snake     below blue flowers 
+ REC: orange alligator below blue wagon   
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_below_bed.0000000000.lab vs data/5/htk/08-10-20_David_4K.monkey_below_bed.0000000000.rec
+ LAB: monkey below bed   
+ REC: monkey below wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_bed.0000000004.lab vs data/5/htk/08-10-20_David_4K.alligator_above_bed.0000000004.rec
+ LAB: alligator above       bed 
+ REC: alligator above white bed 
+Aligned transcription: data/5/htk/08-10-20_David_4K.blue_monkey_above_grey_box.0000000003.lab vs data/5/htk/08-10-20_David_4K.blue_monkey_above_grey_box.0000000003.rec
+ LAB: blue  monkey above grey box 
+ REC: black monkey below grey box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_blue_flowers.0000000002.lab vs data/5/htk/08-10-20_David_4K.snake_below_blue_flowers.0000000002.rec
+ LAB:        snake below blue  flowers 
+ REC: orange snake below black flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.blue_alligator_above_grey_wall.0000000003.lab vs data/5/htk/08-10-20_David_4K.blue_alligator_above_grey_wall.0000000003.rec
+ LAB: blue  alligator above grey wall 
+ REC: black alligator above grey wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_black_chair.0000000004.lab vs data/5/htk/08-10-20_David_4K.snake_below_black_chair.0000000004.rec
+ LAB:        snake below black chair 
+ REC: orange snake below black chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_wall.0000000001.lab vs data/5/htk/08-10-20_David_4K.lion_above_wall.0000000001.rec
+ LAB:       lion      above wall 
+ REC: black alligator in    wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_in_flowers.0000000004.lab vs data/5/htk/08-10-20_David_4K.snake_in_flowers.0000000004.rec
+ LAB:        snake in        flowers 
+ REC: orange lion  in orange bed     
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_in_wagon.0000000000.lab vs data/5/htk/08-10-20_David_4K.alligator_in_wagon.0000000000.rec
+ LAB: alligator in    wagon 
+ REC: alligator above wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.black_monkey_in_white_flowers.0000000003.lab vs data/5/htk/08-10-20_David_4K.black_monkey_in_white_flowers.0000000003.rec
+ LAB: black monkey in    white flowers 
+ REC: blue  monkey above blue  flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_below_grey_bed.0000000000.lab vs data/5/htk/08-10-20_David_4K.alligator_below_grey_bed.0000000000.rec
+ LAB: alligator below grey bed   
+ REC: alligator below grey wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_in_grey_wagon.0000000001.lab vs data/5/htk/08-10-20_David_4K.snake_in_grey_wagon.0000000001.rec
+ LAB:      snake in    grey  wagon 
+ REC: blue snake below black wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.white_lion_in_grey_box.0000000004.lab vs data/5/htk/08-10-20_David_4K.white_lion_in_grey_box.0000000004.rec
+ LAB: white lion in    grey box 
+ REC: white lion above grey box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_black_wall.0000000001.lab vs data/5/htk/08-10-20_David_4K.alligator_above_black_wall.0000000001.rec
+ LAB: alligator above black wall 
+ REC: alligator above blue  wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.black_monkey_in_white_flowers.0000000001.lab vs data/5/htk/08-10-20_David_4K.black_monkey_in_white_flowers.0000000001.rec
+ LAB: black monkey in white flowers 
+ REC: black monkey in black flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.white_lion_in_grey_box.0000000003.lab vs data/5/htk/08-10-20_David_4K.white_lion_in_grey_box.0000000003.rec
+ LAB: white lion in grey box 
+ REC: black lion in grey box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_below_orange_chair.0000000003.lab vs data/5/htk/08-10-20_David_4K.lion_below_orange_chair.0000000003.rec
+ LAB:       lion below orange chair 
+ REC: black lion below orange chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.grey_snake_below_blue_chair.0000000004.lab vs data/5/htk/08-10-20_David_4K.grey_snake_below_blue_chair.0000000004.rec
+ LAB: grey snake below blue  chair 
+ REC: grey snake below black chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_black_chair.0000000003.lab vs data/5/htk/08-10-20_David_4K.snake_below_black_chair.0000000003.rec
+ LAB:        snake     below black chair 
+ REC: orange alligator below black chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_bed.0000000002.lab vs data/5/htk/08-10-20_David_4K.snake_below_bed.0000000002.rec
+ LAB:        snake below bed   
+ REC: orange snake below wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_orange_wagon.0000000004.lab vs data/5/htk/08-10-20_David_4K.alligator_above_orange_wagon.0000000004.rec
+ LAB: alligator above orange wagon 
+ REC: alligator below orange bed   
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000005.lab vs data/5/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000005.rec
+ LAB: alligator above blue  wagon 
+ REC: alligator above black wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.black_monkey_in_white_flowers.0000000002.lab vs data/5/htk/08-10-20_David_4K.black_monkey_in_white_flowers.0000000002.rec
+ LAB: black  monkey in white flowers 
+ REC: orange monkey in black flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_blue_flowers.0000000004.lab vs data/5/htk/08-10-20_David_4K.snake_below_blue_flowers.0000000004.rec
+ LAB:        snake below blue flowers 
+ REC: orange snake below blue flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_bed.0000000000.lab vs data/5/htk/08-10-20_David_4K.snake_below_bed.0000000000.rec
+ LAB: snake below bed   
+ REC: snake below wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_below_blue_chair.0000000001.lab vs data/5/htk/08-10-20_David_4K.monkey_below_blue_chair.0000000001.rec
+ LAB: monkey below blue  chair 
+ REC: monkey below black chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000004.lab vs data/5/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000004.rec
+ LAB: alligator above blue  wall 
+ REC: alligator below black wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_in_orange_flowers.0000000002.lab vs data/5/htk/08-10-20_David_4K.monkey_in_orange_flowers.0000000002.rec
+ LAB: monkey in orange flowers 
+ REC: monkey in        flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000005.lab vs data/5/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000005.rec
+ LAB: alligator above blue  wall 
+ REC: alligator above black wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_black_chair.0000000001.lab vs data/5/htk/08-10-20_David_4K.snake_below_black_chair.0000000001.rec
+ LAB:      snake below black chair 
+ REC: blue snake below black chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.black_alligator_above_orange_wagon.0000000005.lab vs data/5/htk/08-10-20_David_4K.black_alligator_above_orange_wagon.0000000005.rec
+ LAB: black alligator above orange wagon 
+ REC: blue  alligator below orange bed   
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000003.lab vs data/5/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000003.rec
+ LAB: alligator above blue  wall 
+ REC: alligator below black wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.white_snake_in_blue_flowers.0000000002.lab vs data/5/htk/08-10-20_David_4K.white_snake_in_blue_flowers.0000000002.rec
+ LAB: white  snake in blue  flowers 
+ REC: orange snake in black wagon   
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_chair.0000000003.lab vs data/5/htk/08-10-20_David_4K.snake_below_chair.0000000003.rec
+ LAB:        snake     below chair 
+ REC: orange alligator below chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_chair.0000000000.lab vs data/5/htk/08-10-20_David_4K.snake_below_chair.0000000000.rec
+ LAB:        snake below chair 
+ REC: orange snake below chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_blue_bed.0000000005.lab vs data/5/htk/08-10-20_David_4K.lion_above_blue_bed.0000000005.rec
+ LAB: lion above blue                   bed 
+ REC:            blue snake below black bed 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_bed.0000000003.lab vs data/5/htk/08-10-20_David_4K.lion_above_bed.0000000003.rec
+ LAB: lion       above bed   
+ REC: lion below blue  wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_orange_bed.0000000001.lab vs data/5/htk/08-10-20_David_4K.lion_above_orange_bed.0000000001.rec
+ LAB: lion above orange bed   
+ REC: lion above orange wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_below_bed.0000000004.lab vs data/5/htk/08-10-20_David_4K.monkey_below_bed.0000000004.rec
+ LAB: monkey below bed   
+ REC: monkey below wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_in_wagon.0000000005.lab vs data/5/htk/08-10-20_David_4K.alligator_in_wagon.0000000005.rec
+ LAB: alligator in        wagon 
+ REC: alligator in orange wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_flowers.0000000001.lab vs data/5/htk/08-10-20_David_4K.lion_above_flowers.0000000001.rec
+ LAB:      lion  above       flowers 
+ REC: blue snake above black flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_above_wall.0000000000.lab vs data/5/htk/08-10-20_David_4K.snake_above_wall.0000000000.rec
+ LAB:        snake above wall 
+ REC: orange snake in    wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000000.lab vs data/5/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000000.rec
+ LAB: alligator above blue  wall 
+ REC: alligator below black wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_above_chair.0000000004.lab vs data/5/htk/08-10-20_David_4K.monkey_above_chair.0000000004.rec
+ LAB: monkey above chair 
+ REC: monkey in    chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_in_blue_box.0000000001.lab vs data/5/htk/08-10-20_David_4K.monkey_in_blue_box.0000000001.rec
+ LAB: monkey in blue  box 
+ REC: monkey in black box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_orange_bed.0000000002.lab vs data/5/htk/08-10-20_David_4K.lion_above_orange_bed.0000000002.rec
+ LAB: lion above orange bed   
+ REC: lion above orange wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_blue_chair.0000000004.lab vs data/5/htk/08-10-20_David_4K.snake_below_blue_chair.0000000004.rec
+ LAB:        snake below blue chair 
+ REC: orange snake below blue chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_blue_chair.0000000000.lab vs data/5/htk/08-10-20_David_4K.snake_below_blue_chair.0000000000.rec
+ LAB:        snake below blue  chair 
+ REC: orange snake below black chair 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_below_bed.0000000001.lab vs data/5/htk/08-10-20_David_4K.monkey_below_bed.0000000001.rec
+ LAB: monkey below bed   
+ REC: monkey below wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_in_grey_wagon.0000000000.lab vs data/5/htk/08-10-20_David_4K.snake_in_grey_wagon.0000000000.rec
+ LAB: snake  in        grey  wagon 
+ REC: orange alligator above wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.lion_above_grey_wall.0000000002.lab vs data/5/htk/08-10-20_David_4K.lion_above_grey_wall.0000000002.rec
+ LAB: lion  above grey wall 
+ REC: snake below grey wall 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_bed.0000000003.lab vs data/5/htk/08-10-20_David_4K.snake_below_bed.0000000003.rec
+ LAB: snake below      bed   
+ REC: snake below blue wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.orange_alligator_in_grey_flowers.0000000005.lab vs data/5/htk/08-10-20_David_4K.orange_alligator_in_grey_flowers.0000000005.rec
+ LAB: orange alligator in    grey flowers 
+ REC: orange alligator below grey flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_blue_flowers.0000000003.lab vs data/5/htk/08-10-20_David_4K.snake_below_blue_flowers.0000000003.rec
+ LAB:        snake below blue flowers 
+ REC: orange snake below blue flowers 
+Aligned transcription: data/5/htk/08-10-20_David_4K.black_lion_in_blue_wagon.0000000000.lab vs data/5/htk/08-10-20_David_4K.black_lion_in_blue_wagon.0000000000.rec
+ LAB: black lion in blue  wagon 
+ REC: black lion in black wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.alligator_in_box.0000000003.lab vs data/5/htk/08-10-20_David_4K.alligator_in_box.0000000003.rec
+ LAB: alligator in    box 
+ REC: alligator above box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.snake_below_bed.0000000005.lab vs data/5/htk/08-10-20_David_4K.snake_below_bed.0000000005.rec
+ LAB: snake below bed   
+ REC: snake below wagon 
+Aligned transcription: data/5/htk/08-10-20_David_4K.monkey_in_blue_box.0000000002.lab vs data/5/htk/08-10-20_David_4K.monkey_in_blue_box.0000000002.rec
+ LAB: monkey in    blue  box 
+ REC: monkey above black box 
+Aligned transcription: data/5/htk/08-10-20_David_4K.black_lion_above_grey_bed.0000000000.lab vs data/5/htk/08-10-20_David_4K.black_lion_above_grey_bed.0000000000.rec
+ LAB: black lion above grey bed 
+ REC: black lion in    grey bed 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Fri Aug 21 01:47:17 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/5/res_hmm240.mlf                               |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |  307  |  82.77  16.90   0.33   6.40  23.63  58.63 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
+       b   l   e   e   l   l   o   h   l   r   n   i   o   r   n   a   a   h 
+       o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
+       v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
+       e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
+abov  92   0   0  14   2   2   0   0   0   1  21   0   0   1   0   0   0   0    1 [69.2/3.4]
+alli   0  88   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0  17   0   0   0   0   0   0   0   0   0   0   0   0  28   0   0    0 [37.8/2.3]
+belo   0   0   0  95   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blac   0   0   0   0  30   3   0   0   0   0   0   0   0   1   0   0   0   0    0 [88.2/0.3]
+blue   0   0   0   1  48  44   0   0   0   0   0   0   0   0   0   0   0   0    0 [47.3/4.0]
+ box   0   0   0   0   0   0  46   0   0   0   0   0   0   0   0   0   0   0    0
+chai   0   0   0   0   0   0   1  55   0   0   0   0   0   0   0   1   0   0    0 [96.5/0.2]
+flow   0   0   8   0   0   0   0   0  45   0   0   0   0   0   0   6   0   0    0 [76.3/1.1]
+grey   1   0   0   0   2   0   0   0   0  71   0   0   0   1   0   0   0   0    0 [94.7/0.3]
+  in  16   1   0   4   0   0   0   0   0   0  55   0   0   0   0   0   0   1    1 [71.4/1.8]
+lion   0   3   0   2   0   0   0   0   0   0   1  47   0   0  16   0   0   0    1 [68.1/1.8]
+monk   0   0   0   0   0   0   0   0   0   0   0   0  78   0   0   0   0   0    0
+oran   0   0   0   0   1   0   0   0   0   0   0   0   0  64   0   0   0   0    1 [98.5/0.1]
+snak   0   3   0   0   0   0   0   0   0   0   0   1   1   1  65   0   0   0    0 [91.5/0.5]
+wago   0   0   3   0   0   0   0   0   0   0   0   0   0   0   0  38   0   0    0 [92.7/0.2]
+wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  59   0    0
+whit   0   0   0   0   5   2   0   0   0   0   0   0   0   3   0   0   0  20    0 [66.7/0.8]
+Ins    0   0   0   4  18  10   0   0   0   2   1   0   0  36   4   0   0   3
