@@ -907,5 +907,5 @@
         "delta_right_landmark_20_x",
         "delta_right_landmark_20_y"
     ],
-    "features_dir": "/mnt/ExtremeSSD/ProcessingPipeline/DATA/Mediapipe_Data_July_2020"
+    "features_dir": "/media/aslr/Extreme SSD/ProcessingPipeline/DATA/Mediapipe_Data_July_2020"
 }

@@ -200,8 +200,7 @@ def interpolate_feature_data(features_filepath, features, center_on_face: bool =
     df = df * scale
     df = df.round(6)    
 
-    print("Interpolated DataFrame: ")
-    print(df)
+ 
 
     return df
 
