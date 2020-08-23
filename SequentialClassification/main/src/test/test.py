@@ -22,13 +22,14 @@ def test(start: int, end: int, method: str, insertion_penalty: int, beam_thresho
 
     if os.path.exists(f'results/{fold}'):
         shutil.rmtree(f'results/{fold}')
-
-    if os.path.exists(f'hresults/{fold}'):
-        shutil.rmtree(f'hresults/{fold}')
-
     os.makedirs(f'results/{fold}')
-    os.makedirs(f'hresults/{fold}')
 
+    if method != 'alignment':
+
+        if os.path.exists(f'hresults/{fold}'):
+            shutil.rmtree(f'hresults/{fold}')
+        os.makedirs(f'hresults/{fold}')
+    
     if end == -1:
         end = len(glob.glob(f'models/{fold}*hmm*'))
 
