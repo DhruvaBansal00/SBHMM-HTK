@@ -18,4 +18,6 @@ def produceJSONS(source: str, destination: str):
             os.makedirs(dirname)
         runOfflineProcessor(video, destinationFile)
 
-produceJSONS('/media/aslr/U32 Shadow/temp2/Kanksha/**/*.mkv', '/media/aslr/U32 Shadow/temp_jsons/Kanksha/')
+# produceJSONS('/media/aslr/U32 Shadow/temp2/Kanksha/**/*.mkv', '/media/aslr/U32 Shadow/newly_generated_json_files/Kanksha/')
+# produceJSONS('/home/aslr/ttttt/*.mkv', '/home/aslr/tttttdone/')
+produceJSONS('')
