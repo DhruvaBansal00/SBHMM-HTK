@@ -56,7 +56,7 @@ def generate_prototype(n_states: int, n_features: int, output_filepath: str,
         f.write(' '.join(row) + '\n')
 
         for i in range(1, n_states-2):
-            if i == 6 or i==9:
+            if i == 6:
                 row = ['0.0']*i + [str(0.9*transition_prob), str(0.9-0.9*transition_prob)] + ['0.0']*3 + ['0.1'] + ['0.0']*(n_states - i - 6)
                 f.write(' '.join(row) + '\n')
             else:
