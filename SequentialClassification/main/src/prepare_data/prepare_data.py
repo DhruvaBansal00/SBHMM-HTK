@@ -28,7 +28,7 @@ def prepare_data(features_config: dict, users: list) -> None:
         data files.
     """
 
-    create_ark_files(features_config, users, verbose = False, is_select_features = False)
+    create_ark_files(features_config, users, verbose = False, is_select_features = True)
     print('.ark files created')
 
     print('Creating .htk files')
