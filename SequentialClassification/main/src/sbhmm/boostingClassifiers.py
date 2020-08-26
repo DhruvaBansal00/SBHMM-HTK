@@ -198,4 +198,4 @@ class ClassifierTransformer(object):
                 transformation[:, i] = self.callDecisionFunction(i, features)                
             return np.array(transformation)
         else:
-            return self.classifier.predict_proba(features)
+            return self.classifier.predict_proba(features) * 1000
