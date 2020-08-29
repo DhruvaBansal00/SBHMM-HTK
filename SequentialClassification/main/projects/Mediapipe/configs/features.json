@@ -821,7 +821,17 @@
         "right_hand_w", 
         "right_hand_h", 
         "horizontal_hand_dist", 
-        "vertical_hand_dist", 
+        "vertical_hand_dist",
+        "delta_left_hand_x", 
+        "delta_left_hand_y", 
+        "delta_left_hand_w", 
+        "delta_left_hand_h", 
+        "delta_right_hand_x", 
+        "delta_right_hand_y", 
+        "delta_right_hand_w", 
+        "delta_right_hand_h", 
+        "delta_horizontal_hand_dist", 
+        "delta_vertical_hand_dist", 
         "left_landmark_0_x",
         "left_landmark_0_y",
         "left_landmark_1_x",
@@ -907,5 +917,5 @@
         "right_landmark_20_x",
         "right_landmark_20_y"
     ],
-    "features_dir": "/home/thad/copycat/Mediapipe_Data_July_2020"
+    "features_dir": "/home/thad/copycat/ProcessingPipeline/DATA/Mediapipe_Data_July_2020"
 }
