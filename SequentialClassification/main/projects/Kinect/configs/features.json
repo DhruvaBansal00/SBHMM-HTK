@@ -509,9 +509,7 @@
         "delta_thumb_right_squared_xyz",
         "delta_thumb_right_to_nose_x",
         "delta_thumb_right_to_nose_y",
-        "delta_thumb_right_to_nose_z",
-        "angle_wrist_elbow_left",
-        "angle_wrist_elbow_right"
+        "delta_thumb_right_to_nose_z"
     ],
     "features_dir": "/media/aslr/U32 Shadow/DeleteAfter_ProcessingPipeline/ProcessingPipeline/DATA/Kinect_Data_July_2020"
 }
