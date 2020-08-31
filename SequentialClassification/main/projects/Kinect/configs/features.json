@@ -449,7 +449,9 @@
         "delta_ear_right_to_nose_y",
         "delta_ear_right_to_nose_z",
         "angle_wrist_elbow_left",
-        "angle_wrist_elbow_right"
+        "angle_wrist_elbow_right",
+        "dist_between_handtips_squared_xyz",
+        "delta_dist_between_handtips_squared_xyz"
     ],
     "selected_features": [
         "delta_elbow_left_x",
@@ -509,7 +511,9 @@
         "delta_thumb_right_squared_xyz",
         "delta_thumb_right_to_nose_x",
         "delta_thumb_right_to_nose_y",
-        "delta_thumb_right_to_nose_z"
+        "delta_thumb_right_to_nose_z",
+        "angle_wrist_elbow_left",
+        "angle_wrist_elbow_right"
     ],
-    "features_dir": "/media/aslr/U32 Shadow/DeleteAfter_ProcessingPipeline/ProcessingPipeline/DATA/Kinect_Data_July_2020"
+    "features_dir": "/media/aslr/U32 Shadow/DeleteAfter_ProcessingPipeline/PP2/DATA/Kinect_Data_July_2020"
 }
