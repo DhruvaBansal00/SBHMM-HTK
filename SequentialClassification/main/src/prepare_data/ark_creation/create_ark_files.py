@@ -59,7 +59,6 @@ def create_ark_files(features_config: dict, users: list, verbose: bool, is_selec
         shutil.rmtree(ark_dir)
 
     os.makedirs(ark_dir)
-    verbose = True
 
     if not users:
         features_filepaths = glob.glob(os.path.join(features_config['features_dir'], '**/*.data'), recursive = True)
