@@ -25,6 +25,8 @@ def feature_labels():
 
   angle_wrist_elbow = [f'angle_wrist_elbow_{hand}' for hand in ['left', 'right']]
   columns.extend(angle_wrist_elbow)
+  distance_between_handtips = ['dist_between_handtips_squared_xyz', 'delta_dist_between_handtips_squared_xyz']
+  columns.extend(distance_between_handtips)
 
   return columns
 
@@ -74,6 +76,23 @@ def angle_wrist_elbow(frame):
   features = [angle1, angle2]
   return features
 
+def distance_between_handtips(frame, prev_frame):
+  curr_left_handtip = [frame["bodies"][0]["joint_positions"][9][index] for index in range(3)]
+  curr_right_handtip = [frame["bodies"][0]["joint_positions"][16][index] for index in range(3)]
+  curr_dist_between_handtips = [a_i - b_i for a_i, b_i in zip(curr_left_handtip, curr_right_handtip)]
+  # print("start", curr_dist_between_handtips)
+  prev_left_handtip = [prev_frame["bodies"][0]["joint_positions"][9][index] for index in range(3)]
+  prev_right_handtip = [prev_frame["bodies"][0]["joint_positions"][16][index] for index in range(3)]
+  prev_dist_between_handtips = [a_i - b_i for a_i, b_i in zip(prev_left_handtip, prev_right_handtip)]
+  # print(prev_dist_between_handtips)
+  delta_dist_between_handtips = [a_i - b_i for a_i, b_i in zip(curr_dist_between_handtips, prev_dist_between_handtips)]
+  # print(delta_dist_between_handtips)
+  curr_dist_between_handtips_squared_xyz = sum([a_i*a_i for a_i in curr_dist_between_handtips])
+  delta_dist_between_handtips_squared_xyz = sum([a_i*a_i for a_i in delta_dist_between_handtips])
+  features = [curr_dist_between_handtips_squared_xyz, delta_dist_between_handtips_squared_xyz]
+  # print("end",features)
+  return features
+
 def deltas(frame, prev_frame, feature_set):
   origin = [frame["bodies"][0]["joint_positions"][27][index] for index in range(3)]
   previous = [prev_frame["bodies"][0]["joint_positions"][feature_set][index] for index in range(3)]
@@ -117,6 +136,7 @@ def feature_extraction_kinect(input_filepath: str, features_to_extract: list, sc
         #print("feature_ex_ki()=> ", frame_number, len(features))
       
       features.extend(angle_wrist_elbow(frame))
+      features.extend(distance_between_handtips(frame, prev_frame))
       #print("all", len(features))
       #print(features)
       #features = features[1:-1] # Ensure this is right (dropping empty stuff)!

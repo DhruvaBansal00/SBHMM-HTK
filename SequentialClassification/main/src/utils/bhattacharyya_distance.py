@@ -153,7 +153,7 @@ def find_confused_word(macros_data, words, feature_labels, confusion_matrix_file
 
     return bhatt_dist_dict
 
-def bhattacharyya_distance(feature_config_filepath, feature_config_key, macros_filepath, save_dir, words, feature_labels, confusion_matrix_filepath, threshold, mode):
+def bhattacharyya_distance(split, feature_config_filepath, feature_config_key, macros_filepath, save_dir, words, feature_labels, confusion_matrix_filepath, threshold, mode):
     """Function that calculates Bhattacharyya Distance using newMacros data.
 
     Parameters
@@ -196,7 +196,7 @@ def bhattacharyya_distance(feature_config_filepath, feature_config_key, macros_f
         On success, generates a file that consists of good features from the Bhattacharyya Distance.
 
     """
-    gaussian_dir = os.path.join(save_dir, 'visualization', 'gaussian', '1')
+    gaussian_dir = os.path.join(save_dir, 'visualization', 'gaussian', '1', split)
     if not os.path.exists(gaussian_dir):
         os.makedirs(gaussian_dir)
 
@@ -245,13 +245,13 @@ def bhattacharyya_distance(feature_config_filepath, feature_config_key, macros_f
 
 if __name__=='__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--feature_config_filepath', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs/configs/features.json')
+    parser.add_argument('--feature_config_filepath', type = str, default = '/home/aslr/SBHMM-HTK/SequentialClassification/main/projects/Kinect/configs/features.json')
     parser.add_argument('--feature_config_key', type = str, default = 'selected_features')
-    parser.add_argument('--macros_filepath', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs/models/hmm80/newMacros')
-    parser.add_argument('--save_dir', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs/')
+    parser.add_argument('--macros_filepath', type = str, default = '/home/aslr/SBHMM-HTK/SequentialClassification/main/projects/Kinect/models/')
+    parser.add_argument('--save_dir', type = str, default = '/home/aslr/SBHMM-HTK/SequentialClassification/main/projects/Kinect/')
     parser.add_argument('--words', nargs='*', type = str, default = [])
     parser.add_argument('--feature_labels', nargs='*', type = str, default = [])
-    parser.add_argument('--confusion_matrix_filepath', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs/hresults/res_hmm80.txt')
+    parser.add_argument('--confusion_matrix_filepath', type = str, default = '/home/aslr/SBHMM-HTK/SequentialClassification/main/projects/Kinect/hresults/')
     parser.add_argument('--threshold', type = float, default = 0.1)
     parser.add_argument('--mode', type = int, default = 0)
     args = parser.parse_args()
@@ -293,4 +293,7 @@ if __name__=='__main__':
         If mode == 1, then plot each confused pair of words together for each feature.
 
     """
-    bhattacharyya_distance(args.feature_config_filepath, args.feature_config_key, args.macros_filepath, args.save_dir, args.words, args.feature_labels, args.confusion_matrix_filepath, args.threshold, args.mode)
+    for i in range(7):
+        macros_filepath = os.path.join(args.macros_filepath, str(i), 'hmm220/newMacros')
+        confusion_matrix_filepath = os.path.join(args.confusion_matrix_filepath, str(i), 'res_hmm220.txt')
+        bhattacharyya_distance(str(i), args.feature_config_filepath, args.feature_config_key, macros_filepath, args.save_dir, args.words, args.feature_labels, confusion_matrix_filepath, args.threshold, args.mode)
