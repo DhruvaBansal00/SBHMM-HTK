@@ -917,5 +917,5 @@
         "right_landmark_20_x",
         "right_landmark_20_y"
     ],
-    "features_dir": "/media/aslr/Extreme SSD/ProcessingPipeline/DATA/Mediapipe_Data_July_2020"
+    "features_dir": "/media/thad/disk1/ProcessingPipeline/DATA/Mediapipe_Data_July_2020"
 }
