@@ -217,6 +217,7 @@ def main():
 
         if cvm == 'kfold' or cvm == 'stratified':
             unique_phrases = set(phrases)
+            print(len(unique_phrases), len(phrases))
             group_map = {phrase: i for i, phrase in enumerate(unique_phrases)}
             groups = [group_map[phrase] for phrase in phrases]      
             cross_val = cross_val_method(n_splits=args.n_splits)

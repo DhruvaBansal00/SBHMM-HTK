@@ -68,7 +68,7 @@ def create_ark_files(features_config: dict, users: list, verbose: bool, is_selec
         for user in users:
             features_filepaths.extend(glob.glob(os.path.join(features_config['features_dir'], '*{}*'.format(user), '**/*.data'), recursive = True))
             features_filepaths.extend(glob.glob(os.path.join(features_config['features_dir'], '*{}*'.format(user), '**/*.json'), recursive = True))
-
+            print(features_config['features_dir'])
     if is_select_features:
         print("Generating ark/htk using select_features data model")
     else:
