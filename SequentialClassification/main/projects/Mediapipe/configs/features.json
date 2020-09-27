@@ -1169,5 +1169,5 @@
         "delta_right_landmark_19_z",
         "delta_right_landmark_20_z"
     ],
-    "features_dir": "/home/dhruva/Desktop/CopyCat/ProcessingPipeline/DATA/Mediapipe_Data_July_2020"
+    "features_dir": "/home/thad/copycat/ProcessingPipeline/DATA/Mediapipe_Data_July_2020"
 }

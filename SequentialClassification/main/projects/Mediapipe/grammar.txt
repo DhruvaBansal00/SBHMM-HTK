@@ -1,7 +1,7 @@
-$adjective1 = grey | white | black | blue | orange;
-$subject = lion | snake | alligator | monkey;
-$preposition = in | below | above;
-$adjective2 = grey | white | black | blue | orange;
-$object = wagon | flowers | wall | chair | bed | box;
+$adjective1 = white | orange | blue | black | grey;
+$subject = alligator | lion | monkey | snake;
+$preposition = above | below | in;
+$adjective2 = white | orange | blue | black | grey;
+$object = bed | wall | box | flowers | wagon | chair;
 
 (SENT-START [$adjective1] $subject $preposition [$adjective2] $object SENT-END)
