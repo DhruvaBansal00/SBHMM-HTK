@@ -18,9 +18,14 @@ def feature_labels():
     relative_positions = [f'delta_{feature}_{coordinate}' for coordinate in coordinates]
     relative_squared_dist = [f'delta_{feature}_squared_xyz']
     joint_orientation_positions = [f'joint_orientation_{feature}_{orientation}' for orientation in ['x', 'y', 'z', 'w']] 
+    
     relative_to_nose = [f'delta_{feature}_to_nose_{coordinate}' for coordinate in coordinates]
     
-    feature_columns = joint_positions + relative_positions + relative_squared_dist + joint_orientation_positions + relative_to_nose
+    standardized_no_squared_positions = [f'standardized_{feature}_{coordinate}' for coordinate in coordinates]
+    standardized_squared_positions = [f'standardized_{feature}_squared_{coordinate}' for coordinate in coordinates]
+
+    feature_columns = joint_positions + relative_positions + relative_squared_dist + joint_orientation_positions
+    feature_columns += relative_to_nose + standardized_no_squared_positions + standardized_squared_positions
     columns.extend(feature_columns)
 
   angle_wrist_elbow = [f'angle_wrist_elbow_{hand}' for hand in ['left', 'right']]
@@ -118,6 +123,33 @@ def feature_extraction_kinect(input_filepath: str, features_to_extract: list, sc
 
   frames = data["frames"]
 
+  joint_positions = np.asarray(data["frames"])
+  new_joint_positions = []
+  no_body_count = 0
+  multi_body_count = 0
+  for a in joint_positions:
+    try:
+      frame = a["bodies"][0]["joint_positions"]
+      new_joint_positions.append(a)
+    except IndexError:
+      no_body_count += 1
+
+    try:
+      body2 = a["bodies"][1]["joint_positions"]
+      multi_body_count += 1
+    except IndexError:
+      pass
+
+  all_positions = np.stack([np.array(a['bodies'][0]['joint_positions']) for a in new_joint_positions])
+  all_positions = all_positions.astype(float)
+
+  mean = np.mean(all_positions, axis=0)
+  var = np.var(all_positions, axis=0)
+
+  standardized_no_sq = (all_positions - mean)/var
+  standardized_sq = np.square(all_positions - mean)/var
+  standardized_count = 0
+
   all_features = []
 
   prev_frame = frames[0]
@@ -133,7 +165,10 @@ def feature_extraction_kinect(input_filepath: str, features_to_extract: list, sc
     else:
       for index in range(32):
         features.extend(get_features(frame, index) + deltas(frame, prev_frame, index)) # Compare with previous version...
+        features.extend(list(standardized_no_sq[standardized_count, index]))
+        features.extend(list(standardized_sq[standardized_count, index]))
         #print("feature_ex_ki()=> ", frame_number, len(features))
+        # print(features)
       
       features.extend(angle_wrist_elbow(frame))
       features.extend(distance_between_handtips(frame, prev_frame))
@@ -141,7 +176,8 @@ def feature_extraction_kinect(input_filepath: str, features_to_extract: list, sc
       #print(features)
       #features = features[1:-1] # Ensure this is right (dropping empty stuff)!
       prev_frame = frame
-
+      standardized_count += 1
+    
     all_features.append(features)
 
   cols = feature_labels()
