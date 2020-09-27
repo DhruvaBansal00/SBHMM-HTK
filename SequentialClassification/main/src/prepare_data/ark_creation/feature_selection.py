@@ -130,23 +130,35 @@ def select_features(input_filepath: str, features_to_extract: list,
         
         if data[frame]['boxes'] is not None:
 
-            visible_hands = np.array([data[frame]['boxes'][str(i)] for i in range(len(data[frame]['boxes']))])
+            visible_hands = np.array(sorted([data[frame]['boxes'][str(i)] for i in range(len(data[frame]['boxes']))], key= lambda x:x[0]))
 
             distances = {(i, j): cdist([hand[frame-1][:2]], [visible_hand[:2]]) 
                         for i, hand 
                         in enumerate(hands) 
                         for j, visible_hand 
                         in enumerate(visible_hands)}
-
-            visible_hand_assigned = {n: False for n in range(len(visible_hands))}
-            hand_assigned = {n: False for n in range(len(hands))}
-
-            for grouping, _ in sorted(distances.items(), key=lambda t: t[1]):
-                hand, visible_hand = grouping
-                if not hand_assigned[hand] and not visible_hand_assigned[visible_hand]:
-                    hand_assigned[hand] = True
-                    visible_hand_assigned[visible_hand] = True
-                    hands[hand][frame] = visible_hands[visible_hand][:5]
+            
+            if len(visible_hands) == 1:
+                if frame == 0:
+                    for idx in range(len(hands)):
+                        hands[idx][frame] = visible_hands[0][:5] 
+                else:
+                    sorted_distances, _ = sorted(distances.items(), key=lambda t: t[1])
+                    prev_new_hand = sorted_distances[0][0]
+                    prev_keep_hand = prev_new_hand ^ 0b1
+                    new_hands = sorted([visible_hands[0][:5], hands[prev_keep_hand][frame-1]], key=lambda x: x[0])
+                    hands[:,frame,:] = new_hands
+            else:
+                visible_hand_assigned = {n: False for n in range(len(visible_hands))}
+                hand_assigned = {n: False for n in range(len(hands))}
+                new_hands = []
+                for grouping, _ in sorted(distances.items(), key=lambda t: t[1]):
+                    hand, visible_hand = grouping
+                    if not hand_assigned[hand] and not visible_hand_assigned[visible_hand]:
+                        hand_assigned[hand] = True
+                        visible_hand_assigned[visible_hand] = True
+                        new_hands.append(visible_hands[visible_hand][:5])
+                hands[:,frame,:] = sorted(new_hands, key=lambda x: x[0])
                     
         if data[frame]['landmarks'] is not None:
         
