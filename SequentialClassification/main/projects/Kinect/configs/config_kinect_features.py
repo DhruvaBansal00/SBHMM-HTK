@@ -11,7 +11,7 @@ import pandas as pd
 def feature_selection():
   features = ['elbow_left', 'wrist_left', 'hand_left', 'handtip_left', 'thumb_left', 'elbow_right', 'wrist_right', 'hand_right', 'handtip_right', 'thumb_right']
   
-  to_nose_features = ['hand_left', 'handtip_left', 'thumb_left', 'hand_right', 'handtip_right', 'thumb_right']
+  to_nose_features = []#['hand_left', 'handtip_left', 'thumb_left', 'hand_right', 'handtip_right', 'thumb_right']
   coordinates = ['x', 'y', 'z']
 
   columns = []
@@ -25,11 +25,11 @@ def feature_selection():
     if feature in to_nose_features: 
       relative_to_nose = [f'delta_{feature}_to_nose_{coordinate}' for coordinate in coordinates]
     
-    standardized_no_squared_positions = [f'standardized_{feature}_{coordinate}' for coordinate in coordinates]
-    # standardized_squared_positions = [f'standardized_{feature}_squared_{coordinate}' for coordinate in coordinates]
+    standardized_no_squared_positions = [] #[f'standardized_{feature}_{coordinate}' for coordinate in coordinates]
+    standardized_squared_positions = [f'standardized_{feature}_squared_{coordinate}' for coordinate in coordinates]
 
     feature_columns = relative_positions + relative_squared_dist
-    feature_columns += relative_to_nose + standardized_no_squared_positions
+    feature_columns += relative_to_nose + standardized_no_squared_positions + standardized_squared_positions
     columns.extend(feature_columns)
 
   # angle_wrist_elbow = [f'angle_wrist_elbow_{hand}' for hand in ['left', 'right']]
