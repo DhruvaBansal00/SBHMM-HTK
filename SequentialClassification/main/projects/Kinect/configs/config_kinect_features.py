@@ -11,14 +11,14 @@ import pandas as pd
 def feature_selection():
   features = ['elbow_left', 'wrist_left', 'hand_left', 'handtip_left', 'thumb_left', 'elbow_right', 'wrist_right', 'hand_right', 'handtip_right', 'thumb_right']
   
-  to_nose_features = []#['hand_left', 'handtip_left', 'thumb_left', 'hand_right', 'handtip_right', 'thumb_right']
+  to_nose_features = ['hand_left', 'handtip_left', 'thumb_left', 'hand_right', 'handtip_right', 'thumb_right']
   coordinates = ['x', 'y', 'z']
 
   columns = []
   for feature in features:
     # joint_positions = [f'{feature}_{coordinate}' for coordinate in coordinates]
-    relative_positions = [f'delta_{feature}_{coordinate}' for coordinate in coordinates]
-    relative_squared_dist = [f'delta_{feature}_squared_xyz']
+    relative_positions = [] #[f'delta_{feature}_{coordinate}' for coordinate in coordinates]
+    relative_squared_dist = [] #[f'delta_{feature}_squared_xyz']
     # joint_orientation_positions = [f'joint_orientation_{feature}_{orientation}' for orientation in ['x', 'y', 'z', 'w']] 
     
     relative_to_nose = []
