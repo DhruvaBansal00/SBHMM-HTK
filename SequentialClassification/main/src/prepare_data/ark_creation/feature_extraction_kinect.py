@@ -105,7 +105,7 @@ def dist_from_pelvis(frame, feature_set):
   return current
 
 def deltas(frame, prev_frame, feature_set):
-  origin = [frame["bodies"][0]["joint_positions"][27][index] for index in range(3)]
+  origin = [frame["bodies"][0]["joint_positions"][0][index] for index in range(3)]
   previous = [prev_frame["bodies"][0]["joint_positions"][feature_set][index] for index in range(3)]
   current = [frame["bodies"][0]["joint_positions"][feature_set][index] for index in range(3)]
   previous = [a_i - b_i for a_i, b_i in zip(previous, origin)]
