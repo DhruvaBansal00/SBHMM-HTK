@@ -98,6 +98,12 @@ def distance_between_handtips(frame, prev_frame):
   # print("end",features)
   return features
 
+def dist_from_pelvis(frame, feature_set):
+  origin = [frame["bodies"][0]["joint_positions"][0][index] for index in range(3)]
+  current = [frame["bodies"][0]["joint_positions"][feature_set][index] for index in range(3)]
+  current = [a_i - b_i for a_i, b_i in zip(current, origin)]
+  return current
+
 def deltas(frame, prev_frame, feature_set):
   origin = [frame["bodies"][0]["joint_positions"][27][index] for index in range(3)]
   previous = [prev_frame["bodies"][0]["joint_positions"][feature_set][index] for index in range(3)]
@@ -106,7 +112,7 @@ def deltas(frame, prev_frame, feature_set):
   current = [a_i - b_i for a_i, b_i in zip(current, origin)]
   delta = [a_i - b_i for a_i, b_i in zip(current, previous)]
   #print("len deltas()=>", len(delta))
-  return delta
+  return current
 
 # gets absolute xyz and quaternions. This is what the kinect gives us.
 # def get_coords(frame, feature_set):

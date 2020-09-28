@@ -12,6 +12,7 @@ def feature_selection():
   features = ['elbow_left', 'wrist_left', 'hand_left', 'handtip_left', 'thumb_left', 'elbow_right', 'wrist_right', 'hand_right', 'handtip_right', 'thumb_right']
   
   to_nose_features = ['hand_left', 'handtip_left', 'thumb_left', 'hand_right', 'handtip_right', 'thumb_right']
+  to_pelvis_features = ['elbow_left', 'wrist_left', 'hand_left', 'handtip_left', 'thumb_left', 'elbow_right', 'wrist_right', 'hand_right', 'handtip_right', 'thumb_right']
   coordinates = ['x', 'y', 'z']
 
   columns = []
@@ -22,8 +23,8 @@ def feature_selection():
     # joint_orientation_positions = [f'joint_orientation_{feature}_{orientation}' for orientation in ['x', 'y', 'z', 'w']] 
     
     relative_to_nose = []
-    if feature in to_nose_features: 
-      relative_to_nose = [f'delta_{feature}_to_nose_{coordinate}' for coordinate in coordinates]
+    # if feature in to_nose_features: 
+    relative_to_nose = [f'delta_{feature}_to_nose_{coordinate}' for coordinate in coordinates]
     
     standardized_no_squared_positions = [] #[f'standardized_{feature}_{coordinate}' for coordinate in coordinates]
     standardized_squared_positions = [f'standardized_{feature}_squared_{coordinate}' for coordinate in coordinates]
