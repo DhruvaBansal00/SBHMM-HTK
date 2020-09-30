@@ -171,11 +171,12 @@ def select_features(input_filepath: str, features_to_extract: list,
                         visible_hand_assigned[visible_hand] = True
                         new_hands.append(visible_hands[visible_hand][:5])
                 hands[:,frame,:] = sorted(new_hands, key=lambda x: x[0])
-                if pelvis_x == 0 and pelvis_y == 0:
-                    hand_1 = hands[0, frame]
-                    hand_2 = hands[1, frame]
-                    pelvis_x = (hand_1[0] + hand_2[0]) / 2
-                    pelvis_y = (hand_1[1] + hand_2[1]) / 2
+
+            if pelvis_x == 0 and pelvis_y == 0:
+                hand_2 = hands[1,frame]
+                if hand_2[0] >= 0.5:
+                    pelvis_x = hand_2[0]
+                    pelvis_y = hand_2[1]
         
         if data[frame]['landmarks'] is not None:
             if data[frame]['boxes'] is None:

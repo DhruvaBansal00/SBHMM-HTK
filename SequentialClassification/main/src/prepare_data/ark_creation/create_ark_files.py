@@ -93,7 +93,7 @@ def create_ark_files(features_config: dict, users: list, verbose: bool, is_selec
         if features_extension == 'json':
             features_df = feature_extraction_kinect(features_filepath, features_config['selected_features'], scale = 10, drop_na = True)
         elif is_select_features:
-            features_df = select_features(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = False, scale = 10, drop_na = True, do_interpolate = True, center_on_pelvis = True)
+            features_df = select_features(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = False, scale = 10, drop_na = True, do_interpolate = True, center_on_pelvis = False)
 
         else:
             features_df = interpolate_feature_data(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = True, scale = 10, drop_na = True)
