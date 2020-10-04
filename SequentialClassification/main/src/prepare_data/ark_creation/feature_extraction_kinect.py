@@ -19,13 +19,18 @@ def feature_labels():
     relative_squared_dist = [f'delta_{feature}_squared_xyz']
     joint_orientation_positions = [f'joint_orientation_{feature}_{orientation}' for orientation in ['x', 'y', 'z', 'w']] 
     
-    relative_to_nose = [f'delta_{feature}_to_nose_{coordinate}' for coordinate in coordinates]
+    relative_to_nose = [f'{feature}_to_nose_{coordinate}' for coordinate in coordinates] # 'nose' may change depending on specified origin_feature in dist_from_feature(), 27=NOSE default
+    delta_relative_to_nose = [f'delta_{feature}_to_nose_{coordinate}' for coordinate in coordinates]
     
     standardized_no_squared_positions = [f'standardized_{feature}_{coordinate}' for coordinate in coordinates]
     standardized_squared_positions = [f'standardized_{feature}_squared_{coordinate}' for coordinate in coordinates]
 
+    quantile_no_squared_positions = [f'quantile_{feature}_{coordinate}' for coordinate in coordinates]
+    quantile_squared_positions = [f'quantile_{feature}_squared_{coordinate}' for coordinate in coordinates]
+
     feature_columns = joint_positions + relative_positions + relative_squared_dist + joint_orientation_positions
-    feature_columns += relative_to_nose + standardized_no_squared_positions + standardized_squared_positions
+    feature_columns += relative_to_nose + delta_relative_to_nose + standardized_no_squared_positions + standardized_squared_positions
+    feature_columns += quantile_no_squared_positions + quantile_squared_positions
     columns.extend(feature_columns)
 
   angle_wrist_elbow = [f'angle_wrist_elbow_{hand}' for hand in ['left', 'right']]
@@ -98,8 +103,8 @@ def distance_between_handtips(frame, prev_frame):
   # print("end",features)
   return features
 
-def dist_from_pelvis(frame, feature_set):
-  origin = [frame["bodies"][0]["joint_positions"][0][index] for index in range(3)]
+def dist_from_feature(frame, feature_set, origin_feature = 27): #changing origin_feature can cause feature mislabel as default is 'nose'
+  origin = [frame["bodies"][0]["joint_positions"][origin_feature][index] for index in range(3)]
   current = [frame["bodies"][0]["joint_positions"][feature_set][index] for index in range(3)]
   current = [a_i - b_i for a_i, b_i in zip(current, origin)]
   return current
@@ -112,7 +117,7 @@ def deltas(frame, prev_frame, feature_set):
   current = [a_i - b_i for a_i, b_i in zip(current, origin)]
   delta = [a_i - b_i for a_i, b_i in zip(current, previous)]
   #print("len deltas()=>", len(delta))
-  return current
+  return delta
 
 # gets absolute xyz and quaternions. This is what the kinect gives us.
 # def get_coords(frame, feature_set):
@@ -149,12 +154,26 @@ def feature_extraction_kinect(input_filepath: str, features_to_extract: list, sc
   all_positions = np.stack([np.array(a['bodies'][0]['joint_positions']) for a in new_joint_positions])
   all_positions = all_positions.astype(float)
 
+  # STD
   mean = np.mean(all_positions, axis=0)
   var = np.var(all_positions, axis=0)
 
   standardized_no_sq = (all_positions - mean)/var
-  standardized_sq = np.square(all_positions - mean)/var
-  standardized_count = 0
+  standardized_sq = ((all_positions - mean) * np.abs(all_positions - mean))/var
+
+  # QUANTILE
+  min_range = -100
+  max_range = 100
+  quantile_05th = np.quantile(all_positions, 0.05, axis=0)
+  quantile_95th = np.quantile(all_positions, 0.95, axis=0)
+  
+  quantile_scale = (max_range - min_range) /  (quantile_95th - quantile_05th)
+  quantile_offset = (quantile_05th + quantile_95th) / 2
+
+  quantile_no_sq = (all_positions - quantile_offset) * quantile_scale
+  quantile_sq = quantile_no_sq * np.abs(quantile_no_sq)
+
+  all_position_count = 0
 
   all_features = []
 
@@ -170,9 +189,11 @@ def feature_extraction_kinect(input_filepath: str, features_to_extract: list, sc
       print("did not detect a body in frame " + str(frame_number))
     else:
       for index in range(32):
-        features.extend(get_features(frame, index) + deltas(frame, prev_frame, index)) # Compare with previous version...
-        features.extend(list(standardized_no_sq[standardized_count, index]))
-        features.extend(list(standardized_sq[standardized_count, index]))
+        features.extend(get_features(frame, index) + dist_from_feature(frame, index) + deltas(frame, prev_frame, index)) # Compare with previous version...
+        features.extend(list(standardized_no_sq[all_position_count, index]))
+        features.extend(list(standardized_sq[all_position_count, index]))
+        features.extend(list(quantile_no_sq[all_position_count, index]))
+        features.extend(list(quantile_sq[all_position_count, index]))
         #print("feature_ex_ki()=> ", frame_number, len(features))
         # print(features)
       
@@ -182,7 +203,7 @@ def feature_extraction_kinect(input_filepath: str, features_to_extract: list, sc
       #print(features)
       #features = features[1:-1] # Ensure this is right (dropping empty stuff)!
       prev_frame = frame
-      standardized_count += 1
+      all_position_count += 1
     
     all_features.append(features)
 
