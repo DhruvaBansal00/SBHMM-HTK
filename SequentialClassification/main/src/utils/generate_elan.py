@@ -19,12 +19,6 @@ def mlf_to_elan(mlf_filepath: str, video_dir: str, eaf_savedir: str) -> None:
         Directory under which eaf files are saved.
     """
 
-    '''
-    eaf_file = Eaf("sample.eaf")
-    eaf_file.add_linked_file("file:///Users/ishan/Documents/Research/annotation/alligator_above_blue_wagon.1.1596895580.mp4",
-    relpath="./alligator_above_blue_wagon.1.1596895580.mp4",mimetype="video/mp4")
-    '''
-
     # Iterate over lines of mlf file
     with open(mlf_filepath, "rb") as mlf:
         eaf_file = None
