@@ -27,10 +27,10 @@ def feature_selection():
     delta_relative_to_nose = [] #[f'delta_{feature}_to_nose_{coordinate}' for coordinate in coordinates]
     
     standardized_no_squared_positions = [] #[f'standardized_{feature}_{coordinate}' for coordinate in coordinates]
-    standardized_squared_positions = [f'standardized_{feature}_squared_{coordinate}' for coordinate in coordinates]
+    standardized_squared_positions = []#[f'standardized_{feature}_squared_{coordinate}' for coordinate in coordinates]
 
-    quantile_no_squared_positions = []#[f'quantile_{feature}_{coordinate}' for coordinate in coordinates]
-    quantile_squared_positions = [f'quantile_{feature}_squared_{coordinate}' for coordinate in coordinates]
+    quantile_no_squared_positions = [f'quantile_{feature}_{coordinate}' for coordinate in coordinates]
+    quantile_squared_positions = []#[f'quantile_{feature}_squared_{coordinate}' for coordinate in coordinates]
 
     feature_columns = joint_positions + relative_positions + relative_squared_dist + joint_orientation_positions
     feature_columns += relative_to_nose + delta_relative_to_nose + standardized_no_squared_positions + standardized_squared_positions
