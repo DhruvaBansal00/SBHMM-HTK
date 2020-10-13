@@ -15,6 +15,8 @@ import pandas as pd
 from .feature_selection import select_features
 from .interpolate_feature_data import interpolate_feature_data
 from .feature_extraction_kinect import feature_extraction_kinect
+from scipy import stats
+import numpy as np
 
 def _create_ark_file(df: pd.DataFrame, ark_filepath: str, title: str) -> None:
     """Creates a single .ark file
@@ -54,6 +56,7 @@ def create_ark_files(features_config: dict, users: list, verbose: bool, is_selec
     """
 
     ark_dir = os.path.join('data', 'ark')
+    first_frames = []
     
     if os.path.exists(ark_dir):
         shutil.rmtree(ark_dir)
@@ -90,9 +93,11 @@ def create_ark_files(features_config: dict, users: list, verbose: bool, is_selec
         if features_extension == 'json':
             features_df = feature_extraction_kinect(features_filepath, features_config['selected_features'], scale = 10, drop_na = True)
         elif is_select_features:
-            features_df = select_features(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = True, scale = 10, drop_na = True)
+            features_df = select_features(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = False, scale = 10, drop_na = True, do_interpolate = True, center_on_pelvis = True)
+
         else:
             features_df = interpolate_feature_data(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = True, scale = 10, drop_na = True)
 
         if features_df is not None:
             _create_ark_file(features_df, ark_filepath, title)
+

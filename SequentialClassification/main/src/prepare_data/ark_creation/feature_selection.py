@@ -90,7 +90,7 @@ def landmark_box_dist(landmark: list, hand: list) -> float:
 
 def select_features(input_filepath: str, features_to_extract: list,
                     interpolation_method: str = 'spline', order: int = 3,
-                    center_on_face: bool = False, is_2d: bool = True,
+                    center_on_face: bool = False, center_on_pelvis: bool = False, is_2d: bool = True,
                     scale: int = 10, drop_na: bool = True, do_interpolate: bool = False) -> pd.DataFrame:
     """Processes raw features extracted from MediaPipe/Kinect, and
     selects the specified features for use during training of HMMs.
@@ -136,6 +136,7 @@ def select_features(input_filepath: str, features_to_extract: list,
     hands = np.zeros((2, n_frames, 5))
     landmarks = np.zeros((2, n_frames, 63))
     faces = np.zeros((1, n_frames, 12))
+    pelvis_x, pelvis_y = 0,0
 
     for frame in sorted(data.keys()):
         
@@ -170,6 +171,11 @@ def select_features(input_filepath: str, features_to_extract: list,
                         visible_hand_assigned[visible_hand] = True
                         new_hands.append(visible_hands[visible_hand][:5])
                 hands[:,frame,:] = sorted(new_hands, key=lambda x: x[0])
+                if pelvis_x == 0 and pelvis_y == 0:
+                    hand_1 = hands[0, frame]
+                    hand_2 = hands[1, frame]
+                    pelvis_x = (hand_1[0] + hand_2[0]) / 2
+                    pelvis_y = (hand_1[1] + hand_2[1]) / 2
         
         if data[frame]['landmarks'] is not None:
             if data[frame]['boxes'] is None:
@@ -358,6 +364,14 @@ def select_features(input_filepath: str, features_to_extract: list,
         
         df[x_cols] -= main_face[-2]
         df[y_cols] -= main_face[-1]
+
+    if center_on_pelvis:
+        
+        x_cols = [column for column in df.columns if 'x' in column]
+        y_cols = [column for column in df.columns if 'y' in column]
+        
+        df[x_cols] -= pelvis_x
+        df[y_cols] -= pelvis_y
 
     df['horizontal_hand_dist'] = df['right_hand_x'] - df['left_hand_x']
     df['vertical_hand_dist'] = df['right_hand_y'] - df['left_hand_y']

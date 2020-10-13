@@ -93,4 +93,4 @@ def getFeatureImportance(resultFile: str, arkFolder: str, classifier: str, inclu
     print(feature_importance)
 
 
-getFeatureImportance("../alignment/0/res_hmm240.mlf", "../data/ark/", "adaboost", False, False, 1, False, False, 0)
+getFeatureImportance("../alignment/0/res_hmm240.mlf", "../data/ark/", "adaboost", True, False, 1, False, False, 0)
