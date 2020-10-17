@@ -140,7 +140,10 @@ def feature_extraction_kinect(input_filepath: str, features_to_extract: list, sc
     except IndexError:
       pass
 
-  all_positions = np.stack([np.array(a['bodies'][0]['joint_positions']) for a in new_joint_positions])
+  try:
+      all_positions = np.stack([np.array(a['bodies'][0]['joint_positions']) for a in new_joint_positions])
+  except ValueError:
+    print(input_filepath + " threw an error. Check the json, it may be empty!")
   all_positions = all_positions.astype(float)
 
   mean = np.mean(all_positions, axis=0)
