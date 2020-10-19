@@ -27,7 +27,6 @@ def prepare_data(features_config: dict, users: list) -> None:
         A dictionary defining which features to use when creating the 
         data files.
     """
-
     create_ark_files(features_config, users, verbose = False, is_select_features = True)
     print('.ark files created')
 

@@ -64,13 +64,13 @@ def create_ark_files(features_config: dict, users: list, verbose: bool, is_selec
     os.makedirs(ark_dir)
 
     if not users:
-        features_filepaths = glob.glob(os.path.join(features_config['features_dir'], '**.data'), recursive = True)
-        features_filepaths.extend(glob.glob(os.path.join(features_config['features_dir'], '**.json'), recursive = True))
+        features_filepaths = glob.glob(os.path.join(features_config['features_dir'], '**', '*.data'), recursive = True)
+        features_filepaths.extend(glob.glob(os.path.join(features_config['features_dir'], '**', '*.json'), recursive = True))
     else:
         features_filepaths = []
         for user in users:
-            features_filepaths.extend(glob.glob(os.path.join(features_config['features_dir'], '*{}*'.format(user), '**.data'), recursive = True))
-            features_filepaths.extend(glob.glob(os.path.join(features_config['features_dir'], '*{}*'.format(user), '**.json'), recursive = True))
+            features_filepaths.extend(glob.glob(os.path.join(features_config['features_dir'], '*{}*'.format(user), '**', '*.data'), recursive = True))
+            features_filepaths.extend(glob.glob(os.path.join(features_config['features_dir'], '*{}*'.format(user), '**', '*.json'), recursive = True))
             print(features_config['features_dir'])
     if is_select_features:
         print("Generating ark/htk using select_features data model")
