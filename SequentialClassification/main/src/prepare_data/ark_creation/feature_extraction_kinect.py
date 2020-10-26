@@ -162,8 +162,8 @@ def feature_extraction_kinect(input_filepath: str, features_to_extract: list, sc
   standardized_sq = ((all_positions - mean) * np.abs(all_positions - mean))/var
 
   # QUANTILE
-  min_range = -100
-  max_range = 100
+  min_range = -200
+  max_range = 200
   quantile_05th = np.quantile(all_positions, 0.05, axis=0)
   quantile_95th = np.quantile(all_positions, 0.95, axis=0)
   
