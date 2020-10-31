@@ -52,6 +52,6 @@ Note that the important ones are indicated with [**IMP**]
 
 ## Future Work
 - Add SBHMM information to README
-- File that stores results/configs for each training session
+- Test file that stores results/configs for each training session
 - ???
 
