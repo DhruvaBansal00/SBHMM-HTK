@@ -11,17 +11,16 @@ from json_data import load_json
 sys.path.insert(0, '../prepare_data/ark_creation')
 from mediapipe_feature_data import mediapipe_feature_data
 from interpolate_feature_data import interpolate_feature_data
-from kalman_feature_data import kalman_feature_data
+from custom_feature_data import custom_feature_data
 
-def make_mediapipe_video(frames_directory, features_filepath, save_directory, features, table_video, table_filepath, visualization_types, frame_rate):
-
+def make_mediapipe_video(video_filepath, features_filepath, save_directory, features, table_video, table_filepath, visualization_types, frame_rate):
 
     """Generates visualization video(s) for a specific recording (trial) for the following types of dataframes: mediapipe, interpolate, and kalman.
 
     Parameters
     ----------
-    frames_directory : str
-        Directory path of raw images for the specific trial that were recorded from a capture device
+    video_filepath : str
+        File path to the video for the specific trial that was recorded from a capture device
 
     features_filepath : str
         File path to raw mediapipe data for the specific trial
@@ -50,7 +49,7 @@ def make_mediapipe_video(frames_directory, features_filepath, save_directory, fe
 
     """
 
-    print(f"Making Visualization Video for {save_directory}")
+    print(f"Making Visualization Video for {video_filepath}")
  
     mediapipe_feature_df = mediapipe_feature_data(features_filepath, features, drop_na = False)
     interpolate_feature_df = interpolate_feature_data(features_filepath, features, center_on_face = False, scale = 1, drop_na = False)
@@ -70,27 +69,13 @@ def make_mediapipe_video(frames_directory, features_filepath, save_directory, fe
         except KeyError: features_to_extract_dict[feature_key] = [feature]
  
     # List of images for the specific recording
-    frames_filepaths = sorted(glob.glob(frames_directory))
- 
-
-    delete_frames_after = False
-    if not len(frame_filepath):
-        # generate frames data
-        
-        frames_filepaths = sorted(glob.glob(frames_directory))
-        delete_frames_after = True
 
     for visualization_type in visualization_types:
-        draw_features(visualization_type, frames_filepaths, features_to_extract_dict, feature_df_dict, save_directory, table_video, table_filepath)
+        num_frames = draw_features(visualization_type, video_filepath, features_to_extract_dict, feature_df_dict, save_directory, table_video, table_filepath)
         save_video(visualization_type, save_directory, os.path.split(table_filepath)[1], frame_rate)
-        delete_images(save_directory, len(frames_filepaths))
+        delete_images(save_directory, num_frames)
  
-    print(f"Finished Visualization Video for {save_directory}")
-
-    if delete_frames_after:
-        # delete frames data
-        for frame_filepath in frames_filepaths:
-            os.remove(frame_filepath)
+    print(f"Finished Visualization Video for {video_filepath}")
 
 
 
@@ -136,18 +121,22 @@ def save_video(visualization_type, save_directory, table_filename, frame_rate = 
     session, phrase, trial = table_filename.split('.')[0:3]
  
     video_filename = '.'.join((session, phrase, trial, visual_types, 'mp4'))
- 
-    os.system('ffmpeg -r {} -f image2 -s 1024x768 -i {}_%04d.png -vcodec libx264 -loglevel quiet -crf 25  -pix_fmt yuv420p {}'.format(frame_rate, os.path.join(save_directory, 'frame'), os.path.join(save_directory, video_filename)))
+    
+    print(save_directory, video_filename)
 
-def draw_features(visualization_type, frames_filepaths, features_to_extract_dict, feature_df_dict, save_directory, table_video, table_filepath):
- 
-    height, width, _ = cv2.imread(frames_filepaths[0]).shape
- 
-    for i, frame_filepath in enumerate(frames_filepaths):
+    os.system('ffmpeg -r {} -f image2 -s 1024x768 -i {}_%04d.png -codec:v libx264 -crf 25  -pix_fmt yuv420p {}'.format(frame_rate, os.path.join(save_directory, 'frame'), os.path.join(save_directory, video_filename)))
+
+def draw_features(visualization_type, video_filepath, features_to_extract_dict, feature_df_dict, save_directory, table_video, table_filepath):
+
+    vidcap = cv2.VideoCapture(video_filepath)
+    print(video_filepath)
+    success, image = vidcap.read()
+    i = 0
+
+    while success:
         filename = f'frame_{i:04d}.png'
-        image = cv2.imread(frame_filepath)
         height, width, _ = image.shape
- 
+
         for feature in features_to_extract_dict.items():
  
             feature_key = feature[0]
@@ -180,19 +169,25 @@ def draw_features(visualization_type, frames_filepaths, features_to_extract_dict
                     label = 'landmark' if 'landmark' in feature_key else 'face'
                     x, y = calculate_coordinates(feature_df_dict[str(df_type)].loc[i, feature_key_to_extract].values, height, width, label)
                     if x and y:
-                        cv2.circle(image, (x, y), 10, color, -1)
- 
+                        cv2.circle(image, (x, y), 10, color, -1)   
+                        
         if table_video:
             table_image = cv2.imread(table_filepath)
             resized_table_image = cv2.resize(table_image, (width, height)) # the resized table image
             image = cv2.hconcat([image, resized_table_image]) # concatenate the feature image with the table
  
         new_frame_filepath = os.path.join(save_directory, filename)
-        cv2.imwrite(new_frame_filepath, image)   
+        cv2.imwrite(new_frame_filepath, image)        
+
+        i += 1
+        success, image = vidcap.read()
+
+    return i
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--frames_directory', type = str)
+    parser.add_argument('--video_filepath', type = str)
     parser.add_argument('--features_filepath', type = str)
     parser.add_argument('--save_directory', type = str)
     parser.add_argument('--features', type = list, default = [])
@@ -206,8 +201,8 @@ if __name__ == '__main__':
  
     Parameters
     ----------
-    frames_directory : str
-        Directory path of raw images for the specific trial that were recorded from a capture device
+    video_filepath : str
+        File path to the video for the specific trial that was recorded from a capture device
  
     features_filepath : str
         File path to raw mediapipe data for the specific trial
@@ -240,4 +235,4 @@ if __name__ == '__main__':
         os.makedirs(args.save_directory)
         print("Making Directory ", args.save_directory)
  
-    make_mediapipe_video(args.frames_directory, args.features_filepath, args.save_directory, args.features, args.table_video, args.table_filepath, args.visualization_types, args.frame_rate)
+    make_mediapipe_video(args.video_filepath, args.features_filepath, args.save_directory, args.features, args.table_video, args.table_filepath, args.visualization_types, args.frame_rate)
