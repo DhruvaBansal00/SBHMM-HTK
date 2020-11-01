@@ -1,6 +1,8 @@
 import numpy as np
 import cv2 as cv
 import json
+import os
+import argparse
 # from matplotlib import pyplot as plt
 
 def convert_points_2d(joint_positions, intrinsic):
@@ -50,12 +52,22 @@ def make_kinect_video(video_filepath, features_filepath):
 	cv.destroyAllWindows()		
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-	parser.add_argument('--video_filepath', type = str)
-	parser.add_argument('--features_filepath', type = str)
+	parser = argparse.ArgumentParser()
+	parser.add_argument('--video_filepath', type = str, default = '/media/thad/U32 Shadow/Video_Backup_With_Features_DO_NOT_DELETE/DATA/Videos')
+	parser.add_argument('--features_filepath', type = str, default = '/media/thad/disk1/ProcessingPipeline/DATA/Kinect_Data_July_2020')
 	args = parser.parse_args()
 
-	make_kinect_video(args.video_filepath, args.features_filepath)
+	filename = '08-13-20_Thad_4K.alligator_above_bed.0000000000'
+
+	session, phrase, trial = filename.split('.')
+
+	video_filepath = os.path.join(args.video_filepath, session, phrase, trial, f'{filename}.mkv')
+	features_filepath = os.path.join(args.features_filepath, f'{filename}.json')
+
+	print(video_filepath)
+	print(features_filepath)
+
+	make_kinect_video(video_filepath, features_filepath)
 
 # # cap = cv.VideoCapture('alligator_above_chair.1.mkv')
 # cap = cv.VideoCapture('black_monkey_in_white_flowers.1.605.mkv')
