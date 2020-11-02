@@ -57,9 +57,10 @@ def make_visualization_videos(input_video_directory, input_mediapipe_directory, 
 			features_filepaths.extend(glob.glob(path, recursive = True))
 
 	if table_video:
-		print("Making feature table for each trial")
+		# print("Making feature table for each trial")
 		make_features_table(input_mediapipe_directory, users, output_project_directory, 'trials')
 
+	count = 1
 	for features_filepath in features_filepaths:
 		filename = os.path.split(features_filepath)[1]
 		session, phrase, trial, _ = filename.split('.')
@@ -71,7 +72,9 @@ def make_visualization_videos(input_video_directory, input_mediapipe_directory, 
 		if not os.path.exists(save_directory):
 			os.makedirs(save_directory)
 			make_mediapipe_video(video_filepath, features_filepath, save_directory, features, table_video, table_filepath, visualization_types, frame_rate)
-			break
+			count += 1
+			if count > 20:
+				break
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()

@@ -1047,5 +1047,5 @@
         "horizontal_hand_dist", 
         "vertical_hand_dist"
     ],
-    "features_dir": "/home/thad/copycat/ProcessingPipeline/DATA/Mediapipe_Data_July_2020"
+    "features_dir": "/home/thad/copycat/ProcessingPipeline/DATA/Merged_Mediapipe"
 }
