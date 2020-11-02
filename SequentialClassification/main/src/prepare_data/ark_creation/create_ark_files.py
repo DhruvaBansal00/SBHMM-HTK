@@ -42,7 +42,8 @@ def _create_ark_file(df: pd.DataFrame, ark_filepath: str, title: str) -> None:
         out.write(']')
 
 
-def create_ark_files(features_config: dict, users: list, verbose: bool, is_select_features: bool) -> None:
+def create_ark_files(features_config: dict, users: list, verbose: bool, 
+                is_select_features: bool, use_optical_flow: bool) -> None:
     """Creates .ark files needed as intermediate step to creating .htk
     files
 
@@ -93,7 +94,8 @@ def create_ark_files(features_config: dict, users: list, verbose: bool, is_selec
         if features_extension == 'json':
             features_df = feature_extraction_kinect(features_filepath, features_config['selected_features'], scale = 10, drop_na = True)
         elif is_select_features:
-            features_df = select_features(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = False, scale = 10, drop_na = True, do_interpolate = True, center_on_pelvis = False)
+            features_df = select_features(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = False, scale = 10, 
+                                    drop_na = True, do_interpolate = True, center_on_pelvis = False, use_optical_flow=use_optical_flow)
 
         else:
             features_df = interpolate_feature_data(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = True, scale = 10, drop_na = True)

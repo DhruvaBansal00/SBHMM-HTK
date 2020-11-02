@@ -91,7 +91,7 @@ def landmark_box_dist(landmark: list, hand: list) -> float:
 def select_features(input_filepath: str, features_to_extract: list,
                     interpolation_method: str = 'spline', order: int = 3,
                     center_on_face: bool = False, center_on_pelvis: bool = False, is_2d: bool = True,
-                    scale: int = 10, drop_na: bool = True, do_interpolate: bool = False) -> pd.DataFrame:
+                    scale: int = 10, drop_na: bool = True, do_interpolate: bool = False, use_optical_flow = False) -> pd.DataFrame:
     """Processes raw features extracted from MediaPipe/Kinect, and
     selects the specified features for use during training of HMMs.
 
@@ -136,9 +136,18 @@ def select_features(input_filepath: str, features_to_extract: list,
     hands = np.zeros((2, n_frames, 5))
     landmarks = np.zeros((2, n_frames, 63))
     faces = np.zeros((1, n_frames, 12))
+    optical_flow = np.zeros((2, n_frames, 32))
     pelvis_x, pelvis_y = 0,0
 
     for frame in sorted(data.keys()):
+
+        if use_optical_flow and data[frame]['optical_flow'] is not None:
+
+            x_val = data[frame]['optical_flow']["0"]
+            y_val = data[frame]['optical_flow']["1"]
+
+            optical_flow[0, frame, :] = np.array(x_val)/10000000.0
+            optical_flow[1, frame, :] = np.array(y_val)/10000000.0
         
         if data[frame]['boxes'] is not None:
 
@@ -290,7 +299,12 @@ def select_features(input_filepath: str, features_to_extract: list,
     select_faces = np.any(['face' 
                                 in feature
                                 for feature
-                                in features_to_extract])    
+                                in features_to_extract]) 
+
+    select_optical_flow = np.any(['optical_flow'
+                                in feature
+                                for feature
+                                in features_to_extract])
 
     if select_hands and not np.any(hands):
         return None
@@ -299,6 +313,9 @@ def select_features(input_filepath: str, features_to_extract: list,
         return None
 
     if select_faces and not np.any(faces):
+        return None
+    
+    if select_optical_flow and not np.any(optical_flow):
         return None
 
     hands_ = ['left_hand', 'right_hand']
@@ -327,12 +344,20 @@ def select_features(input_filepath: str, features_to_extract: list,
                 in faces_
                 for coordinate
                 in coordinates]
+    
+    coordinates = ['optical_flow_x', 'optical_flow_y']
+    optical_flow_cols = ['{}_{}'.format(coordinate, i)
+                for i
+                in range(32)
+                for coordinate
+                in coordinates]
 
-    cols = hand_cols + landmark_cols + face_cols
+    cols = hand_cols + landmark_cols + face_cols + optical_flow_cols
     hands = np.concatenate([hands[0], hands[1]], axis=1)
     landmarks = np.concatenate([landmarks[0], landmarks[1]], axis=1)
     faces_to_display = faces[np.argmax([len(set(np.nonzero(faces[i])[0])) for i in range(n_faces)])]
-    all_features = np.concatenate([hands, landmarks, faces_to_display], axis=1)
+    optical_flow = np.concatenate([optical_flow[0], optical_flow[1]], axis=1)
+    all_features = np.concatenate([hands, landmarks, faces_to_display, optical_flow], axis=1)
     df = pd.DataFrame(all_features, columns=cols)
 
     df = df.replace(0, np.nan)
