@@ -315,7 +315,7 @@ def select_features(input_filepath: str, features_to_extract: list,
     if select_faces and not np.any(faces):
         return None
     
-    if select_optical_flow and not np.any(optical_flow):
+    if use_optical_flow and select_optical_flow and not np.any(optical_flow):
         return None
 
     hands_ = ['left_hand', 'right_hand']

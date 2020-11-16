@@ -35,7 +35,7 @@ def _create_ark_file(df: pd.DataFrame, ark_filepath: str, title: str) -> None:
 
     with open(ark_filepath, 'w') as out:
         out.write('{} [ '.format(title))
-        
+
     df.to_csv(ark_filepath, mode='a', header=False, index=False, sep=' ')
 
     with open(ark_filepath, 'a') as out:
@@ -102,4 +102,5 @@ def create_ark_files(features_config: dict, users: list, verbose: bool,
 
         if features_df is not None:
             _create_ark_file(features_df, ark_filepath, title)
+        
 
