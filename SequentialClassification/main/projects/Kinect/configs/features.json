@@ -454,22 +454,15 @@
         "delta_dist_between_handtips_squared_xyz"
     ],
     "selected_features": [
-	"elbow_left_to_nose_x",
 	"elbow_right_to_nose_x",
 	"hand_right_to_nose_x",
-	"handtip_left_to_nose_y",
-	"handtip_right_to_nose_x",
-	"quantile_hand_left_squared_y",
+	"elbow_left_to_nose_x",
+	"quantile_elbow_left_squared_y",
 	"quantile_hand_right_squared_x",
 	"quantile_hand_right_squared_y",
-	"quantile_handtip_left_squared_y",
-	"quantile_handtip_right_squared_x",
 	"quantile_thumb_left_squared_y",
-	"quantile_wrist_right_squared_y",
-	"thumb_left_to_nose_y",
 	"thumb_right_to_nose_x",
-	"elbow_left_to_nose_y",
-	"quantile_elbow_left_squared_y"
+	"elbow_left_to_nose_y"
     ],
     "features_dir": "/home/aslr/ProcessingPipeline/DATA/Kinect_Data_July_2020"
 }
