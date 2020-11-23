@@ -1,7 +1,7 @@
 import os
 
 def get_confusion_matrix(results_file):
-    results_dict = {'general': {}, 'matrix': {}}
+    results_dict = {'user': {}, 'general': {}, 'matrix': {}}
     
     labels = {}
 
@@ -11,6 +11,13 @@ def get_confusion_matrix(results_file):
         start_file = 0
         for cnt, line in enumerate(lf):
             l = line.rstrip()
+
+            if cnt == 1:
+                labFile = l.split()[2]
+                name = labFile.split('/')[3]
+                session = name.split('.')[0]
+                results_dict['user'] = session
+
 
             if start_file == 1:
                 if "| Sum/Avg |" in l:
