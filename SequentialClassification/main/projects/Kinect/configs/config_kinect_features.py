@@ -37,10 +37,22 @@ def feature_selection():
     feature_columns += quantile_no_squared_positions + quantile_squared_positions
     columns.extend(feature_columns)
 
+  # ANGLE INFORMATION:
   # angle_wrist_elbow = [f'angle_wrist_elbow_{hand}' for hand in ['left', 'right']]
   # columns.extend(angle_wrist_elbow)
-  # distance_between_handtips = ['dist_between_handtips_squared_xyz', 'delta_dist_between_handtips_squared_xyz']
-  # columns.extend(distance_between_handtips)
+
+  # DISTANCE INFORMATION:
+  distance_between_handtips_positions = [f'dist_between_handtips_{coordinate}' for coordinate in coordinates]
+  distance_between_handtips_squared_positions = [f'dist_between_handtips_squared_{coordinate}' for coordinate in coordinates]
+  # columns.extend(distance_between_handtips_positions)
+  columns.extend(distance_between_handtips_squared_positions)
+  # columns.append('dist_between_handtips_squared_xyz')
+
+  delta_distance_between_handtips_positions = [f'delta_dist_between_handtips_{coordinate}' for coordinate in coordinates]
+  delta_distance_between_handtips_squared_positions = [f'delta_dist_between_handtips_squared_{coordinate}' for coordinate in coordinates]
+  # columns.extend(delta_distance_between_handtips_positions)
+  # columns.extend(delta_distance_between_handtips_squared_positions)
+  # columns.append('delta_dist_between_handtips_squared_xyz')  
 
   return columns
 

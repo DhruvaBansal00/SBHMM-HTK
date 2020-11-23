@@ -11,7 +11,7 @@ import pandas as pd
 def feature_labels():
   features = ['pelvis', 'spine_naval', 'spine_chest', 'neck', 'clavicle_left', 'shoulder_left', 'elbow_left', 'wrist_left', 'hand_left', 'handtip_left', 'thumb_left', 'clavicle_right', 'shoulder_right', 'elbow_right', 'wrist_right', 'hand_right', 'handtip_right', 'thumb_right', 'hip_left', 'knee_left', 'ankle_left', 'foot_left', 'hip_right', 'knee_right', 'ankle_right', 'foot_right', 'head', 'nose', 'eye_left', 'ear_left', 'eye_right', 'ear_right']
   coordinates = ['x', 'y', 'z']
-
+  
   columns = []
   for feature in features:
     joint_positions = [f'{feature}_{coordinate}' for coordinate in coordinates]
@@ -35,8 +35,21 @@ def feature_labels():
 
   angle_wrist_elbow = [f'angle_wrist_elbow_{hand}' for hand in ['left', 'right']]
   columns.extend(angle_wrist_elbow)
-  distance_between_handtips = ['dist_between_handtips_squared_xyz', 'delta_dist_between_handtips_squared_xyz']
-  columns.extend(distance_between_handtips)
+
+  # add distance information to columns in the following two blocks:
+  # [curr_x, curr_y, curr_z, curr_x_squared, curr_y_squared, curr_z_squared, curr_squared_xyz,
+  #  delta_x, delta_y, delta_z, delta_x_squared, delta_y_squared, delta_z_squared, delta_squared_xyz]
+  distance_between_handtips_positions = [f'dist_between_handtips_{coordinate}' for coordinate in coordinates]
+  distance_between_handtips_squared_positions = [f'dist_between_handtips_squared_{coordinate}' for coordinate in coordinates]
+  columns.extend(distance_between_handtips_positions)
+  columns.extend(distance_between_handtips_squared_positions)
+  columns.append('dist_between_handtips_squared_xyz')
+
+  delta_distance_between_handtips_positions = [f'delta_dist_between_handtips_{coordinate}' for coordinate in coordinates]
+  delta_distance_between_handtips_squared_positions = [f'delta_dist_between_handtips_squared_{coordinate}' for coordinate in coordinates]
+  columns.extend(delta_distance_between_handtips_positions)
+  columns.extend(delta_distance_between_handtips_squared_positions)
+  columns.append('delta_dist_between_handtips_squared_xyz')
 
   return columns
 
@@ -87,21 +100,32 @@ def angle_wrist_elbow(frame):
   return features
 
 def distance_between_handtips(frame, prev_frame):
+  output = []
+
   curr_left_handtip = [frame["bodies"][0]["joint_positions"][9][index] for index in range(3)]
   curr_right_handtip = [frame["bodies"][0]["joint_positions"][16][index] for index in range(3)]
   curr_dist_between_handtips = [a_i - b_i for a_i, b_i in zip(curr_left_handtip, curr_right_handtip)]
-  # print("start", curr_dist_between_handtips)
+  curr_dist_between_handtips_squared = [a_i*np.abs(a_i) for a_i in curr_dist_between_handtips]
+  curr_dist_between_handtips_squared_xyz = sum(np.abs(curr_dist_between_handtips_squared))
+
+  output.extend(curr_dist_between_handtips) #output = [curr_x, curr_y, curr_z]
+  output.extend(curr_dist_between_handtips_squared) #output = [curr_x, curr_y, curr_z, curr_x_squared, curr_y_squared, curr_z_squared]
+  output.append(curr_dist_between_handtips_squared_xyz) #output = [curr_x, curr_y, curr_z, curr_x_squared, curr_y_squared, curr_z_squared, curr_squared_xyz]
+  
   prev_left_handtip = [prev_frame["bodies"][0]["joint_positions"][9][index] for index in range(3)]
   prev_right_handtip = [prev_frame["bodies"][0]["joint_positions"][16][index] for index in range(3)]
   prev_dist_between_handtips = [a_i - b_i for a_i, b_i in zip(prev_left_handtip, prev_right_handtip)]
-  # print(prev_dist_between_handtips)
   delta_dist_between_handtips = [a_i - b_i for a_i, b_i in zip(curr_dist_between_handtips, prev_dist_between_handtips)]
-  # print(delta_dist_between_handtips)
-  curr_dist_between_handtips_squared_xyz = sum([a_i*a_i for a_i in curr_dist_between_handtips])
-  delta_dist_between_handtips_squared_xyz = sum([a_i*a_i for a_i in delta_dist_between_handtips])
-  features = [curr_dist_between_handtips_squared_xyz, delta_dist_between_handtips_squared_xyz]
-  # print("end",features)
-  return features
+  delta_dist_between_handtips_squared = [a_i*np.abs(a_i) for a_i in delta_dist_between_handtips]
+  delta_dist_between_handtips_squared_xyz = sum(np.abs(delta_dist_between_handtips_squared))
+
+  output.extend(delta_dist_between_handtips) #output = [curr_x, curr_y, curr_z, curr_x_squared, curr_y_squared, curr_z_squared, curr_squared_xyz, delta_x, delta_y, delta_z]
+  output.extend(delta_dist_between_handtips_squared) #output = [curr_x, curr_y, curr_z, curr_x_squared, curr_y_squared, curr_z_squared, curr_squared_xyz, delta_x, delta_y, delta_z, delta_x_squared, delta_y_squared, delta_z_squared]
+  output.append(delta_dist_between_handtips_squared_xyz) #output = [curr_x, curr_y, curr_z, curr_x_squared, curr_y_squared, curr_z_squared, curr_squared_xyz, delta_x, delta_y, delta_z, delta_x_squared, delta_y_squared, delta_z_squared, delta_squared_xyz]
+  
+  # features = [curr_dist_between_handtips_squared_xyz, delta_dist_between_handtips_squared_xyz]
+  # print("end", output)
+  return output
 
 def dist_from_feature(frame, feature_set, origin_feature = 27): #changing origin_feature can cause feature mislabel as default is 'nose'
   origin = [frame["bodies"][0]["joint_positions"][origin_feature][index] for index in range(3)]
@@ -162,8 +186,8 @@ def feature_extraction_kinect(input_filepath: str, features_to_extract: list, sc
   standardized_sq = ((all_positions - mean) * np.abs(all_positions - mean))/var
 
   # QUANTILE
-  min_range = -50
-  max_range = 50
+  min_range = -100
+  max_range = 100
   quantile_05th = np.quantile(all_positions, 0.05, axis=0)
   quantile_95th = np.quantile(all_positions, 0.95, axis=0)
   
