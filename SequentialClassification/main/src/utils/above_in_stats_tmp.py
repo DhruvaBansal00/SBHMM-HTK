@@ -10,7 +10,7 @@ if __name__=='__main__':
     confusion_matrices = {}
 
     for i in range(7):
-        confusion_matrix_filepath = os.path.join(args.confusion_matrix_filepath, str(i), 'res_hmm200.txt')
+        confusion_matrix_filepath = os.path.join(args.confusion_matrix_filepath, str(i), 'res_hmm260.txt')
         confusion_matrix = get_confusion_matrix(confusion_matrix_filepath)
         confusion_matrices[confusion_matrix['user']] = confusion_matrix['matrix']
         # print(confusion_matrix)
