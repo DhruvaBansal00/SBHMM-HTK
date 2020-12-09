@@ -347,5 +347,5 @@
         "angle_wrist_elbow_left",
         "angle_wrist_elbow_right"
     ],
-    "features_dir": "C:\\Users\\DELL\\AlphaPose\\examples\\input"
+    "features_dir": "/media/thad/DataBackup/AlphaPoseJson"
 }

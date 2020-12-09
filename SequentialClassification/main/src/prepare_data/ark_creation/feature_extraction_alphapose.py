@@ -35,12 +35,12 @@ def feature_labels():
 # can return in a list: absolute positions, relative positions, distance from a particular joint
 def get_features(frame, feature_set):
   features = []
-  joint_positions = [frame[feature_set][index] for index in range(2)]
+  joint_positions = frame[feature_set]
   # if you want absolute positions uncomment
   features.extend(joint_positions)
 
   # replace feature_set with the index of the joint to want relative positions wrt for e.g. 0 for spine, 27 for nose
-  new_origin_positions = [frame[0][index] for index in range(2)]
+  new_origin_positions = frame[0]
   relative = []
   dist = 0
   for i in range(2):
@@ -55,11 +55,11 @@ def get_features(frame, feature_set):
 
 # returns angles of left wrist to left elbow and right wrist to right elbow respectively
 def angle_wrist_elbow(frame):
-  origin = [frame[0][index] for index in range(3)]
-  elbow_left = [frame[7][index] for index in range(3)]
-  wrist_left = [frame[9][index] for index in range(3)]
-  elbow_right = [frame[8][index] for index in range(3)]
-  wrist_right = [frame[10][index] for index in range(3)]
+  origin = frame[0]
+  elbow_left = frame[7]
+  wrist_left = frame[9]
+  elbow_right = frame[8]
+  wrist_right = frame[10]
   elbow_left = [a_i - b_i for a_i, b_i in zip(elbow_left, origin)]
   wrist_left = [a_i - b_i for a_i, b_i in zip(wrist_left, origin)]
   elbow_right = [a_i - b_i for a_i, b_i in zip(elbow_right, origin)]
@@ -75,9 +75,9 @@ def angle_wrist_elbow(frame):
 
 
 def deltas(frame, prev_frame, feature_set):
-  origin = [frame[0][index] for index in range(2)]
-  previous = [prev_frame[feature_set][index] for index in range(2)]
-  current = [frame[feature_set][index] for index in range(2)]
+  origin = frame[0]
+  previous = prev_frame[feature_set]
+  current = frame[feature_set]
   previous = [a_i - b_i for a_i, b_i in zip(previous, origin)]
   current = [a_i - b_i for a_i, b_i in zip(current, origin)]
   delta = [a_i - b_i for a_i, b_i in zip(current, previous)]
@@ -92,15 +92,15 @@ def feature_extraction_alphapose(input_filepath: str, features_to_extract: list,
   frames = data
 
   keypoints = [frame["keypoints"] for frame in frames]
-  joint_positions = np.asarray([[frame[3*coord], frame[3*coord+1]] for frame in frames for coord in range(len(frame)/3)])
+  joint_positions = [[kp[3*coord], kp[3*coord+1]] for kp in keypoints for coord in range(len(kp)//3)]
   new_joint_positions = []
   no_body_count = 0
   multi_body_count = 0
   frame_nums = np.asarray([int(frame["image_id"].split('.')[0]) for frame in frames])
   for a in range(frame_nums[-1]):
-    if frame_nums.count(a) < 1:
+    if np.count_nonzero(frame_nums == a) < 1:
       no_body_count+=1
-    elif frame_nums.count(a) > 1:
+    elif np.count_nonzero(frame_nums == a) > 1:
       multi_body_count += 1
 
   all_positions = np.stack(joint_positions).astype(float)
@@ -113,16 +113,16 @@ def feature_extraction_alphapose(input_filepath: str, features_to_extract: list,
   standardized_count = 0
 
   all_features = []
-
-  prev_frame = frames[0]
+  joint_positions = np.array([joint_positions[17*i:17*(i+1)] for i in range(len(joint_positions)//17)])
+  prev_frame = joint_positions[0]
 
   for frame_number, frame in enumerate(joint_positions):
 
     features = []
     for index in range(17):
       features.extend(get_features(frame, index) + deltas(frame, prev_frame, index)) # Compare with previous version...
-      features.extend(list(standardized_no_sq[standardized_count, index]))
-      features.extend(list(standardized_sq[standardized_count, index]))
+      features.extend(list(standardized_no_sq[standardized_count+index]))
+      features.extend(list(standardized_sq[standardized_count+index]))
     
     features.extend(angle_wrist_elbow(frame))
     prev_frame = frame

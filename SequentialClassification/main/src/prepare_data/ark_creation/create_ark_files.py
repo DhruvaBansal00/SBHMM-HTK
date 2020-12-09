@@ -86,15 +86,14 @@ def create_ark_files(features_config: dict, users: list, verbose: bool,
 
         features_filename = features_filepath.split('/')[-1]
         features_extension = features_filename.split('.')[-1]
-        features_prefix = features_filename.split('/')[-1][:9]
         features_df = None
 
         ark_filename = features_filename.replace(features_extension, 'ark')
         ark_filepath = os.path.join(ark_dir, ark_filename)
         title = ark_filename.replace('.ark', "")
-
-        if features_prefix == 'alphapose':
-            features_df = feature_extraction_kinect(features_filepath, features_config['selected_features'], scale = 10, drop_na = True)
+        
+        if 'alphapose' in features_filename:
+            features_df = feature_extraction_alphapose(features_filepath, features_config['selected_features'], scale = 10, drop_na = True)
         elif features_extension == 'json':
             features_df = feature_extraction_kinect(features_filepath, features_config['selected_features'], scale = 10, drop_na = True)
         elif is_select_features:
