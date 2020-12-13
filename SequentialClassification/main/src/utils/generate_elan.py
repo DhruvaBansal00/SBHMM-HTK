@@ -75,7 +75,6 @@ def make_elan(data: dict, has_states: bool, video_dirs: list, eaf_savedir: str) 
     eaf_savedir : str
         Directory under which eaf files are saved.
     """
-
     video_names = [ vname.split('/')[-1][:-4] for vname in video_dirs ]
 
     for fname in data:
@@ -192,10 +191,10 @@ def mlf_to_elan(mlf_filepath: str, video_dirs: list, eaf_savedir: str) -> None:
 if __name__=='__main__':
 
     # Find where videos are located on desktop
-    video_dirs = glob.glob('/media/thad/DataBackup/Video_Backup_MP4/**/*.mp4', recursive=True)
+    video_dirs = glob.glob('/media/disk1/Video_Backup_MP4/**/*.mp4', recursive=True)
 
     # Save annotated videos on desktop
-    save_dir = '/media/thad/DataBackup/video_annotation'
+    save_dir = '/media/disk1/video_annotation'
     '''
     # Iterate over MLF files
     results = '../../projects/Kinect/results/'
