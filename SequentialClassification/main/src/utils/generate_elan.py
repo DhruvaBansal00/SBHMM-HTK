@@ -93,13 +93,13 @@ def make_elan(data: dict, has_states: bool, video_dirs: list, eaf_savedir: str) 
             # Iterate over segmentation data
             if not has_states:
                 eaf_file.add_tier(fname)
-                for word in fname:
-                    eaf_file.add_annotation(fname, word[0][1], word[-1][2])
+                for word in data[fname]:
+                    eaf_file.add_annotation(fname, int(data[fname][word][0][1]), int(data[fname][word][-1][2]),data[fname][word])
             else:
-                for word in fname:
+                for word in data[fname]:
                     eaf_file.add_tier(word)
-                    for state in word:
-                        eaf_file.add_annotation(word, state[1], state[2])
+                    for state in data[fname][word]:
+                        eaf_file.add_annotation(data[fname][word], int(data[fname][word][state][1]), int(data[fname][word][state][2]),data[fname][word][state])
             
             # Create eaf out of data
             to_eaf(out_path, eaf_file)
