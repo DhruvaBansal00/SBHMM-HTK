@@ -15,6 +15,7 @@ import pandas as pd
 from .feature_selection import select_features
 from .interpolate_feature_data import interpolate_feature_data
 from .feature_extraction_kinect import feature_extraction_kinect
+from .feature_extraction_alphapose import feature_extraction_alphapose
 from scipy import stats
 import numpy as np
 
@@ -90,8 +91,10 @@ def create_ark_files(features_config: dict, users: list, verbose: bool,
         ark_filename = features_filename.replace(features_extension, 'ark')
         ark_filepath = os.path.join(ark_dir, ark_filename)
         title = ark_filename.replace('.ark', "")
-
-        if features_extension == 'json':
+        
+        if 'alphapose' in features_filename:
+            features_df = feature_extraction_alphapose(features_filepath, features_config['selected_features'], scale = 10, drop_na = True)
+        elif features_extension == 'json':
             features_df = feature_extraction_kinect(features_filepath, features_config['selected_features'], scale = 10, drop_na = True)
         elif is_select_features:
             features_df = select_features(features_filepath, features_config['selected_features'], center_on_face = False, is_2d = False, scale = 10, 
