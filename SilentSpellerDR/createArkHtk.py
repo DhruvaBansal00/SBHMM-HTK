@@ -27,6 +27,7 @@ def createArk(data: str, labels: str, saveDirectory: str) -> None:
         with open(labelFiles[i], 'r') as currLabel:
             stamp = labelFiles[i].split("/")[-1].strip(".lab")
             letters = [i.strip("\n") for i in currLabel.readlines()][1:-1]
+            letters = ["_" if i == "sil" else i for i in letters]
             fileNames[stamp] = saveDirectory+user+"."+"_".join(letters)+"."+stamp
             currLabel.close()
 
@@ -92,6 +93,6 @@ def createMLF(htk_dir: str, mlf_file: str) -> None:
 
 if __name__ == "__main__":
 
-    createArk('/home/dhruva/Desktop/CopyCat/SilentSpeller/gt2k_2328_16/data/*', '/home/dhruva/Desktop/CopyCat/SilentSpeller/gt2k_2328_16/label/*', "/home/dhruva/Desktop/CopyCat/SilentSpeller/data/ark/")
+    createArk('/home/dhruva/Desktop/CopyCat/SilentSpeller/MainPipeline/MainPipeline/data/*', '/home/dhruva/Desktop/CopyCat/SilentSpeller/MainPipeline/MainPipeline/label/*', "/home/dhruva/Desktop/CopyCat/SilentSpeller/data/ark/")
     createHTK('/home/dhruva/Desktop/CopyCat/SilentSpeller/data/ark/*', '/home/dhruva/Desktop/CopyCat/SilentSpeller/data/htk/')
     createMLF('/home/dhruva/Desktop/CopyCat/SilentSpeller/data/htk/*', '/home/dhruva/Desktop/CopyCat/SilentSpeller/all_labels.mlf')

@@ -134,7 +134,7 @@ def main():
     parser.add_argument('--multiple_classifiers', action='store_true')
     parser.add_argument('--classifier', type=str, default='knn',
                         choices=['knn', 'adaboost'])
-    parser.add_argument('--beam_threshold', default=10000.0)
+    parser.add_argument('--beam_threshold', default=100000.0)
 
     #Arguments for testing
     parser.add_argument('--start', type=int, default=-2)
