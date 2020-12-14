@@ -1,2 +1,0 @@
-HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/0/res_hmm199.mlf 
-No transcriptions found
