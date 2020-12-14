@@ -85,7 +85,7 @@ def deltas(frame, prev_frame, feature_set):
 
 
 def feature_extraction_alphapose(input_filepath: str, features_to_extract: list, scale: int = 10, drop_na: bool = True) -> pd.DataFrame:
-  
+
   with open(input_filepath, 'r') as in_file:
     data = json.load(in_file)
 
@@ -97,6 +97,10 @@ def feature_extraction_alphapose(input_filepath: str, features_to_extract: list,
   no_body_count = 0
   multi_body_count = 0
   frame_nums = np.asarray([int(frame["image_id"].split('.')[0]) for frame in frames])
+
+  if len(frame_nums) == 0:
+    return
+  
   for a in range(frame_nums[-1]):
     if np.count_nonzero(frame_nums == a) < 1:
       no_body_count+=1
