@@ -94,17 +94,15 @@ def make_elan(data: dict, has_states: bool, video_dirs: list, eaf_savedir: str) 
             if not has_states:
                 eaf_file.add_tier(fname)
                 for word in data[fname]:
-                    eaf_file.add_annotation(fname, int(data[fname][word][0][1]), int(data[fname][word][-1][2]),data[fname][word], word)
+                    eaf_file.add_annotation(fname, int(data[fname][word][0][1]), int(data[fname][word][-1][2]), word)
             else:
                 for word in data[fname]:
                     eaf_file.add_tier(word)
                     for state in data[fname][word]:
-                        eaf_file.add_annotation(data[fname][word], int(data[fname][word][state][1]), int(data[fname][word][state][2]),data[fname][word][state], state)
+                        eaf_file.add_annotation(data[fname][word], int(data[fname][word][state][1]), state)
             
             # Create eaf out of data
             to_eaf(out_path, eaf_file)
-
-
 
 def mlf_to_elan(mlf_filepath: str, video_dirs: list, eaf_savedir: str) -> None:
     """Generates eaf files from mlf file
