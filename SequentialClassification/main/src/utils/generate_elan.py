@@ -30,7 +30,6 @@ def mlf_to_elan(mlf_filepath: str, video_dirs: list, eaf_savedir: str) -> None:
         line_num = 1
         while line_num < len(lines):
             line = str(lines[line_num])
-            print(line)
             updated = False
 
             if len(line) < 10:
@@ -45,7 +44,6 @@ def mlf_to_elan(mlf_filepath: str, video_dirs: list, eaf_savedir: str) -> None:
                     to_eaf(out_path, eaf_file)
 
                 # create filename out of header info
-                print(line)
                 fname = line.split('/')[-1][:-8]
 
                 # take eaf_savedir and append filename to create out_path
@@ -91,15 +89,15 @@ def mlf_to_elan(mlf_filepath: str, video_dirs: list, eaf_savedir: str) -> None:
 if __name__=='__main__':
 
     # Find where videos are located on desktop
-    video_dirs = glob.glob('/media/thad/U32 Shadow/Video_Backup_MP4/**/*.mp4', recursive=True)
+    video_dirs = glob.glob('/media/thad/DataBackup/Video_Backup_MP4/**/*.mp4', recursive=True)
 
     # Save annotated videos on desktop
-    save_dir = '/media/thad/Seagate Backup Plus Drive/video_annotation'
+    save_dir = '/media/thad/DataBackup/video_annotation'
 
     # Iterate over MLF files
     results = '../../projects/Kinect/results/'
     mlf_dirs = [ os.path.join(results, mlf) for mlf in os.listdir(results) if os.path.isdir(os.path.join(results, mlf)) ]
-    for mlf_dir in mlf_dirs:
+    for idx, mlf_dir in enumerate(mlf_dirs):
+        print('Progress: ' + str(idx / len(mlf_dirs)))
         for mlf in os.listdir(mlf_dir):
-            print(mlf_dir)
             mlf_to_elan(os.path.join(mlf_dir, mlf), video_dirs, save_dir)
