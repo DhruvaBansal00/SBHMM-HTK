@@ -146,7 +146,7 @@ def main():
     args = parser.parse_args()
     ########################################################################################
 
-    cross_val_methods = {'kfold': (KFold, False),
+    cross_val_methods = {'kfold': (KFold, True),
                          'leave_one_phrase_out': (LeaveOneGroupOut(), True),
                          'stratified': (StratifiedKFold, True),
                          'leave_one_user_out': (LeaveOneGroupOut(), True)
