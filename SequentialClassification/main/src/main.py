@@ -214,9 +214,6 @@ def main():
             for filepath
             in htk_filepaths]
         
-        users = [filepath.split('/')[-1].split('.')[0].split('_')[1]
-            for filepath
-            in htk_filepaths]
 
         if cvm == 'kfold' or cvm == 'stratified':
             unique_phrases = set(phrases)
@@ -230,6 +227,9 @@ def main():
             groups = [group_map[phrase] for phrase in phrases]
             cross_val = cross_val_method
         elif cvm == 'leave_one_user_out':
+            users = [filepath.split('/')[-1].split('.')[0].split('_')[1]
+                for filepath
+                in htk_filepaths]
             unique_users = set(users)
             group_map = {user: i for i, user in enumerate(unique_users)}
             groups = [group_map[user] for user in users]            
