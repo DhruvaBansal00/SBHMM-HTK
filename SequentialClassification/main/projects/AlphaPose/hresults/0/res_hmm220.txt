@@ -1,16 +1,22 @@
 HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/0/res_hmm220.mlf 
+Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_above_wall.0000000005.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_above_wall.0000000005.rec
+ LAB: snake above      wall 
+ REC: snake above grey wall 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.black_monkey_in_white_flowers.0000000001.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.black_monkey_in_white_flowers.0000000001.rec
  LAB: black monkey in    white flowers 
  REC: black monkey above blue  flowers 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_above_box.0000000000.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_above_box.0000000000.rec
- LAB: snake above      box 
- REC: snake above grey box 
+ LAB:      snake above      box 
+ REC: blue lion  above grey box 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.orange_alligator_in_grey_flowers.0000000002.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.orange_alligator_in_grey_flowers.0000000002.rec
  LAB: orange alligator in    grey flowers 
  REC: orange alligator above grey flowers 
+Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.alligator_above_wall.0000000001.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.alligator_above_wall.0000000001.rec
+ LAB:       alligator above      wall 
+ REC: black alligator above grey wall 
 Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_blue_wagon.0000000002.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_blue_wagon.0000000002.rec
- LAB: alligator above blue wagon   
- REC: alligator above blue flowers 
+ LAB:        alligator above blue wagon   
+ REC: orange alligator above blue flowers 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.snake_in_grey_wagon.0000000002.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.snake_in_grey_wagon.0000000002.rec
  LAB:       snake in grey wagon 
  REC: white snake in grey wagon 
@@ -21,29 +27,53 @@ Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.lion_abo
  LAB: lion above grey wall 
  REC: lion above grey box  
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_below_chair.0000000002.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_below_chair.0000000002.rec
- LAB: lion below      chair 
- REC: lion below grey chair 
+ LAB:       lion below      chair 
+ REC: black lion below grey chair 
+Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_blue_wall.0000000003.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_blue_wall.0000000003.rec
+ LAB:        alligator above blue wall 
+ REC: orange alligator above blue wall 
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.white_lion_above_orange_wall.0000000005.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.white_lion_above_orange_wall.0000000005.rec
- LAB: white lion above orange wall 
- REC:       lion above        wall 
+ LAB: white lion   above orange wall 
+ REC: black monkey above        wall 
+Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_above_orange_bed.0000000003.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_above_orange_bed.0000000003.rec
+ LAB:       lion above orange bed 
+ REC: black lion above orange bed 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.black_alligator_above_orange_wagon.0000000001.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.black_alligator_above_orange_wagon.0000000001.rec
  LAB: black alligator above orange wagon 
  REC: black alligator above blue   wagon 
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.alligator_above_black_wall.0000000005.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.alligator_above_black_wall.0000000005.rec
  LAB: alligator above black wall 
  REC: alligator above       wall 
+Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_in_blue_box.0000000001.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_in_blue_box.0000000001.rec
+ LAB:      monkey in blue box 
+ REC: grey monkey in blue box 
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_above_box.0000000005.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_above_box.0000000005.rec
  LAB: lion above      box  
  REC: lion above grey wall 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_below_chair.0000000000.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_below_chair.0000000000.rec
- LAB: lion below      chair 
- REC: lion below grey chair 
+ LAB:       lion below      chair 
+ REC: black lion below grey chair 
+Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_in_orange_flowers.0000000004.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_in_orange_flowers.0000000004.rec
+ LAB:      monkey in orange flowers 
+ REC: grey monkey in orange flowers 
+Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_14_Processed.lion_above_blue_bed.0000000001.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_14_Processed.lion_above_blue_bed.0000000001.rec
+ LAB:       lion above blue bed 
+ REC: black lion above blue bed 
+Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_blue_wagon.0000000001.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_blue_wagon.0000000001.rec
+ LAB:        alligator above blue wagon 
+ REC: orange alligator above blue wagon 
+Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_in_orange_flowers.0000000000.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_in_orange_flowers.0000000000.rec
+ LAB:        alligator in orange flowers 
+ REC: orange alligator in orange flowers 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_below_blue_chair.0000000005.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_below_blue_chair.0000000005.rec
  LAB:      monkey below blue chair 
  REC: grey monkey below grey wagon 
 Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.black_monkey_in_white_flowers.0000000003.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.black_monkey_in_white_flowers.0000000003.rec
  LAB: black monkey in white flowers 
  REC: black monkey in blue  flowers 
+Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.monkey_below_bed.0000000003.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.monkey_below_bed.0000000003.rec
+ LAB: monkey below      bed 
+ REC: monkey below grey bed 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.alligator_above_chair.0000000000.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.alligator_above_chair.0000000000.rec
  LAB:        alligator above      chair 
  REC: orange alligator above grey chair 
@@ -56,6 +86,9 @@ Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.snake_in_g
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.lion_below_orange_chair.0000000000.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.lion_below_orange_chair.0000000000.rec
  LAB: lion below orange chair 
  REC: lion below blue   wall  
+Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.alligator_above_bed.0000000003.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.alligator_above_bed.0000000003.rec
+ LAB: alligator above      bed 
+ REC: alligator above grey bed 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_in_grey_wagon.0000000005.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_in_grey_wagon.0000000005.rec
  LAB:      snake in grey wagon 
  REC: blue snake in grey wagon 
@@ -64,7 +97,7 @@ Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.whit
  REC: white lion above blue   wall 
 Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.white_alligator_above_blue_wall.0000000001.lab vs data/0/htk/alphapose_Matthew_AlphaPose_Processed.white_alligator_above_blue_wall.0000000001.rec
  LAB: white alligator above blue wall 
- REC:       snake     above blue wall 
+ REC: white snake     above blue wall 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.alligator_above_wall.0000000002.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.alligator_above_wall.0000000002.rec
  LAB: alligator above      wall 
  REC: alligator above grey wall 
@@ -92,24 +125,33 @@ Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.blue_all
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.snake_above_wall.0000000001.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.snake_above_wall.0000000001.rec
  LAB:      snake above wall 
  REC: blue snake above wall 
+Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_below_blue_bed.0000000007.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_below_blue_bed.0000000007.rec
+ LAB:       lion below blue bed 
+ REC: black lion below blue bed 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_in_box.0000000002.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_in_box.0000000002.rec
- LAB: monkey in      box 
- REC: monkey in grey box 
+ LAB:      monkey in      box 
+ REC: grey monkey in grey box 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_above_wall.0000000004.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_above_wall.0000000004.rec
- LAB: monkey above wall 
- REC: monkey below wall 
+ LAB:      monkey above wall 
+ REC: grey monkey below wall 
+Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_below_grey_bed.0000000002.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_below_grey_bed.0000000002.rec
+ LAB:        alligator below grey bed 
+ REC: orange alligator below grey bed 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_14_Processed.black_monkey_in_white_flowers.0000000001.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_14_Processed.black_monkey_in_white_flowers.0000000001.rec
  LAB: black monkey in white flowers 
  REC: black monkey in blue  flowers 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.lion_above_box.0000000003.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.lion_above_box.0000000003.rec
- LAB: lion above      box 
- REC: lion above grey box 
+ LAB:       lion above      box 
+ REC: black lion above grey box 
 Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.orange_alligator_in_grey_flowers.0000000004.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.orange_alligator_in_grey_flowers.0000000004.rec
  LAB: orange alligator in grey   flowers 
  REC: orange alligator in orange flowers 
+Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_in_wagon.0000000002.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_in_wagon.0000000002.rec
+ LAB: alligator in      wagon   
+ REC: alligator in blue flowers 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_below_bed.0000000002.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_below_bed.0000000002.rec
- LAB: monkey below bed 
- REC: monkey above bed 
+ LAB: monkey       below bed 
+ REC: monkey above grey  bed 
 Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.monkey_above_white_wall.0000000003.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.monkey_above_white_wall.0000000003.rec
  LAB: monkey above white  wall 
  REC: monkey above orange wall 
@@ -119,12 +161,15 @@ Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.white_li
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.alligator_in_box.0000000003.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.alligator_in_box.0000000003.rec
  LAB: alligator in      box 
  REC: alligator in grey box 
+Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.alligator_in_box.0000000002.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.alligator_in_box.0000000002.rec
+ LAB: alligator in      box 
+ REC: alligator in grey box 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_above_box.0000000003.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_above_box.0000000003.rec
  LAB: snake above      box  
  REC: snake above grey wall 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.alligator_below_grey_bed.0000000001.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.alligator_below_grey_bed.0000000001.rec
- LAB: alligator below grey   bed 
- REC: alligator below orange bed 
+ LAB:      alligator below grey   bed 
+ REC: grey alligator below orange bed 
 Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.monkey_in_blue_box.0000000001.lab vs data/0/htk/alphapose_Matthew_AlphaPose_Processed.monkey_in_blue_box.0000000001.rec
  LAB:      monkey in blue box 
  REC: grey monkey in grey box 
@@ -143,9 +188,15 @@ Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.monkey_below_blue_chair.0000000002.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.monkey_below_blue_chair.0000000002.rec
  LAB: monkey below blue chair 
  REC: monkey below blue wall  
+Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.alligator_above_blue_wall.0000000001.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.alligator_above_blue_wall.0000000001.rec
+ LAB:      alligator above blue wall 
+ REC: grey alligator above blue wall 
+Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.lion_above_orange_bed.0000000000.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.lion_above_orange_bed.0000000000.rec
+ LAB:       lion above orange bed 
+ REC: black lion above orange bed 
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_below_orange_chair.0000000003.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_below_orange_chair.0000000003.rec
- LAB: lion below orange chair 
- REC: lion above orange chair 
+ LAB:       lion below orange chair 
+ REC: black lion above orange chair 
 Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.white_snake_in_blue_flowers.0000000000.lab vs data/0/htk/alphapose_Matthew_AlphaPose_Processed.white_snake_in_blue_flowers.0000000000.rec
  LAB: white snake in blue   flowers 
  REC: grey  snake in orange flowers 
@@ -174,11 +225,14 @@ Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.monkey_a
  LAB: monkey    above wall 
  REC: alligator below wall 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_above_chair.0000000002.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_above_chair.0000000002.rec
- LAB:      monkey above chair 
- REC: grey monkey above chair 
+ LAB:      monkey above      chair 
+ REC: grey monkey above grey chair 
 Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.lion_above_orange_bed.0000000002.lab vs data/0/htk/alphapose_Matthew_AlphaPose_Processed.lion_above_orange_bed.0000000002.rec
- LAB: lion above orange bed 
- REC: lion above        bed 
+ LAB:       lion above orange bed 
+ REC: black lion above orange bed 
+Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.alligator_above_wall.0000000001.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.alligator_above_wall.0000000001.rec
+ LAB:      alligator above wall 
+ REC: grey alligator above wall 
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.monkey_in_box.0000000004.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.monkey_in_box.0000000004.rec
  LAB: monkey in      box   
  REC: monkey in grey chair 
@@ -195,8 +249,8 @@ Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_14_Processed.alli
  LAB: alligator above chair 
  REC: alligator above wall  
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.lion_above_flowers.0000000000.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.lion_above_flowers.0000000000.rec
- LAB: lion above        flowers 
- REC: lion above orange bed     
+ LAB:       lion above        flowers 
+ REC: black lion above orange bed     
 Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.snake_below_black_chair.0000000004.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.snake_below_black_chair.0000000004.rec
  LAB:        snake below black chair 
  REC: orange snake above black wall  
@@ -204,8 +258,11 @@ Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.snake_abov
  LAB:       snake above      box 
  REC: black lion  above grey box 
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.monkey_above_white_wall.0000000000.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.monkey_above_white_wall.0000000000.rec
- LAB: monkey above white wall 
- REC: monkey above blue  wall 
+ LAB:      monkey above white wall 
+ REC: grey monkey above blue  wall 
+Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.monkey_in_blue_box.0000000006.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.monkey_in_blue_box.0000000006.rec
+ LAB:      monkey in blue box 
+ REC: grey monkey in blue box 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.lion_below_chair.0000000002.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.lion_below_chair.0000000002.rec
  LAB: lion below      chair 
  REC: lion below grey chair 
@@ -237,14 +294,17 @@ Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.snake_ab
  LAB:       snake above      box 
  REC: white snake above grey box 
 Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.lion_below_chair.0000000003.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.lion_below_chair.0000000003.rec
- LAB: lion below      chair 
- REC: lion below grey chair 
+ LAB:       lion below      chair 
+ REC: black lion below grey chair 
 Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.lion_below_blue_bed.0000000000.lab vs data/0/htk/alphapose_Matthew_AlphaPose_Processed.lion_below_blue_bed.0000000000.rec
  LAB: lion below blue   bed 
  REC: lion below orange bed 
 Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_wall.0000000000.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_wall.0000000000.rec
  LAB:        alligator above      wall 
  REC: orange alligator above blue wall 
+Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_below_blue_chair.0000000003.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_below_blue_chair.0000000003.rec
+ LAB:       monkey below blue chair 
+ REC: white monkey below blue chair 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.black_lion_above_grey_bed.0000000001.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.black_lion_above_grey_bed.0000000001.rec
  LAB: black lion   above grey bed 
  REC: black monkey above grey bed 
@@ -254,15 +314,24 @@ Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.lion
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_above_grey_wall.0000000004.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_above_grey_wall.0000000004.rec
  LAB:       lion above grey wall 
  REC: black lion above grey wall 
+Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.alligator_above_wall.0000000001.lab vs data/0/htk/alphapose_Matthew_AlphaPose_Processed.alligator_above_wall.0000000001.rec
+ LAB: alligator above      wall 
+ REC: alligator above blue wall 
+Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.snake_above_wall.0000000001.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.snake_above_wall.0000000001.rec
+ LAB:       snake above wall 
+ REC: black snake above wall 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.blue_alligator_above_grey_wall.0000000001.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.blue_alligator_above_grey_wall.0000000001.rec
  LAB: blue alligator above grey wall 
  REC: blue snake     above grey wall 
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.orange_snake_below_blue_flowers.0000000004.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.orange_snake_below_blue_flowers.0000000004.rec
- LAB: orange snake below blue flowers 
- REC: orange snake below      bed     
+ LAB: orange snake below blue  flowers 
+ REC: orange snake below black flowers 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.alligator_above_blue_wagon.0000000000.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.alligator_above_blue_wagon.0000000000.rec
  LAB:       alligator above blue wagon 
  REC: white alligator above blue wagon 
+Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_14_Processed.lion_below_orange_chair.0000000000.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_14_Processed.lion_below_orange_chair.0000000000.rec
+ LAB:       lion below orange chair 
+ REC: black lion below orange chair 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.snake_above_box.0000000000.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.snake_above_box.0000000000.rec
  LAB:        snake above      box   
  REC: orange snake above blue chair 
@@ -275,12 +344,21 @@ Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.black_snake_below_blue_chair.0000000000.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.black_snake_below_blue_chair.0000000000.rec
  LAB: black snake  below blue chair 
  REC: black monkey below blue chair 
+Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_in_box.0000000000.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_in_box.0000000000.rec
+ LAB:        alligator in      box   
+ REC: orange alligator in grey chair 
+Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_below_blue_chair.0000000000.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_below_blue_chair.0000000000.rec
+ LAB:      monkey below blue chair 
+ REC: grey monkey below blue chair 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.orange_alligator_in_grey_flowers.0000000000.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.orange_alligator_in_grey_flowers.0000000000.rec
  LAB: orange alligator in    grey flowers 
  REC: orange alligator above grey wagon   
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.snake_in_flowers.0000000001.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.snake_in_flowers.0000000001.rec
  LAB:       snake in        flowers 
  REC: black snake in orange flowers 
+Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_below_blue_bed.0000000001.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_below_blue_bed.0000000001.rec
+ LAB:       lion below blue bed 
+ REC: black lion below blue bed 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.white_lion_in_grey_box.0000000000.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.white_lion_in_grey_box.0000000000.rec
  LAB: white lion in    grey box 
  REC: white lion above grey box 
@@ -288,14 +366,26 @@ Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.monk
  LAB: monkey above white wall 
  REC: monkey above blue  wall 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_above_box.0000000000.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_above_box.0000000000.rec
- LAB: lion above      box 
- REC: lion above grey box 
+ LAB:       lion above      box 
+ REC: black lion above grey box 
+Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_below_orange_chair.0000000002.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_below_orange_chair.0000000002.rec
+ LAB:       lion below orange chair 
+ REC: black lion below orange chair 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_above_flowers.0000000001.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_above_flowers.0000000001.rec
- LAB: lion above      flowers 
- REC: lion above grey flowers 
+ LAB:       lion above      flowers 
+ REC: black lion above grey flowers 
+Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_14_Processed.alligator_above_orange_wagon.0000000001.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_14_Processed.alligator_above_orange_wagon.0000000001.rec
+ LAB:      alligator above orange wagon 
+ REC: blue alligator above orange wagon 
 Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.monkey_above_chair.0000000000.lab vs data/0/htk/alphapose_Matthew_AlphaPose_Processed.monkey_above_chair.0000000000.rec
  LAB:      monkey above chair 
  REC: grey monkey above chair 
+Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_bed.0000000000.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_bed.0000000000.rec
+ LAB:        alligator above bed 
+ REC: orange alligator above bed 
+Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.lion_above_orange_bed.0000000001.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.lion_above_orange_bed.0000000001.rec
+ LAB:       lion above orange bed 
+ REC: black lion above orange bed 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.white_alligator_above_blue_wall.0000000001.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.white_alligator_above_blue_wall.0000000001.rec
  LAB: white alligator above blue wall 
  REC: blue  alligator above blue wall 
@@ -303,8 +393,8 @@ Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_bel
  LAB:       lion  below blue bed   
  REC: black snake below blue wagon 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_below_chair.0000000002.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_below_chair.0000000002.rec
- LAB: snake below      chair 
- REC: snake below grey chair 
+ LAB:       snake below      chair 
+ REC: black snake below grey chair 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.monkey_below_bed.0000000001.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.monkey_below_bed.0000000001.rec
  LAB: monkey below      bed 
  REC: monkey below blue bed 
@@ -314,6 +404,12 @@ Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.monk
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.snake_in_grey_wagon.0000000002.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.snake_in_grey_wagon.0000000002.rec
  LAB:       snake in grey wagon 
  REC: black snake in grey wagon 
+Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.alligator_above_wall.0000000005.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.alligator_above_wall.0000000005.rec
+ LAB: alligator above      wall 
+ REC: alligator above grey wall 
+Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_blue_wagon.0000000000.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_blue_wagon.0000000000.rec
+ LAB:        alligator above blue wagon 
+ REC: orange alligator above blue wagon 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_above_box.0000000004.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_above_box.0000000004.rec
  LAB: snake above      box 
  REC: snake above grey box 
@@ -330,14 +426,14 @@ Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.alligator
  LAB: alligator in      box 
  REC: alligator in grey box 
 Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.lion_above_wall.0000000000.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.lion_above_wall.0000000000.rec
- LAB: lion above        wall 
- REC: lion above orange wall 
+ LAB:       lion above        wall 
+ REC: black lion above orange wall 
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.snake_below_blue_chair.0000000001.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.snake_below_blue_chair.0000000001.rec
  LAB:       snake below blue chair 
  REC: black snake below blue chair 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_above_wall.0000000003.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_above_wall.0000000003.rec
- LAB: monkey above      wall 
- REC: monkey above grey box  
+ LAB:      monkey above      wall 
+ REC: grey monkey above grey box  
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_below_chair.0000000001.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_below_chair.0000000001.rec
  LAB:       lion below      chair 
  REC: white lion below grey chair 
@@ -356,9 +452,18 @@ Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.snake_ab
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_below_orange_chair.0000000000.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_below_orange_chair.0000000000.rec
  LAB:       lion below orange chair 
  REC: white lion below orange chair 
+Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_above_grey_wall.0000000001.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_above_grey_wall.0000000001.rec
+ LAB:       lion above grey wall 
+ REC: black lion above grey wall 
 Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.snake_in_flowers.0000000000.lab vs data/0/htk/alphapose_Matthew_AlphaPose_Processed.snake_in_flowers.0000000000.rec
  LAB: snake in        flowers 
  REC: snake in orange flowers 
+Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.alligator_above_chair.0000000002.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.alligator_above_chair.0000000002.rec
+ LAB: alligator above      chair 
+ REC: alligator above grey chair 
+Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_in_grey_wagon.0000000000.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_in_grey_wagon.0000000000.rec
+ LAB:      snake in grey wagon 
+ REC: blue snake in grey wagon 
 Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.orange_snake_below_blue_flowers.0000000002.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.orange_snake_below_blue_flowers.0000000002.rec
  LAB: orange snake     below blue   flowers 
  REC: orange alligator above orange wagon   
@@ -366,8 +471,8 @@ Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.snak
  LAB:        snake in        flowers 
  REC: orange snake in orange flowers 
 Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_wall.0000000001.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_wall.0000000001.rec
- LAB:        alligator above wall 
- REC: orange alligator below wall 
+ LAB:        alligator       above  wall 
+ REC: orange alligator below orange wall 
 Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.monkey_above_white_wall.0000000001.lab vs data/0/htk/alphapose_Matthew_AlphaPose_Processed.monkey_above_white_wall.0000000001.rec
  LAB:       monkey above white wall 
  REC: black lion   above black wall 
@@ -383,6 +488,9 @@ Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.monkey_bel
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.alligator_above_blue_wall.0000000003.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.alligator_above_blue_wall.0000000003.rec
  LAB: alligator above blue wall 
  REC: alligator above grey wall 
+Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.monkey_below_bed.0000000000.lab vs data/0/htk/alphapose_Matthew_AlphaPose_Processed.monkey_below_bed.0000000000.rec
+ LAB:      monkey below bed 
+ REC: grey monkey below bed 
 Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_orange_wagon.0000000000.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_orange_wagon.0000000000.rec
  LAB:        alligator above orange wagon 
  REC: orange alligator above orange wagon 
@@ -393,17 +501,20 @@ Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.lion
  LAB:       lion above orange bed 
  REC: black lion above orange bed 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.monkey_in_box.0000000000.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.monkey_in_box.0000000000.rec
- LAB: monkey in    box 
- REC: monkey above box 
+ LAB: monkey       in   box 
+ REC: monkey above grey box 
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.monkey_in_orange_flowers.0000000000.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.monkey_in_orange_flowers.0000000000.rec
  LAB:      monkey in orange flowers 
  REC: grey monkey in orange wagon   
 Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.orange_monkey_below_grey_flowers.0000000001.lab vs data/0/htk/alphapose_Matthew_AlphaPose_Processed.orange_monkey_below_grey_flowers.0000000001.rec
  LAB: orange monkey below grey flowers 
- REC:        snake  below grey flowers 
+ REC: black  snake  below grey flowers 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.grey_monkey_below_orange_chair.0000000002.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.grey_monkey_below_orange_chair.0000000002.rec
  LAB: grey monkey below orange chair 
  REC: grey monkey below black  chair 
+Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_in_grey_box.0000000002.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_in_grey_box.0000000002.rec
+ LAB:      monkey in grey box 
+ REC: grey monkey in grey box 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.snake_below_black_chair.0000000002.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.snake_below_black_chair.0000000002.rec
  LAB:       snake below black chair 
  REC: white snake below black chair 
@@ -413,27 +524,42 @@ Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.oran
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.lion_below_blue_bed.0000000001.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.lion_below_blue_bed.0000000001.rec
  LAB: lion below blue   bed 
  REC: lion below orange bed 
+Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_14_Processed.lion_below_blue_bed.0000000001.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_14_Processed.lion_below_blue_bed.0000000001.rec
+ LAB:       lion below blue bed 
+ REC: black lion below blue bed 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_above_wall.0000000002.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_above_wall.0000000002.rec
- LAB:       snake above wall 
- REC: white snake above wall 
+ LAB:       snake above      wall 
+ REC: white snake above grey wall 
+Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.lion_below_chair.0000000000.lab vs data/0/htk/alphapose_Matthew_AlphaPose_Processed.lion_below_chair.0000000000.rec
+ LAB:       lion below chair 
+ REC: black lion below chair 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.orange_snake_below_blue_flowers.0000000000.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.orange_snake_below_blue_flowers.0000000000.rec
  LAB: orange snake     below blue flowers 
  REC: blue   alligator below blue bed     
+Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.snake_below_blue_chair.0000000003.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.snake_below_blue_chair.0000000003.rec
+ LAB:        snake below blue chair 
+ REC: orange snake below blue chair 
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.monkey_below_bed.0000000000.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.monkey_below_bed.0000000000.rec
  LAB:      monkey below bed 
  REC: grey monkey below bed 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_14_Processed.white_alligator_above_blue_wall.0000000000.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_14_Processed.white_alligator_above_blue_wall.0000000000.rec
  LAB: white alligator above blue wall 
- REC:       snake     above blue wall 
+ REC: black alligator above blue wall 
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_above_white_wall.0000000001.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.monkey_above_white_wall.0000000001.rec
  LAB: monkey above white wall 
  REC: monkey above grey  wall 
 Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.snake_above_box.0000000000.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.snake_above_box.0000000000.rec
  LAB:        snake above      box 
  REC: orange snake above grey box 
+Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.alligator_below_grey_bed.0000000003.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.alligator_below_grey_bed.0000000003.rec
+ LAB:       alligator below grey bed 
+ REC: black alligator below grey bed 
 Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.alligator_in_wagon.0000000001.lab vs data/0/htk/alphapose_Matthew_AlphaPose_Processed.alligator_in_wagon.0000000001.rec
  LAB: alligator in    wagon 
  REC: alligator above wagon 
+Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.snake_below_bed.0000000000.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.snake_below_bed.0000000000.rec
+ LAB:       snake below bed 
+ REC: black snake below bed 
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.black_monkey_in_white_flowers.0000000001.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.black_monkey_in_white_flowers.0000000001.rec
  LAB: black monkey in white flowers 
  REC: black monkey in blue  flowers 
@@ -444,8 +570,8 @@ Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.snake_in_
  LAB:       snake in grey wagon 
  REC: white snake in grey wagon 
 Aligned transcription: data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.lion_above_box.0000000001.lab vs data/0/htk/alphapose_Thad_AlphaPose_Aug_13_Processed.lion_above_box.0000000001.rec
- LAB: lion above      box  
- REC: lion above grey wall 
+ LAB:       lion above      box  
+ REC: black lion above grey wall 
 Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_chair.0000000004.lab vs data/0/htk/alphapose_Linda_AlphaPose_Processed.alligator_above_chair.0000000004.rec
  LAB:        alligator above        chair 
  REC: orange alligator above orange chair 
@@ -455,6 +581,9 @@ Aligned transcription: data/0/htk/alphapose_Matthew_AlphaPose_Processed.black_li
 Aligned transcription: data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_above_orange_bed.0000000000.lab vs data/0/htk/alphapose_Prerna_AlphaPose_Processed.lion_above_orange_bed.0000000000.rec
  LAB:        lion above orange bed 
  REC: orange lion above orange bed 
+Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_above_wall.0000000000.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.lion_above_wall.0000000000.rec
+ LAB: lion above      wall 
+ REC: lion above grey box  
 Aligned transcription: data/0/htk/alphapose_Kanksha_AlphaPose_Processed.alligator_above_chair.0000000000.lab vs data/0/htk/alphapose_Kanksha_AlphaPose_Processed.alligator_above_chair.0000000000.rec
  LAB: alligator above      chair 
  REC: alligator above grey chair 
@@ -462,13 +591,13 @@ Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.white_alli
  LAB: white alligator above blue wall 
  REC: blue  alligator above blue wall 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Sat Dec 19 18:49:39 2020            |
+    | HTK Results Analysis at Sat Dec 19 20:08:13 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/0/res_hmm220.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |  278  |  88.83  10.45   0.73   9.63  20.80  55.40 |
+    | Sum/Avg |  278  |  88.74  11.08   0.18  15.89  27.16  70.86 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -476,22 +605,22 @@ Aligned transcription: data/0/htk/alphapose_Linda_AlphaPose_Processed.white_alli
        o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
        v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
        e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
-abov  124  0   0   3   0   0   0   0   0   0   1   0   0   0   0   0   0   0    0 [96.9/0.4]
-alli   0  71   0   0   0   0   0   0   0   0   0   0   0   0   3   0   0   0    0 [95.9/0.3]
+abov  124  0   0   2   0   0   0   0   0   0   1   0   0   1   0   0   0   0    0 [96.9/0.4]
+alli   0  72   0   0   0   0   0   0   0   0   0   0   0   0   2   0   0   0    0 [97.3/0.2]
  bed   0   0  41   0   0   0   0   0   0   0   0   0   0   0   0   1   1   0    0 [95.3/0.2]
-belo   5   0   0  79   0   1   0   0   0   0   0   0   0   0   0   0   0   0    0 [92.9/0.5]
+belo   4   0   0  79   0   1   0   0   0   1   0   0   0   0   0   0   0   0    0 [92.9/0.5]
 blac   0   0   0   0  30   0   0   0   0   0   0   0   0   0   0   0   0   1    1 [96.8/0.1]
-blue   0   0   0   0   0  71   0   0   0   3   0   0   0   5   0   0   0   1    1 [88.8/0.8]
- box   0   0   0   0   0   0  39   3   0   0   0   0   0   0   0   0   4   0    0 [84.8/0.6]
+blue   0   0   0   0   1  71   0   0   0   3   0   0   0   5   0   0   0   1    0 [87.7/0.9]
+ box   0   0   0   0   0   0  38   4   0   0   0   0   0   0   0   0   4   0    0 [82.6/0.7]
 chai   0   0   0   0   0   0   1  46   0   0   0   0   0   0   0   1   7   0    0 [83.6/0.8]
-flow   0   0   6   0   0   0   0   0  30   0   0   0   0   0   0   5   1   0    0 [71.4/1.1]
+flow   0   0   5   0   0   0   0   0  31   0   0   0   0   0   0   5   1   0    0 [73.8/1.0]
 grey   0   0   0   0   0   0   0   0   0  62   0   0   0   4   0   0   0   0    0 [93.9/0.4]
-  in   7   0   0   0   0   0   0   0   0   1  57   0   0   0   0   0   0   0    0 [87.7/0.7]
-lion   0   1   0   0   0   0   0   0   0   0   0  64   1   0   2   0   0   0    0 [94.1/0.4]
+  in   6   0   0   0   0   0   0   0   0   2  57   0   0   0   0   0   0   0    0 [87.7/0.7]
+lion   0   1   0   0   0   0   0   0   0   0   0  63   2   0   2   0   0   0    0 [92.6/0.5]
 monk   0   1   0   0   0   0   0   0   0   0   0   1  76   0   1   0   0   0    0 [96.2/0.3]
-oran   0   0   0   0   1   6   0   0   0   0   0   0   0  45   0   0   0   0    3 [86.5/0.6]
-snak   1   2   0   0   0   0   0   0   0   0   0   2   2   0  50   0   0   0    0 [87.7/0.6]
-wago   0   0   0   0   0   0   2   1   2   0   0   0   0   0   0  23   0   0    0 [82.1/0.5]
-wall   0   0   0   0   0   0   4   1   0   0   0   0   0   0   0   0  59   0    0 [92.2/0.5]
-whit   0   0   0   0   1  13   0   0   0   3   0   0   0   2   0   0   0  11    3 [36.7/1.7]
-Ins    1   0   0   0  13  12   0   0   0  43   0   1   0  24   0   0   0  12
+oran   0   0   0   0   2   6   0   0   0   0   0   0   0  46   0   0   0   0    1 [85.2/0.7]
+snak   1   2   0   0   0   0   0   0   0   0   0   3   2   0  49   0   0   0    0 [86.0/0.7]
+wago   0   0   0   0   0   0   2   1   3   0   0   0   0   0   0  22   0   0    0 [78.6/0.5]
+wall   0   0   0   0   0   0   5   1   0   0   0   0   0   0   0   0  58   0    0 [90.6/0.5]
+whit   0   0   0   0   3  13   0   0   0   3   0   0   0   2   0   0   0  12    0 [36.4/1.9]
+Ins    3   0   0   1  40  17   0   0   0  67   0   1   0  33   0   0   0  13
