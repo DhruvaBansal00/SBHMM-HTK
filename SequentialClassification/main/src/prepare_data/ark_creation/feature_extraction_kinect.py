@@ -194,7 +194,7 @@ def feature_extraction_kinect(input_filepath: str, features_to_extract: list, sc
 
   #print(f'Kinect DataFrame: {df}')
   return df
-
+  
   # To convert any file individually. Otherwise just use to_ark.sh 
   # print("This file converts raw data from Kinect .json to .ark")
   # print("Usage: python feature_extraction_kinect.py input_filepath output_filepath feature_indices")
