@@ -9,22 +9,32 @@ import numpy as np
 import pandas as pd
 
 def feature_labels():
-  features = ['Nose', 'LEye', 'REye', 'LEar', 'REar', 'LShoulder', 'RShoulder', 'LElbow', 'RElbow', 'LWrist', 'RWrist', 'LHip', 'RHip', 'LKnee', 'RKnee', 'LAnkle', 'RAnkle']
+  body_keypoints = ['Nose', 'LEye', 'REye', 'LEar', 'REar', 'LShoulder', 'RShoulder', 'LElbow', 'RElbow', 'LWrist', 'RWrist', 'LHip', 'RHip', 'LKnee', 'RKnee', 'LAnkle', 'RAnkle', 'Head', 'Neck', 'Hip', 'LBigToe', 'RBigToe', 'LSmallToe', 'RSmallToe', 'LHeel', 'RHeel']
+  face_keypoints = [f'face_{i}' for i in range(68)]
+  left_hand_keypoints = [f'left_hand_{i}' for i in range(21)]
+  right_hand_keypoints = [f'right_hand_{i}' for i in range(21)]
+  features = body_keypoints + face_keypoints + left_hand_keypoints + right_hand_keypoints
+
   coordinates = ['x', 'y']
+
+  #nose_x, nose_y, nose_z, delta_nose_x, delta_nose_y, delta_nose_z, delta_feature_to_nose_
 
   columns = []
   for feature in features:
-    joint_positions = [f'{feature}_{coordinate}' for coordinate in coordinates]
-    relative_positions = [f'delta_{feature}_{coordinate}' for coordinate in coordinates]
-    relative_squared_dist = [f'delta_{feature}_squared_xy']
+    # get_features() -> 2 + 2 + 1
+    joint_positions = [f'{feature}_{coordinate}' for coordinate in coordinates] # [absolute position feature x, absolute position feature y] 
+    relative_positions = [f'dist_{feature}_to_nose_{coordinate}' for coordinate in coordinates] # [absolute position feature x - absolute position of nose x, absolute position feature y - absolute position of nose y]
+    relative_squared_dist = [f'dist_{feature}_to_nose_squared_xy'] # [(absolute position feature x - absolute position of nose x)^2 + (absolute position feature y - absolute position of nose y)^2]
     
-    relative_to_nose = [f'delta_{feature}_to_nose_{coordinate}' for coordinate in coordinates]
+    # deltas() -> 2
+    delta = [f'delta_{feature}_{coordinate}' for coordinate in coordinates] # [current feature - previous feature]
     
+    # standarized
     standardized_no_squared_positions = [f'standardized_{feature}_{coordinate}' for coordinate in coordinates]
     standardized_squared_positions = [f'standardized_{feature}_squared_{coordinate}' for coordinate in coordinates]
 
     feature_columns = joint_positions + relative_positions + relative_squared_dist
-    feature_columns += relative_to_nose + standardized_no_squared_positions + standardized_squared_positions
+    feature_columns += delta + standardized_no_squared_positions + standardized_squared_positions
     columns.extend(feature_columns)
 
   angle_wrist_elbow = [f'angle_wrist_elbow_{hand}' for hand in ['left', 'right']]
@@ -39,18 +49,17 @@ def get_features(frame, feature_set):
   # if you want absolute positions uncomment
   features.extend(joint_positions)
 
-  # replace feature_set with the index of the joint to want relative positions wrt for e.g. 0 for spine, 27 for nose
+  # replace feature_set with the index of the joint to want relative positions wrt for e.g, 0 for nose
   new_origin_positions = frame[0]
   relative = []
-  dist = 0
+  squared_dist = 0
   for i in range(2):
-    dist = dist + (joint_positions[i]-new_origin_positions[i])*(joint_positions[i]-new_origin_positions[i])
+    squared_dist += (joint_positions[i]-new_origin_positions[i]) ** 2
     relative.append(joint_positions[i] - new_origin_positions[i])
   # if you want relative positions uncomment
   features.extend(relative)
   # if you want distance from relative positions uncomment
-  # features.append(np.sqrt(dist))
-  features.append(dist)
+  features.append(squared_dist)
   return features
 
 # returns angles of left wrist to left elbow and right wrist to right elbow respectively
@@ -75,13 +84,10 @@ def angle_wrist_elbow(frame):
 
 
 def deltas(frame, prev_frame, feature_set):
-  origin = frame[0]
   previous = prev_frame[feature_set]
   current = frame[feature_set]
-  previous = [a_i - b_i for a_i, b_i in zip(previous, origin)]
-  current = [a_i - b_i for a_i, b_i in zip(current, origin)]
-  delta = [a_i - b_i for a_i, b_i in zip(current, previous)]
-  return delta
+  features = [a_i - b_i for a_i, b_i in zip(current, previous)] # delta
+  return features
 
 
 def feature_extraction_alphapose(input_filepath: str, features_to_extract: list, scale: int = 10, drop_na: bool = True) -> pd.DataFrame:
@@ -92,8 +98,24 @@ def feature_extraction_alphapose(input_filepath: str, features_to_extract: list,
   frames = data
 
   keypoints = [frame["keypoints"] for frame in frames]
-  joint_positions = [[kp[3*coord], kp[3*coord+1]] for kp in keypoints for coord in range(len(kp)//3)]
-  new_joint_positions = []
+  # print(np.asarray(keypoints).shape)
+
+  #51 points -> 17
+
+  # 26 body keypoints
+  # body_keypoints = keypoints[:, 0:26]
+
+  # #face 68 keypoints
+  # face_keypoints = keypoints[:, 26:94]
+
+  # #left hand 21 keypoints
+  # lefthand_keypoints = keypoints[:, 94:115]
+
+  # #right hand 21 keypoints
+  # righthand_keypoints = keypoints[:, 115:136]
+
+  joint_positions = [[[kp[3*coord], kp[3*coord+1]] for coord in range(len(kp) // 3)] for kp in keypoints] # frames x 135 x 2
+
   no_body_count = 0
   multi_body_count = 0
   frame_nums = np.asarray([int(frame["image_id"].split('.')[0]) for frame in frames])
@@ -107,34 +129,34 @@ def feature_extraction_alphapose(input_filepath: str, features_to_extract: list,
     elif np.count_nonzero(frame_nums == a) > 1:
       multi_body_count += 1
 
-  all_positions = np.stack(joint_positions).astype(float)
-
-  mean = np.mean(all_positions, axis=0)
-  var = np.var(all_positions, axis=0)
+  all_positions = np.stack(joint_positions).astype(float) # frames x 135 x 2
+  mean = np.mean(all_positions, axis=0) #135 x 2
+  var = np.var(all_positions, axis=0) #135 x 2
 
   standardized_no_sq = (all_positions - mean)/var
   standardized_sq = np.square(all_positions - mean)/var
-  standardized_count = 0
 
   all_features = []
-  joint_positions = np.array([joint_positions[17*i:17*(i+1)] for i in range(len(joint_positions)//17)])
-  prev_frame = joint_positions[0]
 
-  for frame_number, frame in enumerate(joint_positions):
+  prev_frame = joint_positions[0] #135 x 2
 
+  for frame_number, frame in enumerate(joint_positions): # number of frames
     features = []
-    for index in range(17):
+    for index in range(len(frame)): # number of features (135)
       features.extend(get_features(frame, index) + deltas(frame, prev_frame, index)) # Compare with previous version...
-      features.extend(list(standardized_no_sq[standardized_count+index]))
-      features.extend(list(standardized_sq[standardized_count+index]))
+      features.extend(list(standardized_no_sq[frame_number, index]))
+      features.extend(list(standardized_sq[frame_number, index]))
     
     features.extend(angle_wrist_elbow(frame))
     prev_frame = frame
-    standardized_count += 1
     
     all_features.append(features)
 
+  # print(np.asarray(all_features).shape)
+
   cols = feature_labels()
+  print(cols)
+  #print(np.asarray(cols).shape)
 
   df = pd.DataFrame(all_features, columns = cols)
 
@@ -143,8 +165,11 @@ def feature_extraction_alphapose(input_filepath: str, features_to_extract: list,
   df = df * scale
   df = df.round(6)
 
-  #print(f'AlphaPose DataFrame: {df}')
+  print(f'AlphaPose DataFrame: {df}')
   return df
+
+feature_extraction_alphapose("/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/AlphaPoseJson/Ishan_NewModels/alligator_above_bed/0000000000/alphapose_Ishan_NewModels.alligator_above_bed.0000000000.json", ['REar_x', 'Nose_x'])
+
 
   # To convert any file individually. Otherwise just use to_ark.sh 
   # print("This file converts raw data from AlphaPose .json to .ark")
