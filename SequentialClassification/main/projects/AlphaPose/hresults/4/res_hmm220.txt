@@ -1,0 +1,56 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/4/res_hmm220.mlf 
+Aligned transcription: data/4/htk/alphapose_Ishan_NewModels.snake_below_bed.0000000005.lab vs data/4/htk/alphapose_Ishan_NewModels.snake_below_bed.0000000005.rec
+ LAB: snake below bed 
+ REC: lion  in    bed 
+Aligned transcription: data/4/htk/alphapose_Ishan_NewModels.black_lion_above_grey_bed.0000000000.lab vs data/4/htk/alphapose_Ishan_NewModels.black_lion_above_grey_bed.0000000000.rec
+ LAB: black lion above grey bed 
+ REC:       lion above grey bed 
+Aligned transcription: data/4/htk/alphapose_Ishan_NewModels.white_lion_above_orange_wall.0000000002.lab vs data/4/htk/alphapose_Ishan_NewModels.white_lion_above_orange_wall.0000000002.rec
+ LAB: white lion above orange wall 
+ REC:       lion above orange wall 
+Aligned transcription: data/4/htk/alphapose_Ishan_NewModels.monkey_above_white_wall.0000000005.lab vs data/4/htk/alphapose_Ishan_NewModels.monkey_above_white_wall.0000000005.rec
+ LAB: monkey above white wall 
+ REC: monkey above       wall 
+Aligned transcription: data/4/htk/alphapose_Ishan_NewModels.snake_above_wall.0000000003.lab vs data/4/htk/alphapose_Ishan_NewModels.snake_above_wall.0000000003.rec
+ LAB:      snake above wall 
+ REC: blue snake above wall 
+Aligned transcription: data/4/htk/alphapose_Ishan_NewModels.white_snake_in_blue_flowers.0000000003.lab vs data/4/htk/alphapose_Ishan_NewModels.white_snake_in_blue_flowers.0000000003.rec
+ LAB: white snake in blue flowers 
+ REC:       snake in blue flowers 
+Aligned transcription: data/4/htk/alphapose_Ishan_NewModels.white_lion_in_grey_box.0000000006.lab vs data/4/htk/alphapose_Ishan_NewModels.white_lion_in_grey_box.0000000006.rec
+ LAB: white lion in grey box 
+ REC:       lion in grey box 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Wed Dec 23 13:53:03 2020            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/4/res_hmm220.mlf                               |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |   56  |  96.70   0.94   2.36   0.47   3.77  12.50 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w 
+       b   l   e   e   l   l   o   h   l   r   n   i   o   r   n   a   a 
+       o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l 
+       v   i       o   c   e       i   w   y       n   k   n   k   o   l 
+       e   g       w   k           r   e               e   g   e   n      Del [ %c / %e]
+abov  23   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+alli   0  12   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0   9   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+belo   0   0   0  21   0   0   0   0   0   0   1   0   0   0   0   0   0    0 [95.5/0.5]
+blac   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0    1
+blue   0   0   0   0   0  14   0   0   0   0   0   0   0   0   0   0   0    0
+ box   0   0   0   0   0   0  11   0   0   0   0   0   0   0   0   0   0    0
+chai   0   0   0   0   0   0   0  14   0   0   0   0   0   0   0   0   0    0
+flow   0   0   0   0   0   0   0   0  10   0   0   0   0   0   0   0   0    0
+grey   0   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0    0
+  in   0   0   0   0   0   0   0   0   0   0  11   0   0   0   0   0   0    0
+lion   0   0   0   0   0   0   0   0   0   0   0  13   0   0   0   0   0    0
+monk   0   0   0   0   0   0   0   0   0   0   0   0  11   0   0   0   0    0
+oran   0   0   0   0   0   0   0   0   0   0   0   0   0  15   0   0   0    0
+snak   0   0   0   0   0   0   0   0   0   0   0   1   0   0  19   0   0    0 [95.0/0.5]
+wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0    0
+wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   6    0
+whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    4
+Ins    0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0
