@@ -1,17 +1,17 @@
 # CopyCat HTK Pipeline
 
-A pipeline to run tracking Kinect or MediaPipe experiments on sign language feature data using either HMMs or SBHMMs
+A pipeline to run tracking Kinect, MediaPipe and AlphaPose experiments on sign language feature data using either HMMs or SBHMMs
 
 ## Getting Started
 
-* Navigate to either `projects/Kinect` or `projects/Mediapipe` depending on which hand tracking the experiment is for
-* Inside this directory, navigate to `configs/features.json` to select which features to use. `"all_features"` is the complete list of features that are available for the specific hand tracker. Select a subset of those features to add into `"selected_features"` to customize the list of features to run the experiment on. Note that `config_kinect_features.py` allows a faster way to print out which features you want to use instead of manually copying and pasting each one.
-* Inside this directory, navigate to `configs/features.json` `"feature_dir"` to select where the base directory of the features directory is located. More likely than not, this will not be required to change on the current system.
+* Navigate to either `projects/Kinect`, `projects/Mediapipe` or `projects/AlphaPose` depending on which hand tracking the experiment is for
+* Inside this directory, navigate to `configs/features.json` to select which features to use. `"all_features"` is the complete list of features that are available for the specific hand tracker. Select a subset of those features to add into `"selected_features"` to customize the list of features to run the experiment on. Note that `config_kinect_features.py` and `config_alphapose_features.py` allows a faster way to print out which features you want to use for Kinect and AlphaPose instead of manually copying and pasting each one.
+* Inside this directory, navigate to `configs/features.json` `"feature_dir"` to select where the base directory of the features directory is located. More likely than not, this will not be required to change on the current system. Note that for AlphaPose, you are required to run `test.py` on the Data in the `"feature_dir"` so that it aligns with the naming convention the pipeline uses.
 * `configs/` also contains other HMM hyperparameters such as `hhed#.conf` where it lists the number of mixture models and the number of states that will be used in the model. The current pipeline will iterate through these `hhed#.conf` files using the `train_iters` argument when running the experiment.
 
 ## Running the Pipeline
 
-* Open a terminal at `projects/Kinect` or `projects/Mediapipe` and execute (this is one specific example): `python3 driver.py --test_type cross_val --train_iters 25 50 75 100 120 140 160 180 200 220 --hmm_insertion_penalty 0 --cross_val_method leave_one_user_out --n_splits 4 --cv_parallel --parallel_jobs 5 --prepare_data` 
+* Open a terminal at `projects/Kinect`, `projects/Mediapipe` or `projects/AlphaPose` and execute (this is one specific example): `python3 driver.py --test_type cross_val --train_iters 25 50 75 100 120 140 160 180 200 220 --hmm_insertion_penalty 0 --cross_val_method leave_one_user_out --n_splits 4 --cv_parallel --parallel_jobs 5 --prepare_data` 
 * This will first prepare the HTK files for HMMs on all users data located at the base directory `"features_dir"` using user independent cross validation of 4 folds on 5 parallel processes. The specifics of some common options are given in the next section. Please look at `main/src/main.py` for the complete list of arguments that can be used with the pipeline.
 * **This helps to stay organized and is very important.** After the results have completed, please commit and push all changes with the message: `exp <Kinect/Mediapipe> <###> [comments]` where `###` is the excel row number of the experiment. In the excel sheet, please note relevant information, especially the model, tracker type, and command as well as the **average** word, sentence, insertion, and deletion error that is printed to terminal after the experiment ends.
 
