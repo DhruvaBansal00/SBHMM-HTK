@@ -9,7 +9,7 @@ def runOfflineProcessor(source: str, dest: str):
         source = f"\"{source}\""
     if " " in dest:
         dest = f"\"{dest}\""
-    command = f"./offline_processor_left {source} {dest}.json"
+    command = f"./offline_processor {source} {dest}.json"
     try:
         output = subprocess.check_output(command, shell=True)
     except:
@@ -25,5 +25,5 @@ def produceJSONS(source: str, destination: str):
 
 #print("Processing files in Extreme SSD")
 #produceJSONS("/media/aslr/Extreme SSD/ProcessingPipeline/DATA/Videos/**/*.mkv", "/media/aslr/U32 Shadow/ProcessingPipeline/DATA/Kinect_Data_July_2020")
-print("Processing files in U32 Shadow")
-produceJSONS("/media/aslr/U32 Shadow/ProcessingPipeline/DATA/Videos/10-02-20_ThadLeft_4K/*.mkv", "/media/aslr/U32 Shadow/ProcessingPipeline/DATA/Kinect_Left_Data_Flipped")
+print("Processing files")
+produceJSONS("/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Videos/07-24-20_Matthew_4KDepth/*/*/*.mkv", "/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Kinect_Data_2020/07-24-20_Matthew_4KDepth")

@@ -155,7 +155,7 @@ def feature_extraction_alphapose(input_filepath: str, features_to_extract: list,
   # print(np.asarray(all_features).shape)
 
   cols = feature_labels()
-  print(cols)
+  #print(cols)
   #print(np.asarray(cols).shape)
 
   df = pd.DataFrame(all_features, columns = cols)
@@ -165,7 +165,7 @@ def feature_extraction_alphapose(input_filepath: str, features_to_extract: list,
   df = df * scale
   df = df.round(6)
 
-  print(f'AlphaPose DataFrame: {df}')
+  #print(f'AlphaPose DataFrame: {df}')
   return df
 
 feature_extraction_alphapose("/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/AlphaPoseJson/Ishan_NewModels/alligator_above_bed/0000000000/alphapose_Ishan_NewModels.alligator_above_bed.0000000000.json", ['REar_x', 'Nose_x'])
