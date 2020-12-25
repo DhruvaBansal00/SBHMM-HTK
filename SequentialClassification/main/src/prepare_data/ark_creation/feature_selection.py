@@ -133,11 +133,11 @@ def select_features(input_filepath: str, features_to_extract: list,
     data = {int(key): value for key, value in data.items()}
 
     n_frames = len(data)
-    hands = np.zeros((2, n_frames, 5))
+    hands = np.zeros((2, n_frames, 15))
     landmarks = np.zeros((2, n_frames, 63))
-    faces = np.zeros((1, n_frames, 12))
+    noses = np.zeros((1, n_frames, 3))
+    shoulders = np.zeros((2, n_frames, 3))
     optical_flow = np.zeros((2, n_frames, 32))
-    pelvis_x, pelvis_y = 0,0
 
     for frame in sorted(data.keys()):
 
@@ -149,43 +149,17 @@ def select_features(input_filepath: str, features_to_extract: list,
             optical_flow[0, frame, :] = np.array(x_val)/10000000.0
             optical_flow[1, frame, :] = np.array(y_val)/10000000.0
         
-        if data[frame]['boxes'] is not None:
+        if data[frame]['pose']:
 
-            visible_hands = np.array(sorted([data[frame]['boxes'][str(i)] for i in range(len(data[frame]['boxes']))], key= lambda x:x[0]))
-
-            distances = {(i, j): cdist([hand[frame-1][:2]], [visible_hand[:2]]) 
-                        for i, hand 
-                        in enumerate(hands) 
-                        for j, visible_hand 
-                        in enumerate(visible_hands)}
-            
-            if len(visible_hands) == 1:
-                if frame == 0:
-                    for idx in range(len(hands)):
-                        hands[idx][frame] = visible_hands[0][:5] 
-                else:
-                    sorted_distances, _ = sorted(distances.items(), key=lambda t: t[1])
-                    prev_new_hand = sorted_distances[0][0]
-                    prev_keep_hand = prev_new_hand ^ 0b1
-                    new_hands = sorted([visible_hands[0][:5], hands[prev_keep_hand][frame-1]], key=lambda x: x[0])
-                    hands[:,frame,:] = new_hands
-            else:
-                visible_hand_assigned = {n: False for n in range(len(visible_hands))}
-                hand_assigned = {n: False for n in range(len(hands))}
-                new_hands = []
-                for grouping, _ in sorted(distances.items(), key=lambda t: t[1]):
-                    hand, visible_hand = grouping
-                    if not hand_assigned[hand] and not visible_hand_assigned[visible_hand]:
-                        hand_assigned[hand] = True
-                        visible_hand_assigned[visible_hand] = True
-                        new_hands.append(visible_hands[visible_hand][:5])
-                hands[:,frame,:] = sorted(new_hands, key=lambda x: x[0])
-
-            if pelvis_x == 0 and pelvis_y == 0:
-                hand_2 = hands[1,frame]
-                if hand_2[0] >= 0.5:
-                    pelvis_x = hand_2[0]
-                    pelvis_y = hand_2[1]
+            right_hand = np.array([data[frame]['pose'][str(i)] for i in range(13,22,2)]).reshape((-1,))
+            left_hand = np.array([data[frame]['pose'][str(i)] for i in range(14,23,2)]).reshape((-1,))
+            curr_nose = np.array(data[frame]['pose']["0"]).reshape((-1,))
+            curr_shoulders = np.array([data[frame]['pose'][str(i)] for i in range(11, 13)]).reshape((2,3))
+            hands[0, frame, :] = right_hand
+            hands[1, frame, :] = left_hand
+            shoulders[0, frame, :] = curr_shoulders[0, :]
+            shoulders[1, frame, :] = curr_shoulders[1, :]
+            noses[0, frame, :] = curr_nose
         
         if data[frame]['landmarks'] is not None:
             if data[frame]['boxes'] is None:
@@ -249,45 +223,6 @@ def select_features(input_filepath: str, features_to_extract: list,
         #             visible_landmark_assigned[visible_landmark] = True
         #             landmarks[landmark][frame] = visible_landmarks[visible_landmark]
                     
-        if data[frame]['faces'] is not None:
-            
-            means = np.array(np.mean(np.ma.masked_equal(faces, 0), axis=1))
-            visible_faces = []
-            for i in range(len(data[frame]['faces'])):
-                for j in range(len(data[frame]['faces'][str(i)])):
-                    visible_faces += data[frame]['faces'][str(i)][str(j)]
-            visible_faces = np.array(visible_faces).reshape(-1, 12)
-
-            for visible_face in visible_faces:
-                if len(faces) == 1 and not np.any(means):
-                    faces[0, frame] = visible_face
-                else:
-                    if not np.any(np.all(np.abs(means - visible_face) < 0.04, axis=1)):
-                        new_face = np.zeros((1, n_frames, 12))
-                        new_face[0, frame] = visible_face
-                        faces = np.concatenate([faces, new_face], axis=0)
-
-            means = np.array(np.mean(np.ma.masked_equal(faces, 0), axis=1))
-            distances = {(i, j): cdist([mean], [visible_face])[0][0] 
-                        for i, mean 
-                        in enumerate(means) 
-                        for j, visible_face 
-                        in enumerate(visible_faces)}
-
-            face_assigned = {n: False for n in range(len(visible_faces))}
-            mean_assigned = {n: False for n in range(len(means))}
-
-            for grouping, _ in sorted(distances.items(), key=lambda t: t[1]):
-                mean, face = grouping
-                if not mean_assigned[mean] and not face_assigned[face]:
-                    mean_assigned[mean] = True
-                    face_assigned[face] = True
-                    faces[mean][frame] = visible_faces[face]
-                    
-    means = np.array(np.mean(np.ma.masked_equal(faces, 0), axis=1))
-    n_faces = faces.shape[0]
-    main_face = means[np.argmax([len(set(np.nonzero(faces[i])[0])) for i in range(n_faces)])]
-
     select_hands = np.any(['hand' 
                            in feature 
                            for feature 
@@ -296,7 +231,7 @@ def select_features(input_filepath: str, features_to_extract: list,
                                in feature 
                                for feature 
                                in features_to_extract])
-    select_faces = np.any(['face' 
+    select_nose = np.any(['nose' 
                                 in feature
                                 for feature
                                 in features_to_extract]) 
@@ -312,21 +247,24 @@ def select_features(input_filepath: str, features_to_extract: list,
     if select_landmarks and not np.any(landmarks):
         return None
 
-    if select_faces and not np.any(faces):
+    if select_nose and not np.any(noses):
         return None
     
     if use_optical_flow and select_optical_flow and not np.any(optical_flow):
         return None
 
-    hands_ = ['left_hand', 'right_hand']
-    coordinates = ['x', 'y', 'w', 'h', 'rot']
-    hand_cols = [f'{hand}_{coordinate}' 
+    hands_ = ['right', 'left']
+    landmarks = ['elbow', 'wrist', 'pinky', 'index', 'thumb']
+    coordinates = ['x', 'y', 'z']
+    hand_cols = [f'{hand}_{landmark}_{coordinate}' 
                 for hand 
-                in hands_ 
+                in hands_
+                for landmark
+                in landmarks
                 for coordinate 
                 in coordinates]
 
-    hands_ = ['left', 'right']
+    hands_ = ['right', 'left']
     landmarks_ = ['landmark_{}'.format(i) for i in range(21)]
     coordinates = ['x', 'y', 'z']
     landmark_cols = ['{}_{}_{}'.format(hand, landmark, coordinate) 
@@ -337,11 +275,11 @@ def select_features(input_filepath: str, features_to_extract: list,
                     for coordinate 
                     in coordinates]
 
-    faces_ = ['face_{}'.format(i) for i in range(6)]
-    coordinates = ['x', 'y']
-    face_cols = ['{}_{}'.format(face, coordinate)
-                for face
-                in faces_
+    nose_ = ['nose']
+    coordinates = ['x', 'y', 'z']
+    nose_cols = ['{}_{}'.format(nose, coordinate)
+                for nose
+                in nose_
                 for coordinate
                 in coordinates]
     
@@ -352,12 +290,12 @@ def select_features(input_filepath: str, features_to_extract: list,
                 for coordinate
                 in coordinates]
 
-    cols = hand_cols + landmark_cols + face_cols + optical_flow_cols
+    cols = hand_cols + landmark_cols + nose_cols + optical_flow_cols
     hands = np.concatenate([hands[0], hands[1]], axis=1)
     landmarks = np.concatenate([landmarks[0], landmarks[1]], axis=1)
-    faces_to_display = faces[np.argmax([len(set(np.nonzero(faces[i])[0])) for i in range(n_faces)])]
     optical_flow = np.concatenate([optical_flow[0], optical_flow[1]], axis=1)
-    all_features = np.concatenate([hands, landmarks, faces_to_display, optical_flow], axis=1)
+    noses = np.reshape(noses, (-1, 3))
+    all_features = np.concatenate([hands, landmarks, noses, optical_flow], axis=1)
     df = pd.DataFrame(all_features, columns=cols)
 
     df = df.replace(0, np.nan)
@@ -390,14 +328,6 @@ def select_features(input_filepath: str, features_to_extract: list,
         
         df[x_cols] -= main_face[-2]
         df[y_cols] -= main_face[-1]
-
-    if center_on_pelvis:
-        
-        x_cols = [column for column in df.columns if 'x' in column]
-        y_cols = [column for column in df.columns if 'y' in column]
-        
-        df[x_cols] -= pelvis_x
-        df[y_cols] -= pelvis_y
 
     df['horizontal_hand_dist'] = df['right_hand_x'] - df['left_hand_x']
     df['vertical_hand_dist'] = df['right_hand_y'] - df['left_hand_y']
