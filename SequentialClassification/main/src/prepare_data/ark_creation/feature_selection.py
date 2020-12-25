@@ -90,7 +90,7 @@ def landmark_box_dist(landmark: list, hand: list) -> float:
 
 def select_features(input_filepath: str, features_to_extract: list,
                     interpolation_method: str = 'spline', order: int = 3,
-                    center_on_face: bool = False, center_on_pelvis: bool = False, is_2d: bool = True,
+                    center_on_nose: bool = False, center_on_pelvis: bool = False, is_2d: bool = True,
                     scale: int = 10, drop_na: bool = True, do_interpolate: bool = False, use_optical_flow = False) -> pd.DataFrame:
     """Processes raw features extracted from MediaPipe/Kinect, and
     selects the specified features for use during training of HMMs.
@@ -110,7 +110,7 @@ def select_features(input_filepath: str, features_to_extract: list,
     order : int, optional, by default 3
         Hyperparameter needed for certain interpolation methods.
 
-    center_on_face : bool, optional, by default True
+    center_on_nose : bool, optional, by default False
         Whether to center the features on the main face.
 
     is_2d : bool, optional, by default True
@@ -161,67 +161,17 @@ def select_features(input_filepath: str, features_to_extract: list,
             shoulders[1, frame, :] = curr_shoulders[1, :]
             noses[0, frame, :] = curr_nose
         
-        if data[frame]['landmarks'] is not None:
-            if data[frame]['boxes'] is None:
+        if data[frame]['landmarks']:
+            if data[frame]['pose'] is None:
                 raise Exception('Red Alert: Our assumption that landmarks are only provided when we have boxes is incorrect')
             else:
-                visible_landmarks = []
-                for i in range(len(data[frame]['landmarks'])):
-                    for j in range(len(data[frame]['landmarks'][str(i)])):
-                        visible_landmarks += data[frame]['landmarks'][str(i)][str(j)]
-                visible_landmarks = np.array(visible_landmarks).reshape(-1, 63)
-                curr_hands = hands[:,frame,:]
-
-                distances = {(i, j): landmark_box_dist(landmark, hand)
-                            for i, hand in enumerate(curr_hands)
-                            for j, landmark in enumerate(visible_landmarks)}
-                if len(visible_landmarks) == 1:
-                    if frame == 0:
-                        for idx in range(len(landmarks)):
-                            landmarks[idx][frame] = visible_landmarks[0]   
-                    else:
-                        sorted_distances, _ = sorted(distances.items(), key=lambda t: t[1])
-                        prev_new_landmark = sorted_distances[0][0]
-                        prev_keep_landmark = prev_new_landmark ^ 0b1
-                        landmarks[prev_new_landmark,frame,:] = visible_landmarks[0]
-                        landmarks[prev_keep_landmark,frame,:] = landmarks[prev_keep_landmark,frame-1,:]
-                
-                else:
-                    visible_landmark_assigned = {n: False for n in range(len(visible_hands))}
-                    curr_hand_assigned = {n: False for n in range(len(hands))}
-                    for grouping, _ in sorted(distances.items(), key=lambda t: t[1]):
-                        hand, visible_landmark = grouping
-                        if not curr_hand_assigned[hand] and not visible_landmark_assigned[visible_landmark]:
-                            curr_hand_assigned[hand] = True
-                            visible_landmark_assigned[visible_landmark] = True
-                            landmarks[hand, frame, :] = visible_landmarks[visible_landmark]
-                    
-        # if data[frame]['landmarks'] is not None:
-        
-        #     visible_landmarks = []
-        #     for i in range(len(data[frame]['landmarks'])):
-        #         for j in range(len(data[frame]['landmarks'][str(i)])):
-        #             visible_landmarks += data[frame]['landmarks'][str(i)][str(j)]
-        #     visible_landmarks = np.array(visible_landmarks).reshape(-1, 63)
-
-        #     if len(visible_landmarks) == 1:
-        #         landmarks[:, frame] = visible_landmarks[0]
-
-        #     distances = {(i, j): cdist([landmark[frame-1]], [visible_landmark]) 
-        #                 for i, landmark 
-        #                 in enumerate(landmarks) 
-        #                 for j, visible_landmark 
-        #                 in enumerate(visible_landmarks)}
-
-        #     visible_landmark_assigned = {n: False for n in range(len(visible_landmarks))}
-        #     landmark_assigned = {n: False for n in range(len(landmarks))}
-
-        #     for grouping, _ in sorted(distances.items(), key=lambda t: t[1]):
-        #         landmark, visible_landmark = grouping
-        #         if not landmark_assigned[landmark] and not visible_landmark_assigned[visible_landmark]:
-        #             landmark_assigned[landmark] = True
-        #             visible_landmark_assigned[visible_landmark] = True
-        #             landmarks[landmark][frame] = visible_landmarks[visible_landmark]
+                visible_landmarks = [data[frame]['landmarks']["0"], data[frame]['landmarks']["1"]]
+                if visible_landmarks[0]:
+                    left_landmark = np.array([visible_landmarks[0][str(i)] for i in range(21)]).reshape((-1,))
+                    landmarks[1, frame, :] = left_landmark
+                if visible_landmarks[1]:
+                    right_landmark = np.array([visible_landmarks[1][str(i)] for i in range(21)]).reshape((-1,))
+                    landmarks[0, frame, :] = right_landmark
                     
     select_hands = np.any(['hand' 
                            in feature 
@@ -316,18 +266,15 @@ def select_features(input_filepath: str, features_to_extract: list,
             print(input_filepath)
             return None
 
-    if is_2d:
-        
-        z_landmark_cols = [column for column in landmark_cols if 'z' in column]
-        df = df.drop(z_landmark_cols, axis=1)
-
-    if center_on_face:
+    if center_on_nose:
         
         x_cols = [column for column in df.columns if 'x' in column]
         y_cols = [column for column in df.columns if 'y' in column]
+        z_cols = [column for column in df.columns if 'z' in column]
         
-        df[x_cols] -= main_face[-2]
-        df[y_cols] -= main_face[-1]
+        df[x_cols] -= noses[0]
+        df[y_cols] -= noses[1]
+        df[z_cols] -= noses[2]
 
     df['horizontal_hand_dist'] = df['right_hand_x'] - df['left_hand_x']
     df['vertical_hand_dist'] = df['right_hand_y'] - df['left_hand_y']
