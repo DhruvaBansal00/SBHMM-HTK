@@ -163,7 +163,6 @@ def main():
     else:
         hresults_file = f'hresults/res_hmm{args.train_iters[-1]-1}.txt'
 
-
     if args.prepare_data:
         
         prepare_data(features_config, args.users)
