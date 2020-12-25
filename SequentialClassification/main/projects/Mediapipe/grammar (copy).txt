@@ -1,0 +1,2 @@
+$word = (away | box | breakfast | chicken | drive | gone | jump | squirrel | zipper);
+(sil0 $word sil1)
