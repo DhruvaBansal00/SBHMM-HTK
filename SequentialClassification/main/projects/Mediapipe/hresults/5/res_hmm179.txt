@@ -14,6 +14,9 @@ Aligned transcription: data/5/htk/08-11-20_Linda_4KDepth.monkey_above_white_wall
 Aligned transcription: data/5/htk/11-08-20_Ishan_4KDepth.blue_monkey_above_grey_box.0000000005.lab vs data/5/htk/11-08-20_Ishan_4KDepth.blue_monkey_above_grey_box.0000000005.rec
  LAB: blue monkey above grey box   
  REC:      monkey above      wagon 
+Aligned transcription: data/5/htk/08-15-20_Prerna_4KDepth.snake_in_flowers.0000000004.lab vs data/5/htk/08-15-20_Prerna_4KDepth.snake_in_flowers.0000000004.rec
+ LAB: snake in      flowers 
+ REC: snake in blue flowers 
 Aligned transcription: data/5/htk/11-08-20_Colby_4KDepth.alligator_in_orange_flowers.0000000004.lab vs data/5/htk/11-08-20_Colby_4KDepth.alligator_in_orange_flowers.0000000004.rec
  LAB: alligator in orange flowers 
  REC: alligator in orange bed     
@@ -51,13 +54,13 @@ Aligned transcription: data/5/htk/08-08-20_Ishan_4K+Depth.monkey_in_orange_flowe
  LAB: monkey in orange flowers 
  REC: monkey in        flowers 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Fri Dec 25 06:56:48 2020            |
+    | HTK Results Analysis at Fri Dec 25 09:16:21 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/5/res_hmm179.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |  390  |  98.45   0.91   0.65   0.00   1.55   4.36 |
+    | Sum/Avg |  390  |  98.45   0.91   0.65   0.06   1.62   4.62 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -83,4 +86,4 @@ snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0  86   0   0   0    
 wago   0   0   0   0   0   0   1   1   0   0   0   0   0   0   0  42   0   0    0 [95.5/0.1]
 wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  70   0    0
 whit   0   0   0   0   0   0   0   0   0   0   0   0   0   2   0   0   0  37    0 [94.9/0.1]
-Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Ins    0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0

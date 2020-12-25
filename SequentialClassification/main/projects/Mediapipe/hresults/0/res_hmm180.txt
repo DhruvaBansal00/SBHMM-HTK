@@ -42,7 +42,7 @@ Aligned transcription: data/0/htk/11-01-20_Ishan_4KDepth.lion_above_blue_bed.000
  LAB: lion above blue bed 
  REC: lion above      bed 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Fri Dec 25 06:58:56 2020            |
+    | HTK Results Analysis at Fri Dec 25 09:20:07 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/0/res_hmm180.mlf                               |
     |=============================================================|

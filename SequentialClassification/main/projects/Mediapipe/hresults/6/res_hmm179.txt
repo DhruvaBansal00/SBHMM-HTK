@@ -57,7 +57,7 @@ Aligned transcription: data/6/htk/07-24-20_Matthew_4KDepth.white_lion_in_grey_bo
  LAB: white lion      in grey box 
  REC: white alligator in grey box 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Fri Dec 25 06:52:39 2020            |
+    | HTK Results Analysis at Fri Dec 25 09:10:00 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/6/res_hmm179.mlf                               |
     |=============================================================|
