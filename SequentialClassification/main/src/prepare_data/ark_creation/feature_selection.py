@@ -133,10 +133,9 @@ def select_features(input_filepath: str, features_to_extract: list,
     data = {int(key): value for key, value in data.items()}
 
     n_frames = len(data)
-    hands = np.zeros((2, n_frames, 15))
+    hands = np.zeros((2, n_frames, 18))
     landmarks = np.zeros((2, n_frames, 63))
     noses = np.zeros((1, n_frames, 3))
-    shoulders = np.zeros((2, n_frames, 3))
     optical_flow = np.zeros((2, n_frames, 32))
 
     for frame in sorted(data.keys()):
@@ -151,14 +150,11 @@ def select_features(input_filepath: str, features_to_extract: list,
         
         if data[frame]['pose']:
 
-            right_hand = np.array([data[frame]['pose'][str(i)] for i in range(13,22,2)]).reshape((-1,))
-            left_hand = np.array([data[frame]['pose'][str(i)] for i in range(14,23,2)]).reshape((-1,))
+            right_hand = np.array([data[frame]['pose'][str(i)] for i in range(11,22,2)]).reshape((-1,))
+            left_hand = np.array([data[frame]['pose'][str(i)] for i in range(12,23,2)]).reshape((-1,))
             curr_nose = np.array(data[frame]['pose']["0"]).reshape((-1,))
-            curr_shoulders = np.array([data[frame]['pose'][str(i)] for i in range(11, 13)]).reshape((2,3))
             hands[0, frame, :] = right_hand
             hands[1, frame, :] = left_hand
-            shoulders[0, frame, :] = curr_shoulders[0, :]
-            shoulders[1, frame, :] = curr_shoulders[1, :]
             noses[0, frame, :] = curr_nose
         
         if data[frame]['landmarks']:
@@ -204,7 +200,7 @@ def select_features(input_filepath: str, features_to_extract: list,
         return None
 
     hands_ = ['right', 'left']
-    landmarks = ['elbow', 'wrist', 'pinky', 'index', 'thumb']
+    landmarks = ['shoulder', 'elbow', 'wrist', 'pinky', 'index', 'thumb']
     coordinates = ['x', 'y', 'z']
     hand_cols = [f'{hand}_{landmark}_{coordinate}' 
                 for hand 
