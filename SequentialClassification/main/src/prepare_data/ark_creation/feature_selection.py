@@ -200,13 +200,13 @@ def select_features(input_filepath: str, features_to_extract: list,
         return None
 
     hands_ = ['right', 'left']
-    landmarks = ['shoulder', 'elbow', 'wrist', 'pinky', 'index', 'thumb']
+    landmarks_ = ['shoulder', 'elbow', 'wrist', 'pinky', 'index', 'thumb']
     coordinates = ['x', 'y', 'z']
     hand_cols = [f'{hand}_{landmark}_{coordinate}' 
                 for hand 
                 in hands_
                 for landmark
-                in landmarks
+                in landmarks_
                 for coordinate 
                 in coordinates]
 
