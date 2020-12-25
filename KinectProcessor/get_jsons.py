@@ -23,7 +23,7 @@ def produceJSONS(source: str, destination: str):
         destinationFile = os.path.join(destination, name)
         runOfflineProcessor(video, destinationFile)            
 
-print("Processing files in Extreme SSD")
-produceJSONS("/media/aslr/Extreme SSD/ProcessingPipeline/DATA/Videos/**/*.mkv", "/media/aslr/U32 Shadow/ProcessingPipeline/DATA/Kinect_Data_July_2020")
-print("Processing files in U32 Shadow")
-produceJSONS("/media/aslr/U32 Shadow/ProcessingPipeline/DATA/Videos/**/*.mkv", "/media/aslr/U32 Shadow/ProcessingPipeline/DATA/Kinect_Data_July_2020")
+#print("Processing files in Extreme SSD")
+#produceJSONS("/media/aslr/Extreme SSD/ProcessingPipeline/DATA/Videos/**/*.mkv", "/media/aslr/U32 Shadow/ProcessingPipeline/DATA/Kinect_Data_July_2020")
+print("Processing files")
+produceJSONS("/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Videos/07-24-20_Matthew_4KDepth/*/*/*.mkv", "/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Kinect_Data_2020/07-24-20_Matthew_4KDepth")

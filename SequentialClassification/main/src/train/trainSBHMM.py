@@ -23,14 +23,15 @@ from src.prepare_data.ark_creation import _create_ark_file
 from src.prepare_data.htk_creation import create_htk_files
 
 
-def createNewArkFile(arkFile: str, trainedClassifier: object, pca_components: int, no_pca: bool, 
+def createNewArkFile(arkFile: str, trainedClassifier: object, pca_components: int, pca: bool, 
                     arkFileSave: str, parallel: bool, n_jobs: int):
     content = read_ark_files(arkFile)
     newContent = trainedClassifier.getTransformedFeatures(content, parallel, n_jobs)
     
-    if not no_pca:
-        pca = PCA(n_components=pca_components)
-        newContent = pca.fit_transform(newContent)
+    if pca:
+        pca_model = PCA(n_components=pca_components)
+        newContent = pca_model.fit_transform(newContent)
+        newContent *= 1000
 
     num_features = newContent.shape[1]
     arkFileName = arkFile.split("/")[-1]
@@ -43,7 +44,7 @@ def createNewArkFile(arkFile: str, trainedClassifier: object, pca_components: in
 
 def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: float, 
             transition_prob: float, pca_components: int, sbhmm_iters: list, 
-            include_state: bool, include_index: bool, no_pca: bool, hmm_insertion_penalty: float, sbhmm_insertion_penalty: float,
+            include_state: bool, include_index: bool, pca: bool, hmm_insertion_penalty: float, sbhmm_insertion_penalty: float,
             n_jobs: int, parallel: bool, trainMultipleClassifiers: bool, knn_neighbors: str, classifier: str,
             beam_threshold: float, fold: str = "") -> object:
     """Trains the SBHMM using HTK. First completes a loop of
@@ -91,7 +92,7 @@ def trainSBHMM(sbhmm_cycles: int, train_iters: list, mean: float, variance: floa
         num_features = 0
         
         for arkFile in tqdm(arkFiles):
-            num_features = createNewArkFile(arkFile, trainedClassifier, pca_components, no_pca, arkFileSave, parallel, n_jobs)
+            num_features = createNewArkFile(arkFile, trainedClassifier, pca_components, pca, arkFileSave, parallel, n_jobs)
         
         print("Creating new .htk Files")
         create_htk_files(htkFileSave, arkFileSave + "*ark")

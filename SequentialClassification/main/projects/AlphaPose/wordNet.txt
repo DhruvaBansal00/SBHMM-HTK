@@ -1,0 +1,93 @@
+VERSION=1.0
+N=32   L=59   
+I=0    W=SENT-END            
+I=1    W=chair               
+I=2    W=!NULL               
+I=3    W=wagon               
+I=4    W=flowers             
+I=5    W=box                 
+I=6    W=wall                
+I=7    W=bed                 
+I=8    W=grey                
+I=9    W=!NULL               
+I=10   W=blue                
+I=11   W=white               
+I=12   W=orange              
+I=13   W=black               
+I=14   W=in                  
+I=15   W=!NULL               
+I=16   W=above               
+I=17   W=below               
+I=18   W=monkey              
+I=19   W=!NULL               
+I=20   W=lion                
+I=21   W=snake               
+I=22   W=alligator           
+I=23   W=grey                
+I=24   W=!NULL               
+I=25   W=blue                
+I=26   W=white               
+I=27   W=orange              
+I=28   W=black               
+I=29   W=SENT-START          
+I=30   W=!NULL               
+I=31   W=!NULL               
+J=0     S=2    E=0    
+J=1     S=9    E=1    
+J=2     S=15   E=1    
+J=3     S=1    E=2    
+J=4     S=3    E=2    
+J=5     S=4    E=2    
+J=6     S=5    E=2    
+J=7     S=6    E=2    
+J=8     S=7    E=2    
+J=9     S=9    E=3    
+J=10    S=15   E=3    
+J=11    S=9    E=4    
+J=12    S=15   E=4    
+J=13    S=9    E=5    
+J=14    S=15   E=5    
+J=15    S=9    E=6    
+J=16    S=15   E=6    
+J=17    S=9    E=7    
+J=18    S=15   E=7    
+J=19    S=15   E=8    
+J=20    S=8    E=9    
+J=21    S=10   E=9    
+J=22    S=11   E=9    
+J=23    S=12   E=9    
+J=24    S=13   E=9    
+J=25    S=15   E=10   
+J=26    S=15   E=11   
+J=27    S=15   E=12   
+J=28    S=15   E=13   
+J=29    S=19   E=14   
+J=30    S=14   E=15   
+J=31    S=16   E=15   
+J=32    S=17   E=15   
+J=33    S=19   E=16   
+J=34    S=19   E=17   
+J=35    S=24   E=18   
+J=36    S=29   E=18   
+J=37    S=18   E=19   
+J=38    S=20   E=19   
+J=39    S=21   E=19   
+J=40    S=22   E=19   
+J=41    S=24   E=20   
+J=42    S=29   E=20   
+J=43    S=24   E=21   
+J=44    S=29   E=21   
+J=45    S=24   E=22   
+J=46    S=29   E=22   
+J=47    S=29   E=23   
+J=48    S=23   E=24   
+J=49    S=25   E=24   
+J=50    S=26   E=24   
+J=51    S=27   E=24   
+J=52    S=28   E=24   
+J=53    S=29   E=25   
+J=54    S=29   E=26   
+J=55    S=29   E=27   
+J=56    S=29   E=28   
+J=57    S=31   E=29   
+J=58    S=0    E=30   
