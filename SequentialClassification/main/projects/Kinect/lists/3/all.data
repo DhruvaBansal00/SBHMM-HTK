@@ -1,9 +1,22 @@
+data/3/htk/08-12-20_Kanksha_4K.snake_below_blue_chair.0000000007.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_above_blue_bed.0000000007.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_below_blue_bed.0000000007.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_below_blue_chair.0000000007.htk
+data/3/htk/08-12-20_Kanksha_4K.black_monkey_in_white_flowers.0000000007.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_below_black_chair.0000000007.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_below_chair.0000000007.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_in_grey_box.0000000007.htk
 data/3/htk/08-13-20_Thad_4K.orange_alligator_in_grey_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.snake_in_flowers.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.black_lion_in_blue_wagon.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.white_snake_in_blue_flowers.0000000005.htk
 data/3/htk/08-13-20_Thad_4K.grey_monkey_below_orange_chair.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.blue_alligator_above_grey_wall.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_blue_wagon.0000000001.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.black_snake_below_blue_chair.0000000001.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.white_alligator_above_blue_wall.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.white_lion_above_orange_wall.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.black_monkey_in_white_flowers.0000000001.htk
@@ -13,7 +26,12 @@ data/3/htk/08-10-20_David_4K.orange_alligator_in_grey_flowers.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.blue_monkey_above_grey_box.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.black_lion_above_grey_bed.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.grey_alligator_below_blue_flowers.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_below_orange_chair.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.orange_alligator_in_grey_flowers.0000000005.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.snake_above_box.0000000004.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.monkey_below_blue_chair.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_orange_wagon.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_black_chair.0000000005.htk
@@ -24,7 +42,11 @@ data/3/htk/08-10-20_David_4K.monkey_above_white_wall.0000000004.htk
 data/3/htk/08-14-20_Thad_4K.lion_above_bed.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.lion_above_box.0000000003.htk
 data/3/htk/08-10-20_David_4K.grey_alligator_below_blue_flowers.0000000005.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.snake_below_black_chair.0000000003.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.grey_snake_below_blue_chair.0000000002.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.alligator_above_blue_wagon.0000000002.htk
 data/3/htk/08-10-20_David_4K.monkey_below_wagon.0000000000.htk
 data/3/htk/08-10-20_David_4K.lion_below_chair.0000000003.htk
@@ -33,27 +55,28 @@ data/3/htk/08-11-20_Linda_4K.monkey_in_grey_box.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_orange_wagon.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.grey_monkey_below_orange_chair.0000000000.htk
 data/3/htk/08-10-20_David_4K.lion_above_flowers.0000000004.htk
-data/3/htk/08-14-20_Matthew_4K.snake_in_grey_wagon.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_in_orange_flowers.0000000002.htk
 data/3/htk/08-10-20_David_4K.alligator_in_box.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_orange_bed.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.snake_above_box.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_in_box.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.black_lion_in_blue_wagon.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.white_lion_in_grey_box.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.lion_below_blue_bed.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_chair.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_orange_bed.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.grey_monkey_below_orange_chair.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.lion_above_orange_bed.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.black_lion_above_grey_bed.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_orange_wagon.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.blue_alligator_above_grey_wall.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_blue_flowers.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.black_lion_in_blue_wagon.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.snake_above_wall.0000000006.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_in_flowers.0000000005.htk
+data/3/htk/08-15-20_Prerna_4K.monkey_above_white_wall.0000000000.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.alligator_above_wall.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_above_white_wall.0000000000.htk
 data/3/htk/08-14-20_Matthew_4K.orange_monkey_below_grey_flowers.0000000001.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.lion_below_orange_chair.0000000005.htk
 data/3/htk/08-13-20_Thad_4K.snake_in_flowers.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.orange_monkey_in_grey_box.0000000004.htk
@@ -61,6 +84,16 @@ data/3/htk/08-08-20_Ishan_4k.lion_below_chair.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.grey_snake_below_blue_chair.0000000005.htk
 data/3/htk/08-13-20_Thad_4K.white_lion_in_grey_box.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.lion_below_chair.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.black_monkey_in_white_flowers.0000000003.htk
+data/3/htk/08-11-20_Linda_4K.snake_below_black_chair.0000000004.htk
+data/3/htk/08-14-20_Thad_4K.alligator_above_bed.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_blue_wagon.0000000003.htk
+data/3/htk/08-15-20_Prerna_4K.lion_above_bed.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_below_wagon.0000000001.htk
+data/3/htk/08-10-20_David_4K.orange_monkey_below_grey_flowers.0000000000.htk
+data/3/htk/08-10-20_David_4K.lion_above_wall.0000000001.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wagon.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.black_monkey_in_white_flowers.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_black_chair.0000000004.htk
@@ -70,111 +103,152 @@ data/3/htk/08-15-20_Prerna_4K.lion_above_bed.0000000004.htk
 data/3/htk/08-10-20_David_4K.orange_monkey_below_grey_flowers.0000000000.htk
 data/3/htk/08-10-20_David_4K.lion_above_wall.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.snake_below_bed.0000000001.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.blue_monkey_above_grey_box.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_in_wagon.0000000001.htk
 data/3/htk/08-10-20_David_4K.monkey_in_grey_box.0000000000.htk
 data/3/htk/08-10-20_David_4K.lion_below_blue_bed.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.white_lion_above_orange_wall.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_chair.0000000003.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.grey_snake_below_blue_chair.0000000000.htk
+>>>>>>> master
 data/3/htk/08-14-20_Thad_4K.lion_above_flowers.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.monkey_in_blue_box.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.snake_below_black_chair.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.lion_below_chair.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.lion_below_blue_bed.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.lion_above_box.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.snake_below_bed.0000000002.htk
+=======
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.lion_above_grey_wall.0000000005.htk
 data/3/htk/08-11-20_Linda_4K.alligator_in_box.0000000004.htk
 data/3/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_chair.0000000005.htk
 data/3/htk/08-11-20_Linda_4K.white_lion_in_grey_box.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wall.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.lion_above_blue_bed.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_bed.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.white_alligator_above_blue_wall.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_bed.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_orange_bed.0000000004.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_below_orange_chair.0000000005.htk
+=======
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.white_alligator_above_blue_wall.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.grey_monkey_below_orange_chair.0000000005.htk
 data/3/htk/08-08-20_Ishan_4k.white_alligator_above_blue_wall.0000000001.htk
 data/3/htk/08-10-20_David_4K.monkey_below_bed.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_black_chair.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.black_alligator_above_orange_wagon.0000000004.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_bed.0000000003.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000003.htk
+>>>>>>> master
 data/3/htk/08-14-20_Thad_4K.alligator_above_bed.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.lion_below_blue_bed.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.black_monkey_in_white_flowers.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.monkey_below_blue_chair.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.lion_above_grey_wall.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_above_white_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.monkey_in_grey_box.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.snake_in_flowers.0000000003.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_in_wagon.0000000004.htk
+=======
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.snake_in_grey_wagon.0000000005.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_box.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.white_alligator_above_blue_wall.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_box.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.blue_monkey_above_grey_box.0000000001.htk
 data/3/htk/08-10-20_David_4K.white_snake_in_blue_flowers.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.snake_above_wall.0000000000.htk
-data/3/htk/08-14-20_Matthew_4K.white_alligator_above_blue_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.snake_below_chair.0000000004.htk
 data/3/htk/08-14-20_Thad_4K.black_alligator_above_orange_wagon.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_orange_wagon.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.snake_above_wall.0000000004.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.monkey_in_grey_box.0000000004.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.lion_above_bed.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.grey_snake_below_blue_chair.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.snake_in_grey_wagon.0000000001.htk
 data/3/htk/08-10-20_David_4K.alligator_above_wall.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.alligator_in_orange_flowers.0000000001.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.grey_monkey_below_orange_chair.0000000004.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.alligator_above_blue_wagon.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_in_orange_flowers.0000000003.htk
 data/3/htk/08-14-20_Thad_4K.grey_alligator_below_blue_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.white_alligator_above_blue_wall.0000000005.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_blue_bed.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.grey_monkey_below_orange_chair.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_wall.0000000001.htk
 data/3/htk/08-10-20_David_4K.lion_below_chair.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.black_snake_below_blue_chair.0000000002.htk
+=======
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.blue_monkey_above_grey_box.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_blue_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.lion_below_orange_chair.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.lion_below_chair.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-08-20_Ishan_4k.lion_above_blue_bed.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.orange_alligator_in_grey_flowers.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_above_blue_bed.0000000002.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.0000000005.htk
 data/3/htk/07-24-20_Matthew_4K.alligator_above_wall.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_blue_bed.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.lion_above_blue_bed.0000000001.htk
 data/3/htk/08-14-20_Matthew_4K.lion_above_wall.0000000001.htk
+>>>>>>> master
 data/3/htk/08-14-20_Thad_4K.lion_below_chair.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_bed.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.snake_in_grey_wagon.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_bed.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.snake_above_wall.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.white_snake_in_blue_flowers.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.blue_monkey_above_grey_box.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_below_blue_chair.0000000006.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.blue_alligator_above_grey_wall.0000000002.htk
+data/3/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000002.htk
+data/3/htk/08-15-20_Prerna_4K.monkey_below_wagon.0000000005.htk
+data/3/htk/08-12-20_Kanksha_4K.white_alligator_above_blue_wall.0000000003.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.lion_above_flowers.0000000003.htk
 data/3/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_below_wagon.0000000005.htk
 data/3/htk/07-24-20_Matthew_4K.orange_alligator_in_grey_flowers.0000000002.htk
 data/3/htk/07-24-20_Matthew_4K.lion_above_orange_bed.0000000002.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.orange_snake_below_blue_flowers.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_box.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.alligator_in_wagon.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_in_box.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.monkey_above_chair.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_in_wagon.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_bed.0000000005.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_wall.0000000005.htk
 data/3/htk/08-14-20_Thad_4K.lion_above_orange_bed.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.monkey_in_box.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_orange_wagon.0000000004.htk
-data/3/htk/08-14-20_Matthew_4K.monkey_below_blue_chair.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.lion_above_blue_bed.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_blue_wall.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_blue_wall.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_flowers.0000000001.htk
-data/3/htk/08-14-20_Matthew_4K.black_snake_below_blue_chair.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_above_orange_wagon.0000000005.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.monkey_above_wall.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.grey_monkey_below_orange_chair.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_in_orange_flowers.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_chair.0000000001.htk
+data/3/htk/08-15-20_Prerna_4K.lion_below_orange_chair.0000000000.htk
+data/3/htk/08-11-20_Linda_4K.lion_above_grey_wall.0000000003.htk
+data/3/htk/08-10-20_David_4K.lion_below_blue_bed.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.grey_snake_below_blue_chair.0000000002.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.monkey_in_orange_flowers.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_above_wall.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.monkey_in_orange_flowers.0000000000.htk
@@ -186,24 +260,32 @@ data/3/htk/07-24-20_Matthew_4K.black_monkey_in_white_flowers.0000000001.htk
 data/3/htk/08-14-20_Matthew_4K.lion_above_flowers.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.lion_below_blue_bed.0000000002.htk
 data/3/htk/08-14-20_Matthew_4K.lion_above_box.0000000001.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.alligator_above_wall.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.black_snake_below_blue_chair.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.monkey_below_blue_chair.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.monkey_in_box.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_bed.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_grey_wall.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_blue_bed.0000000007.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.alligator_above_black_wall.0000000001.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.monkey_in_grey_box.0000000003.htk
 data/3/htk/08-10-20_David_4K.lion_above_blue_bed.0000000005.htk
-data/3/htk/08-14-20_Matthew_4K.blue_alligator_above_grey_wall.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.snake_below_blue_chair.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.snake_in_grey_wagon.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.snake_above_box.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.black_snake_below_blue_chair.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-13-20_Thad_4K.lion_above_flowers.0000000002.htk
+data/3/htk/08-15-20_Prerna_4K.white_snake_in_blue_flowers.0000000003.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.lion_above_flowers.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.lion_above_flowers.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.white_snake_in_blue_flowers.0000000003.htk
 data/3/htk/08-14-20_Matthew_4K.orange_alligator_in_grey_flowers.0000000001.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.snake_in_flowers.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_orange_flowers.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.snake_above_box.0000000000.htk
@@ -218,14 +300,23 @@ data/3/htk/08-11-20_Linda_4K.white_lion_above_orange_wall.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.orange_monkey_below_grey_flowers.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_bed.0000000003.htk
 data/3/htk/08-10-20_David_4K.alligator_above_bed.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.grey_snake_below_blue_chair.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.orange_snake_below_blue_flowers.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.white_snake_in_blue_flowers.0000000004.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.monkey_above_wall.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_in_orange_flowers.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.monkey_below_bed.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.orange_monkey_in_grey_box.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.black_monkey_in_white_flowers.0000000005.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_bed.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_below_blue_bed.0000000004.htk
+=======
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.snake_below_bed.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.orange_alligator_in_grey_flowers.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.snake_above_box.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.blue_alligator_above_grey_wall.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.snake_above_wall.0000000001.htk
@@ -236,24 +327,29 @@ data/3/htk/08-10-20_David_4K.white_lion_in_grey_box.0000000003.htk
 data/3/htk/08-10-20_David_4K.lion_above_box.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.snake_below_blue_flowers.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.lion_above_box.0000000002.htk
-data/3/htk/08-14-20_Matthew_4K.snake_above_box.0000000001.htk
 data/3/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.black_lion_in_blue_wagon.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_blue_wagon.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.white_snake_in_blue_flowers.0000000000.htk
 data/3/htk/08-10-20_David_4K.orange_monkey_in_grey_box.0000000003.htk
 data/3/htk/08-10-20_David_4K.monkey_above_wall.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_in_blue_box.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_blue_chair.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.snake_above_wall.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.blue_alligator_above_grey_wall.0000000005.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_black_wall.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_below_chair.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_bed.0000000004.htk
+data/3/htk/08-15-20_Prerna_4K.monkey_in_grey_box.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_bed.0000000000.htk
+=======
 data/3/htk/08-15-20_Prerna_4K.monkey_in_grey_box.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.monkey_above_chair.0000000001.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.blue_alligator_above_grey_wall.0000000005.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_below_grey_bed.0000000001.htk
 data/3/htk/08-10-20_David_4K.blue_alligator_above_grey_wall.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.grey_alligator_below_blue_flowers.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.lion_below_blue_bed.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.orange_monkey_in_grey_box.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.blue_alligator_above_grey_wall.0000000001.htk
@@ -263,12 +359,20 @@ data/3/htk/08-11-20_Linda_4K.white_snake_in_blue_flowers.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.monkey_in_grey_box.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.grey_monkey_below_orange_chair.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_wall.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.monkey_in_box.0000000005.htk
+=======
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.grey_snake_below_blue_chair.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_bed.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_orange_flowers.0000000004.htk
 data/3/htk/08-14-20_Thad_4K.snake_below_bed.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.black_lion_in_blue_wagon.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.black_lion_in_blue_wagon.0000000001.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.monkey_in_box.0000000000.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.black_snake_below_blue_chair.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_wall.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_blue_wagon.0000000003.htk
@@ -282,17 +386,20 @@ data/3/htk/08-08-20_Ishan_4k.blue_alligator_above_grey_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.lion_above_orange_bed.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.black_monkey_in_white_flowers.0000000003.htk
 data/3/htk/08-10-20_David_4K.snake_above_box.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.snake_in_flowers.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.white_alligator_above_blue_wall.0000000001.htk
 data/3/htk/08-10-20_David_4K.grey_monkey_below_orange_chair.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_black_wall.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_above_grey_wall.0000000001.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.lion_above_flowers.0000000002.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.monkey_in_blue_box.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.black_monkey_in_white_flowers.0000000002.htk
 data/3/htk/08-10-20_David_4K.snake_below_chair.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.alligator_in_box.0000000003.htk
 data/3/htk/08-14-20_Thad_4K.orange_snake_below_blue_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.orange_alligator_in_grey_flowers.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_below_wagon.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.monkey_below_bed.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.snake_in_grey_wagon.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_above_white_wall.0000000001.htk
@@ -304,8 +411,6 @@ data/3/htk/08-13-20_Thad_4K.lion_below_orange_chair.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_blue_bed.0000000003.htk
 data/3/htk/08-10-20_David_4K.grey_snake_below_blue_chair.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.snake_below_blue_chair.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.grey_snake_below_blue_chair.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.black_lion_above_grey_bed.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.snake_below_chair.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_above_chair.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_below_bed.0000000001.htk
@@ -327,11 +432,13 @@ data/3/htk/08-15-20_Prerna_4K.lion_below_chair.0000000004.htk
 data/3/htk/08-10-20_David_4K.snake_below_blue_chair.0000000002.htk
 data/3/htk/08-10-20_David_4K.alligator_above_black_wall.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.white_alligator_above_blue_wall.0000000000.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.lion_above_bed.0000000002.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.alligator_above_wall.0000000003.htk
 data/3/htk/08-10-20_David_4K.grey_alligator_below_blue_flowers.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.lion_above_bed.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_black_wall.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_blue_wagon.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.alligator_in_orange_flowers.0000000003.htk
@@ -358,24 +465,42 @@ data/3/htk/08-08-20_Ishan_4k.blue_alligator_above_grey_wall.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.orange_monkey_in_grey_box.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_box.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_blue_wall.0000000006.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.orange_monkey_below_grey_flowers.0000000000.htk
+data/3/htk/08-10-20_David_4K.black_snake_below_blue_chair.0000000003.htk
+data/3/htk/08-13-20_Thad_4K.lion_below_blue_bed.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.orange_monkey_in_grey_box.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.lion_above_orange_bed.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.orange_monkey_below_grey_flowers.0000000000.htk
 data/3/htk/08-10-20_David_4K.black_snake_below_blue_chair.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.lion_below_blue_bed.0000000000.htk
 data/3/htk/08-14-20_Matthew_4K.alligator_below_grey_bed.0000000000.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.alligator_in_wagon.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.snake_in_flowers.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.lion_below_blue_bed.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_bed.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.black_snake_below_blue_chair.0000000005.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.orange_monkey_in_grey_box.0000000000.htk
+>>>>>>> master
 data/3/htk/08-14-20_Thad_4K.black_monkey_in_white_flowers.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wagon.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.black_snake_below_blue_chair.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.black_lion_above_grey_bed.0000000004.htk
 data/3/htk/08-10-20_David_4K.alligator_above_bed.0000000001.htk
-data/3/htk/08-14-20_Matthew_4K.alligator_above_blue_wall.0000000000.htk
-data/3/htk/08-14-20_Matthew_4K.lion_above_bed.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.monkey_below_wagon.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_blue_bed.0000000000.htk
+data/3/htk/08-11-20_Linda_4K.lion_above_orange_bed.0000000001.htk
+data/3/htk/08-15-20_Prerna_4K.alligator_in_orange_flowers.0000000005.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_below_grey_bed.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_in_grey_box.0000000006.htk
+data/3/htk/08-13-20_Thad_4K.lion_below_orange_chair.0000000000.htk
+data/3/htk/08-15-20_Prerna_4K.alligator_in_wagon.0000000002.htk
+data/3/htk/08-15-20_Prerna_4K.alligator_above_orange_wagon.0000000003.htk
+data/3/htk/08-15-20_Prerna_4K.alligator_above_blue_wagon.0000000005.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.0000000002.htk
 data/3/htk/07-24-20_Matthew_4K.snake_above_wall.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_orange_bed.0000000001.htk
@@ -386,18 +511,28 @@ data/3/htk/07-24-20_Matthew_4K.blue_monkey_above_grey_box.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_orange_wagon.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_blue_wagon.0000000005.htk
 data/3/htk/07-24-20_Matthew_4K.lion_above_wall.0000000001.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.orange_monkey_in_grey_box.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.snake_in_flowers.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.black_lion_in_blue_wagon.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.blue_alligator_above_grey_wall.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_in_box.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_box.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.black_snake_below_blue_chair.0000000003.htk
+data/3/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_below_bed.0000000001.htk
+data/3/htk/08-11-20_Linda_4K.alligator_above_chair.0000000004.htk
+data/3/htk/08-15-20_Prerna_4K.lion_above_bed.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_above_orange_bed.0000000005.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_blue_wall.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.monkey_below_blue_chair.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.black_snake_below_blue_chair.0000000003.htk
 data/3/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000003.htk
 data/3/htk/08-14-20_Matthew_4K.alligator_in_orange_flowers.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_chair.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_bed.0000000003.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.monkey_below_wagon.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_above_white_wall.0000000003.htk
 data/3/htk/08-10-20_David_4K.snake_above_wall.0000000000.htk
@@ -407,21 +542,34 @@ data/3/htk/08-08-20_Ishan_4k.grey_alligator_below_blue_flowers.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.blue_monkey_above_grey_box.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.white_lion_above_orange_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.black_lion_in_blue_wagon.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.snake_above_box.0000000000.htk
+data/3/htk/08-15-20_Prerna_4K.alligator_above_black_wall.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.grey_monkey_below_orange_chair.0000000000.htk
+data/3/htk/08-08-20_Ishan_4k.lion_above_orange_bed.0000000001.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.monkey_above_white_wall.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.alligator_above_chair.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_black_wall.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_orange_bed.0000000001.htk
 data/3/htk/08-14-20_Matthew_4K.lion_above_grey_wall.0000000001.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.lion_above_blue_bed.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.alligator_in_wagon.0000000004.htk
 data/3/htk/08-10-20_David_4K.lion_above_flowers.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_in_grey_box.0000000004.htk
 data/3/htk/08-10-20_David_4K.monkey_in_blue_box.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.white_lion_in_grey_box.0000000000.htk
+<<<<<<< HEAD
+=======
 data/3/htk/08-14-20_Matthew_4K.lion_above_blue_bed.0000000000.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.lion_above_flowers.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.orange_monkey_below_grey_flowers.0000000002.htk
+<<<<<<< HEAD
+=======
 data/3/htk/08-14-20_Matthew_4K.snake_above_wall.0000000000.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.alligator_above_black_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.snake_above_box.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.orange_monkey_in_grey_box.0000000002.htk
@@ -437,31 +585,39 @@ data/3/htk/08-08-20_Ishan_4k.alligator_above_chair.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_chair.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_blue_flowers.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.snake_in_grey_wagon.0000000000.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.orange_alligator_in_grey_flowers.0000000001.htk
 data/3/htk/08-14-20_Matthew_4K.lion_below_blue_bed.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.white_snake_in_blue_flowers.0000000003.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.blue_monkey_above_grey_box.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.orange_snake_below_blue_flowers.0000000003.htk
 data/3/htk/08-14-20_Thad_4K.monkey_above_wall.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.lion_below_orange_chair.0000000002.htk
-data/3/htk/08-14-20_Matthew_4K.orange_snake_below_blue_flowers.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.blue_alligator_above_grey_wall.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.lion_above_bed.0000000003.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_black_wall.0000000005.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_above_bed.0000000004.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.monkey_in_grey_box.0000000002.htk
-data/3/htk/08-14-20_Matthew_4K.monkey_above_wall.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.alligator_below_grey_bed.0000000000.htk
 data/3/htk/08-10-20_David_4K.snake_below_blue_flowers.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.white_lion_in_grey_box.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_below_blue_chair.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.snake_below_chair.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.orange_alligator_in_grey_flowers.0000000002.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.monkey_above_white_wall.0000000001.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.grey_snake_below_blue_chair.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_chair.0000000000.htk
 data/3/htk/08-10-20_David_4K.lion_above_box.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.black_snake_below_blue_chair.0000000004.htk
 data/3/htk/08-10-20_David_4K.monkey_below_blue_chair.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wagon.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.monkey_in_box.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_blue_chair.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.alligator_in_orange_flowers.0000000002.htk
@@ -472,27 +628,39 @@ data/3/htk/08-15-20_Prerna_4K.monkey_in_orange_flowers.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_orange_bed.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.blue_monkey_above_grey_box.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_bed.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.monkey_below_blue_chair.0000000000.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.alligator_above_orange_wagon.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.monkey_below_wagon.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.lion_below_chair.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.grey_snake_below_blue_chair.0000000001.htk
+<<<<<<< HEAD
+=======
 data/3/htk/08-14-20_Matthew_4K.white_snake_in_blue_flowers.0000000000.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.lion_above_box.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_in_orange_flowers.0000000001.htk
 data/3/htk/08-10-20_David_4K.lion_above_orange_bed.0000000003.htk
 data/3/htk/08-10-20_David_4K.black_alligator_above_orange_wagon.0000000003.htk
 data/3/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000005.htk
-data/3/htk/07-24-20_Matthew_4K.snake_below_blue_flowers.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.grey_snake_below_blue_chair.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_bed.0000000001.htk
+<<<<<<< HEAD
+=======
 data/3/htk/08-14-20_Matthew_4K.grey_monkey_below_orange_chair.0000000000.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.grey_monkey_below_orange_chair.0000000003.htk
 data/3/htk/08-14-20_Thad_4K.lion_above_wall.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.white_lion_above_orange_wall.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_chair.0000000003.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_above_black_wall.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.black_snake_below_blue_chair.0000000004.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.black_monkey_in_white_flowers.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.white_lion_in_grey_box.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.black_monkey_in_white_flowers.0000000003.htk
@@ -522,21 +690,33 @@ data/3/htk/08-13-20_Thad_4K.grey_monkey_below_orange_chair.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_bed.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.monkey_above_white_wall.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.lion_below_chair.0000000003.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_blue_wagon.0000000002.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.snake_in_grey_wagon.0000000000.htk
 data/3/htk/08-14-20_Matthew_4K.lion_above_wall.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.monkey_above_wall.0000000001.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.alligator_below_grey_bed.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_black_wall.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_in_wagon.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_chair.0000000001.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.black_monkey_in_white_flowers.0000000004.htk
 data/3/htk/07-24-20_Matthew_4K.black_lion_in_blue_wagon.0000000000.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.lion_below_blue_bed.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_blue_wagon.0000000004.htk
 data/3/htk/08-10-20_David_4K.lion_below_chair.0000000004.htk
 data/3/htk/08-10-20_David_4K.black_alligator_above_orange_wagon.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.snake_in_grey_wagon.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_orange_bed.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.black_snake_below_blue_chair.0000000001.htk
+data/3/htk/08-10-20_David_4K.lion_below_orange_chair.0000000001.htk
+data/3/htk/08-15-20_Prerna_4K.white_lion_above_orange_wall.0000000005.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.alligator_in_box.0000000001.htk
 data/3/htk/08-14-20_Matthew_4K.snake_below_bed.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.snake_below_bed.0000000000.htk
@@ -544,51 +724,68 @@ data/3/htk/07-24-20_Matthew_4K.monkey_below_wagon.0000000002.htk
 data/3/htk/08-10-20_David_4K.lion_below_orange_chair.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.white_lion_above_orange_wall.0000000005.htk
 data/3/htk/07-24-20_Matthew_4K.black_lion_in_blue_wagon.0000000003.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.orange_monkey_below_grey_flowers.0000000005.htk
 data/3/htk/08-11-20_Linda_4K.snake_above_box.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.black_snake_below_blue_chair.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_above_wall.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_in_blue_box.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.snake_above_box.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-11-20_Linda_4K.grey_snake_below_blue_chair.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_below_blue_chair.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_above_chair.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.grey_snake_below_blue_chair.0000000003.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.orange_snake_below_blue_flowers.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.white_lion_above_orange_wall.0000000002.htk
-data/3/htk/08-14-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_black_wall.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.monkey_in_box.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.black_lion_above_grey_bed.0000000004.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.black_monkey_in_white_flowers.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.monkey_in_orange_flowers.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.black_monkey_in_white_flowers.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.grey_snake_below_blue_chair.0000000001.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.alligator_in_orange_flowers.0000000001.htk
 data/3/htk/08-10-20_David_4K.snake_above_wall.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.grey_snake_below_blue_chair.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.snake_in_flowers.0000000004.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.black_lion_above_grey_bed.0000000003.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.lion_above_flowers.0000000001.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.black_lion_in_blue_wagon.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.black_lion_above_grey_bed.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_below_bed.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.monkey_in_orange_flowers.0000000001.htk
 data/3/htk/08-10-20_David_4K.grey_alligator_below_blue_flowers.0000000003.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_blue_bed.0000000004.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.snake_below_chair.0000000000.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.snake_in_flowers.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_chair.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.snake_below_blue_chair.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_below_blue_chair.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_in_box.0000000004.htk
+<<<<<<< HEAD
+=======
 data/3/htk/08-14-20_Matthew_4K.black_lion_above_grey_bed.0000000000.htk
 data/3/htk/08-14-20_Matthew_4K.lion_above_grey_wall.0000000000.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.monkey_below_bed.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.white_alligator_above_blue_wall.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.black_monkey_in_white_flowers.0000000001.htk
 data/3/htk/08-10-20_David_4K.snake_below_chair.0000000002.htk
-data/3/htk/08-14-20_Matthew_4K.lion_above_blue_bed.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_flowers.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_wall.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_bed.0000000004.htk
 data/3/htk/08-10-20_David_4K.alligator_in_box.0000000001.htk
-data/3/htk/08-14-20_Matthew_4K.alligator_in_wagon.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_blue_flowers.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.monkey_above_white_wall.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.black_lion_in_blue_wagon.0000000002.htk
@@ -597,19 +794,27 @@ data/3/htk/08-15-20_Prerna_4K.alligator_in_box.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_below_grey_bed.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_wall.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.blue_alligator_above_grey_wall.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.lion_above_grey_wall.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_grey_wall.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_in_box.0000000002.htk
 data/3/htk/08-10-20_David_4K.lion_above_orange_bed.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.white_lion_in_grey_box.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_blue_wagon.0000000005.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.snake_in_grey_wagon.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.white_lion_in_grey_box.0000000004.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.lion_above_orange_bed.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_chair.0000000002.htk
 data/3/htk/08-10-20_David_4K.white_alligator_above_blue_wall.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.white_lion_in_grey_box.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.black_alligator_above_orange_wagon.0000000003.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.snake_in_flowers.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_above_wall.0000000002.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.alligator_above_blue_wall.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.white_lion_in_grey_box.0000000000.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.lion_below_chair.0000000000.htk
 data/3/htk/08-10-20_David_4K.black_lion_in_blue_wagon.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.white_lion_in_grey_box.0000000003.htk
@@ -622,6 +827,14 @@ data/3/htk/08-14-20_Thad_4K.monkey_in_grey_box.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.grey_monkey_below_orange_chair.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_above_chair.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.orange_monkey_in_grey_box.0000000003.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.monkey_above_white_wall.0000000004.htk
+data/3/htk/08-15-20_Prerna_4K.lion_above_flowers.0000000002.htk
+data/3/htk/08-13-20_Thad_4K.snake_in_grey_wagon.0000000003.htk
+data/3/htk/08-13-20_Thad_4K.snake_above_wall.0000000003.htk
+data/3/htk/08-13-20_Thad_4K.lion_above_flowers.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.blue_alligator_above_grey_wall.0000000000.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.lion_above_orange_bed.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_above_white_wall.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_flowers.0000000002.htk
@@ -630,74 +843,103 @@ data/3/htk/08-13-20_Thad_4K.snake_in_grey_wagon.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.snake_above_wall.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.lion_above_flowers.0000000003.htk
 data/3/htk/07-24-20_Matthew_4K.snake_below_blue_chair.0000000004.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.white_lion_above_orange_wall.0000000002.htk
 data/3/htk/08-10-20_David_4K.lion_above_bed.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_in_wagon.0000000003.htk
+data/3/htk/08-13-20_Thad_4K.monkey_above_white_wall.0000000000.htk
+data/3/htk/08-15-20_Prerna_4K.snake_above_box.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.grey_alligator_below_blue_flowers.0000000001.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.white_snake_in_blue_flowers.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.monkey_above_white_wall.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.snake_above_box.0000000004.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.monkey_in_box.0000000003.htk
 data/3/htk/08-10-20_David_4K.orange_monkey_below_grey_flowers.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_in_grey_box.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_below_grey_bed.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_blue_wagon.0000000005.htk
 data/3/htk/08-11-20_Linda_4K.white_snake_in_blue_flowers.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_chair.0000000005.htk
 data/3/htk/08-15-20_Prerna_4K.lion_below_orange_chair.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.monkey_above_white_wall.0000000000.htk
+=======
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.monkey_in_orange_flowers.0000000003.htk
 data/3/htk/08-14-20_Thad_4K.orange_alligator_in_grey_flowers.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.snake_below_black_chair.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.alligator_in_box.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_box.0000000004.htk
 data/3/htk/08-10-20_David_4K.snake_below_bed.0000000004.htk
-data/3/htk/08-14-20_Matthew_4K.monkey_above_chair.0000000001.htk
-data/3/htk/08-14-20_Matthew_4K.monkey_below_blue_chair.0000000001.htk
-data/3/htk/08-14-20_Matthew_4K.alligator_above_bed.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.blue_alligator_above_grey_wall.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_below_grey_bed.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.white_snake_in_blue_flowers.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_wall.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_wall.0000000003.htk
 data/3/htk/08-10-20_David_4K.monkey_below_bed.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.orange_snake_below_blue_flowers.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.orange_monkey_in_grey_box.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_bed.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.orange_alligator_in_grey_flowers.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.orange_snake_below_blue_flowers.0000000002.htk
 data/3/htk/07-24-20_Matthew_4K.lion_below_chair.0000000003.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.monkey_below_bed.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.grey_monkey_below_orange_chair.0000000002.htk
 data/3/htk/08-10-20_David_4K.black_lion_in_blue_wagon.0000000000.htk
 data/3/htk/08-10-20_David_4K.grey_snake_below_blue_chair.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.black_lion_in_blue_wagon.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.grey_alligator_below_blue_flowers.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.white_snake_in_blue_flowers.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_below_black_chair.0000000002.htk
+data/3/htk/08-15-20_Prerna_4K.monkey_above_chair.0000000002.htk
+data/3/htk/08-14-20_Thad_4K.monkey_above_white_wall.0000000000.htk
+data/3/htk/08-15-20_Prerna_4K.black_snake_below_blue_chair.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_below_blue_chair.0000000003.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.alligator_above_black_wall.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_above_chair.0000000002.htk
 data/3/htk/07-24-20_Matthew_4K.white_lion_above_orange_wall.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.monkey_above_white_wall.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.black_snake_below_blue_chair.0000000004.htk
 data/3/htk/08-14-20_Matthew_4K.white_lion_above_orange_wall.0000000001.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.black_alligator_above_orange_wagon.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_black_chair.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.grey_alligator_below_blue_flowers.0000000005.htk
 data/3/htk/08-13-20_Thad_4K.monkey_above_white_wall.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.monkey_above_wall.0000000003.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.monkey_below_wagon.0000000001.htk
+data/3/htk/08-15-20_Prerna_4K.blue_monkey_above_grey_box.0000000005.htk
+data/3/htk/08-15-20_Prerna_4K.orange_snake_below_blue_flowers.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_above_chair.0000000003.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.lion_above_bed.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_below_wagon.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.blue_monkey_above_grey_box.0000000005.htk
 data/3/htk/08-15-20_Prerna_4K.orange_snake_below_blue_flowers.0000000000.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.black_snake_below_blue_chair.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.lion_below_chair.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.monkey_below_bed.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.orange_monkey_in_grey_box.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.snake_in_flowers.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.snake_above_box.0000000003.htk
+data/3/htk/08-15-20_Prerna_4K.lion_above_grey_wall.0000000003.htk
+data/3/htk/08-13-20_Thad_4K.snake_above_wall.0000000000.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.monkey_in_box.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.snake_above_box.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_grey_wall.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.snake_above_wall.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wall.0000000001.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.grey_alligator_below_blue_flowers.0000000000.htk
 data/3/htk/08-10-20_David_4K.black_lion_in_blue_wagon.0000000004.htk
-data/3/htk/08-14-20_Matthew_4K.white_lion_in_grey_box.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.blue_monkey_above_grey_box.0000000001.htk
 data/3/htk/08-10-20_David_4K.snake_below_chair.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.alligator_above_blue_wall.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_flowers.0000000000.htk
@@ -705,28 +947,46 @@ data/3/htk/08-11-20_Linda_4K.monkey_in_grey_box.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.grey_alligator_below_blue_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_above_chair.0000000005.htk
 data/3/htk/08-15-20_Prerna_4K.white_lion_in_grey_box.0000000005.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_orange_wagon.0000000000.htk
+data/3/htk/08-10-20_David_4K.alligator_above_black_wall.0000000001.htk
+data/3/htk/08-15-20_Prerna_4K.monkey_in_blue_box.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.orange_monkey_below_grey_flowers.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_above_bed.0000000001.htk
+=======
 data/3/htk/08-10-20_David_4K.alligator_above_black_wall.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_in_blue_box.0000000002.htk
 data/3/htk/07-24-20_Matthew_4K.snake_below_blue_chair.0000000001.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.blue_monkey_above_grey_box.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.orange_snake_below_blue_flowers.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_below_bed.0000000004.htk
+<<<<<<< HEAD
+=======
 data/3/htk/08-14-20_Matthew_4K.white_lion_above_orange_wall.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.monkey_above_white_wall.0000000001.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.snake_above_wall.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_wall.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_box.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_blue_bed.0000000005.htk
 data/3/htk/08-15-20_Prerna_4K.lion_below_orange_chair.0000000001.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_in_orange_flowers.0000000004.htk
 data/3/htk/07-24-20_Matthew_4K.lion_below_chair.0000000004.htk
 data/3/htk/07-24-20_Matthew_4K.lion_above_bed.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.lion_above_box.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.lion_above_orange_bed.0000000000.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.lion_above_bed.0000000003.htk
 data/3/htk/08-10-20_David_4K.monkey_below_bed.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_grey_wall.0000000003.htk
 data/3/htk/08-10-20_David_4K.orange_monkey_in_grey_box.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.monkey_in_grey_box.0000000003.htk
+=======
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.black_monkey_in_white_flowers.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_wall.0000000004.htk
 data/3/htk/08-10-20_David_4K.orange_snake_below_blue_flowers.0000000002.htk
@@ -737,7 +997,10 @@ data/3/htk/08-08-20_Ishan_4k.snake_in_flowers.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.snake_above_box.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.alligator_in_wagon.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_chair.0000000002.htk
+<<<<<<< HEAD
+=======
 data/3/htk/08-14-20_Matthew_4K.grey_monkey_below_orange_chair.0000000001.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.monkey_above_wall.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.black_lion_above_grey_bed.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_below_grey_bed.0000000001.htk
@@ -749,10 +1012,17 @@ data/3/htk/08-15-20_Prerna_4K.snake_in_flowers.0000000005.htk
 data/3/htk/08-14-20_Thad_4K.alligator_in_orange_flowers.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.grey_monkey_below_orange_chair.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.white_snake_in_blue_flowers.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_box.0000000002.htk
+data/3/htk/08-15-20_Prerna_4K.blue_alligator_above_grey_wall.0000000001.htk
+data/3/htk/08-15-20_Prerna_4K.snake_below_black_chair.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_above_chair.0000000002.htk
+=======
 data/3/htk/08-15-20_Prerna_4K.blue_alligator_above_grey_wall.0000000001.htk
 data/3/htk/08-14-20_Matthew_4K.monkey_in_grey_box.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_black_chair.0000000002.htk
 data/3/htk/08-14-20_Matthew_4K.monkey_above_white_wall.0000000000.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.lion_above_box.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.monkey_above_chair.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.white_snake_in_blue_flowers.0000000002.htk
@@ -760,7 +1030,13 @@ data/3/htk/08-10-20_David_4K.snake_above_box.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.grey_snake_below_blue_chair.0000000005.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_in_orange_flowers.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.alligator_below_grey_bed.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.grey_snake_below_blue_chair.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_below_grey_bed.0000000006.htk
+data/3/htk/08-12-20_Kanksha_4K.black_snake_below_blue_chair.0000000004.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.blue_monkey_above_grey_box.0000000001.htk
+>>>>>>> master
 data/3/htk/08-14-20_Thad_4K.monkey_above_wall.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.alligator_above_blue_wagon.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.alligator_in_orange_flowers.0000000001.htk
@@ -768,72 +1044,97 @@ data/3/htk/08-14-20_Thad_4K.black_monkey_in_white_flowers.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.monkey_above_chair.0000000003.htk
 data/3/htk/08-10-20_David_4K.grey_snake_below_blue_chair.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_black_chair.0000000004.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.monkey_below_bed.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.monkey_above_wall.0000000004.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.alligator_above_wall.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_blue_wagon.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_in_orange_flowers.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_blue_box.0000000003.htk
 data/3/htk/08-10-20_David_4K.snake_below_black_chair.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.snake_below_black_chair.0000000002.htk
 data/3/htk/08-10-20_David_4K.monkey_above_chair.0000000002.htk
 data/3/htk/08-10-20_David_4K.orange_snake_below_blue_flowers.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_blue_flowers.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.orange_monkey_below_grey_flowers.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.lion_below_orange_chair.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.snake_above_wall.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.alligator_above_blue_wall.0000000004.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.orange_monkey_below_grey_flowers.0000000004.htk
 data/3/htk/07-24-20_Matthew_4K.white_alligator_above_blue_wall.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_blue_wall.0000000004.htk
 data/3/htk/07-24-20_Matthew_4K.lion_below_chair.0000000002.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.lion_above_blue_bed.0000000005.htk
 data/3/htk/08-10-20_David_4K.orange_snake_below_blue_flowers.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.orange_monkey_below_grey_flowers.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_wall.0000000001.htk
 data/3/htk/08-10-20_David_4K.grey_alligator_below_blue_flowers.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_orange_wagon.0000000002.htk
 data/3/htk/08-10-20_David_4K.alligator_in_box.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.snake_above_box.0000000003.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_below_grey_bed.0000000000.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.black_monkey_in_white_flowers.0000000001.htk
 data/3/htk/08-14-20_Matthew_4K.monkey_in_blue_box.0000000000.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.white_snake_in_blue_flowers.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.blue_monkey_above_grey_box.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.monkey_in_box.0000000002.htk
 data/3/htk/08-10-20_David_4K.alligator_above_chair.0000000005.htk
 data/3/htk/08-10-20_David_4K.monkey_in_box.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.orange_alligator_in_grey_flowers.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_wall.0000000004.htk
+=======
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.orange_alligator_in_grey_flowers.0000000005.htk
 data/3/htk/08-08-20_Ishan_4k.orange_snake_below_blue_flowers.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.lion_below_orange_chair.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_grey_wall.0000000002.htk
 data/3/htk/08-10-20_David_4K.alligator_above_orange_wagon.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_below_bed.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_in_orange_flowers.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.orange_monkey_below_grey_flowers.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_blue_wall.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_in_orange_flowers.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.lion_above_flowers.0000000001.htk
 data/3/htk/08-10-20_David_4K.blue_monkey_above_grey_box.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_chair.0000000004.htk
+data/3/htk/08-10-20_David_4K.lion_above_orange_bed.0000000001.htk
+data/3/htk/08-15-20_Prerna_4K.monkey_in_blue_box.0000000005.htk
+data/3/htk/08-15-20_Prerna_4K.snake_in_flowers.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_below_chair.0000000002.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.snake_below_chair.0000000000.htk
 data/3/htk/08-10-20_David_4K.lion_above_orange_bed.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_in_blue_box.0000000005.htk
 data/3/htk/08-15-20_Prerna_4K.snake_in_flowers.0000000002.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.black_lion_above_grey_bed.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.blue_monkey_above_grey_box.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_flowers.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.monkey_in_box.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.orange_monkey_in_grey_box.0000000003.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.lion_above_orange_bed.0000000004.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.black_lion_above_grey_bed.0000000005.htk
-data/3/htk/08-14-20_Matthew_4K.black_snake_below_blue_chair.0000000001.htk
 data/3/htk/08-10-20_David_4K.alligator_above_black_wall.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.grey_snake_below_blue_chair.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_orange_wagon.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wall.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.snake_below_bed.0000000002.htk
 data/3/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.grey_monkey_below_orange_chair.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.monkey_below_wagon.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_chair.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.snake_below_bed.0000000003.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.alligator_in_wagon.0000000000.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.snake_in_grey_wagon.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_black_chair.0000000003.htk
 data/3/htk/08-10-20_David_4K.alligator_above_bed.0000000005.htk
@@ -843,11 +1144,9 @@ data/3/htk/08-08-20_Ishan_4k.black_alligator_above_orange_wagon.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_orange_wagon.0000000006.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_blue_flowers.0000000001.htk
 data/3/htk/08-10-20_David_4K.monkey_below_wagon.0000000003.htk
-data/3/htk/08-14-20_Matthew_4K.lion_above_orange_bed.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_box.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.snake_in_grey_wagon.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.monkey_below_wagon.0000000002.htk
-data/3/htk/08-14-20_Matthew_4K.black_lion_in_blue_wagon.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_black_chair.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_chair.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_wall.0000000001.htk
@@ -858,14 +1157,24 @@ data/3/htk/08-11-20_Linda_4K.lion_above_flowers.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_bed.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_chair.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.grey_monkey_below_orange_chair.0000000000.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.orange_alligator_in_grey_flowers.0000000004.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.orange_alligator_in_grey_flowers.0000000004.htk
 data/3/htk/08-10-20_David_4K.snake_below_blue_flowers.0000000003.htk
 data/3/htk/08-10-20_David_4K.monkey_below_blue_chair.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_flowers.0000000004.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.snake_below_chair.0000000004.htk
+data/3/htk/08-08-20_Ishan_4k.monkey_above_chair.0000000000.htk
+data/3/htk/08-11-20_Linda_4K.white_lion_above_orange_wall.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_chair.0000000000.htk
+=======
 data/3/htk/08-08-20_Ishan_4k.monkey_above_chair.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.white_lion_above_orange_wall.0000000002.htk
 data/3/htk/07-24-20_Matthew_4K.monkey_above_white_wall.0000000004.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.blue_monkey_above_grey_box.0000000003.htk
 data/3/htk/08-10-20_David_4K.alligator_above_wall.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_orange_wagon.0000000000.htk
@@ -873,16 +1182,23 @@ data/3/htk/08-11-20_Linda_4K.alligator_above_black_wall.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_chair.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_blue_chair.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.black_lion_in_blue_wagon.0000000006.htk
-data/3/htk/07-24-20_Matthew_4K.grey_monkey_below_orange_chair.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.orange_monkey_in_grey_box.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.snake_in_grey_wagon.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.black_monkey_in_white_flowers.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_above_wall.0000000004.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.snake_below_blue_flowers.0000000003.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.orange_monkey_below_grey_flowers.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.monkey_below_wagon.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.lion_below_blue_bed.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.black_alligator_above_orange_wagon.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.black_lion_above_grey_bed.0000000001.htk
+<<<<<<< HEAD
+=======
 data/3/htk/08-14-20_Matthew_4K.alligator_above_chair.0000000000.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.monkey_in_orange_flowers.0000000001.htk
 data/3/htk/08-10-20_David_4K.orange_monkey_in_grey_box.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.blue_monkey_above_grey_box.0000000003.htk
@@ -890,10 +1206,18 @@ data/3/htk/08-13-20_Thad_4K.lion_above_orange_bed.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_above_wall.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.lion_below_blue_bed.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.blue_monkey_above_grey_box.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.blue_monkey_above_grey_box.0000000000.htk
+data/3/htk/08-08-20_Ishan_4k.alligator_in_orange_flowers.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.grey_alligator_below_blue_flowers.0000000003.htk
+data/3/htk/08-15-20_Prerna_4K.monkey_below_bed.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_in_grey_wagon.0000000001.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.black_lion_in_blue_wagon.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_in_orange_flowers.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_below_bed.0000000004.htk
 data/3/htk/07-24-20_Matthew_4K.lion_below_chair.0000000001.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.orange_snake_below_blue_flowers.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.grey_alligator_below_blue_flowers.0000000002.htk
 data/3/htk/08-10-20_David_4K.monkey_below_blue_chair.0000000002.htk
@@ -901,26 +1225,39 @@ data/3/htk/08-10-20_David_4K.orange_snake_below_blue_flowers.0000000005.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_blue_flowers.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.lion_below_chair.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.grey_snake_below_blue_chair.0000000002.htk
-data/3/htk/08-14-20_Matthew_4K.snake_above_box.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.alligator_in_box.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.white_lion_above_orange_wall.0000000002.htk
+=======
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.grey_monkey_below_orange_chair.0000000001.htk
 data/3/htk/08-10-20_David_4K.alligator_above_blue_wall.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_orange_bed.0000000002.htk
 data/3/htk/08-14-20_Thad_4K.snake_in_grey_wagon.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.lion_above_wall.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.black_alligator_above_orange_wagon.0000000002.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.lion_above_bed.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_wall.0000000002.htk
 data/3/htk/07-24-20_Matthew_4K.alligator_in_box.0000000004.htk
 data/3/htk/07-24-20_Matthew_4K.alligator_below_grey_bed.0000000004.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.monkey_above_white_wall.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.blue_alligator_above_grey_wall.0000000006.htk
 data/3/htk/08-11-20_Linda_4K.white_lion_in_grey_box.0000000003.htk
-data/3/htk/08-14-20_Matthew_4K.black_lion_above_grey_bed.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.lion_above_orange_bed.0000000003.htk
 data/3/htk/08-10-20_David_4K.lion_above_bed.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.white_snake_in_blue_flowers.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.monkey_in_orange_flowers.0000000002.htk
 data/3/htk/08-10-20_David_4K.snake_below_chair.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.snake_above_wall.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.monkey_above_wall.0000000003.htk
+data/3/htk/08-15-20_Prerna_4K.orange_monkey_below_grey_flowers.0000000002.htk
+data/3/htk/08-11-20_Linda_4K.grey_snake_below_blue_chair.0000000002.htk
+data/3/htk/08-08-20_Ishan_4k.monkey_in_grey_box.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_below_blue_chair.0000000002.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.alligator_below_grey_bed.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.snake_above_wall.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.orange_monkey_below_grey_flowers.0000000002.htk
@@ -928,31 +1265,33 @@ data/3/htk/08-11-20_Linda_4K.grey_snake_below_blue_chair.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_grey_box.0000000003.htk
 data/3/htk/07-24-20_Matthew_4K.lion_below_chair.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.alligator_in_orange_flowers.0000000001.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.blue_monkey_above_grey_box.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_in_wagon.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_bed.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.snake_above_box.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.snake_above_box.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_in_wagon.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_in_grey_box.0000000003.htk
 data/3/htk/08-10-20_David_4K.lion_below_orange_chair.0000000005.htk
 data/3/htk/08-10-20_David_4K.alligator_below_grey_bed.0000000001.htk
 data/3/htk/08-10-20_David_4K.white_lion_in_grey_box.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_grey_wall.0000000005.htk
-data/3/htk/07-24-20_Matthew_4K.lion_above_grey_wall.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.monkey_below_bed.0000000001.htk
 data/3/htk/08-10-20_David_4K.alligator_above_wall.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.white_alligator_above_blue_wall.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.snake_in_grey_wagon.0000000005.htk
 data/3/htk/08-11-20_Linda_4K.grey_alligator_below_blue_flowers.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.lion_above_flowers.0000000003.htk
+data/3/htk/08-15-20_Prerna_4K.grey_snake_below_blue_chair.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.lion_above_flowers.0000000004.htk
 data/3/htk/07-24-20_Matthew_4K.monkey_below_wagon.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_flowers.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.grey_snake_below_blue_chair.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.snake_below_bed.0000000002.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.black_lion_above_grey_bed.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.snake_below_blue_flowers.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_in_box.0000000001.htk
 data/3/htk/08-10-20_David_4K.lion_above_wall.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_bed.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_above_white_wall.0000000005.htk
@@ -961,21 +1300,34 @@ data/3/htk/08-15-20_Prerna_4K.monkey_in_blue_box.0000000004.htk
 data/3/htk/08-10-20_David_4K.white_snake_in_blue_flowers.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.lion_below_orange_chair.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.alligator_above_chair.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.lion_above_box.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_bed.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.snake_below_chair.0000000003.htk
 data/3/htk/08-10-20_David_4K.alligator_above_orange_wagon.0000000004.htk
 data/3/htk/08-10-20_David_4K.alligator_above_black_wall.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.snake_above_wall.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.alligator_above_blue_wagon.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_wall.0000000004.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_wall.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.grey_monkey_below_orange_chair.0000000006.htk
+data/3/htk/08-12-20_Kanksha_4K.orange_snake_below_blue_flowers.0000000002.htk
+data/3/htk/08-11-20_Linda_4K.alligator_in_box.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_above_wall.0000000005.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_above_orange_wagon.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.alligator_in_box.0000000000.htk
 data/3/htk/08-14-20_Matthew_4K.alligator_above_blue_wagon.0000000001.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.lion_below_blue_bed.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_blue_bed.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.snake_below_black_chair.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.snake_below_chair.0000000001.htk
+data/3/htk/08-15-20_Prerna_4K.snake_in_grey_wagon.0000000004.htk
+data/3/htk/08-15-20_Prerna_4K.snake_in_flowers.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_above_wall.0000000001.htk
+data/3/htk/08-15-20_Prerna_4K.lion_below_orange_chair.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_below_orange_chair.0000000006.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.orange_monkey_below_grey_flowers.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.snake_in_grey_wagon.0000000004.htk
 data/3/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.0000000004.htk
@@ -983,34 +1335,43 @@ data/3/htk/07-24-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.snake_in_flowers.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.lion_below_orange_chair.0000000004.htk
 data/3/htk/07-24-20_Matthew_4K.monkey_above_white_wall.0000000003.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.black_lion_in_blue_wagon.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.orange_snake_below_blue_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.orange_snake_below_blue_flowers.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_in_box.0000000002.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000002.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.monkey_in_box.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.snake_above_box.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.orange_alligator_in_grey_flowers.0000000002.htk
 data/3/htk/08-10-20_David_4K.snake_below_black_chair.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.black_monkey_in_white_flowers.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.lion_below_orange_chair.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.snake_in_grey_wagon.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_black_chair.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_below_bed.0000000005.htk
 data/3/htk/08-08-20_Ishan_4k.orange_alligator_in_grey_flowers.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.lion_above_box.0000000002.htk
 data/3/htk/08-10-20_David_4K.monkey_above_wall.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.lion_below_orange_chair.0000000002.htk
 data/3/htk/08-10-20_David_4K.snake_above_box.0000000004.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_in_wagon.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wall.0000000002.htk
 data/3/htk/07-24-20_Matthew_4K.snake_above_wall.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.alligator_above_orange_wagon.0000000002.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.alligator_above_bed.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_bed.0000000003.htk
 data/3/htk/08-14-20_Thad_4K.monkey_below_wagon.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.alligator_above_wall.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_in_wagon.0000000005.htk
 data/3/htk/08-08-20_Ishan_4k.white_snake_in_blue_flowers.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_wall.0000000003.htk
+=======
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.alligator_above_bed.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_below_grey_bed.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.monkey_in_grey_box.0000000001.htk
@@ -1018,24 +1379,34 @@ data/3/htk/08-13-20_Thad_4K.white_snake_in_blue_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.orange_alligator_in_grey_flowers.0000000002.htk
 data/3/htk/08-14-20_Thad_4K.lion_above_bed.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_wall.0000000003.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.lion_above_blue_bed.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_orange_wagon.0000000002.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.white_snake_in_blue_flowers.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_blue_bed.0000000002.htk
 data/3/htk/07-24-20_Matthew_4K.monkey_below_bed.0000000000.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.grey_alligator_below_blue_flowers.0000000001.htk
 data/3/htk/08-10-20_David_4K.snake_below_bed.0000000005.htk
-data/3/htk/07-24-20_Matthew_4K.snake_below_chair.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.white_lion_in_grey_box.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_orange_flowers.0000000000.htk
 data/3/htk/08-10-20_David_4K.orange_monkey_in_grey_box.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_chair.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.black_lion_above_grey_bed.0000000004.htk
 data/3/htk/08-10-20_David_4K.alligator_above_orange_wagon.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_blue_bed.0000000005.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.black_alligator_above_orange_wagon.0000000000.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.monkey_in_orange_flowers.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.black_lion_above_grey_bed.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.white_lion_in_grey_box.0000000002.htk
+<<<<<<< HEAD
+=======
 data/3/htk/08-14-20_Matthew_4K.monkey_below_bed.0000000001.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.lion_above_wall.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.grey_monkey_below_orange_chair.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.black_lion_in_blue_wagon.0000000004.htk
@@ -1056,22 +1427,20 @@ data/3/htk/08-15-20_Prerna_4K.black_lion_in_blue_wagon.0000000003.htk
 data/3/htk/08-10-20_David_4K.snake_in_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.orange_monkey_below_grey_flowers.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.orange_monkey_in_grey_box.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.monkey_below_wagon.0000000002.htk
+=======
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.lion_above_wall.0000000004.htk
 data/3/htk/08-14-20_Thad_4K.alligator_above_orange_wagon.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_above_wall.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_below_bed.0000000002.htk
-data/3/htk/08-14-20_Matthew_4K.alligator_above_wall.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_above_chair.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_in_blue_box.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.grey_snake_below_blue_chair.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.white_alligator_above_blue_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.lion_above_grey_wall.0000000003.htk
 data/3/htk/08-10-20_David_4K.black_snake_below_blue_chair.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.black_lion_above_grey_bed.0000000003.htk
-data/3/htk/08-14-20_Matthew_4K.monkey_in_orange_flowers.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.lion_below_blue_bed.0000000001.htk
 data/3/htk/08-10-20_David_4K.orange_monkey_below_grey_flowers.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.lion_above_blue_bed.0000000003.htk
 data/3/htk/08-10-20_David_4K.snake_below_bed.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.orange_monkey_below_grey_flowers.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_in_orange_flowers.0000000000.htk
@@ -1079,6 +1448,27 @@ data/3/htk/08-08-20_Ishan_4k.white_lion_above_orange_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.blue_monkey_above_grey_box.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_below_blue_chair.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_bed.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-11-20_Linda_4K.monkey_in_blue_box.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_in_wagon.0000000005.htk
+data/3/htk/08-08-20_Ishan_4k.snake_above_wall.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_wall.0000000001.htk
+data/3/htk/08-15-20_Prerna_4K.alligator_above_blue_wagon.0000000000.htk
+data/3/htk/08-08-20_Ishan_4k.alligator_above_wall.0000000002.htk
+data/3/htk/08-15-20_Prerna_4K.black_lion_in_blue_wagon.0000000004.htk
+data/3/htk/08-15-20_Prerna_4K.lion_above_box.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_below_bed.0000000004.htk
+data/3/htk/08-10-20_David_4K.monkey_in_orange_flowers.0000000005.htk
+data/3/htk/08-13-20_Thad_4K.lion_above_blue_bed.0000000001.htk
+data/3/htk/08-13-20_Thad_4K.monkey_in_box.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.grey_monkey_below_orange_chair.0000000004.htk
+data/3/htk/08-15-20_Prerna_4K.monkey_in_box.0000000000.htk
+data/3/htk/08-11-20_Linda_4K.alligator_above_black_wall.0000000004.htk
+data/3/htk/08-08-20_Ishan_4k.lion_above_bed.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_above_white_wall.0000000001.htk
+data/3/htk/08-10-20_David_4K.lion_above_grey_wall.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.black_monkey_in_white_flowers.0000000005.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.orange_monkey_below_grey_flowers.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.monkey_in_blue_box.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.alligator_above_wall.0000000004.htk
@@ -1099,10 +1489,17 @@ data/3/htk/08-14-20_Matthew_4K.blue_alligator_above_grey_wall.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.snake_below_black_chair.0000000003.htk
 data/3/htk/08-10-20_David_4K.lion_above_grey_wall.0000000004.htk
 data/3/htk/08-14-20_Matthew_4K.lion_below_chair.0000000002.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.snake_below_bed.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.black_alligator_above_orange_wagon.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.white_lion_in_grey_box.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.black_lion_above_grey_bed.0000000006.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_wall.0000000004.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.monkey_in_blue_box.0000000001.htk
 data/3/htk/08-14-20_Matthew_4K.white_alligator_above_blue_wall.0000000001.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.monkey_in_orange_flowers.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_orange_bed.0000000000.htk
 data/3/htk/08-10-20_David_4K.orange_alligator_in_grey_flowers.0000000004.htk
@@ -1113,22 +1510,33 @@ data/3/htk/08-10-20_David_4K.white_lion_in_grey_box.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.blue_alligator_above_grey_wall.0000000003.htk
 data/3/htk/08-14-20_Thad_4K.snake_below_bed.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_below_blue_chair.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.orange_monkey_in_grey_box.0000000003.htk
+data/3/htk/08-14-20_Thad_4K.white_alligator_above_blue_wall.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.white_lion_in_grey_box.0000000005.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.white_lion_above_orange_wall.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.orange_monkey_in_grey_box.0000000003.htk
 data/3/htk/07-24-20_Matthew_4K.snake_below_blue_flowers.0000000004.htk
 data/3/htk/08-14-20_Thad_4K.white_alligator_above_blue_wall.0000000001.htk
 data/3/htk/08-14-20_Matthew_4K.snake_below_blue_chair.0000000000.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.lion_below_chair.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.monkey_above_white_wall.0000000002.htk
 data/3/htk/08-10-20_David_4K.monkey_in_box.0000000002.htk
 data/3/htk/08-10-20_David_4K.black_alligator_above_orange_wagon.0000000005.htk
 data/3/htk/08-10-20_David_4K.snake_in_flowers.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_in_orange_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_blue_box.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.lion_above_box.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_chair.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_above_wall.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.grey_alligator_below_blue_flowers.0000000008.htk
 data/3/htk/08-15-20_Prerna_4K.snake_above_box.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.white_lion_in_grey_box.0000000002.htk
+=======
+data/3/htk/08-15-20_Prerna_4K.snake_above_box.0000000002.htk
+>>>>>>> master
 data/3/htk/08-14-20_Thad_4K.black_lion_in_blue_wagon.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_above_chair.0000000000.htk
 data/3/htk/08-10-20_David_4K.monkey_in_box.0000000000.htk
@@ -1140,7 +1548,10 @@ data/3/htk/08-15-20_Prerna_4K.alligator_in_wagon.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.grey_alligator_below_blue_flowers.0000000004.htk
 data/3/htk/08-10-20_David_4K.black_monkey_in_white_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_chair.0000000003.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_above_wall.0000000003.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.alligator_above_black_wall.0000000005.htk
 data/3/htk/08-11-20_Linda_4K.grey_monkey_below_orange_chair.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.white_alligator_above_blue_wall.0000000000.htk
@@ -1149,31 +1560,45 @@ data/3/htk/08-15-20_Prerna_4K.orange_monkey_in_grey_box.0000000001.htk
 data/3/htk/08-10-20_David_4K.monkey_above_white_wall.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.monkey_in_blue_box.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_box.0000000002.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.monkey_in_box.0000000000.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.blue_alligator_above_grey_wall.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.orange_snake_below_blue_flowers.0000000003.htk
-data/3/htk/08-14-20_Matthew_4K.monkey_below_wagon.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.black_alligator_above_orange_wagon.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.monkey_in_orange_flowers.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_bed.0000000005.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.grey_snake_below_blue_chair.0000000001.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.black_monkey_in_white_flowers.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_above_white_wall.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.snake_in_grey_wagon.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.black_lion_above_grey_bed.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.grey_snake_below_blue_chair.0000000004.htk
+<<<<<<< HEAD
+data/3/htk/08-08-20_Ishan_4k.orange_monkey_below_grey_flowers.0000000002.htk
+data/3/htk/08-10-20_David_4K.monkey_in_grey_box.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_in_orange_flowers.0000000005.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.monkey_above_chair.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.orange_monkey_below_grey_flowers.0000000002.htk
 data/3/htk/08-10-20_David_4K.monkey_in_grey_box.0000000003.htk
 data/3/htk/08-14-20_Matthew_4K.snake_in_grey_wagon.0000000001.htk
+>>>>>>> master
 data/3/htk/08-14-20_Thad_4K.snake_above_wall.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_orange_bed.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.grey_monkey_below_orange_chair.0000000004.htk
 data/3/htk/08-10-20_David_4K.lion_above_grey_wall.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.white_snake_in_blue_flowers.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_bed.0000000000.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.lion_below_orange_chair.0000000002.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.snake_above_wall.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_in_blue_box.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.lion_below_blue_bed.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.monkey_in_box.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.orange_alligator_in_grey_flowers.0000000001.htk
@@ -1196,80 +1621,122 @@ data/3/htk/08-13-20_Thad_4K.lion_above_blue_bed.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_in_wagon.0000000005.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_above_chair.0000000005.htk
 data/3/htk/08-10-20_David_4K.grey_snake_below_blue_chair.0000000003.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.black_alligator_above_orange_wagon.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.white_lion_above_orange_wall.0000000003.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.snake_below_bed.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.black_alligator_above_orange_wagon.0000000004.htk
+>>>>>>> master
 data/3/htk/08-14-20_Thad_4K.lion_below_blue_bed.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.orange_alligator_in_grey_flowers.0000000004.htk
-data/3/htk/08-14-20_Matthew_4K.snake_below_black_chair.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_black_wall.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.lion_below_chair.0000000001.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_above_black_wall.0000000000.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.lion_above_box.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.lion_below_chair.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.alligator_in_orange_flowers.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.snake_above_box.0000000005.htk
 data/3/htk/08-13-20_Thad_4K.snake_in_flowers.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.white_alligator_above_blue_wall.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_above_chair.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.grey_monkey_below_orange_chair.0000000001.htk
 data/3/htk/08-14-20_Matthew_4K.snake_below_bed.0000000001.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.monkey_below_wagon.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.monkey_above_chair.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_black_wall.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.grey_monkey_below_orange_chair.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.snake_below_black_chair.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.orange_monkey_in_grey_box.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.black_lion_in_blue_wagon.0000000006.htk
+data/3/htk/08-15-20_Prerna_4K.lion_above_grey_wall.0000000002.htk
+data/3/htk/08-15-20_Prerna_4K.monkey_below_wagon.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_above_box.0000000001.htk
+=======
 data/3/htk/08-15-20_Prerna_4K.lion_above_grey_wall.0000000002.htk
 data/3/htk/08-14-20_Matthew_4K.snake_below_blue_chair.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_below_wagon.0000000000.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.black_alligator_above_orange_wagon.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.alligator_in_box.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.lion_above_wall.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.snake_above_wall.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_blue_chair.0000000004.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.monkey_below_wagon.0000000000.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.alligator_in_orange_flowers.0000000001.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.monkey_below_blue_chair.0000000005.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_in_wagon.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.white_lion_above_orange_wall.0000000004.htk
 data/3/htk/08-10-20_David_4K.monkey_above_chair.0000000001.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.black_monkey_in_white_flowers.0000000002.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.snake_below_chair.0000000004.htk
 data/3/htk/08-10-20_David_4K.white_alligator_above_blue_wall.0000000001.htk
 data/3/htk/08-10-20_David_4K.black_lion_above_grey_bed.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.alligator_above_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.snake_in_grey_wagon.0000000005.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.monkey_above_wall.0000000002.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.snake_in_grey_wagon.0000000004.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.blue_alligator_above_grey_wall.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.blue_monkey_above_grey_box.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.monkey_above_wall.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_blue_flowers.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.lion_above_wall.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_in_grey_box.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.grey_alligator_below_blue_flowers.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.lion_below_orange_chair.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_grey_wall.0000000004.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.snake_above_box.0000000003.htk
+>>>>>>> master
 data/3/htk/08-14-20_Thad_4K.monkey_in_grey_box.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.grey_snake_below_blue_chair.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_below_blue_chair.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.snake_in_grey_wagon.0000000004.htk
 data/3/htk/08-14-20_Thad_4K.alligator_in_box.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.black_lion_above_grey_bed.0000000003.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.monkey_below_bed.0000000003.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.alligator_above_blue_wall.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.orange_alligator_in_grey_flowers.0000000002.htk
 data/3/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_below_wagon.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.monkey_in_blue_box.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.snake_above_wall.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_orange_wagon.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_bed.0000000002.htk
 data/3/htk/08-10-20_David_4K.black_alligator_above_orange_wagon.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.white_snake_in_blue_flowers.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.monkey_above_chair.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_in_orange_flowers.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_in_blue_box.0000000001.htk
+data/3/htk/08-10-20_David_4K.white_snake_in_blue_flowers.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.white_alligator_above_blue_wall.0000000004.htk
+data/3/htk/08-15-20_Prerna_4K.blue_monkey_above_grey_box.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.black_monkey_in_white_flowers.0000000003.htk
+data/3/htk/08-13-20_Thad_4K.orange_snake_below_blue_flowers.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_below_blue_bed.0000000000.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.orange_monkey_in_grey_box.0000000001.htk
 data/3/htk/08-10-20_David_4K.white_snake_in_blue_flowers.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.blue_monkey_above_grey_box.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.orange_snake_below_blue_flowers.0000000000.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.monkey_above_chair.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_wall.0000000003.htk
 data/3/htk/08-10-20_David_4K.alligator_in_orange_flowers.0000000004.htk
@@ -1280,26 +1747,38 @@ data/3/htk/08-08-20_Ishan_4k.snake_in_grey_wagon.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.snake_in_grey_wagon.0000000006.htk
 data/3/htk/08-15-20_Prerna_4K.snake_above_wall.0000000001.htk
 data/3/htk/08-10-20_David_4K.snake_below_blue_flowers.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.snake_in_flowers.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.lion_above_wall.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.alligator_below_grey_bed.0000000004.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.snake_below_blue_chair.0000000002.htk
 data/3/htk/07-24-20_Matthew_4K.monkey_above_wall.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_below_grey_bed.0000000004.htk
 data/3/htk/07-24-20_Matthew_4K.white_lion_in_grey_box.0000000003.htk
 data/3/htk/07-24-20_Matthew_4K.grey_monkey_below_orange_chair.0000000000.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.monkey_above_white_wall.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.blue_monkey_above_grey_box.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_bed.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_black_chair.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.snake_below_black_chair.0000000007.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.black_lion_above_grey_bed.0000000000.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.lion_above_blue_bed.0000000004.htk
 data/3/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000002.htk
 data/3/htk/08-10-20_David_4K.lion_above_flowers.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.snake_below_chair.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_bed.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_chair.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_below_black_chair.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.black_alligator_above_orange_wagon.0000000004.htk
 data/3/htk/07-24-20_Matthew_4K.lion_above_grey_wall.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.blue_monkey_above_grey_box.0000000000.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.black_monkey_in_white_flowers.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_chair.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.lion_below_chair.0000000003.htk
@@ -1313,22 +1792,30 @@ data/3/htk/08-15-20_Prerna_4K.monkey_below_blue_chair.0000000004.htk
 data/3/htk/08-10-20_David_4K.lion_above_grey_wall.0000000001.htk
 data/3/htk/08-10-20_David_4K.lion_above_blue_bed.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.lion_above_grey_wall.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.lion_above_orange_bed.0000000005.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.snake_below_blue_flowers.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_orange_bed.0000000005.htk
 data/3/htk/08-14-20_Matthew_4K.snake_in_flowers.0000000000.htk
 data/3/htk/08-14-20_Matthew_4K.alligator_above_orange_wagon.0000000001.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.white_alligator_above_blue_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.snake_above_wall.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_below_grey_bed.0000000001.htk
 data/3/htk/08-10-20_David_4K.lion_above_wall.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.monkey_in_box.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.black_alligator_above_orange_wagon.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.grey_alligator_below_blue_flowers.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.black_alligator_above_orange_wagon.0000000003.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.orange_snake_below_blue_flowers.0000000003.htk
 data/3/htk/08-14-20_Matthew_4K.white_lion_in_grey_box.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.lion_below_orange_chair.0000000004.htk
 data/3/htk/08-14-20_Matthew_4K.orange_monkey_below_grey_flowers.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.monkey_above_wall.0000000002.htk
 data/3/htk/08-14-20_Matthew_4K.monkey_below_wagon.0000000001.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.snake_above_box.0000000006.htk
 data/3/htk/08-11-20_Linda_4K.lion_below_chair.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_grey_box.0000000002.htk
@@ -1345,7 +1832,6 @@ data/3/htk/08-10-20_David_4K.snake_below_blue_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_above_wall.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.orange_alligator_in_grey_flowers.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_black_wall.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.blue_alligator_above_grey_wall.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.snake_below_blue_chair.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.orange_monkey_in_grey_box.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.white_lion_in_grey_box.0000000005.htk
@@ -1353,6 +1839,20 @@ data/3/htk/08-15-20_Prerna_4K.snake_below_black_chair.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_blue_chair.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_below_wagon.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.grey_alligator_below_blue_flowers.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_black_wall.0000000000.htk
+data/3/htk/08-13-20_Thad_4K.snake_above_box.0000000001.htk
+data/3/htk/08-10-20_David_4K.grey_snake_below_blue_chair.0000000005.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_in_blue_box.0000000003.htk
+data/3/htk/08-15-20_Prerna_4K.snake_in_flowers.0000000000.htk
+data/3/htk/08-13-20_Thad_4K.black_alligator_above_orange_wagon.0000000001.htk
+data/3/htk/08-15-20_Prerna_4K.snake_in_flowers.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_below_wagon.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.black_lion_above_grey_bed.0000000004.htk
+data/3/htk/08-08-20_Ishan_4k.alligator_in_orange_flowers.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_below_chair.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_above_box.0000000002.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.black_lion_above_grey_bed.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.snake_above_box.0000000001.htk
 data/3/htk/08-10-20_David_4K.grey_snake_below_blue_chair.0000000005.htk
@@ -1362,39 +1862,54 @@ data/3/htk/08-13-20_Thad_4K.black_alligator_above_orange_wagon.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.snake_in_flowers.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_in_orange_flowers.0000000002.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.alligator_in_box.0000000004.htk
 data/3/htk/08-10-20_David_4K.snake_below_blue_chair.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_chair.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.monkey_in_grey_box.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_wall.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.orange_snake_below_blue_flowers.0000000004.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.snake_below_bed.0000000004.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.snake_below_chair.0000000005.htk
 data/3/htk/08-13-20_Thad_4K.monkey_in_orange_flowers.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_chair.0000000003.htk
 data/3/htk/08-10-20_David_4K.monkey_in_grey_box.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.snake_below_bed.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.snake_in_flowers.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.monkey_in_grey_box.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.black_lion_above_grey_bed.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_chair.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.lion_below_blue_bed.0000000003.htk
 data/3/htk/08-14-20_Thad_4K.monkey_in_orange_flowers.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_in_box.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.monkey_in_blue_box.0000000004.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.white_snake_in_blue_flowers.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_below_blue_chair.0000000005.htk
 data/3/htk/08-10-20_David_4K.blue_alligator_above_grey_wall.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.grey_snake_below_blue_chair.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.alligator_above_blue_wall.0000000001.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_in_wagon.0000000003.htk
 data/3/htk/07-24-20_Matthew_4K.snake_below_chair.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_blue_wall.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.snake_below_chair.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.black_alligator_above_orange_wagon.0000000003.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.lion_above_grey_wall.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.grey_snake_below_blue_chair.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.white_alligator_above_blue_wall.0000000005.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_blue_wall.0000000001.htk
 data/3/htk/08-10-20_David_4K.alligator_above_chair.0000000001.htk
 data/3/htk/08-10-20_David_4K.orange_alligator_in_grey_flowers.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_grey_wall.0000000000.htk
+=======
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.monkey_in_orange_flowers.0000000005.htk
 data/3/htk/08-14-20_Thad_4K.snake_below_blue_chair.0000000000.htk
 data/3/htk/08-10-20_David_4K.lion_above_box.0000000003.htk
@@ -1404,15 +1919,18 @@ data/3/htk/08-08-20_Ishan_4k.snake_below_chair.0000000004.htk
 data/3/htk/08-14-20_Thad_4K.lion_below_orange_chair.0000000000.htk
 data/3/htk/08-10-20_David_4K.orange_alligator_in_grey_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_chair.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_flowers.0000000001.htk
+data/3/htk/08-15-20_Prerna_4K.snake_above_wall.0000000005.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_below_blue_flowers.0000000001.htk
+=======
 data/3/htk/08-15-20_Prerna_4K.snake_above_wall.0000000005.htk
 data/3/htk/08-14-20_Matthew_4K.alligator_above_orange_wagon.0000000000.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.black_monkey_in_white_flowers.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_blue_flowers.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.black_alligator_above_orange_wagon.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.orange_monkey_below_grey_flowers.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wall.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.snake_in_grey_wagon.0000000004.htk
-data/3/htk/08-14-20_Matthew_4K.snake_above_wall.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.white_snake_in_blue_flowers.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_bed.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.black_snake_below_blue_chair.0000000003.htk
@@ -1420,7 +1938,10 @@ data/3/htk/08-13-20_Thad_4K.snake_below_blue_flowers.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_in_orange_flowers.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_black_chair.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.monkey_in_blue_box.0000000000.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wagon.0000000004.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.grey_alligator_below_blue_flowers.0000000003.htk
 data/3/htk/08-10-20_David_4K.lion_below_orange_chair.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.white_snake_in_blue_flowers.0000000004.htk
@@ -1428,7 +1949,6 @@ data/3/htk/08-11-20_Linda_4K.monkey_in_blue_box.0000000002.htk
 data/3/htk/08-10-20_David_4K.lion_above_grey_wall.0000000005.htk
 data/3/htk/08-10-20_David_4K.lion_above_flowers.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.orange_alligator_in_grey_flowers.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_black_wall.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.snake_above_box.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.monkey_below_blue_chair.0000000004.htk
@@ -1436,46 +1956,70 @@ data/3/htk/08-08-20_Ishan_4k.alligator_above_blue_wagon.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_in_wagon.0000000001.htk
 data/3/htk/08-10-20_David_4K.alligator_below_grey_bed.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.monkey_below_blue_chair.0000000004.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_black_wall.0000000004.htk
+data/3/htk/08-15-20_Prerna_4K.orange_monkey_below_grey_flowers.0000000001.htk
+data/3/htk/08-10-20_David_4K.alligator_in_orange_flowers.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_in_box.0000000004.htk
+=======
 data/3/htk/08-15-20_Prerna_4K.orange_monkey_below_grey_flowers.0000000001.htk
 data/3/htk/08-10-20_David_4K.alligator_in_orange_flowers.0000000003.htk
 data/3/htk/07-24-20_Matthew_4K.monkey_in_orange_flowers.0000000001.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.black_lion_in_blue_wagon.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.white_alligator_above_blue_wall.0000000004.htk
 data/3/htk/08-10-20_David_4K.lion_below_orange_chair.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.black_snake_below_blue_chair.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.blue_monkey_above_grey_box.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_below_chair.0000000002.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.white_lion_in_grey_box.0000000001.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.grey_snake_below_blue_chair.0000000000.htk
 data/3/htk/08-10-20_David_4K.black_monkey_in_white_flowers.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_in_orange_flowers.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.monkey_below_bed.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.snake_below_bed.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_chair.0000000004.htk
 data/3/htk/08-14-20_Thad_4K.orange_monkey_below_grey_flowers.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_black_chair.0000000003.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.monkey_in_box.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.black_lion_in_blue_wagon.0000000004.htk
+=======
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.snake_below_blue_flowers.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.monkey_above_chair.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_black_wall.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_chair.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_box.0000000000.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.blue_monkey_above_grey_box.0000000002.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.lion_below_orange_chair.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_orange_flowers.0000000005.htk
-data/3/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.alligator_above_blue_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.orange_alligator_in_grey_flowers.0000000005.htk
 data/3/htk/08-13-20_Thad_4K.blue_alligator_above_grey_wall.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.monkey_below_wagon.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_chair.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_below_wagon.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.monkey_below_blue_chair.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.black_monkey_in_white_flowers.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_blue_wall.0000000002.htk
-data/3/htk/08-14-20_Matthew_4K.monkey_below_bed.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_above_wall.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_box.0000000005.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_above_chair.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.black_lion_in_blue_wagon.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.orange_snake_below_blue_flowers.0000000005.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.snake_in_flowers.0000000003.htk
+data/3/htk/08-08-20_Ishan_4k.alligator_above_black_wall.0000000000.htk
+data/3/htk/08-13-20_Thad_4K.snake_below_bed.0000000000.htk
+data/3/htk/08-08-20_Ishan_4k.lion_above_box.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_in_orange_flowers.0000000002.htk
+data/3/htk/08-10-20_David_4K.monkey_in_blue_box.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_blue_wall.0000000001.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.lion_below_blue_bed.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_black_wall.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.snake_below_bed.0000000000.htk
@@ -1483,40 +2027,51 @@ data/3/htk/08-08-20_Ishan_4k.lion_above_box.0000000002.htk
 data/3/htk/08-14-20_Matthew_4K.orange_alligator_in_grey_flowers.0000000000.htk
 data/3/htk/08-10-20_David_4K.monkey_in_blue_box.0000000004.htk
 data/3/htk/07-24-20_Matthew_4K.lion_above_box.0000000003.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.alligator_above_bed.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_wall.0000000005.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_in_wagon.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.orange_snake_below_blue_flowers.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.white_lion_in_grey_box.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.lion_above_wall.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_black_wall.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.black_alligator_above_orange_wagon.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_blue_chair.0000000005.htk
+<<<<<<< HEAD
+=======
 data/3/htk/08-14-20_Matthew_4K.alligator_above_blue_wagon.0000000000.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.monkey_below_wagon.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.grey_monkey_below_orange_chair.0000000005.htk
 data/3/htk/08-08-20_Ishan_4k.black_monkey_in_white_flowers.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_blue_wall.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.monkey_below_blue_chair.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.grey_alligator_below_blue_flowers.0000000000.htk
+data/3/htk/08-11-20_Linda_4K.black_lion_above_grey_bed.0000000002.htk
+data/3/htk/08-11-20_Linda_4K.alligator_below_grey_bed.0000000001.htk
+data/3/htk/08-15-20_Prerna_4K.monkey_above_wall.0000000004.htk
+data/3/htk/08-12-20_Kanksha_4K.grey_snake_below_blue_chair.0000000004.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.blue_alligator_above_grey_wall.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.black_lion_above_grey_bed.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.alligator_below_grey_bed.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_above_wall.0000000004.htk
+>>>>>>> master
 data/3/htk/08-14-20_Thad_4K.white_lion_above_orange_wall.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.orange_monkey_below_grey_flowers.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.snake_below_blue_flowers.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.lion_above_blue_bed.0000000000.htk
 data/3/htk/08-10-20_David_4K.snake_above_box.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_in_wagon.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_black_chair.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.white_lion_in_grey_box.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.monkey_below_blue_chair.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.orange_alligator_in_grey_flowers.0000000004.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.snake_in_grey_wagon.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_wall.0000000006.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_above_bed.0000000001.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.alligator_in_orange_flowers.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.monkey_above_wall.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.white_snake_in_blue_flowers.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_in_orange_flowers.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.snake_above_wall.0000000002.htk
 data/3/htk/08-10-20_David_4K.snake_in_flowers.0000000004.htk
 data/3/htk/08-10-20_David_4K.monkey_in_blue_box.0000000001.htk
@@ -1528,12 +2083,13 @@ data/3/htk/08-15-20_Prerna_4K.monkey_in_grey_box.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_bed.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.blue_alligator_above_grey_wall.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.orange_snake_below_blue_flowers.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.snake_in_flowers.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.lion_below_orange_chair.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.snake_above_box.0000000003.htk
 data/3/htk/08-10-20_David_4K.snake_in_grey_wagon.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.lion_below_chair.0000000002.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.black_alligator_above_orange_wagon.0000000002.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.grey_snake_below_blue_chair.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.monkey_above_chair.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_orange_wagon.0000000004.htk
@@ -1541,15 +2097,17 @@ data/3/htk/08-10-20_David_4K.monkey_below_bed.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_blue_wagon.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_in_box.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.snake_in_grey_wagon.0000000003.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.black_lion_above_grey_bed.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_above_chair.0000000004.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.monkey_in_orange_flowers.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_chair.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.lion_below_blue_bed.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_below_grey_bed.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_blue_wall.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_orange_flowers.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_below_grey_bed.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.lion_above_grey_wall.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.lion_below_orange_chair.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.orange_monkey_in_grey_box.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_blue_chair.0000000002.htk
@@ -1558,6 +2116,16 @@ data/3/htk/08-10-20_David_4K.grey_monkey_below_orange_chair.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.grey_monkey_below_orange_chair.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.blue_alligator_above_grey_wall.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.snake_in_flowers.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.snake_below_chair.0000000005.htk
+data/3/htk/08-15-20_Prerna_4K.alligator_above_blue_wall.0000000002.htk
+data/3/htk/08-10-20_David_4K.lion_above_blue_bed.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_in_box.0000000005.htk
+data/3/htk/08-15-20_Prerna_4K.alligator_above_bed.0000000002.htk
+data/3/htk/08-11-20_Linda_4K.blue_monkey_above_grey_box.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.blue_alligator_above_grey_wall.0000000003.htk
+data/3/htk/08-13-20_Thad_4K.black_snake_below_blue_chair.0000000000.htk
+=======
 data/3/htk/08-15-20_Prerna_4K.alligator_above_blue_wall.0000000002.htk
 data/3/htk/08-10-20_David_4K.lion_above_blue_bed.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.black_lion_in_blue_wagon.0000000004.htk
@@ -1568,18 +2136,20 @@ data/3/htk/08-11-20_Linda_4K.blue_monkey_above_grey_box.0000000001.htk
 data/3/htk/08-14-20_Matthew_4K.black_alligator_above_orange_wagon.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.black_snake_below_blue_chair.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.monkey_above_white_wall.0000000002.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.white_alligator_above_blue_wall.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_bed.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_blue_bed.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.lion_above_grey_wall.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.lion_below_blue_bed.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_flowers.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_above_chair.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_grey_wall.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_below_orange_chair.0000000000.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.monkey_in_grey_box.0000000000.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.orange_snake_below_blue_flowers.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.lion_below_orange_chair.0000000003.htk
-data/3/htk/08-14-20_Matthew_4K.blue_monkey_above_grey_box.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.lion_above_box.0000000001.htk
 data/3/htk/08-10-20_David_4K.alligator_in_wagon.0000000005.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_flowers.0000000003.htk
@@ -1589,13 +2159,9 @@ data/3/htk/08-13-20_Thad_4K.alligator_in_wagon.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.blue_monkey_above_grey_box.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_below_blue_chair.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.lion_above_flowers.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_black_wall.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.lion_above_blue_bed.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.snake_above_box.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_in_wagon.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.lion_below_blue_bed.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.grey_snake_below_blue_chair.0000000004.htk
-data/3/htk/08-14-20_Matthew_4K.black_alligator_above_orange_wagon.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_blue_chair.0000000000.htk
 data/3/htk/08-10-20_David_4K.grey_alligator_below_blue_flowers.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.black_alligator_above_orange_wagon.0000000000.htk
@@ -1603,17 +2169,23 @@ data/3/htk/08-15-20_Prerna_4K.alligator_in_box.0000000000.htk
 data/3/htk/08-10-20_David_4K.snake_below_bed.0000000003.htk
 data/3/htk/08-10-20_David_4K.white_alligator_above_blue_wall.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.white_lion_above_orange_wall.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.black_lion_in_blue_wagon.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.black_monkey_in_white_flowers.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.white_lion_above_orange_wall.0000000000.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.snake_in_grey_wagon.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.snake_in_flowers.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_orange_wagon.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.black_snake_below_blue_chair.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_blue_bed.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_blue_flowers.0000000002.htk
+<<<<<<< HEAD
+=======
 data/3/htk/08-14-20_Matthew_4K.monkey_above_wall.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.snake_above_box.0000000002.htk
 data/3/htk/07-24-20_Matthew_4K.alligator_above_bed.0000000002.htk
 data/3/htk/08-14-20_Matthew_4K.grey_snake_below_blue_chair.0000000000.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.grey_alligator_below_blue_flowers.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.lion_above_grey_wall.0000000001.htk
 data/3/htk/08-10-20_David_4K.blue_alligator_above_grey_wall.0000000001.htk
@@ -1621,7 +2193,11 @@ data/3/htk/08-11-20_Linda_4K.snake_in_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_above_white_wall.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.black_lion_above_grey_bed.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_in_orange_flowers.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_in_wagon.0000000001.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.lion_below_chair.0000000000.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.monkey_below_wagon.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_below_wagon.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.lion_below_chair.0000000005.htk
@@ -1637,13 +2213,15 @@ data/3/htk/08-14-20_Thad_4K.snake_below_black_chair.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.white_lion_in_grey_box.0000000006.htk
 data/3/htk/08-14-20_Thad_4K.alligator_above_black_wall.0000000001.htk
 data/3/htk/08-10-20_David_4K.monkey_in_grey_box.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_in_box.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_below_bed.0000000001.htk
 data/3/htk/08-10-20_David_4K.snake_below_black_chair.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.snake_above_wall.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_blue_wagon.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.monkey_in_orange_flowers.0000000000.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.lion_above_flowers.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.alligator_in_wagon.0000000002.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.snake_below_blue_chair.0000000005.htk
 data/3/htk/08-10-20_David_4K.lion_above_bed.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_wall.0000000001.htk
@@ -1653,12 +2231,20 @@ data/3/htk/08-15-20_Prerna_4K.black_alligator_above_orange_wagon.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_black_wall.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.snake_below_chair.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.black_lion_in_blue_wagon.0000000005.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.monkey_above_wall.0000000001.htk
+=======
+>>>>>>> master
 data/3/htk/08-14-20_Thad_4K.white_alligator_above_blue_wall.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.snake_in_grey_wagon.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.orange_monkey_below_grey_flowers.0000000005.htk
 data/3/htk/08-10-20_David_4K.lion_below_blue_bed.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_orange_wagon.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_grey_wall.0000000003.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.lion_below_blue_bed.0000000000.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.alligator_below_grey_bed.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_blue_wagon.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_above_chair.0000000000.htk
@@ -1667,13 +2253,17 @@ data/3/htk/08-08-20_Ishan_4k.lion_below_orange_chair.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_orange_wagon.0000000003.htk
 data/3/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_flowers.0000000000.htk
-data/3/htk/08-14-20_Matthew_4K.monkey_above_chair.0000000000.htk
 data/3/htk/08-10-20_David_4K.white_alligator_above_blue_wall.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_below_wagon.0000000004.htk
 data/3/htk/08-10-20_David_4K.alligator_above_blue_wagon.0000000005.htk
+<<<<<<< HEAD
+data/3/htk/08-15-20_Prerna_4K.lion_above_wall.0000000005.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_above_white_wall.0000000003.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wagon.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_wall.0000000005.htk
 data/3/htk/08-14-20_Matthew_4K.lion_below_orange_chair.0000000000.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.alligator_in_wagon.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.snake_below_blue_flowers.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.monkey_in_blue_box.0000000004.htk
@@ -1681,18 +2271,34 @@ data/3/htk/08-14-20_Thad_4K.monkey_above_white_wall.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.blue_monkey_above_grey_box.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.lion_below_chair.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_chair.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.white_snake_in_blue_flowers.0000000001.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_in_box.0000000002.htk
 data/3/htk/07-24-20_Matthew_4K.alligator_in_wagon.0000000001.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.monkey_below_bed.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_flowers.0000000000.htk
-data/3/htk/08-14-20_Matthew_4K.alligator_above_chair.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.snake_in_flowers.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.orange_monkey_in_grey_box.0000000002.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.snake_in_flowers.0000000003.htk
 data/3/htk/07-24-20_Matthew_4K.white_lion_above_orange_wall.0000000004.htk
+>>>>>>> master
 data/3/htk/08-13-20_Thad_4K.alligator_above_orange_wagon.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.snake_below_blue_flowers.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.grey_alligator_below_blue_flowers.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_blue_box.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.black_lion_above_grey_bed.0000000005.htk
+data/3/htk/08-08-20_Ishan_4k.snake_below_blue_chair.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_above_flowers.0000000003.htk
+data/3/htk/08-15-20_Prerna_4K.alligator_above_chair.0000000004.htk
+data/3/htk/08-11-20_Linda_4K.black_snake_below_blue_chair.0000000000.htk
+data/3/htk/08-15-20_Prerna_4K.alligator_above_bed.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_black_wall.0000000003.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.alligator_above_bed.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_blue_chair.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.0000000003.htk
@@ -1700,24 +2306,42 @@ data/3/htk/07-24-20_Matthew_4K.white_lion_above_orange_wall.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_chair.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.black_snake_below_blue_chair.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_bed.0000000000.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.monkey_below_bed.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_above_black_wall.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_below_wagon.0000000005.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_orange_bed.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_wall.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.orange_snake_below_blue_flowers.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_above_box.0000000005.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_in_flowers.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_in_box.0000000001.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.orange_alligator_in_grey_flowers.0000000000.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.alligator_above_bed.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.orange_alligator_in_grey_flowers.0000000000.htk
 data/3/htk/08-10-20_David_4K.black_lion_above_grey_bed.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.alligator_below_grey_bed.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.orange_alligator_in_grey_flowers.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_blue_flowers.0000000003.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_grey_wall.0000000002.htk
+data/3/htk/08-08-20_Ishan_4k.snake_below_chair.0000000003.htk
+data/3/htk/08-15-20_Prerna_4K.white_lion_above_orange_wall.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_bed.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.black_snake_below_blue_chair.0000000006.htk
+data/3/htk/08-11-20_Linda_4K.lion_above_box.0000000000.htk
+data/3/htk/08-15-20_Prerna_4K.monkey_above_wall.0000000003.htk
+=======
 data/3/htk/08-08-20_Ishan_4k.snake_below_chair.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.white_lion_above_orange_wall.0000000002.htk
 data/3/htk/07-24-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_box.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_above_wall.0000000003.htk
 data/3/htk/07-24-20_Matthew_4K.snake_below_blue_flowers.0000000001.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.monkey_in_orange_flowers.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.alligator_in_wagon.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.orange_snake_below_blue_flowers.0000000001.htk
@@ -1733,15 +2357,25 @@ data/3/htk/08-11-20_Linda_4K.lion_above_bed.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_chair.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_above_chair.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_in_box.0000000005.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.snake_below_blue_chair.0000000003.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.white_lion_above_orange_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.monkey_above_chair.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.alligator_in_wagon.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_in_box.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.orange_alligator_in_grey_flowers.0000000005.htk
+<<<<<<< HEAD
+data/3/htk/08-08-20_Ishan_4k.lion_above_wall.0000000000.htk
+data/3/htk/08-11-20_Linda_4K.white_lion_above_orange_wall.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.monkey_in_blue_box.0000000006.htk
+data/3/htk/08-12-20_Kanksha_4K.alligator_above_bed.0000000002.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.black_monkey_in_white_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_wall.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.white_lion_above_orange_wall.0000000003.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.grey_alligator_below_blue_flowers.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_blue_wall.0000000002.htk
 data/3/htk/08-10-20_David_4K.snake_below_blue_chair.0000000005.htk
@@ -1751,9 +2385,12 @@ data/3/htk/08-10-20_David_4K.orange_alligator_in_grey_flowers.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.lion_below_chair.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_bed.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_bed.0000000003.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_in_orange_flowers.0000000001.htk
+=======
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.lion_above_box.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_below_bed.0000000000.htk
-data/3/htk/08-14-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_flowers.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.alligator_in_box.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.monkey_in_box.0000000003.htk
@@ -1764,9 +2401,12 @@ data/3/htk/08-08-20_Ishan_4k.snake_in_flowers.0000000001.htk
 data/3/htk/08-14-20_Thad_4K.monkey_in_box.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_bed.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.grey_monkey_below_orange_chair.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_below_chair.0000000001.htk
+=======
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.monkey_above_chair.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.monkey_below_blue_chair.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.black_monkey_in_white_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_in_wagon.0000000001.htk
 data/3/htk/08-10-20_David_4K.alligator_in_orange_flowers.0000000002.htk
 data/3/htk/08-14-20_Thad_4K.alligator_above_orange_wagon.0000000001.htk
@@ -1776,45 +2416,47 @@ data/3/htk/08-10-20_David_4K.black_lion_above_grey_bed.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.white_snake_in_blue_flowers.0000000004.htk
 data/3/htk/08-11-20_Linda_4K.monkey_in_grey_box.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.lion_below_blue_bed.0000000003.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.alligator_above_bed.0000000000.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.lion_above_box.0000000002.htk
 data/3/htk/08-13-20_Thad_4K.black_lion_above_grey_bed.0000000002.htk
-data/3/htk/08-14-20_Matthew_4K.lion_above_box.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_above_orange_wagon.0000000001.htk
 data/3/htk/08-13-20_Thad_4K.monkey_in_orange_flowers.0000000000.htk
 data/3/htk/08-10-20_David_4K.black_lion_above_grey_bed.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_in_wagon.0000000004.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_grey_wall.0000000005.htk
+data/3/htk/08-11-20_Linda_4K.alligator_in_orange_flowers.0000000002.htk
+data/3/htk/08-08-20_Ishan_4k.lion_below_orange_chair.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.black_alligator_above_orange_wagon.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.alligator_in_orange_flowers.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.lion_below_orange_chair.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.black_lion_in_blue_wagon.0000000001.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.snake_below_blue_chair.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_below_grey_bed.0000000003.htk
 data/3/htk/08-15-20_Prerna_4K.white_alligator_above_blue_wall.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_in_box.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_blue_box.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.black_lion_above_grey_bed.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.orange_monkey_below_grey_flowers.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.black_lion_in_blue_wagon.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_grey_wall.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_black_chair.0000000002.htk
 data/3/htk/08-10-20_David_4K.monkey_in_box.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.snake_above_box.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_grey_box.0000000000.htk
 data/3/htk/08-13-20_Thad_4K.black_monkey_in_white_flowers.0000000002.htk
 data/3/htk/08-14-20_Thad_4K.monkey_in_blue_box.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.black_lion_in_blue_wagon.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.lion_above_bed.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_above_wall.0000000003.htk
 data/3/htk/08-10-20_David_4K.snake_above_box.0000000005.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_bed.0000000005.htk
-data/3/htk/08-14-20_Matthew_4K.orange_snake_below_blue_flowers.0000000000.htk
 data/3/htk/08-10-20_David_4K.snake_below_blue_chair.0000000003.htk
 data/3/htk/08-10-20_David_4K.lion_above_blue_bed.0000000002.htk
 data/3/htk/08-14-20_Thad_4K.lion_above_blue_bed.0000000000.htk
 data/3/htk/08-10-20_David_4K.monkey_in_orange_flowers.0000000003.htk
-data/3/htk/08-14-20_Matthew_4K.snake_below_chair.0000000001.htk
-data/3/htk/08-14-20_Matthew_4K.alligator_in_box.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_orange_wagon.0000000005.htk
 data/3/htk/08-08-20_Ishan_4k.white_snake_in_blue_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_bed.0000000005.htk
@@ -1843,25 +2485,35 @@ data/3/htk/08-15-20_Prerna_4K.snake_below_bed.0000000005.htk
 data/3/htk/08-10-20_David_4K.monkey_above_wall.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_black_wall.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.blue_monkey_above_grey_box.0000000002.htk
-data/3/htk/07-24-20_Matthew_4K.lion_above_wall.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_bed.0000000002.htk
 data/3/htk/08-14-20_Thad_4K.alligator_below_grey_bed.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.orange_monkey_in_grey_box.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_box.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-08-20_Ishan_4k.lion_above_blue_bed.0000000002.htk
+data/3/htk/08-10-20_David_4K.snake_below_bed.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_below_black_chair.0000000005.htk
+data/3/htk/08-15-20_Prerna_4K.snake_below_bed.0000000002.htk
+data/3/htk/08-12-20_Kanksha_4K.white_alligator_above_blue_wall.0000000005.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.lion_above_blue_bed.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_blue_bed.0000000002.htk
 data/3/htk/08-10-20_David_4K.snake_below_bed.0000000002.htk
 data/3/htk/07-24-20_Matthew_4K.snake_below_black_chair.0000000004.htk
 data/3/htk/08-15-20_Prerna_4K.snake_below_bed.0000000002.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.grey_alligator_below_blue_flowers.0000000003.htk
 data/3/htk/08-14-20_Thad_4K.snake_below_black_chair.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.monkey_below_wagon.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_orange_bed.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.monkey_in_blue_box.0000000003.htk
 data/3/htk/08-10-20_David_4K.lion_above_grey_wall.0000000002.htk
+<<<<<<< HEAD
+=======
 data/3/htk/08-14-20_Matthew_4K.snake_below_black_chair.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.black_snake_below_blue_chair.0000000002.htk
 data/3/htk/08-14-20_Matthew_4K.lion_below_orange_chair.0000000001.htk
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.black_snake_below_blue_chair.0000000001.htk
 data/3/htk/08-10-20_David_4K.white_lion_in_grey_box.0000000000.htk
 data/3/htk/08-10-20_David_4K.white_alligator_above_blue_wall.0000000003.htk
@@ -1874,36 +2526,42 @@ data/3/htk/08-13-20_Thad_4K.monkey_below_bed.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.snake_above_box.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.grey_monkey_below_orange_chair.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_blue_wagon.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.alligator_below_grey_bed.0000000002.htk
+=======
 data/3/htk/08-14-20_Matthew_4K.lion_below_chair.0000000001.htk
 data/3/htk/07-24-20_Matthew_4K.monkey_below_blue_chair.0000000002.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.alligator_above_orange_wagon.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_blue_wall.0000000005.htk
 data/3/htk/08-10-20_David_4K.monkey_above_white_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.white_lion_in_grey_box.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.lion_below_orange_chair.0000000001.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_below_grey_bed.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.black_monkey_in_white_flowers.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.black_lion_above_grey_bed.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.orange_monkey_below_grey_flowers.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.snake_above_wall.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_in_box.0000000004.htk
-data/3/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.0000000000.htk
 data/3/htk/08-14-20_Thad_4K.orange_snake_below_blue_flowers.0000000001.htk
 data/3/htk/08-10-20_David_4K.lion_above_flowers.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.blue_monkey_above_grey_box.0000000005.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.monkey_below_bed.0000000004.htk
+>>>>>>> master
 data/3/htk/08-10-20_David_4K.snake_above_wall.0000000001.htk
 data/3/htk/08-10-20_David_4K.monkey_in_orange_flowers.0000000000.htk
 data/3/htk/08-10-20_David_4K.black_lion_above_grey_bed.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_above_chair.0000000004.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.black_alligator_above_orange_wagon.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.lion_above_wall.0000000002.htk
+>>>>>>> master
 data/3/htk/08-11-20_Linda_4K.blue_alligator_above_grey_wall.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.white_snake_in_blue_flowers.0000000002.htk
 data/3/htk/08-10-20_David_4K.grey_monkey_below_orange_chair.0000000001.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_below_grey_bed.0000000005.htk
 data/3/htk/08-11-20_Linda_4K.monkey_below_wagon.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.black_lion_above_grey_bed.0000000000.htk
-data/3/htk/08-14-20_Matthew_4K.snake_below_blue_flowers.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.monkey_below_blue_chair.0000000004.htk
 data/3/htk/08-10-20_David_4K.monkey_above_wall.0000000005.htk
 data/3/htk/08-10-20_David_4K.orange_snake_below_blue_flowers.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_blue_wall.0000000003.htk
@@ -1916,10 +2574,13 @@ data/3/htk/08-08-20_Ishan_4k.monkey_in_box.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_wall.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_grey_wall.0000000004.htk
 data/3/htk/08-13-20_Thad_4K.alligator_above_chair.0000000000.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_in_box.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_in_box.0000000002.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.lion_above_flowers.0000000000.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.orange_snake_below_blue_flowers.0000000000.htk
 data/3/htk/07-24-20_Matthew_4K.alligator_below_grey_bed.0000000003.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.alligator_above_bed.0000000000.htk
 data/3/htk/08-10-20_David_4K.blue_monkey_above_grey_box.0000000003.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_bed.0000000003.htk
@@ -1929,7 +2590,10 @@ data/3/htk/08-08-20_Ishan_4k.lion_above_bed.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_box.0000000001.htk
 data/3/htk/08-08-20_Ishan_4k.black_lion_in_blue_wagon.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.lion_below_orange_chair.0000000003.htk
+<<<<<<< HEAD
+=======
 data/3/htk/07-24-20_Matthew_4K.lion_below_blue_bed.0000000004.htk
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.white_lion_in_grey_box.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_blue_wagon.0000000004.htk
 data/3/htk/08-10-20_David_4K.snake_in_grey_wagon.0000000003.htk
@@ -1939,17 +2603,24 @@ data/3/htk/08-13-20_Thad_4K.monkey_above_wall.0000000000.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_grey_box.0000000001.htk
 data/3/htk/08-11-20_Linda_4K.orange_snake_below_blue_flowers.0000000002.htk
 data/3/htk/08-15-20_Prerna_4K.lion_above_blue_bed.0000000000.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.orange_monkey_in_grey_box.0000000005.htk
+=======
+>>>>>>> master
 data/3/htk/08-08-20_Ishan_4k.white_snake_in_blue_flowers.0000000003.htk
 data/3/htk/08-13-20_Thad_4K.black_alligator_above_orange_wagon.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.snake_below_chair.0000000005.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_flowers.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-12-20_Kanksha_4K.orange_monkey_below_grey_flowers.0000000000.htk
+=======
+>>>>>>> master
 data/3/htk/08-15-20_Prerna_4K.black_snake_below_blue_chair.0000000002.htk
 data/3/htk/08-11-20_Linda_4K.alligator_above_blue_wall.0000000000.htk
 data/3/htk/08-10-20_David_4K.alligator_below_grey_bed.0000000003.htk
 data/3/htk/08-08-20_Ishan_4k.lion_above_orange_bed.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_above_blue_wagon.0000000002.htk
 data/3/htk/08-10-20_David_4K.monkey_above_wall.0000000003.htk
-data/3/htk/07-24-20_Matthew_4K.alligator_above_black_wall.0000000002.htk
 data/3/htk/08-08-20_Ishan_4k.monkey_in_grey_box.0000000004.htk
 data/3/htk/08-10-20_David_4K.monkey_in_box.0000000003.htk
 data/3/htk/08-10-20_David_4K.monkey_below_blue_chair.0000000000.htk
@@ -1958,6 +2629,426 @@ data/3/htk/08-08-20_Ishan_4k.orange_monkey_below_grey_flowers.0000000004.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_in_box.0000000005.htk
 data/3/htk/08-08-20_Ishan_4k.alligator_in_box.0000000000.htk
 data/3/htk/08-15-20_Prerna_4K.alligator_in_box.0000000001.htk
+<<<<<<< HEAD
+data/3/htk/08-14-20_Thad_4K.monkey_in_blue_box.0000000000.htk
+data/3/htk/08-11-20_Linda_4K.lion_above_blue_bed.0000000004.htk
+data/3/htk/08-15-20_Prerna_4K.snake_below_chair.0000000003.htk
+data/3/htk/08-12-20_Kanksha_4K.snake_below_black_chair.0000000006.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_above_wall.0000000003.htk
+data/3/htk/08-08-20_Ishan_4k.monkey_below_blue_chair.0000000000.htk
+data/3/htk/08-10-20_David_4K.orange_monkey_in_grey_box.0000000001.htk
+data/3/htk/08-12-20_Kanksha_4K.lion_above_bed.0000000002.htk
+data/3/htk/08-11-20_Linda_4K.monkey_above_wall.0000000000.htk
+data/3/htk/08-12-20_Kanksha_4K.black_lion_in_blue_wagon.0000000002.htk
+data/3/htk/08-10-20_David_4K.orange_monkey_below_grey_flowers.0000000003.htk
+data/3/htk/08-14-20_Thad_4K.snake_below_chair.0000000000.htk
+data/3/htk/08-14-20_Thad_4K.alligator_above_black_wall.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.black_snake_below_blue_chair.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.snake_above_box.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.grey_snake_below_blue_chair.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_orange_flowers.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_box.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.grey_monkey_below_orange_chair.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.blue_alligator_above_grey_wall.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wagon.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.blue_alligator_above_grey_wall.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_bed.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.grey_snake_below_blue_chair.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_black_chair.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wall.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.white_alligator_above_blue_wall.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_blue_bed.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.snake_above_wall.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_grey_box.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.grey_monkey_below_orange_chair.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_wall.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.0000000005.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_wall.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_blue_bed.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.white_snake_in_blue_flowers.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_flowers.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.orange_alligator_in_grey_flowers.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_orange_bed.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_box.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_orange_wagon.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_blue_bed.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_orange_flowers.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.white_alligator_above_blue_wall.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.black_monkey_in_white_flowers.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_blue_bed.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.snake_in_grey_wagon.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_flowers.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.white_snake_in_blue_flowers.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.orange_alligator_in_grey_flowers.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_blue_box.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_chair.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_blue_bed.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.snake_in_flowers.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_flowers.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_wagon.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.grey_snake_below_blue_chair.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.black_lion_above_grey_bed.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_bed.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_bed.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_orange_bed.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wagon.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.black_snake_below_blue_chair.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.snake_above_wall.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.blue_monkey_above_grey_box.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_wall.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.blue_alligator_above_grey_wall.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_blue_chair.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_white_wall.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_chair.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.orange_alligator_in_grey_flowers.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.white_snake_in_blue_flowers.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_bed.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wagon.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_blue_chair.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_blue_flowers.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_black_wall.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.black_snake_below_blue_chair.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.snake_in_grey_wagon.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_wall.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.black_monkey_in_white_flowers.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.black_lion_in_blue_wagon.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_bed.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_wagon.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.black_lion_in_blue_wagon.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_chair.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_orange_flowers.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.grey_snake_below_blue_chair.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_flowers.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_blue_chair.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_grey_wall.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_box.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.snake_in_grey_wagon.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.white_lion_in_grey_box.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_chair.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_blue_chair.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_grey_box.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_black_chair.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_wall.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.orange_snake_below_blue_flowers.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_chair.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.black_lion_in_blue_wagon.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.white_lion_above_orange_wall.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wall.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.blue_monkey_above_grey_box.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_blue_chair.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_white_wall.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_orange_flowers.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_chair.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_bed.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_box.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_orange_bed.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_wall.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_orange_flowers.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_black_chair.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.orange_monkey_below_grey_flowers.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.white_alligator_above_blue_wall.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_chair.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.orange_monkey_below_grey_flowers.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.blue_monkey_above_grey_box.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_bed.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_chair.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_orange_bed.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wall.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.orange_alligator_in_grey_flowers.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_white_wall.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.grey_monkey_below_orange_chair.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_blue_flowers.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_chair.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_bed.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_box.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_below_grey_bed.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_orange_bed.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.snake_above_wall.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_chair.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_orange_flowers.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.snake_above_box.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_grey_box.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_grey_wall.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_flowers.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_wagon.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_bed.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_box.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_box.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_bed.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_chair.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_orange_wagon.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.orange_monkey_below_grey_flowers.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_white_wall.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_orange_chair.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.snake_in_grey_wagon.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_box.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wall.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.snake_above_wall.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_orange_wagon.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.white_snake_in_blue_flowers.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_bed.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_chair.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.white_lion_in_grey_box.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.black_alligator_above_orange_wagon.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_wall.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_chair.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_blue_box.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_blue_bed.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.orange_monkey_below_grey_flowers.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_wall.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_box.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_blue_box.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_black_chair.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.white_lion_above_orange_wall.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_blue_flowers.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_orange_flowers.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_wall.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_box.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_chair.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_orange_chair.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_blue_box.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_bed.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_black_wall.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_chair.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.grey_monkey_below_orange_chair.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_wall.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.snake_above_wall.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.black_monkey_in_white_flowers.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.snake_in_grey_wagon.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_grey_box.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.snake_above_box.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_bed.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_orange_wagon.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.snake_in_flowers.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_blue_chair.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_wall.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.white_lion_in_grey_box.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.grey_monkey_below_orange_chair.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.black_lion_above_grey_bed.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.black_alligator_above_orange_wagon.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_grey_wall.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.blue_monkey_above_grey_box.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_below_grey_bed.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.orange_snake_below_blue_flowers.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_orange_chair.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_wall.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.blue_alligator_above_grey_wall.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.black_lion_above_grey_bed.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_blue_chair.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_bed.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_chair.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.black_lion_above_grey_bed.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_blue_box.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_wagon.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_chair.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_chair.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.black_alligator_above_orange_wagon.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.orange_monkey_below_grey_flowers.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wall.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wagon.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_black_wall.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_orange_flowers.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.white_lion_in_grey_box.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_orange_flowers.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.blue_monkey_above_grey_box.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_wagon.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.black_monkey_in_white_flowers.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_blue_bed.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_box.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_wagon.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.blue_alligator_above_grey_wall.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_blue_flowers.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_wagon.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.white_lion_in_grey_box.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_bed.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.white_snake_in_blue_flowers.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_orange_flowers.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.snake_in_flowers.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_orange_chair.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.black_alligator_above_orange_wagon.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_chair.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_below_grey_bed.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_grey_wall.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.black_lion_in_blue_wagon.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.black_snake_below_blue_chair.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.orange_snake_below_blue_flowers.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_white_wall.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_grey_wall.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_above_chair.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_black_wall.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_blue_bed.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.grey_snake_below_blue_chair.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.white_lion_above_orange_wall.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.snake_in_flowers.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_orange_wagon.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.snake_above_box.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_bed.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_box.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_bed.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_wagon.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_blue_wagon.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_box.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_wagon.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.snake_in_flowers.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.white_lion_above_orange_wall.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.white_lion_above_orange_wall.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.orange_alligator_in_grey_flowers.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_blue_flowers.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_blue_chair.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.black_monkey_in_white_flowers.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_bed.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.black_alligator_above_orange_wagon.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.black_lion_in_blue_wagon.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.black_lion_above_grey_bed.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.snake_above_box.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_bed.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_wall.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_blue_bed.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.snake_below_black_chair.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.black_snake_below_blue_chair.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_blue_chair.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_orange_chair.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_below_grey_bed.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_box.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_bed.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.lion_above_wall.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_blue_chair.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_in_box.0000000001.htk
+data/3/htk/07-24-20_Matthew_4K.orange_snake_below_blue_flowers.0000000000.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_below_grey_bed.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.lion_below_blue_bed.0000000004.htk
+data/3/htk/07-24-20_Matthew_4K.alligator_above_black_wall.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_below_wagon.0000000003.htk
+data/3/htk/07-24-20_Matthew_4K.monkey_in_grey_box.0000000002.htk
+data/3/htk/07-24-20_Matthew_4K.orange_snake_below_blue_flowers.0000000004.htk
+data/3/htk/08-14-20_Matthew_4K.snake_in_grey_wagon.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_above_wall.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.orange_monkey_below_grey_flowers.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.white_alligator_above_blue_wall.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.lion_above_wall.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_below_blue_chair.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.black_snake_below_blue_chair.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_in_orange_flowers.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.lion_above_flowers.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.lion_above_box.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_above_black_wall.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.blue_alligator_above_grey_wall.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.orange_alligator_in_grey_flowers.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.snake_above_box.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_in_box.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_below_grey_bed.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.orange_monkey_in_grey_box.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_above_blue_wall.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.lion_above_bed.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_in_orange_flowers.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.lion_above_grey_wall.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.lion_above_blue_bed.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.snake_above_wall.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.lion_below_blue_bed.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.orange_snake_below_blue_flowers.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_above_wall.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_above_white_wall.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.white_snake_in_blue_flowers.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.grey_monkey_below_orange_chair.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.lion_above_wall.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_in_box.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.snake_below_bed.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.snake_below_chair.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.black_lion_above_grey_bed.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.lion_above_grey_wall.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.lion_above_blue_bed.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_in_wagon.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_above_blue_wall.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.lion_above_orange_bed.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.white_snake_in_blue_flowers.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_above_chair.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_below_blue_chair.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_above_bed.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_above_black_wall.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.white_lion_above_orange_wall.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.lion_above_bed.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_in_box.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.white_lion_in_grey_box.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.white_lion_above_orange_wall.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.grey_monkey_below_orange_chair.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_in_grey_box.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_above_white_wall.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.blue_monkey_above_grey_box.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.black_monkey_in_white_flowers.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_in_blue_box.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.black_snake_below_blue_chair.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_in_wagon.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.lion_above_orange_bed.0000000002.htk
+data/3/htk/08-14-20_Matthew_4K.black_lion_in_blue_wagon.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_above_chair.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.black_lion_in_blue_wagon.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.snake_above_box.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.black_lion_above_grey_bed.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_below_grey_bed.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_above_blue_wagon.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_below_bed.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_above_wall.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_in_orange_flowers.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.blue_alligator_above_grey_wall.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.lion_below_chair.0000000002.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_in_blue_box.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.white_alligator_above_blue_wall.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.snake_below_blue_chair.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_below_wagon.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.grey_snake_below_blue_chair.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.snake_in_grey_wagon.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.snake_below_black_chair.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.snake_below_bed.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.snake_below_blue_chair.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_in_orange_flowers.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.orange_monkey_in_grey_box.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.snake_below_blue_flowers.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.snake_in_flowers.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_above_orange_wagon.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.white_lion_in_grey_box.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.orange_monkey_below_grey_flowers.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_below_wagon.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_above_orange_wagon.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.snake_above_wall.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_below_bed.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.orange_alligator_in_grey_flowers.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_above_blue_wagon.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.black_alligator_above_orange_wagon.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_in_grey_box.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.blue_monkey_above_grey_box.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.black_alligator_above_orange_wagon.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_above_wall.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.grey_snake_below_blue_chair.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.lion_below_chair.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.lion_above_flowers.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.lion_below_blue_bed.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.monkey_above_chair.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.lion_below_orange_chair.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_above_chair.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_above_bed.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.black_monkey_in_white_flowers.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.grey_alligator_below_blue_flowers.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.lion_above_box.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.orange_snake_below_blue_flowers.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.snake_below_chair.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.alligator_in_box.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.snake_below_black_chair.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.lion_below_orange_chair.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.lion_below_chair.0000000001.htk
+data/3/htk/08-14-20_Matthew_4K.snake_below_blue_flowers.0000000000.htk
+data/3/htk/08-14-20_Matthew_4K.snake_in_flowers.0000000001.htk
+=======
 data/3/htk/07-24-20_Matthew_4K.monkey_below_wagon.0000000003.htk
 data/3/htk/08-14-20_Thad_4K.monkey_in_blue_box.0000000000.htk
 data/3/htk/08-11-20_Linda_4K.lion_above_blue_bed.0000000004.htk
@@ -2313,3 +3404,4 @@ data/3/htk/08-12-20_Kanksha_4K.snake_below_black_chair.0000000006.htk
 data/3/htk/08-12-20_Kanksha_4K.lion_above_wall.0000000003.htk
 data/3/htk/08-12-20_Kanksha_4K.lion_above_bed.0000000002.htk
 data/3/htk/08-12-20_Kanksha_4K.black_lion_in_blue_wagon.0000000002.htk
+>>>>>>> master

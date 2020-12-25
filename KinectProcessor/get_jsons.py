@@ -13,7 +13,7 @@ def runOfflineProcessor(source: str, dest: str):
         source = f"\"{source}\""
     if " " in dest:
         dest = f"\"{dest}\""
-    command = f"./offline_processor_left {source} {dest}.json"
+    command = f"./offline_processor {source} {dest}.json"
     try:
         output = subprocess.check_output(command, shell=True)
     except:
@@ -50,5 +50,10 @@ produceJSONS("/home/aslr/ccg-charizard/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/
 
 #print("Processing files in Extreme SSD")
 #produceJSONS("/media/aslr/Extreme SSD/ProcessingPipeline/DATA/Videos/**/*.mkv", "/media/aslr/U32 Shadow/ProcessingPipeline/DATA/Kinect_Data_July_2020")
+<<<<<<< HEAD
 # print("Processing files in U32 Shadow")
 # produceJSONS("/home/aslr/ccg-charizard/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/Fingerspelling_Of_The_Dead/output_directory/Kinect/12-13-20_Matthew_Fingerspelling_Right/**/*.mkv", "/home/aslr/ccg-charizard/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/Fingerspelling_Of_The_Dead/output_directory/Kinect_json")
+=======
+print("Processing files")
+produceJSONS("/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Videos/07-24-20_Matthew_4KDepth/*/*/*.mkv", "/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Kinect_Data_2020/07-24-20_Matthew_4KDepth")
+>>>>>>> 68869373d8b66b037ca054734f3a66658542be06

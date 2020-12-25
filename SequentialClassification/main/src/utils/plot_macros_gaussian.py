@@ -252,6 +252,11 @@ def each_confused_word_and_feature_graphs(macros_data, save_dir, words, feature_
                     if col in word: col_word = word
                 
                 if not row_word or not col_word: continue
+                
+                #remove afterwards!!!
+                if not (row_word == 'above' or row_word == 'in'): continue
+                if not (col_word == 'above' or col_word == 'in'): continue
+                if row_word == col_word: continue
 
                 word_dir = os.path.join(save_dir, '_'.join([row_word, col_word]))
                 if not os.path.exists(word_dir):
@@ -303,9 +308,9 @@ def plot_macros_gaussian(feature_config_filepath, feature_config_key, macros_fil
 
     """
     gaussian_dir = os.path.join(save_dir, 'visualization', 'gaussian', str(mode))
-    if os.path.exists(gaussian_dir):
-        shutil.rmtree(gaussian_dir)
-    os.makedirs(gaussian_dir)
+    # if os.path.exists(gaussian_dir):
+    #     shutil.rmtree(gaussian_dir)
+    # os.makedirs(gaussian_dir)
 
     all_features = load_json(feature_config_filepath)[str(feature_config_key)]
     macros_data = get_macros(all_features, macros_filepath)
@@ -323,15 +328,15 @@ def plot_macros_gaussian(feature_config_filepath, feature_config_key, macros_fil
 
 if __name__=='__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--feature_config_filepath', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs/configs/features.json')
+    parser.add_argument('--feature_config_filepath', type = str, default = '/home/aslr/SBHMM-HTK/SequentialClassification/main/projects/Kinect/configs/features.json')
     parser.add_argument('--feature_config_key', type = str, default = 'selected_features')
-    parser.add_argument('--macros_filepath', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs/models/hmm80/newMacros')
-    parser.add_argument('--save_dir', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs/')
+    parser.add_argument('--macros_filepath', type = str, default = '/home/aslr/SBHMM-HTK/SequentialClassification/main/projects/Kinect/models/3/hmm220/newMacros')
+    parser.add_argument('--save_dir', type = str, default = '/home/aslr/SBHMM-HTK/SequentialClassification/main/projects/Kinect/')
     parser.add_argument('--words', nargs='*', type = str, default = [])
-    parser.add_argument('--feature_labels', nargs='*', type = str, default = [])
-    parser.add_argument('--confusion_matrix_filepath', type = str, default = '/home/thad/copycat/SBHMM-HTK/SequentialClassification/main/projects/Prerna_Interpolation_HMMs/hresults/res_hmm80.txt')
-    parser.add_argument('--threshold', type = float, default = 0.05)
-    parser.add_argument('--mode', type = int, default = 0)
+    parser.add_argument('--feature_labels', nargs='*', type = str, default = [])#['dist_between_handtips_squared_x', 'dist_between_handtips_squared_y', 'dist_between_handtips_squared_z'])
+    parser.add_argument('--confusion_matrix_filepath', type = str, default = '/home/aslr/SBHMM-HTK/SequentialClassification/main/projects/Kinect/hresults/3/res_hmm220.txt')
+    parser.add_argument('--threshold', type = float, default = 0.0)
+    parser.add_argument('--mode', type = int, default = 1)
     args = parser.parse_args()
 
     """Generates gaussian graphs for visualization purposes with respect to the newMacros data generated from HMMs.
