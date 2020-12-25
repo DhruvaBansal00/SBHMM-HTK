@@ -287,5 +287,5 @@
         "angle_wrist_elbow_left",
         "angle_wrist_elbow_right"
     ],
-    "features_dir": "/media/thad/DataBackup/AlphaPoseJson"
+    "features_dir": "/home/aslr/ccg-charizard/media/thad/DataBackup/AlphaPoseJson"
 }
