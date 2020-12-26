@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-$adjective1 = black | grey | white | blue | orange;
-$subject = snake | alligator | monkey | lion;
-$preposition = in | above | below;
-$adjective2 = black | grey | white | blue | orange;
-$object = wall | flowers | bed | box | wagon | chair;
-=======
-$adjective1 = grey | black | blue | white | orange;
-$subject = lion | snake | alligator | monkey;
-$preposition = below | in | above;
-$adjective2 = grey | black | blue | white | orange;
-$object = chair | wagon | wall | flowers | bed | box;
->>>>>>> master
+$adjective1 = black | orange | grey | white | blue;
+$subject = lion | monkey | snake | alligator;
+$preposition = above | below | in;
+$adjective2 = black | orange | grey | white | blue;
+$object = chair | wall | bed | wagon | box | flowers;
 
 (SENT-START [$adjective1] $subject $preposition [$adjective2] $object SENT-END)
