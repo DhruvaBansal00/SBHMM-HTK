@@ -264,16 +264,27 @@ def select_features(input_filepath: str, features_to_extract: list,
 
     if center_on_nose:
         
-        x_cols = [column for column in df.columns if 'x' in column]
-        y_cols = [column for column in df.columns if 'y' in column]
-        z_cols = [column for column in df.columns if 'z' in column]
-        
-        df[x_cols] -= noses[0]
-        df[y_cols] -= noses[1]
-        df[z_cols] -= noses[2]
+        x_cols = [column for column in df.columns if '_x' in column]
+        y_cols = [column for column in df.columns if '_y' in column]
+        z_cols = [column for column in df.columns if '_z' in column]
 
-    df['horizontal_hand_dist'] = df['right_hand_x'] - df['left_hand_x']
-    df['vertical_hand_dist'] = df['right_hand_y'] - df['left_hand_y']
+        # SHAPES:
+        # df[x_cols]: (159, 87)
+        # noses: (159, 3)
+        # noses[0]: (,3)
+        # noses[:,0]: (159,)
+        
+        # this is what we had before
+        # df[x_cols] -= np.mean(noses, axis=1)[0]
+        # df[y_cols] -= np.mean(noses, axis=1)[1]
+        # df[z_cols] -= np.mean(noses, axis=1)[2]
+
+        df[x_cols] = (df[x_cols].transpose() - noses[:,0]).transpose()
+        df[y_cols] = (df[y_cols].transpose() - noses[:,1]).transpose()
+        df[z_cols] = (df[z_cols].transpose() - noses[:,2]).transpose()
+
+    df['horizontal_hand_dist'] = df['right_wrist_x'] - df['left_wrist_x']
+    df['vertical_hand_dist'] = df['right_wrist_y'] - df['left_wrist_y']
 
     for col in df.columns:
 
