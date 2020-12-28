@@ -1,111 +1,159 @@
 HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/0/res_hmm219.mlf 
-Aligned transcription: data/0/htk/alphapose_11-08-20_Ishan_4KDepth.monkey_below_blue_chair.0000000003.lab vs data/0/htk/alphapose_11-08-20_Ishan_4KDepth.monkey_below_blue_chair.0000000003.rec
- LAB: monkey below blue chair 
- REC:        snake in   wagon 
-Aligned transcription: data/0/htk/alphapose_11-08-20_Colby_4KDepth.snake_below_blue_flowers.0000000003.lab vs data/0/htk/alphapose_11-08-20_Colby_4KDepth.snake_below_blue_flowers.0000000003.rec
- LAB: snake below blue flowers 
- REC: snake       in   chair   
+Aligned transcription: data/0/htk/alphapose_08-06-20_Linda_4KDepth.black_lion_in_blue_wagon.0000000000.lab vs data/0/htk/alphapose_08-06-20_Linda_4KDepth.black_lion_in_blue_wagon.0000000000.rec
+ LAB: black lion in blue wagon 
+ REC: black lion in      wagon 
+Aligned transcription: data/0/htk/alphapose_07-24-20_Matthew_4KDepth.alligator_above_wall.0000000003.lab vs data/0/htk/alphapose_07-24-20_Matthew_4KDepth.alligator_above_wall.0000000003.rec
+ LAB:       alligator above wall 
+ REC: white alligator above wall 
+Aligned transcription: data/0/htk/alphapose_08-08-20_Ishan_4kDepth.orange_snake_below_blue_flowers.0000000003.lab vs data/0/htk/alphapose_08-08-20_Ishan_4kDepth.orange_snake_below_blue_flowers.0000000003.rec
+ LAB: orange snake below blue flowers 
+ REC:        snake below blue flowers 
+Aligned transcription: data/0/htk/alphapose_08-06-20_Linda_4KDepth.orange_snake_below_blue_flowers.0000000002.lab vs data/0/htk/alphapose_08-06-20_Linda_4KDepth.orange_snake_below_blue_flowers.0000000002.rec
+ LAB: orange snake below blue flowers 
+ REC: orange snake below      flowers 
 Aligned transcription: data/0/htk/alphapose_11-08-20_Ishan_4KDepth.grey_monkey_below_orange_chair.0000000004.lab vs data/0/htk/alphapose_11-08-20_Ishan_4KDepth.grey_monkey_below_orange_chair.0000000004.rec
  LAB: grey monkey below orange chair 
- REC:      snake  in    blue   wagon 
-Aligned transcription: data/0/htk/alphapose_08-10-20_David_4KDepth.snake_below_blue_flowers.0000000000.lab vs data/0/htk/alphapose_08-10-20_David_4KDepth.snake_below_blue_flowers.0000000000.rec
- LAB:        snake below blue flowers 
- REC: orange snake below blue flowers 
+ REC:      snake  below        bed   
+Aligned transcription: data/0/htk/alphapose_07-24-20_Matthew_4KDepth.monkey_in_orange_flowers.0000000000.lab vs data/0/htk/alphapose_07-24-20_Matthew_4KDepth.monkey_in_orange_flowers.0000000000.rec
+ LAB: monkey in orange flowers 
+ REC: monkey in        flowers 
 Aligned transcription: data/0/htk/alphapose_11-08-20_Ishan_4KDepth.lion_above_blue_bed.0000000002.lab vs data/0/htk/alphapose_11-08-20_Ishan_4KDepth.lion_above_blue_bed.0000000002.rec
  LAB: lion above blue bed 
  REC: lion above      bed 
-Aligned transcription: data/0/htk/alphapose_07-24-20_Matthew_4KDepth.white_lion_above_orange_wall.0000000002.lab vs data/0/htk/alphapose_07-24-20_Matthew_4KDepth.white_lion_above_orange_wall.0000000002.rec
- LAB: white lion above orange wall 
- REC:       lion above orange wall 
-Aligned transcription: data/0/htk/alphapose_11-08-20_Colby_4KDepth.snake_in_flowers.0000000008.lab vs data/0/htk/alphapose_11-08-20_Colby_4KDepth.snake_in_flowers.0000000008.rec
- LAB: snake in flowers 
- REC: snake in chair   
+Aligned transcription: data/0/htk/alphapose_08-06-20_Linda_4KDepth.lion_below_blue_bed.0000000001.lab vs data/0/htk/alphapose_08-06-20_Linda_4KDepth.lion_below_blue_bed.0000000001.rec
+ LAB: lion below blue bed 
+ REC: lion below      bed 
 Aligned transcription: data/0/htk/alphapose_11-01-20_Ishan_4KDepth.alligator_in_orange_flowers.0000000001.lab vs data/0/htk/alphapose_11-01-20_Ishan_4KDepth.alligator_in_orange_flowers.0000000001.rec
  LAB: alligator in orange flowers 
  REC: alligator in        flowers 
 Aligned transcription: data/0/htk/alphapose_07-24-20_Matthew_4KDepth.alligator_above_black_wall.0000000003.lab vs data/0/htk/alphapose_07-24-20_Matthew_4KDepth.alligator_above_black_wall.0000000003.rec
  LAB: alligator above black wall 
  REC: alligator above       wall 
+Aligned transcription: data/0/htk/alphapose_07-24-20_Matthew_4KDepth.monkey_above_white_wall.0000000003.lab vs data/0/htk/alphapose_07-24-20_Matthew_4KDepth.monkey_above_white_wall.0000000003.rec
+ LAB: monkey above white wall 
+ REC: monkey above       wall 
 Aligned transcription: data/0/htk/alphapose_07-24-20_Matthew_4KDepth.white_lion_in_grey_box.0000000000.lab vs data/0/htk/alphapose_07-24-20_Matthew_4KDepth.white_lion_in_grey_box.0000000000.rec
  LAB: white lion      in grey box 
  REC: white alligator in grey box 
 Aligned transcription: data/0/htk/alphapose_11-08-20_Colby_4KDepth.orange_monkey_below_grey_flowers.0000000004.lab vs data/0/htk/alphapose_11-08-20_Colby_4KDepth.orange_monkey_below_grey_flowers.0000000004.rec
- LAB: orange monkey below grey  flowers 
- REC: orange monkey       above chair   
+ LAB: orange monkey below grey flowers 
+ REC: orange monkey below      chair   
+Aligned transcription: data/0/htk/alphapose_11-08-20_Ishan_4KDepth.black_alligator_above_orange_wagon.0000000004.lab vs data/0/htk/alphapose_11-08-20_Ishan_4KDepth.black_alligator_above_orange_wagon.0000000004.rec
+ LAB: black alligator above orange wagon 
+ REC: blue  alligator above orange wagon 
 Aligned transcription: data/0/htk/alphapose_08-08-20_Ishan_4kDepth.snake_in_grey_wagon.0000000006.lab vs data/0/htk/alphapose_08-08-20_Ishan_4kDepth.snake_in_grey_wagon.0000000006.rec
- LAB:       snake in grey wagon 
- REC: black snake in grey wall  
-Aligned transcription: data/0/htk/alphapose_11-08-20_Colby_4KDepth.lion_above_blue_bed.0000000000.lab vs data/0/htk/alphapose_11-08-20_Colby_4KDepth.lion_above_blue_bed.0000000000.rec
- LAB: lion above blue bed     
- REC: lion above blue flowers 
+ LAB: snake in grey wagon 
+ REC: snake in      box   
+Aligned transcription: data/0/htk/alphapose_08-12-20_Kanksha_4KDepth.alligator_above_orange_wagon.0000000004.lab vs data/0/htk/alphapose_08-12-20_Kanksha_4KDepth.alligator_above_orange_wagon.0000000004.rec
+ LAB: alligator above orange wagon   
+ REC: alligator above        flowers 
 Aligned transcription: data/0/htk/alphapose_07-24-20_Matthew_4KDepth.grey_snake_below_blue_chair.0000000003.lab vs data/0/htk/alphapose_07-24-20_Matthew_4KDepth.grey_snake_below_blue_chair.0000000003.rec
  LAB: grey snake below blue chair 
  REC: grey snake below      chair 
+Aligned transcription: data/0/htk/alphapose_08-06-20_Linda_4KDepth.black_alligator_above_orange_wagon.0000000004.lab vs data/0/htk/alphapose_08-06-20_Linda_4KDepth.black_alligator_above_orange_wagon.0000000004.rec
+ LAB: black alligator above orange wagon 
+ REC: black alligator above        wagon 
 Aligned transcription: data/0/htk/alphapose_08-08-20_Ishan_4kDepth.grey_snake_below_blue_chair.0000000002.lab vs data/0/htk/alphapose_08-08-20_Ishan_4kDepth.grey_snake_below_blue_chair.0000000002.rec
- LAB: grey snake below blue chair 
- REC: grey snake in    blue chair 
+ LAB: grey snake     below blue chair 
+ REC: grey alligator below blue chair 
+Aligned transcription: data/0/htk/alphapose_08-06-20_Linda_4KDepth.alligator_above_blue_wagon.0000000000.lab vs data/0/htk/alphapose_08-06-20_Linda_4KDepth.alligator_above_blue_wagon.0000000000.rec
+ LAB: alligator above blue wagon 
+ REC: alligator above      wagon 
+Aligned transcription: data/0/htk/alphapose_07-24-20_Matthew_4KDepth.snake_below_blue_chair.0000000000.lab vs data/0/htk/alphapose_07-24-20_Matthew_4KDepth.snake_below_blue_chair.0000000000.rec
+ LAB: snake below blue chair 
+ REC: snake below      chair 
+Aligned transcription: data/0/htk/alphapose_08-11-20_Linda_4KDepth.orange_snake_below_blue_flowers.0000000004.lab vs data/0/htk/alphapose_08-11-20_Linda_4KDepth.orange_snake_below_blue_flowers.0000000004.rec
+ LAB: orange snake below blue flowers 
+ REC:        snake below blue flowers 
 Aligned transcription: data/0/htk/alphapose_11-08-20_Ishan_4KDepth.black_lion_above_grey_bed.0000000005.lab vs data/0/htk/alphapose_11-08-20_Ishan_4KDepth.black_lion_above_grey_bed.0000000005.rec
- LAB: black lion      above grey bed     
- REC: black alligator above      flowers 
+ LAB: black lion above grey bed 
+ REC:       lion       in   bed 
 Aligned transcription: data/0/htk/alphapose_11-08-20_Colby_4KDepth.black_monkey_in_white_flowers.0000000001.lab vs data/0/htk/alphapose_11-08-20_Colby_4KDepth.black_monkey_in_white_flowers.0000000001.rec
  LAB: black monkey in white flowers 
  REC: black lion   in white flowers 
 Aligned transcription: data/0/htk/alphapose_07-24-20_Matthew_4KDepth.snake_below_blue_flowers.0000000002.lab vs data/0/htk/alphapose_07-24-20_Matthew_4KDepth.snake_below_blue_flowers.0000000002.rec
  LAB: snake below blue flowers 
- REC: snake below grey flowers 
+ REC: snake below      flowers 
 Aligned transcription: data/0/htk/alphapose_11-07_20_Kanksha_4KDepth.orange_monkey_in_grey_box.0000000000.lab vs data/0/htk/alphapose_11-07_20_Kanksha_4KDepth.orange_monkey_in_grey_box.0000000000.rec
- LAB: orange monkey in grey box   
- REC:        monkey in      wagon 
-Aligned transcription: data/0/htk/alphapose_08-06-20_Linda_4KDepth.white_lion_in_grey_box.0000000000.lab vs data/0/htk/alphapose_08-06-20_Linda_4KDepth.white_lion_in_grey_box.0000000000.rec
- LAB: white lion in grey box 
- REC: white lion in      box 
+ LAB: orange monkey in grey  box   
+ REC:        monkey    above wagon 
+Aligned transcription: data/0/htk/alphapose_07-24-20_Matthew_4KDepth.lion_below_blue_bed.0000000000.lab vs data/0/htk/alphapose_07-24-20_Matthew_4KDepth.lion_below_blue_bed.0000000000.rec
+ LAB: lion below blue bed 
+ REC: lion below      bed 
+Aligned transcription: data/0/htk/alphapose_07-24-20_Matthew_4KDepth.orange_snake_below_blue_flowers.0000000003.lab vs data/0/htk/alphapose_07-24-20_Matthew_4KDepth.orange_snake_below_blue_flowers.0000000003.rec
+ LAB: orange snake below blue flowers 
+ REC:        snake below      flowers 
 Aligned transcription: data/0/htk/alphapose_08-27-20_Colby_4KDepth.snake_below_bed.0000000000.lab vs data/0/htk/alphapose_08-27-20_Colby_4KDepth.snake_below_bed.0000000000.rec
- LAB: snake  below bed 
- REC: monkey below bed 
+ LAB: snake below bed 
+ REC: lion  below bed 
+Aligned transcription: data/0/htk/alphapose_08-15-20_Prerna_4KDepth.monkey_in_orange_flowers.0000000000.lab vs data/0/htk/alphapose_08-15-20_Prerna_4KDepth.monkey_in_orange_flowers.0000000000.rec
+ LAB: monkey in orange flowers 
+ REC: monkey in orange wagon   
+Aligned transcription: data/0/htk/alphapose_07-24-20_Matthew_4KDepth.alligator_in_orange_flowers.0000000000.lab vs data/0/htk/alphapose_07-24-20_Matthew_4KDepth.alligator_in_orange_flowers.0000000000.rec
+ LAB: alligator in orange flowers 
+ REC: alligator in        flowers 
 Aligned transcription: data/0/htk/alphapose_11-08-20_Colby_4KDepth.black_monkey_in_white_flowers.0000000007.lab vs data/0/htk/alphapose_11-08-20_Colby_4KDepth.black_monkey_in_white_flowers.0000000007.rec
  LAB: black monkey in white flowers 
  REC: black monkey in       chair   
+Aligned transcription: data/0/htk/alphapose_08-06-20_Linda_4KDepth.white_lion_above_orange_wall.0000000001.lab vs data/0/htk/alphapose_08-06-20_Linda_4KDepth.white_lion_above_orange_wall.0000000001.rec
+ LAB: white lion above orange wall 
+ REC:       lion above orange wall 
 Aligned transcription: data/0/htk/alphapose_11-08-20_Colby_4KDepth.black_snake_below_blue_chair.0000000007.lab vs data/0/htk/alphapose_11-08-20_Colby_4KDepth.black_snake_below_blue_chair.0000000007.rec
- LAB: black snake below blue  chair 
- REC: black snake       above wagon 
-Aligned transcription: data/0/htk/alphapose_08-15-20_Prerna_4KDepth.snake_in_flowers.0000000004.lab vs data/0/htk/alphapose_08-15-20_Prerna_4KDepth.snake_in_flowers.0000000004.rec
- LAB: snake in      flowers 
- REC: snake in blue flowers 
+ LAB: black snake below blue chair 
+ REC:       lion  below      wagon 
+Aligned transcription: data/0/htk/alphapose_08-12-20_Kanksha_4KDepth.black_alligator_above_orange_wagon.0000000004.lab vs data/0/htk/alphapose_08-12-20_Kanksha_4KDepth.black_alligator_above_orange_wagon.0000000004.rec
+ LAB: black alligator above orange wagon   
+ REC: black alligator above        flowers 
 Aligned transcription: data/0/htk/alphapose_08-27-20_Colby_4KDepth.grey_monkey_below_orange_chair.0000000000.lab vs data/0/htk/alphapose_08-27-20_Colby_4KDepth.grey_monkey_below_orange_chair.0000000000.rec
  LAB: grey monkey below orange chair 
- REC:      monkey below orange chair 
+ REC:      monkey below        chair 
+Aligned transcription: data/0/htk/alphapose_08-08-20_Ishan_4kDepth.snake_in_grey_wagon.0000000004.lab vs data/0/htk/alphapose_08-08-20_Ishan_4kDepth.snake_in_grey_wagon.0000000004.rec
+ LAB: snake in grey wagon 
+ REC: snake in grey wall  
 Aligned transcription: data/0/htk/alphapose_11-08-20_Colby_4KDepth.monkey_above_white_wall.0000000001.lab vs data/0/htk/alphapose_11-08-20_Colby_4KDepth.monkey_above_white_wall.0000000001.rec
  LAB: monkey above white wall  
- REC: monkey above       wagon 
+ REC: monkey above       chair 
 Aligned transcription: data/0/htk/alphapose_08-12-20_Kanksha_4KDepth.blue_monkey_above_grey_box.0000000004.lab vs data/0/htk/alphapose_08-12-20_Kanksha_4KDepth.blue_monkey_above_grey_box.0000000004.rec
  LAB: blue monkey above grey box  
  REC: blue monkey above grey wall 
 Aligned transcription: data/0/htk/alphapose_08-27-20_Colby_4KDepth.orange_snake_below_blue_flowers.0000000000.lab vs data/0/htk/alphapose_08-27-20_Colby_4KDepth.orange_snake_below_blue_flowers.0000000000.rec
- LAB: orange snake  below blue flowers 
- REC:        monkey below blue flowers 
-Aligned transcription: data/0/htk/alphapose_07-24-20_Matthew_4KDepth.snake_below_black_chair.0000000001.lab vs data/0/htk/alphapose_07-24-20_Matthew_4KDepth.snake_below_black_chair.0000000001.rec
- LAB: snake below black chair 
- REC: snake below blue  chair 
+ LAB: orange snake below blue flowers 
+ REC:        snake below      flowers 
+Aligned transcription: data/0/htk/alphapose_08-10-20_David_4KDepth.white_snake_in_blue_flowers.0000000003.lab vs data/0/htk/alphapose_08-10-20_David_4KDepth.white_snake_in_blue_flowers.0000000003.rec
+ LAB: white snake in blue flowers 
+ REC:       snake in blue flowers 
+Aligned transcription: data/0/htk/alphapose_11-01-20_Ishan_4KDepth.black_lion_above_grey_bed.0000000001.lab vs data/0/htk/alphapose_11-01-20_Ishan_4KDepth.black_lion_above_grey_bed.0000000001.rec
+ LAB: black lion above grey bed 
+ REC: black lion above      bed 
+Aligned transcription: data/0/htk/alphapose_08-11-20_Linda_4KDepth.black_lion_in_blue_wagon.0000000002.lab vs data/0/htk/alphapose_08-11-20_Linda_4KDepth.black_lion_in_blue_wagon.0000000002.rec
+ LAB: black lion in blue wagon 
+ REC: black lion in      wagon 
+Aligned transcription: data/0/htk/alphapose_07-24-20_Matthew_4KDepth.black_snake_below_blue_chair.0000000003.lab vs data/0/htk/alphapose_07-24-20_Matthew_4KDepth.black_snake_below_blue_chair.0000000003.rec
+ LAB: black snake below blue chair 
+ REC: black snake below      chair 
 Aligned transcription: data/0/htk/alphapose_08-27-20_Colby_4KDepth.blue_alligator_above_grey_wall.0000000000.lab vs data/0/htk/alphapose_08-27-20_Colby_4KDepth.blue_alligator_above_grey_wall.0000000000.rec
  LAB: blue alligator above grey wall 
- REC:      lion      above      wall 
+ REC:      alligator       in   wall 
 Aligned transcription: data/0/htk/alphapose_11-04-20_Kanksha_4KDepth.lion_above_orange_bed.0000000001.lab vs data/0/htk/alphapose_11-04-20_Kanksha_4KDepth.lion_above_orange_bed.0000000001.rec
  LAB: lion above orange bed  
  REC: lion above orange wall 
 Aligned transcription: data/0/htk/alphapose_08-27-20_Colby_4KDepth.orange_alligator_in_grey_flowers.0000000000.lab vs data/0/htk/alphapose_08-27-20_Colby_4KDepth.orange_alligator_in_grey_flowers.0000000000.rec
  LAB: orange alligator in grey flowers 
- REC:        lion      in      flowers 
+ REC:        alligator in      flowers 
+Aligned transcription: data/0/htk/alphapose_08-27-20_Colby_4KDepth.alligator_above_wall.0000000000.lab vs data/0/htk/alphapose_08-27-20_Colby_4KDepth.alligator_above_wall.0000000000.rec
+ LAB: alligator above wall 
+ REC: alligator in    wall 
 Aligned transcription: data/0/htk/alphapose_08-27-20_Colby_4KDepth.snake_below_blue_chair.0000000000.lab vs data/0/htk/alphapose_08-27-20_Colby_4KDepth.snake_below_blue_chair.0000000000.rec
- LAB: snake  below blue chair 
- REC: monkey below blue chair 
+ LAB: snake below blue chair 
+ REC: lion  below      chair 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Sat Dec 26 20:56:39 2020            |
+    | HTK Results Analysis at Sun Dec 27 18:00:59 2020            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/0/res_hmm219.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |  774  |  98.21   1.07   0.72   0.10   1.89   4.26 |
+    | Sum/Avg |  771  |  97.65   0.82   1.54   0.03   2.39   6.36 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -113,22 +161,22 @@ Aligned transcription: data/0/htk/alphapose_08-27-20_Colby_4KDepth.snake_below_b
        o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
        v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
        e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
-abov  331  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-alli   0  212  0   0   0   0   0   0   0   0   0   2   0   0   0   0   0   0    0 [99.1/0.1]
- bed   0   0  119  0   0   0   0   0   2   0   0   0   0   0   0   0   1   0    0 [97.5/0.1]
-belo   0   0   0  240  0   0   0   0   0   0   2   0   0   0   1   0   0   0    3 [98.8/0.1]
-blac   0   0   0   0  94   1   0   0   0   0   0   0   0   0   0   0   0   0    1 [98.9/0.0]
-blue   1   0   0   0   0  229  0   0   0   1   2   0   0   0   0   0   0   0    3 [98.3/0.1]
+abov  328  0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0    2 [99.7/0.0]
+alli   0  214  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0  121  0   0   0   0   0   0   0   0   0   0   0   0   0   1   0    0 [99.2/0.0]
+belo   0   0   0  244  0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blac   0   0   0   0  92   1   0   0   0   0   0   0   0   0   0   0   0   0    3 [98.9/0.0]
+blue   0   0   0   0   0  218  0   0   0   0   0   0   0   0   0   0   0   0   16
  box   0   0   0   0   0   0  118  0   0   0   0   0   0   0   0   1   1   0    0 [98.3/0.1]
-chai   0   0   0   0   0   0   0  151  0   0   0   0   0   0   0   3   0   0    0 [98.1/0.1]
-flow   0   0   0   0   0   0   0   4  137  0   0   0   0   0   0   0   0   0    0 [97.2/0.1]
-grey   1   0   0   0   0   0   0   0   0  179  0   0   0   0   0   0   0   0    7 [99.4/0.0]
-  in   0   0   0   0   0   0   0   0   0   0  197  0   0   0   0   0   0   0    0
-lion   0   2   0   0   0   0   0   0   0   0   0  175  0   0   0   0   0   0    0 [98.9/0.1]
-monk   0   0   0   0   0   0   0   0   0   0   0   1  200  0   1   0   0   0    1 [99.0/0.1]
-oran   0   0   0   0   0   1   0   0   0   0   0   0   0  149  0   0   0   0    4 [99.3/0.0]
-snak   0   0   0   0   0   0   0   0   0   0   0   0   3   0  177  0   0   0    0 [98.3/0.1]
-wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  94   1   0    0 [98.9/0.0]
-wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1  141  0    0 [99.3/0.0]
-whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  73    3
-Ins    0   0   0   0   1   1   0   0   0   0   0   0   0   1   0   0   0   0
+chai   0   0   1   0   0   0   0  151  0   0   0   0   0   0   0   1   0   0    0 [98.7/0.1]
+flow   0   0   0   0   0   0   0   2  136  0   0   0   0   0   0   1   0   0    0 [97.8/0.1]
+grey   1   0   0   0   0   0   0   0   0  178  2   0   0   0   0   0   0   0    6 [98.3/0.1]
+  in   0   0   0   0   0   0   0   0   0   0  195  0   0   0   0   0   0   0    1
+lion   0   1   0   0   0   0   0   0   0   0   0  176  0   0   0   0   0   0    0 [99.4/0.0]
+monk   0   0   0   0   0   0   0   0   0   0   0   1  200  0   1   0   0   0    0 [99.0/0.1]
+oran   0   0   0   0   0   0   0   0   0   0   0   0   0  140  0   0   0   0   14
+snak   0   1   0   0   0   0   0   0   0   0   0   3   0   0  174  0   0   0    0 [97.8/0.1]
+wago   0   0   0   0   0   0   1   0   2   0   0   0   0   0   0  91   1   0    0 [95.8/0.1]
+wall   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0  141  0    0 [99.3/0.0]
+whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  71    5
+Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1
