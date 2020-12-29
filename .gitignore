@@ -4,10 +4,14 @@
 SequentialClassification/main/projects/*/logs/
 
 !SequentialClassification/main/projects/*/models/
-SequentialClassification/main/projects/*/models/*
 
-!SequentialClassification/main/projects/*/models/*/hmm220
+SequentialClassification/main/projects/*/models/*
+!SequentialClassification/main/projects/*/models/*/
+
 SequentialClassification/main/projects/*/models/*/*
+!SequentialClassification/main/projects/*/models/*/hmm220/
+!SequentialClassification/main/projects/*/models/*/hmm240/
+!SequentialClassification/main/projects/*/models/*/prototype
 
 
 SequentialClassification/main/projects/*/data/*/*/*.ark
