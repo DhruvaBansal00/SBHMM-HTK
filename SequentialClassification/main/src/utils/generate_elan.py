@@ -204,6 +204,7 @@ if __name__=='__main__':
     '''
     results = '../../projects/Kinect/results/'
     for mlf_dir in os.listdir(results):
-        for mlf in os.listdir(os.path.join(results, mlf_dir)):
-            data = mlf_to_dict(os.path.join(results, mlf_dir, mlf))
-            make_elan(data, False, video_dirs, save_dir)
+        if os.path.isdir(mlf_dir):
+            for mlf in os.listdir(os.path.join(results, mlf_dir)): 
+                data = mlf_to_dict(os.path.join(results, mlf_dir, mlf))
+                make_elan(data, True, video_dirs, save_dir)
