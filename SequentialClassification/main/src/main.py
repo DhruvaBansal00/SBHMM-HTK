@@ -226,10 +226,11 @@ def main():
             groups = [group_map[phrase] for phrase in phrases]
             cross_val = cross_val_method
         elif cvm == 'leave_one_user_out':
-            users = [filepath.split('/')[-1].split('.')[0].split('_')[1]
+            users = [filepath.split('/')[-1].split('.')[0].split('_')[-2]
                 for filepath
                 in htk_filepaths]
             unique_users = set(users)
+            print(unique_users)
             group_map = {user: i for i, user in enumerate(unique_users)}
             groups = [group_map[user] for user in users]            
             cross_val = cross_val_method
