@@ -55,7 +55,6 @@ def mlf_to_dict(mlf_filepath: str):
                 start = int(line_arr[0])/1000
                 end = int(line_arr[1])/1000
                 out_dict[fname][word].append([state, start, end])
-        
         return out_dict
         
 def make_elan(data: dict, has_states: bool, video_dirs: list, eaf_savedir: str) -> None:
@@ -75,8 +74,7 @@ def make_elan(data: dict, has_states: bool, video_dirs: list, eaf_savedir: str) 
     eaf_savedir : str
         Directory under which eaf files are saved.
     """
-    video_names = [ vname.split('/')[-1][:-4] for vname in video_dirs ]
-
+    video_names = [ '.'.join(vname.split('/')[-1].split('.')[:-1]) for vname in video_dirs ]
     for fname in data:
         if fname in video_names:
             video_fp = video_dirs[video_names.index(fname)]
@@ -94,12 +92,17 @@ def make_elan(data: dict, has_states: bool, video_dirs: list, eaf_savedir: str) 
             if not has_states:
                 eaf_file.add_tier(fname)
                 for word in data[fname]:
-                    eaf_file.add_annotation(fname, int(data[fname][word][0][1]), int(data[fname][word][-1][2]), word)
+                    start = int(data[fname][word][0][1])
+                    end = int(data[fname][word][-1][2])
+                    eaf_file.add_annotation(fname, start, end, word)
             else:
                 for word in data[fname]:
                     eaf_file.add_tier(word)
                     for state in data[fname][word]:
-                        eaf_file.add_annotation(data[fname][word], int(data[fname][word][state][1]), state)
+                        state_num = state[0]
+                        start = state[1]
+                        end = state[2]
+                        eaf_file.add_annotation(word, int(start), int(end), state_num)
             
             # Create eaf out of data
             to_eaf(out_path, eaf_file)
@@ -189,10 +192,10 @@ def mlf_to_elan(mlf_filepath: str, video_dirs: list, eaf_savedir: str) -> None:
 if __name__=='__main__':
 
     # Find where videos are located on desktop
-    video_dirs = glob.glob('/media/disk1/Video_Backup_MP4/**/*.mp4', recursive=True)
+    video_dirs = glob.glob('/media/aslr/disk1/Video_Backup_MP4/**/*.mp4', recursive=True)
 
     # Save annotated videos on desktop
-    save_dir = '/media/disk1/video_annotation'
+    save_dir = '/media/aslr/disk1/video_annotation'
     '''
     # Iterate over MLF files
     results = '../../projects/Kinect/results/'
@@ -204,7 +207,8 @@ if __name__=='__main__':
     '''
     results = '../../projects/Kinect/results/'
     for mlf_dir in os.listdir(results):
-        if os.path.isdir(mlf_dir):
-            for mlf in os.listdir(os.path.join(results, mlf_dir)): 
-                data = mlf_to_dict(os.path.join(results, mlf_dir, mlf))
+        path = os.path.join(os.getcwd(), results, mlf_dir)
+        if os.path.isdir(path):
+            for mlf in os.listdir(path):
+                data = mlf_to_dict(os.path.join(path, mlf))
                 make_elan(data, True, video_dirs, save_dir)
