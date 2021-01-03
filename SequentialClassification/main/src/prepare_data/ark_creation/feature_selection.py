@@ -283,8 +283,8 @@ def select_features(input_filepath: str, features_to_extract: list,
         df[y_cols] = (df[y_cols].transpose() - noses[:,1]).transpose()
         df[z_cols] = (df[z_cols].transpose() - noses[:,2]).transpose()
 
-    df['horizontal_hand_dist'] = df['right_wrist_x'] - df['left_wrist_x']
-    df['vertical_hand_dist'] = df['right_wrist_y'] - df['left_wrist_y']
+    df['horizontal_hand_dist'] = df['right_index_x'] - df['left_index_x']
+    df['vertical_hand_dist'] = df['right_index_y'] - df['left_index_y']
 
     for col in df.columns:
 
