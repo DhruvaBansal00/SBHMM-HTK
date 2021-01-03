@@ -17,6 +17,9 @@ Aligned transcription: data/2/htk/alphapose_08-10-20_David_4KDepth.lion_above_bl
 Aligned transcription: data/2/htk/alphapose_08-10-20_David_4KDepth.snake_above_box.0000000002.lab vs data/2/htk/alphapose_08-10-20_David_4KDepth.snake_above_box.0000000002.rec
  LAB:        snake above box 
  REC: orange snake above box 
+Aligned transcription: data/2/htk/alphapose_08-10-20_David_4KDepth.alligator_in_wagon.0000000003.lab vs data/2/htk/alphapose_08-10-20_David_4KDepth.alligator_in_wagon.0000000003.rec
+ LAB: alligator in      wagon 
+ REC: alligator in blue wagon 
 Aligned transcription: data/2/htk/alphapose_08-10-20_David_4KDepth.snake_above_box.0000000001.lab vs data/2/htk/alphapose_08-10-20_David_4KDepth.snake_above_box.0000000001.rec
  LAB:        snake above box 
  REC: orange snake above box 
@@ -44,6 +47,9 @@ Aligned transcription: data/2/htk/alphapose_08-10-20_David_4KDepth.snake_above_w
 Aligned transcription: data/2/htk/alphapose_08-10-20_David_4KDepth.lion_above_bed.0000000003.lab vs data/2/htk/alphapose_08-10-20_David_4KDepth.lion_above_bed.0000000003.rec
  LAB: lion above bed 
  REC: lion in    bed 
+Aligned transcription: data/2/htk/alphapose_08-10-20_David_4KDepth.snake_above_box.0000000000.lab vs data/2/htk/alphapose_08-10-20_David_4KDepth.snake_above_box.0000000000.rec
+ LAB:        snake above      box 
+ REC: orange snake above grey box 
 Aligned transcription: data/2/htk/alphapose_08-10-20_David_4KDepth.lion_above_blue_bed.0000000005.lab vs data/2/htk/alphapose_08-10-20_David_4KDepth.lion_above_blue_bed.0000000005.rec
  LAB: lion above blue bed 
  REC: lion in    blue bed 
@@ -75,8 +81,8 @@ Aligned transcription: data/2/htk/alphapose_08-10-20_David_4KDepth.lion_above_be
  LAB: lion above bed 
  REC: lion in    bed 
 Aligned transcription: data/2/htk/alphapose_08-10-20_David_4KDepth.lion_above_flowers.0000000002.lab vs data/2/htk/alphapose_08-10-20_David_4KDepth.lion_above_flowers.0000000002.rec
- LAB: lion above flowers 
- REC: lion in    flowers 
+ LAB: lion    above flowers 
+ REC: lion in blue  flowers 
 Aligned transcription: data/2/htk/alphapose_08-10-20_David_4KDepth.snake_above_box.0000000003.lab vs data/2/htk/alphapose_08-10-20_David_4KDepth.snake_above_box.0000000003.rec
  LAB:        snake above box 
  REC: orange snake above box 
@@ -99,13 +105,13 @@ Aligned transcription: data/2/htk/alphapose_08-10-20_David_4KDepth.alligator_abo
  LAB: alligator above      chair 
  REC: alligator above grey chair 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Sat Jan  2 18:43:59 2021            |
+    | HTK Results Analysis at Sun Jan  3 16:15:57 2021            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/2/res_hmm159.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |  306  |  98.11   1.81   0.08   1.07   2.96  10.78 |
+    | Sum/Avg |  306  |  98.11   1.81   0.08   1.40   3.29  11.44 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -113,7 +119,7 @@ Aligned transcription: data/2/htk/alphapose_08-10-20_David_4KDepth.alligator_abo
        o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
        v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
        e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
-abov  117  0   0   0   0   1   0   0   0   0  15   0   0   0   0   0   0   1    0 [87.3/1.4]
+abov  117  0   0   0   0   2   0   0   0   0  14   0   0   0   0   0   0   1    0 [87.3/1.4]
 alli   0  88   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
  bed   0   0  45   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
 belo   0   0   0  93   0   0   0   0   0   0   2   0   0   0   0   0   0   0    0 [97.9/0.2]
@@ -131,4 +137,4 @@ snak   0   1   0   0   0   0   0   0   0   0   0   0   0   0  70   0   0   0    
 wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  41   0   0    0
 wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  59   0    0
 whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  30    0
-Ins    0   0   0   0   1   0   0   0   0   1   2   0   0   7   0   0   0   2
+Ins    0   0   0   0   1   1   0   0   0   2   3   0   0   8   0   0   0   2
