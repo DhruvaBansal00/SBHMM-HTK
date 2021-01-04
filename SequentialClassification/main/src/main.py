@@ -229,7 +229,7 @@ def main():
             users = [filepath.split('/')[-1].split('.')[0].split('_')[-2]
                 for filepath
                 in htk_filepaths]
-            unique_users = set(users)
+            unique_users = sort(list(set(users)))
             print(unique_users)
             group_map = {user: i for i, user in enumerate(unique_users)}
             groups = [group_map[user] for user in users]            
@@ -246,6 +246,8 @@ def main():
         all_results['average']['sentence_error'] = mean([i[1] for i in stats])
         all_results['average']['insertions'] = mean([i[2] for i in stats])
         all_results['average']['deletions'] = mean([i[3] for i in stats])
+        print(unique_users)
+        print(stats)
 
     elif args.test_type == 'cross_val':
 
