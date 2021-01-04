@@ -385,7 +385,9 @@
         "delta_left_thumb_x",
         "delta_left_thumb_y",
         "horizontal_hand_dist",
-        "vertical_hand_dist"
+        "vertical_hand_dist",
+        "delta_horizontal_hand_dist",
+        "delta_vertical_hand_dist"
     ],
     "features_dir": "/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/ProcessingPipeline/DATA/Mediapipe_Data_2020"
 }
