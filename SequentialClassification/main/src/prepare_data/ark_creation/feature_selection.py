@@ -91,7 +91,8 @@ def landmark_box_dist(landmark: list, hand: list) -> float:
 def select_features(input_filepath: str, features_to_extract: list,
                     interpolation_method: str = 'spline', order: int = 3,
                     center_on_nose: bool = False, center_on_pelvis: bool = False, is_2d: bool = True,
-                    scale: int = 10, drop_na: bool = True, do_interpolate: bool = False, use_optical_flow = False) -> pd.DataFrame:
+                    scale: int = 10, drop_na: bool = True, do_interpolate: bool = False, use_optical_flow = False,
+                    square: bool = False) -> pd.DataFrame:
     """Processes raw features extracted from MediaPipe/Kinect, and
     selects the specified features for use during training of HMMs.
 
@@ -283,8 +284,8 @@ def select_features(input_filepath: str, features_to_extract: list,
         df[y_cols] = (df[y_cols].transpose() - noses[:,1]).transpose()
         df[z_cols] = (df[z_cols].transpose() - noses[:,2]).transpose()
 
-    df['horizontal_hand_dist'] = df['right_wrist_x'] - df['left_wrist_x']
-    df['vertical_hand_dist'] = df['right_wrist_y'] - df['left_wrist_y']
+    df['horizontal_hand_dist'] = df['right_index_x'] - df['left_index_x']
+    df['vertical_hand_dist'] = df['right_index_y'] - df['left_index_y']
 
     for col in df.columns:
 
@@ -294,6 +295,8 @@ def select_features(input_filepath: str, features_to_extract: list,
     if drop_na:
         df = df.dropna(axis=0)
     df = df * scale
+    if square:
+        df = pd.DataFrame(df.values*df.abs().values, columns=df.columns, index=df.index)
     df = df.round(6)
 
     return df
