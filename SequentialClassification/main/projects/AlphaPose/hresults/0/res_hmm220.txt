@@ -8,6 +8,9 @@ Aligned transcription: data/0/htk/alphapose_11-08-20_Ishan_4KDepth.grey_monkey_b
 Aligned transcription: data/0/htk/alphapose_08-10-20_David_4KDepth.snake_below_blue_flowers.0000000000.lab vs data/0/htk/alphapose_08-10-20_David_4KDepth.snake_below_blue_flowers.0000000000.rec
  LAB:        snake below blue flowers 
  REC: orange snake below blue flowers 
+Aligned transcription: data/0/htk/alphapose_11-07_20_Kanksha_4KDepth.lion_above_grey_wall.0000000001.lab vs data/0/htk/alphapose_11-07_20_Kanksha_4KDepth.lion_above_grey_wall.0000000001.rec
+ LAB:      lion above grey wall 
+ REC: blue lion above grey wall 
 Aligned transcription: data/0/htk/alphapose_08-08-20_Ishan_4kDepth.snake_in_grey_wagon.0000000006.lab vs data/0/htk/alphapose_08-08-20_Ishan_4kDepth.snake_in_grey_wagon.0000000006.rec
  LAB:       snake in grey wagon 
  REC: black snake in      box   
@@ -39,13 +42,13 @@ Aligned transcription: data/0/htk/alphapose_08-27-20_Colby_4KDepth.snake_below_b
  LAB: snake below blue chair 
  REC: lion  below blue chair 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Mon Jan  4 22:56:02 2021            |
+    | HTK Results Analysis at Tue Jan  5 01:44:04 2021            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/0/res_hmm220.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |  389  |  98.44   0.84   0.71   0.13   1.69   3.34 |
+    | Sum/Avg |  389  |  98.44   0.84   0.71   0.19   1.75   3.60 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -71,4 +74,4 @@ snak   0   0   0   0   0   0   0   0   0   0   0   2   0   0  104  0   0   0    
 wago   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0  43   0   0    0 [97.7/0.1]
 wall   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0  65   0    0 [98.5/0.1]
 whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  38    2
-Ins    0   0   0   0   1   0   0   0   0   0   0   0   0   1   0   0   0   0
+Ins    0   0   0   0   1   1   0   0   0   0   0   0   0   1   0   0   0   0
