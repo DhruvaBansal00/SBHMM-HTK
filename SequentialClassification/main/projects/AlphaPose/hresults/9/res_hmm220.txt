@@ -42,7 +42,7 @@ Aligned transcription: data/9/htk/alphapose_08-10-20_David_4KDepth.snake_in_grey
  LAB:        snake in grey wagon 
  REC: orange snake in grey wagon 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Mon Jan  4 22:49:40 2021            |
+    | HTK Results Analysis at Tue Jan  5 01:40:01 2021            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/9/res_hmm220.mlf                               |
     |=============================================================|

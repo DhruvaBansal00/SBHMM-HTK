@@ -38,20 +38,17 @@ Aligned transcription: data/3/htk/alphapose_08-27-20_Colby_4KDepth.white_lion_ab
 Aligned transcription: data/3/htk/alphapose_08-15-20_Prerna_4KDepth.monkey_below_bed.0000000002.lab vs data/3/htk/alphapose_08-15-20_Prerna_4KDepth.monkey_below_bed.0000000002.rec
  LAB: monkey below bed 
  REC: monkey above bed 
-Aligned transcription: data/3/htk/alphapose_07-24-20_Matthew_4KDepth.lion_below_blue_bed.0000000002.lab vs data/3/htk/alphapose_07-24-20_Matthew_4KDepth.lion_below_blue_bed.0000000002.rec
- LAB: lion below blue bed 
- REC: lion below      bed 
 Aligned transcription: data/3/htk/alphapose_08-14-20_Matthew_4KDepth.lion_above_wall.0000000000.lab vs data/3/htk/alphapose_08-14-20_Matthew_4KDepth.lion_above_wall.0000000000.rec
  LAB:       lion above wall 
  REC: white lion above wall 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Mon Jan  4 22:56:47 2021            |
+    | HTK Results Analysis at Tue Jan  5 01:47:30 2021            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/3/res_hmm219.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |  389  |  98.51   0.97   0.52   0.13   1.62   3.86 |
+    | Sum/Avg |  389  |  98.58   0.97   0.45   0.13   1.55   3.60 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -64,7 +61,7 @@ alli   0  107  0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0    
  bed   0   0  61   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0    0 [98.4/0.1]
 belo   1   0   0  126  0   0   0   0   0   0   0   0   0   0   0   0   0   0    0 [99.2/0.1]
 blac   0   0   0   0  46   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blue   1   0   0   1   0  104  0   0   0   0   0   0   0   1   0   0   0   0    3 [97.2/0.2]
+blue   1   0   0   1   0  105  0   0   0   0   0   0   0   1   0   0   0   0    2 [97.2/0.2]
  box   0   0   0   0   0   0  54   1   0   0   0   0   0   0   0   0   0   0    0 [98.2/0.1]
 chai   0   0   0   0   0   0   0  72   0   0   0   0   0   0   0   0   0   0    0
 flow   0   0   0   0   0   0   0   1  82   0   0   0   0   0   0   0   0   0    0 [98.8/0.1]

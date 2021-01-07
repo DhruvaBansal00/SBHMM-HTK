@@ -58,7 +58,7 @@ Aligned transcription: data/8/htk/alphapose_11-08-20_Colby_4KDepth.alligator_abo
  REC: alligator above blue   wagon 
 Aligned transcription: data/8/htk/alphapose_07-24-20_Matthew_4KDepth.white_alligator_above_blue_wall.0000000002.lab vs data/8/htk/alphapose_07-24-20_Matthew_4KDepth.white_alligator_above_blue_wall.0000000002.rec
  LAB: white alligator above blue wall 
- REC:       alligator above      wall 
+ REC:       alligator above blue wall 
 Aligned transcription: data/8/htk/alphapose_11-08-20_Colby_4KDepth.monkey_above_wall.0000000002.lab vs data/8/htk/alphapose_11-08-20_Colby_4KDepth.monkey_above_wall.0000000002.rec
  LAB: monkey above wall  
  REC: monkey below wagon 
@@ -81,13 +81,13 @@ Aligned transcription: data/8/htk/alphapose_11-08-20_Colby_4KDepth.blue_alligato
  LAB: blue alligator above grey wall 
  REC: blue alligator above      wall 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Mon Jan  4 23:14:10 2021            |
+    | HTK Results Analysis at Tue Jan  5 02:05:47 2021            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/8/res_hmm219.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |  386  |  97.34   1.30   1.36   0.00   2.66   6.99 |
+    | Sum/Avg |  386  |  97.41   1.30   1.30   0.00   2.59   6.99 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -100,7 +100,7 @@ alli   0  104  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    
  bed   0   0  59   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0    0 [98.3/0.1]
 belo   1   0   0  114  0   0   0   0   0   0   0   1   0   0   0   0   0   0    1 [98.3/0.1]
 blac   0   0   0   0  43   0   0   0   0   0   0   0   0   0   0   0   0   0    4
-blue   0   0   0   0   0  106  0   0   0   0   1   0   0   0   0   0   0   0    6 [99.1/0.1]
+blue   0   0   0   0   0  107  0   0   0   0   1   0   0   0   0   0   0   0    5 [99.1/0.1]
  box   0   0   0   0   0   0  66   0   0   0   0   0   0   0   0   0   0   0    0
 chai   0   0   0   0   0   0   0  69   1   0   0   0   0   0   0   0   0   0    0 [98.6/0.1]
 flow   0   0   0   0   0   0   0   2  71   0   0   0   0   0   0   1   0   0    0 [95.9/0.2]
