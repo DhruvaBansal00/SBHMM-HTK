@@ -515,5 +515,5 @@
 	"quantile_thumb_right_squared_y",
 	"quantile_thumb_right_squared_z"
     ],
-    "features_dir": "/home/aslr/ProcessingPipeline/DATA/Kinect_Data_July_2020"
+    "features_dir": "/home/aslr/ProcessingPipeline/DATA/Kinect_Data_2020"
 }
