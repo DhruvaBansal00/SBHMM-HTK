@@ -1,15 +1,15 @@
 HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/6/res_hmm219.mlf 
-Aligned transcription: data/6/htk/08-15-20_Prerna_4K.snake_in_flowers.0000000004.lab vs data/6/htk/08-15-20_Prerna_4K.snake_in_flowers.0000000004.rec
- LAB: snake in      flowers 
- REC: snake in blue flowers 
+Aligned transcription: data/6/htk/08-15-20_Prerna_4K.orange_alligator_in_grey_flowers.0000000003.lab vs data/6/htk/08-15-20_Prerna_4K.orange_alligator_in_grey_flowers.0000000003.rec
+ LAB: orange alligator in    grey flowers 
+ REC: orange alligator above grey flowers 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Fri Jan  8 15:26:12 2021            |
+    | HTK Results Analysis at Fri Jan  8 16:44:36 2021            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/6/res_hmm219.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |   27  | 100.00   0.00   0.00   0.97   0.97   3.70 |
+    | Sum/Avg |   38  |  99.34   0.66   0.00   0.00   0.66   2.63 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -17,22 +17,22 @@ Aligned transcription: data/6/htk/08-15-20_Prerna_4K.snake_in_flowers.0000000004
        o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
        v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
        e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
-abov  12   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+abov  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
 alli   0  11   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
- bed   0   0   6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-belo   0   0   0   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blac   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blue   0   0   0   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0    0
- box   0   0   0   0   0   0   4   0   0   0   0   0   0   0   0   0   0   0    0
-chai   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0   4   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+belo   0   0   0  10   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blac   0   0   0   0   4   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blue   0   0   0   0   0  12   0   0   0   0   0   0   0   0   0   0   0   0    0
+ box   0   0   0   0   0   0   5   0   0   0   0   0   0   0   0   0   0   0    0
+chai   0   0   0   0   0   0   0   7   0   0   0   0   0   0   0   0   0   0    0
 flow   0   0   0   0   0   0   0   0   7   0   0   0   0   0   0   0   0   0    0
-grey   0   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0   0    0
-  in   0   0   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0    0
-lion   0   0   0   0   0   0   0   0   0   0   0   4   0   0   0   0   0   0    0
-monk   0   0   0   0   0   0   0   0   0   0   0   0   6   0   0   0   0   0    0
-oran   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0   0   0   0    0
-snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0   0   0    0
-wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   2   0   0    0
-wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0    0
-whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   2    0
-Ins    0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0
+grey   0   0   0   0   0   0   0   0   0  11   0   0   0   0   0   0   0   0    0
+  in   1   0   0   0   0   0   0   0   0   0  10   0   0   0   0   0   0   0    0 [90.9/0.7]
+lion   0   0   0   0   0   0   0   0   0   0   0   7   0   0   0   0   0   0    0
+monk   0   0   0   0   0   0   0   0   0   0   0   0  10   0   0   0   0   0    0
+oran   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0   0   0   0    0
+snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0  10   0   0   0    0
+wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   9   0   0    0
+wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0    0
+whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   4    0
+Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0

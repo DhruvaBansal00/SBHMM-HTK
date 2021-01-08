@@ -1,21 +1,18 @@
 HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/4/res_hmm220.mlf 
-Aligned transcription: data/4/htk/08-06-20_Linda_4KDepth.orange_snake_below_blue_flowers.0000000000.lab vs data/4/htk/08-06-20_Linda_4KDepth.orange_snake_below_blue_flowers.0000000000.rec
- LAB: orange snake below blue flowers 
- REC:        snake below blue flowers 
-Aligned transcription: data/4/htk/08-06-20_Linda_4KDepth.black_alligator_above_orange_wagon.0000000004.lab vs data/4/htk/08-06-20_Linda_4KDepth.black_alligator_above_orange_wagon.0000000004.rec
- LAB: black alligator above orange wagon 
- REC: black alligator above blue   wagon 
-Aligned transcription: data/4/htk/08-11-20_Linda_4K.blue_alligator_above_grey_wall.0000000003.lab vs data/4/htk/08-11-20_Linda_4K.blue_alligator_above_grey_wall.0000000003.rec
- LAB: blue alligator above grey   wall 
- REC: blue alligator above orange wall 
+Aligned transcription: data/4/htk/08-06-20_Linda_4KDepth.lion_below_blue_bed.0000000002.lab vs data/4/htk/08-06-20_Linda_4KDepth.lion_below_blue_bed.0000000002.rec
+ LAB: lion below blue bed   
+ REC: lion       in   chair 
+Aligned transcription: data/4/htk/08-06-20_Linda_4KDepth.orange_monkey_below_grey_flowers.0000000000.lab vs data/4/htk/08-06-20_Linda_4KDepth.orange_monkey_below_grey_flowers.0000000000.rec
+ LAB: orange monkey below grey flowers 
+ REC: orange monkey below      flowers 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Fri Jan  8 15:27:46 2021            |
+    | HTK Results Analysis at Fri Jan  8 16:46:31 2021            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/4/res_hmm220.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |   62  |  98.76   0.83   0.41   0.00   1.24   4.84 |
+    | Sum/Avg |   62  |  98.44   0.78   0.78   0.00   1.56   3.23 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -23,22 +20,22 @@ Aligned transcription: data/4/htk/08-11-20_Linda_4K.blue_alligator_above_grey_wa
        o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
        v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
        e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
-abov  31   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-alli   0  22   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
- bed   0   0   9   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-belo   0   0   0  18   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blac   0   0   0   0   8   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blue   0   0   0   0   0  17   0   0   0   0   0   0   0   0   0   0   0   0    0
- box   0   0   0   0   0   0  10   0   0   0   0   0   0   0   0   0   0   0    0
-chai   0   0   0   0   0   0   0   5   0   0   0   0   0   0   0   0   0   0    0
+abov  25   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+alli   0  19   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0   8   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0    0 [88.9/0.4]
+belo   0   0   0  27   0   0   0   0   0   0   0   0   0   0   0   0   0   0    1
+blac   0   0   0   0   9   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blue   0   0   0   0   0  23   0   0   0   0   1   0   0   0   0   0   0   0    0 [95.8/0.4]
+ box   0   0   0   0   0   0   7   0   0   0   0   0   0   0   0   0   0   0    0
+chai   0   0   0   0   0   0   0  12   0   0   0   0   0   0   0   0   0   0    0
 flow   0   0   0   0   0   0   0   0  14   0   0   0   0   0   0   0   0   0    0
-grey   0   0   0   0   0   0   0   0   0  12   0   0   0   1   0   0   0   0    0 [92.3/0.4]
-  in   0   0   0   0   0   0   0   0   0   0  13   0   0   0   0   0   0   0    0
-lion   0   0   0   0   0   0   0   0   0   0   0   9   0   0   0   0   0   0    0
-monk   0   0   0   0   0   0   0   0   0   0   0   0  16   0   0   0   0   0    0
-oran   0   0   0   0   0   1   0   0   0   0   0   0   0  10   0   0   0   0    1 [90.9/0.4]
+grey   0   0   0   0   0   0   0   0   0  15   0   0   0   0   0   0   0   0    1
+  in   0   0   0   0   0   0   0   0   0   0   9   0   0   0   0   0   0   0    0
+lion   0   0   0   0   0   0   0   0   0   0   0  18   0   0   0   0   0   0    0
+monk   0   0   0   0   0   0   0   0   0   0   0   0  10   0   0   0   0   0    0
+oran   0   0   0   0   0   0   0   0   0   0   0   0   0  18   0   0   0   0    0
 snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0  15   0   0   0    0
-wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   9   0   0    0
-wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  15   0    0
-whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   5    0
+wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  11   0   0    0
+wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   9   0    0
+whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   4    0
 Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
