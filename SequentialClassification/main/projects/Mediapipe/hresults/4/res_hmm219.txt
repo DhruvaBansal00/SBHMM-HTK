@@ -1,15 +1,30 @@
 HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/4/res_hmm219.mlf 
-Aligned transcription: data/4/htk/08-11-20_Linda_4KDepth.lion_above_flowers.0000000003.lab vs data/4/htk/08-11-20_Linda_4KDepth.lion_above_flowers.0000000003.rec
- LAB: lion above        flowers 
- REC: lion above orange flowers 
+Aligned transcription: data/4/htk/08-27-20_Colby_4KDepth.alligator_in_box.0000000000.lab vs data/4/htk/08-27-20_Colby_4KDepth.alligator_in_box.0000000000.rec
+ LAB: alligator in box   
+ REC: alligator in chair 
+Aligned transcription: data/4/htk/11-08-20_Colby_4KDepth.monkey_above_wall.0000000002.lab vs data/4/htk/11-08-20_Colby_4KDepth.monkey_above_wall.0000000002.rec
+ LAB: monkey above wall  
+ REC: monkey in    wagon 
+Aligned transcription: data/4/htk/11-08-20_Colby_4KDepth.snake_below_bed.0000000002.lab vs data/4/htk/11-08-20_Colby_4KDepth.snake_below_bed.0000000002.rec
+ LAB: snake below bed  
+ REC: snake above wall 
+Aligned transcription: data/4/htk/11-08-20_Colby_4KDepth.orange_alligator_in_grey_flowers.0000000002.lab vs data/4/htk/11-08-20_Colby_4KDepth.orange_alligator_in_grey_flowers.0000000002.rec
+ LAB: orange alligator in grey flowers 
+ REC:        monkey    in      chair   
+Aligned transcription: data/4/htk/11-08-20_Colby_4KDepth.orange_monkey_below_grey_flowers.0000000000.lab vs data/4/htk/11-08-20_Colby_4KDepth.orange_monkey_below_grey_flowers.0000000000.rec
+ LAB: orange monkey below grey flowers 
+ REC: orange monkey below grey wall    
+Aligned transcription: data/4/htk/11-08-20_Colby_4KDepth.monkey_above_chair.0000000002.lab vs data/4/htk/11-08-20_Colby_4KDepth.monkey_above_chair.0000000002.rec
+ LAB: monkey above chair 
+ REC: monkey above wall  
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Fri Jan  8 04:33:45 2021            |
+    | HTK Results Analysis at Sat Jan  9 15:26:58 2021            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/4/res_hmm219.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |   57  | 100.00   0.00   0.00   0.45   0.45   1.75 |
+    | Sum/Avg |   45  |  93.53   5.29   1.18   0.00   6.47  13.33 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -17,22 +32,22 @@ Aligned transcription: data/4/htk/08-11-20_Linda_4KDepth.lion_above_flowers.0000
        o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
        v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
        e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
-abov  26   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-alli   0  13   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
- bed   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-belo   0   0   0  22   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blac   0   0   0   0   7   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blue   0   0   0   0   0  18   0   0   0   0   0   0   0   0   0   0   0   0    0
- box   0   0   0   0   0   0   6   0   0   0   0   0   0   0   0   0   0   0    0
-chai   0   0   0   0   0   0   0  19   0   0   0   0   0   0   0   0   0   0    0
-flow   0   0   0   0   0   0   0   0  10   0   0   0   0   0   0   0   0   0    0
-grey   0   0   0   0   0   0   0   0   0  11   0   0   0   0   0   0   0   0    0
-  in   0   0   0   0   0   0   0   0   0   0   9   0   0   0   0   0   0   0    0
-lion   0   0   0   0   0   0   0   0   0   0   0  12   0   0   0   0   0   0    0
-monk   0   0   0   0   0   0   0   0   0   0   0   0  17   0   0   0   0   0    0
-oran   0   0   0   0   0   0   0   0   0   0   0   0   0  13   0   0   0   0    0
-snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0  15   0   0   0    0
-wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0   0    0
-wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  11   0    0
-whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3    0
-Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0
+abov  17   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0    0 [94.4/0.6]
+alli   0  12   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0    0 [92.3/0.6]
+ bed   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0    0 [83.3/0.6]
+belo   1   0   0  13   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0 [92.9/0.6]
+blac   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blue   0   0   0   0   0  12   0   0   0   0   0   0   0   0   0   0   0   0    0
+ box   0   0   0   0   0   0   7   1   0   0   0   0   0   0   0   0   0   0    0 [87.5/0.6]
+chai   0   0   0   0   0   0   0   9   0   0   0   0   0   0   0   0   1   0    0 [90.0/0.6]
+flow   0   0   0   0   0   0   0   1   6   0   0   0   0   0   0   0   1   0    0 [75.0/1.2]
+grey   0   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0   0    1
+  in   0   0   0   0   0   0   0   0   0   0  13   0   0   0   0   0   0   0    0
+lion   0   0   0   0   0   0   0   0   0   0   0   9   0   0   0   0   0   0    0
+monk   0   0   0   0   0   0   0   0   0   0   0   0  12   0   0   0   0   0    0
+oran   0   0   0   0   0   0   0   0   0   0   0   0   0   9   0   0   0   0    1
+snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0  11   0   0   0    0
+wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0   0    0
+wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   5   0    0 [83.3/0.6]
+whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   2    0
+Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
