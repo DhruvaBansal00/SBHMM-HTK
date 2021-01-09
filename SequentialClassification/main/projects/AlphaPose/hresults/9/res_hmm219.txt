@@ -1,30 +1,12 @@
 HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/9/res_hmm219.mlf 
-Aligned transcription: data/9/htk/alphapose_11-08-20_Colby_4KDepth.monkey_below_blue_chair.0000000006.lab vs data/9/htk/alphapose_11-08-20_Colby_4KDepth.monkey_below_blue_chair.0000000006.rec
- LAB: monkey below blue chair   
- REC: monkey below blue flowers 
-Aligned transcription: data/9/htk/alphapose_11-08-20_Colby_4KDepth.alligator_in_box.0000000008.lab vs data/9/htk/alphapose_11-08-20_Colby_4KDepth.alligator_in_box.0000000008.rec
- LAB: alligator in box     
- REC: alligator in flowers 
-Aligned transcription: data/9/htk/alphapose_08-27-20_Colby_4KDepth.alligator_in_orange_flowers.0000000000.lab vs data/9/htk/alphapose_08-27-20_Colby_4KDepth.alligator_in_orange_flowers.0000000000.rec
- LAB: alligator in orange flowers 
- REC: alligator in        flowers 
-Aligned transcription: data/9/htk/alphapose_11-08-20_Colby_4KDepth.black_alligator_above_orange_wagon.0000000000.lab vs data/9/htk/alphapose_11-08-20_Colby_4KDepth.black_alligator_above_orange_wagon.0000000000.rec
- LAB: black alligator above orange wagon 
- REC: black alligator above orange wall  
-Aligned transcription: data/9/htk/alphapose_11-08-20_Colby_4KDepth.orange_monkey_in_grey_box.0000000004.lab vs data/9/htk/alphapose_11-08-20_Colby_4KDepth.orange_monkey_in_grey_box.0000000004.rec
- LAB: orange monkey in grey  box   
- REC: orange monkey    above chair 
-Aligned transcription: data/9/htk/alphapose_11-08-20_Colby_4KDepth.blue_alligator_above_grey_wall.0000000001.lab vs data/9/htk/alphapose_11-08-20_Colby_4KDepth.blue_alligator_above_grey_wall.0000000001.rec
- LAB: blue alligator above grey wall 
- REC: blue alligator above      wall 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Sat Jan  9 17:27:31 2021            |
+    | HTK Results Analysis at Sat Jan  9 17:54:21 2021            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/9/res_hmm219.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |   46  |  95.58   2.76   1.66   0.00   4.42  13.04 |
+    | Sum/Avg |   30  | 100.00   0.00   0.00   0.00   0.00   0.00 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -32,22 +14,22 @@ Aligned transcription: data/9/htk/alphapose_11-08-20_Colby_4KDepth.blue_alligato
        o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
        v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
        e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
-abov  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-alli   0  14   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
- bed   0   0   8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-belo   0   0   0  13   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blac   0   0   0   0   8   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blue   0   0   0   0   0  12   0   0   0   0   0   0   0   0   0   0   0   0    0
- box   0   0   0   0   0   0   9   1   1   0   0   0   0   0   0   0   0   0    0 [81.8/1.1]
-chai   0   0   0   0   0   0   0   9   1   0   0   0   0   0   0   0   0   0    0 [90.0/0.6]
-flow   0   0   0   0   0   0   0   0   6   0   0   0   0   0   0   0   0   0    0
-grey   1   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0   0    1 [88.9/0.6]
-  in   0   0   0   0   0   0   0   0   0   0  15   0   0   0   0   0   0   0    1
-lion   0   0   0   0   0   0   0   0   0   0   0   9   0   0   0   0   0   0    0
-monk   0   0   0   0   0   0   0   0   0   0   0   0  16   0   0   0   0   0    0
-oran   0   0   0   0   0   0   0   0   0   0   0   0   0   8   0   0   0   0    1
+abov  14   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+alli   0   9   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+belo   0   0   0  11   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blac   0   0   0   0   3   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blue   0   0   0   0   0   6   0   0   0   0   0   0   0   0   0   0   0   0    0
+ box   0   0   0   0   0   0   3   0   0   0   0   0   0   0   0   0   0   0    0
+chai   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0   0   0   0    0
+flow   0   0   0   0   0   0   0   0   5   0   0   0   0   0   0   0   0   0    0
+grey   0   0   0   0   0   0   0   0   0   4   0   0   0   0   0   0   0   0    0
+  in   0   0   0   0   0   0   0   0   0   0   5   0   0   0   0   0   0   0    0
+lion   0   0   0   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0    0
+monk   0   0   0   0   0   0   0   0   0   0   0   0   6   0   0   0   0   0    0
+oran   0   0   0   0   0   0   0   0   0   0   0   0   0   5   0   0   0   0    0
 snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0   0   0    0
-wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   5   1   0    0 [83.3/0.6]
+wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   4   0   0    0
 wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   5   0    0
-whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   4    0
+whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   2    0
 Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
