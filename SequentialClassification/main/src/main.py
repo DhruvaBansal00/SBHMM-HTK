@@ -19,7 +19,7 @@ import argparse
 import os
 import shutil
 import sys
-
+import random
 import numpy as np
 from sklearn.model_selection import (
     KFold, StratifiedKFold, LeaveOneGroupOut, train_test_split)
@@ -31,6 +31,19 @@ from src.utils import get_results, save_results, load_json, get_arg_groups
 from src.test import test, testSBHMM
 from joblib import Parallel, delayed
 from statistics import mean
+
+def returnUserDependentSplits(unique_users, htk_filepaths, test_size):
+    splits = [[[],[]] for i in range(len(unique_users))]
+    for htk_idx, curr_file in enumerate(htk_filepaths):
+        curr_user = curr_file.split("/")[-1].split(".")[0].split('_')[-2]
+        for usr_idx, usr in enumerate(unique_users):
+            if usr == curr_user:
+                if random.random() > test_size:
+                    splits[usr_idx][0].append(htk_idx)
+                else:
+                    splits[usr_idx][1].append(htk_idx)
+    splits = np.array(splits)
+    return splits
 
 def copyFiles(fileNames: list, newFolder: str, originalFolder: str, ext: str):
     if os.path.exists(newFolder):
@@ -101,7 +114,8 @@ def main():
                         default='kfold', choices=['kfold',
                                                   'leave_one_phrase_out',
                                                   'stratified',
-                                                  'leave_one_user_out'
+                                                  'leave_one_user_out',
+                                                  'user_dependent'
                                                   ])
     parser.add_argument('--n_splits', required='cross_val' in sys.argv,
                         type=int, default=10)
@@ -149,7 +163,8 @@ def main():
     cross_val_methods = {'kfold': (KFold, True),
                          'leave_one_phrase_out': (LeaveOneGroupOut(), True),
                          'stratified': (StratifiedKFold, True),
-                         'leave_one_user_out': (LeaveOneGroupOut(), True)
+                         'leave_one_user_out': (LeaveOneGroupOut(), True),
+                         'user_dependent': (None, False)
                          }
     cvm = args.cross_val_method
     cross_val_method, use_groups = cross_val_methods[args.cross_val_method]
@@ -235,12 +250,20 @@ def main():
             group_map = {user: i for i, user in enumerate(unique_users)}
             groups = [group_map[user] for user in users]            
             cross_val = cross_val_method
-
-        if use_groups:
+        elif cvm == 'user_dependent':
+            users = [filepath.split('/')[-1].split('.')[0].split('_')[-2]
+                for filepath
+                in htk_filepaths]
+            unique_users = list(set(users))
+            unique_users.sort()
+            print(unique_users)
+        
+        if cvm == 'user_dependent':
+            splits = returnUserDependentSplits(unique_users, htk_filepaths, args.test_size)
+        elif use_groups:
             splits = list(cross_val.split(htk_filepaths, phrases, groups))
         else:
-            splits = list(cross_val.split(htk_filepaths, phrases))
-        
+            splits = list(cross_val.split(htk_filepaths, phrases))        
         stats = Parallel(n_jobs=args.parallel_jobs)(delayed(crossValFold)(np.array(htk_filepaths)[splits[currFold][0]], np.array(htk_filepaths)[splits[currFold][1]], args, currFold) for currFold in range(len(splits)))
         
         all_results['average']['error'] = mean([i[0] for i in stats])
@@ -289,8 +312,17 @@ def main():
             group_map = {user: i for i, user in enumerate(unique_users)}
             groups = [group_map[user] for user in users]            
             cross_val = cross_val_method
-
-        if use_groups:
+        elif cvm == 'user_dependent':
+            users = [filepath.split('/')[-1].split('.')[0].split('_')[-2]
+                for filepath
+                in htk_filepaths]
+            unique_users = list(set(users))
+            unique_users.sort()
+            print(unique_users)
+        
+        if cvm == 'user_dependent':
+            splits = returnUserDependentSplits(unique_users, htk_filepaths, args.test_size)
+        elif use_groups:
             splits = list(cross_val.split(htk_filepaths, phrases, groups))
         else:
             splits = list(cross_val.split(htk_filepaths, phrases))
