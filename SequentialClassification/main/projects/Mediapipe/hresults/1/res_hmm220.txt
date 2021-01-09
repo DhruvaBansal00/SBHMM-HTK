@@ -1,27 +1,21 @@
 HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/1/res_hmm220.mlf 
-Aligned transcription: data/1/htk/11-08-20_Colby_4KDepth.snake_in_grey_wagon.0000000000.lab vs data/1/htk/11-08-20_Colby_4KDepth.snake_in_grey_wagon.0000000000.rec
- LAB: snake in grey  wagon 
- REC: snake    above chair 
-Aligned transcription: data/1/htk/11-08-20_Colby_4KDepth.monkey_above_white_wall.0000000007.lab vs data/1/htk/11-08-20_Colby_4KDepth.monkey_above_white_wall.0000000007.rec
+Aligned transcription: data/1/htk/08-10-20_David_4KDepth.monkey_above_white_wall.0000000001.lab vs data/1/htk/08-10-20_David_4KDepth.monkey_above_white_wall.0000000001.rec
  LAB: monkey above white wall 
- REC: lion   above       wall 
-Aligned transcription: data/1/htk/11-08-20_Colby_4KDepth.lion_above_blue_bed.0000000000.lab vs data/1/htk/11-08-20_Colby_4KDepth.lion_above_blue_bed.0000000000.rec
- LAB: lion above blue bed     
- REC: lion above blue flowers 
-Aligned transcription: data/1/htk/11-08-20_Colby_4KDepth.black_snake_below_blue_chair.0000000001.lab vs data/1/htk/11-08-20_Colby_4KDepth.black_snake_below_blue_chair.0000000001.rec
- LAB: black snake below blue  chair 
- REC:       snake       above wagon 
-Aligned transcription: data/1/htk/11-08-20_Colby_4KDepth.black_lion_above_grey_bed.0000000005.lab vs data/1/htk/11-08-20_Colby_4KDepth.black_lion_above_grey_bed.0000000005.rec
- LAB: black lion above grey bed   
- REC: black lion above      chair 
+ REC: monkey above       wall 
+Aligned transcription: data/1/htk/08-10-20_David_4KDepth.monkey_above_white_wall.0000000002.lab vs data/1/htk/08-10-20_David_4KDepth.monkey_above_white_wall.0000000002.rec
+ LAB: monkey above white wall 
+ REC: monkey above       wall 
+Aligned transcription: data/1/htk/08-10-20_David_4KDepth.lion_below_blue_bed.0000000003.lab vs data/1/htk/08-10-20_David_4KDepth.lion_below_blue_bed.0000000003.rec
+ LAB: lion  below blue bed 
+ REC: snake in    blue bed 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Sat Jan  9 15:27:03 2021            |
+    | HTK Results Analysis at Sat Jan  9 15:53:01 2021            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/1/res_hmm220.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |   46  |  93.41   3.85   2.75   0.00   6.59  10.87 |
+    | Sum/Avg |   31  |  96.77   1.61   1.61   0.00   3.23   9.68 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -29,22 +23,22 @@ Aligned transcription: data/1/htk/11-08-20_Colby_4KDepth.black_lion_above_grey_b
        o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
        v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
        e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
-abov  19   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-alli   0  11   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
- bed   0   0   6   0   0   0   0   1   1   0   0   0   0   0   0   0   0   0    0 [75.0/1.1]
-belo   0   0   0  13   0   0   0   0   0   0   0   0   0   0   0   0   0   0    1
-blac   0   0   0   0   6   0   0   0   0   0   0   0   0   0   0   0   0   0    1
-blue   1   0   0   0   0  12   0   0   0   0   0   0   0   0   0   0   0   0    0 [92.3/0.5]
- box   0   0   0   0   0   0   7   0   0   0   0   0   0   0   0   0   0   0    0
-chai   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0   1   0   0    0 [88.9/0.5]
-flow   0   0   0   0   0   0   0   0  10   0   0   0   0   0   0   0   0   0    0
-grey   1   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0   0    1 [88.9/0.5]
-  in   0   0   0   0   0   0   0   0   0   0  12   0   0   0   0   0   0   0    1
-lion   0   0   0   0   0   0   0   0   0   0   0  14   0   0   0   0   0   0    0
-monk   0   0   0   0   0   0   0   0   0   0   0   1  10   0   0   0   0   0    0 [90.9/0.5]
-oran   0   0   0   0   0   0   0   0   0   0   0   0   0   9   0   0   0   0    0
-snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0  10   0   0   0    0
-wago   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   3   0   0    0 [75.0/0.5]
-wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   8   0    0
-whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   4    1
+abov  15   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+alli   0   8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+belo   0   0   0  10   0   0   0   0   0   0   1   0   0   0   0   0   0   0    0 [90.9/0.8]
+blac   0   0   0   0   3   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blue   0   0   0   0   0  10   0   0   0   0   0   0   0   0   0   0   0   0    0
+ box   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0    0
+chai   0   0   0   0   0   0   0   6   0   0   0   0   0   0   0   0   0   0    0
+flow   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0   0   0    0
+grey   0   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0   0    0
+  in   0   0   0   0   0   0   0   0   0   0   5   0   0   0   0   0   0   0    0
+lion   0   0   0   0   0   0   0   0   0   0   0   5   0   0   1   0   0   0    0 [83.3/0.8]
+monk   0   0   0   0   0   0   0   0   0   0   0   0   8   0   0   0   0   0    0
+oran   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0   0   0   0    0
+snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0   9   0   0   0    0
+wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   2   0   0    0
+wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0    0
+whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1    2
 Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
