@@ -1,12 +1,24 @@
 HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/7/res_hmm219.mlf 
+Aligned transcription: data/7/htk/alphapose_11-08-20_Colby_4KDepth.grey_alligator_below_blue_flowers.0000000002.lab vs data/7/htk/alphapose_11-08-20_Colby_4KDepth.grey_alligator_below_blue_flowers.0000000002.rec
+ LAB: grey alligator below blue flowers 
+ REC:      lion      below      flowers 
+Aligned transcription: data/7/htk/alphapose_11-08-20_Colby_4KDepth.monkey_above_white_wall.0000000007.lab vs data/7/htk/alphapose_11-08-20_Colby_4KDepth.monkey_above_white_wall.0000000007.rec
+ LAB: monkey above white wall    
+ REC: lion   above       flowers 
+Aligned transcription: data/7/htk/alphapose_11-08-20_Colby_4KDepth.grey_monkey_below_orange_chair.0000000002.lab vs data/7/htk/alphapose_11-08-20_Colby_4KDepth.grey_monkey_below_orange_chair.0000000002.rec
+ LAB: grey monkey below orange chair 
+ REC: grey monkey below        wall  
+Aligned transcription: data/7/htk/alphapose_11-08-20_Colby_4KDepth.snake_below_chair.0000000004.lab vs data/7/htk/alphapose_11-08-20_Colby_4KDepth.snake_below_chair.0000000004.rec
+ LAB: snake below chair   
+ REC: snake below flowers 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Sat Jan  9 21:04:06 2021            |
+    | HTK Results Analysis at Sat Jan  9 21:25:27 2021            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/7/res_hmm219.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |   33  | 100.00   0.00   0.00   0.00   0.00   0.00 |
+    | Sum/Avg |   45  |  94.67   2.96   2.37   0.00   5.33   8.89 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -14,22 +26,22 @@ HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/
        o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
        v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
        e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
-abov  15   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-alli   0  10   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
- bed   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-belo   0   0   0  13   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blac   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blue   0   0   0   0   0  10   0   0   0   0   0   0   0   0   0   0   0   0    0
+abov  16   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+alli   0   9   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0    0 [90.0/0.6]
+ bed   0   0   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+belo   0   0   0  21   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blac   0   0   0   0   3   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blue   0   0   0   0   0  11   0   0   0   0   0   0   0   0   0   0   0   0    1
  box   0   0   0   0   0   0   3   0   0   0   0   0   0   0   0   0   0   0    0
-chai   0   0   0   0   0   0   0   6   0   0   0   0   0   0   0   0   0   0    0
-flow   0   0   0   0   0   0   0   0   7   0   0   0   0   0   0   0   0   0    0
-grey   0   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0   0    0
-  in   0   0   0   0   0   0   0   0   0   0   5   0   0   0   0   0   0   0    0
-lion   0   0   0   0   0   0   0   0   0   0   0  10   0   0   0   0   0   0    0
-monk   0   0   0   0   0   0   0   0   0   0   0   0   8   0   0   0   0   0    0
-oran   0   0   0   0   0   0   0   0   0   0   0   0   0   6   0   0   0   0    0
-snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0   5   0   0   0    0
-wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   5   0   0    0
-wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0    0
-whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3    0
+chai   0   0   0   0   0   0   0  11   1   0   0   0   0   0   0   0   1   0    0 [84.6/1.2]
+flow   0   0   0   0   0   0   0   0   9   0   0   0   0   0   0   0   0   0    0
+grey   0   0   0   0   0   0   0   0   0   6   0   0   0   0   0   0   0   0    1
+  in   0   0   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0    0
+lion   0   0   0   0   0   0   0   0   0   0   0  14   0   0   0   0   0   0    0
+monk   0   0   0   0   0   0   0   0   0   0   0   1  13   0   0   0   0   0    0 [92.9/0.6]
+oran   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0   0   0   0    1
+snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0   0   0    0
+wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   4   0   0    0
+wall   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   8   0    0 [88.9/0.6]
+whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3    1
 Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
