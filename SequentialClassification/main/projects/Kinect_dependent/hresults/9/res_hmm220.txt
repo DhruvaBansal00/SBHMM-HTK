@@ -1,15 +1,15 @@
 HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/9/res_hmm220.mlf 
-Aligned transcription: data/9/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.0000000003.lab vs data/9/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.0000000003.rec
- LAB: orange monkey    in grey box   
- REC: orange alligator in      chair 
+Aligned transcription: data/9/htk/08-06-20_Linda_4KDepth.lion_below_orange_chair.0000000001.lab vs data/9/htk/08-06-20_Linda_4KDepth.lion_below_orange_chair.0000000001.rec
+ LAB: lion below orange chair 
+ REC: lion below blue   chair 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Sun Jan 10 00:06:02 2021            |
+    | HTK Results Analysis at Sun Jan 10 00:26:37 2021            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/9/res_hmm220.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |   40  |  98.19   1.20   0.60   0.00   1.81   2.50 |
+    | Sum/Avg |   57  |  99.56   0.44   0.00   0.00   0.44   1.75 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -17,22 +17,22 @@ Aligned transcription: data/9/htk/07-24-20_Matthew_4K.orange_monkey_in_grey_box.
        o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
        v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
        e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
-abov  19   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-alli   0  15   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
- bed   0   0   6   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-belo   0   0   0  10   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blac   0   0   0   0   7   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blue   0   0   0   0   0  15   0   0   0   0   0   0   0   0   0   0   0   0    0
- box   0   0   0   0   0   0   9   1   0   0   0   0   0   0   0   0   0   0    0 [90.0/0.6]
-chai   0   0   0   0   0   0   0   6   0   0   0   0   0   0   0   0   0   0    0
-flow   0   0   0   0   0   0   0   0   6   0   0   0   0   0   0   0   0   0    0
-grey   0   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0   0    1
+abov  23   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+alli   0  10   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+ bed   0   0   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+belo   0   0   0  23   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blac   0   0   0   0   4   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blue   0   0   0   0   0  16   0   0   0   0   0   0   0   0   0   0   0   0    0
+ box   0   0   0   0   0   0  14   0   0   0   0   0   0   0   0   0   0   0    0
+chai   0   0   0   0   0   0   0  14   0   0   0   0   0   0   0   0   0   0    0
+flow   0   0   0   0   0   0   0   0   8   0   0   0   0   0   0   0   0   0    0
+grey   0   0   0   0   0   0   0   0   0  21   0   0   0   0   0   0   0   0    0
   in   0   0   0   0   0   0   0   0   0   0  11   0   0   0   0   0   0   0    0
-lion   0   0   0   0   0   0   0   0   0   0   0   7   0   0   0   0   0   0    0
-monk   0   1   0   0   0   0   0   0   0   0   0   0  10   0   0   0   0   0    0 [90.9/0.6]
-oran   0   0   0   0   0   0   0   0   0   0   0   0   0  10   0   0   0   0    0
-snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0   0   0    0
-wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   4   0   0    0
-wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   8   0    0
-whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   5    0
+lion   0   0   0   0   0   0   0   0   0   0   0  17   0   0   0   0   0   0    0
+monk   0   0   0   0   0   0   0   0   0   0   0   0  18   0   0   0   0   0    0
+oran   0   0   0   0   0   1   0   0   0   0   0   0   0   9   0   0   0   0    0 [90.0/0.4]
+snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0  12   0   0   0    0
+wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3   0   0    0
+wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  11   0    0
+whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   4    0
 Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
