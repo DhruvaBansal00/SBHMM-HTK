@@ -1,15 +1,15 @@
 HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/3/res_hmm220.mlf 
-Aligned transcription: data/3/htk/alphapose_11-08-20_Ishan_4KDepth.blue_monkey_above_grey_box.0000000005.lab vs data/3/htk/alphapose_11-08-20_Ishan_4KDepth.blue_monkey_above_grey_box.0000000005.rec
- LAB: blue monkey above grey  box   
- REC:             snake below wagon 
+Aligned transcription: data/3/htk/alphapose_08-12-20_Kanksha_4KDepth.blue_monkey_above_grey_box.0000000004.lab vs data/3/htk/alphapose_08-12-20_Kanksha_4KDepth.blue_monkey_above_grey_box.0000000004.rec
+ LAB: blue monkey above grey box  
+ REC: blue monkey above grey wall 
     ,-------------------------------------------------------------.
-    | HTK Results Analysis at Sat Jan  9 18:28:38 2021            |
+    | HTK Results Analysis at Sat Jan  9 19:08:04 2021            |
     | Ref: all_labels.mlf                                         |
     | Rec: results/3/res_hmm220.mlf                               |
     |=============================================================|
     |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
     |-------------------------------------------------------------|
-    | Sum/Avg |   76  |  98.37   0.98   0.65   0.00   1.63   1.32 |
+    | Sum/Avg |   71  |  99.64   0.36   0.00   0.00   0.36   1.41 |
     `-------------------------------------------------------------'
 ------------------------ Confusion Matrix -------------------------
        a   a   b   b   b   b   b   c   f   g   i   l   m   o   s   w   w   w 
@@ -17,22 +17,22 @@ Aligned transcription: data/3/htk/alphapose_11-08-20_Ishan_4KDepth.blue_monkey_a
        o   l   d   l   a   u   x   a   o   e       o   n   a   a   g   l   i 
        v   i       o   c   e       i   w   y       n   k   n   k   o   l   t 
        e   g       w   k           r   e               e   g   e   n       e  Del [ %c / %e]
-abov  29   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0    0 [96.7/0.3]
+abov  27   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
 alli   0  20   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
- bed   0   0  11   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-belo   0   0   0  29   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blac   0   0   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0   0    0
-blue   0   0   0   0   0  23   0   0   0   0   0   0   0   0   0   0   0   0    1
- box   0   0   0   0   0   0   8   0   0   0   0   0   0   0   0   1   0   0    0 [88.9/0.3]
-chai   0   0   0   0   0   0   0  15   0   0   0   0   0   0   0   0   0   0    0
-flow   0   0   0   0   0   0   0   0  15   0   0   0   0   0   0   0   0   0    0
-grey   0   0   0   1   0   0   0   0   0  19   0   0   0   0   0   0   0   0    0 [95.0/0.3]
-  in   0   0   0   0   0   0   0   0   0   0  17   0   0   0   0   0   0   0    0
-lion   0   0   0   0   0   0   0   0   0   0   0  14   0   0   0   0   0   0    0
-monk   0   0   0   0   0   0   0   0   0   0   0   0  24   0   0   0   0   0    1
-oran   0   0   0   0   0   0   0   0   0   0   0   0   0  20   0   0   0   0    0
-snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0  17   0   0   0    0
+ bed   0   0  12   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+belo   0   0   0  26   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blac   0   0   0   0  11   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+blue   0   0   0   0   0  26   0   0   0   0   0   0   0   0   0   0   0   0    0
+ box   0   0   0   0   0   0  10   0   0   0   0   0   0   0   0   0   1   0    0 [90.9/0.4]
+chai   0   0   0   0   0   0   0  19   0   0   0   0   0   0   0   0   0   0    0
+flow   0   0   0   0   0   0   0   0  12   0   0   0   0   0   0   0   0   0    0
+grey   0   0   0   0   0   0   0   0   0  10   0   0   0   0   0   0   0   0    0
+  in   0   0   0   0   0   0   0   0   0   0  18   0   0   0   0   0   0   0    0
+lion   0   0   0   0   0   0   0   0   0   0   0  18   0   0   0   0   0   0    0
+monk   0   0   0   0   0   0   0   0   0   0   0   0  18   0   0   0   0   0    0
+oran   0   0   0   0   0   0   0   0   0   0   0   0   0  11   0   0   0   0    0
+snak   0   0   0   0   0   0   0   0   0   0   0   0   0   0  15   0   0   0    0
 wago   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   7   0   0    0
-wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  19   0    0
-whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   9    0
+wall   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0  10   0    0
+whit   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   7    0
 Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
