@@ -493,7 +493,15 @@
         "delta_thumb_right_x",
         "delta_thumb_right_y",
         "delta_thumb_right_to_nose_x",
-        "delta_thumb_right_to_nose_y" 
+        "delta_thumb_right_to_nose_y",
+        "quantile_hand_left_squared_y",
+        "quantile_hand_right_squared_x",
+        "quantile_hand_right_squared_y",
+        "quantile_handtip_left_squared_y",
+        "quantile_handtip_right_squared_x",
+        "quantile_thumb_left_squared_y",
+        "quantile_wrist_right_squared_y",
+        "quantile_elbow_left_squared_y" 
     ],
     "features_dir": "/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/ProcessingPipeline/DATA/Kinect_Data_2020"
 }
