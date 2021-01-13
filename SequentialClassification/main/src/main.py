@@ -426,7 +426,7 @@ def main():
             if args.method == "recognition":
                 test(args.start, args.end, args.method, args.hmm_insertion_penalty)
             elif args.method == "verification":
-                correct, incorrect = verify(args.end, args.hmm_insertion_penalty, args.acceptance_threshold, args.beam_threshold)
+                positive, negative, false_positive, false_negative = verify(args.end, args.hmm_insertion_penalty, args.acceptance_threshold, args.beam_threshold)
         
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
@@ -436,8 +436,10 @@ def main():
             print('Test on Train Results')
         
         if args.method == "verification":
-            all_results['average']['correct'] = correct
-            all_results['average']['incorrect'] = incorrect
+            all_results['average']['positive'] = positive
+            all_results['average']['negative'] = negative
+            all_results['average']['false_positive'] = false_positive
+            all_results['average']['false_negative'] = false_negative
 
             print('Standard Train/Test Split Results')
 
@@ -452,10 +454,15 @@ def main():
     
     if args.method == "verification":
 
-        print(f'Videos correct: {all_results["average"]["correct"]}')
-        print(f'Videos incorrect: {all_results["average"]["incorrect"]}')
-        percent_correct = all_results["average"]["correct"]/(all_results["average"]["correct"] + all_results["average"]["incorrect"])
+        print(f'Videos positive: {all_results["average"]["positive"]}')
+        print(f'Videos negative: {all_results["average"]["negative"]}')
+        print(f'Videos false positive: {all_results["average"]["false_positive"]}')
+        print(f'Videos false negative: {all_results["average"]["false_negative"]}')
+        percent_correct = (all_results["average"]["positive"] + all_results["average"]["negative"]) \
+                            /(all_results["average"]["positive"] + all_results["average"]["negative"] + all_results["average"]["false_positive"] + all_results["average"]["false_negative"])
         print(f'Correct %: {percent_correct}')
+        print(f'Precision %: {all_results["average"]["positive"]/(all_results["average"]["positive"] + all_results["average"]["false_positive"])}')
+        print(f'Recall %: {all_results["average"]["positive"]/(all_results["average"]["positive"] + all_results["average"]["false_negative"])}')
 
     # print(all_results)
     # Loads data as new run into pickle

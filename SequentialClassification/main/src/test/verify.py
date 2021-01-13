@@ -64,18 +64,21 @@ def verify(model_iter:int, insertion_penalty: int, acceptance_threshold: int, be
     if model_iter == -1:
         model_iter = len(glob.glob(f'models/{fold}*hmm*')) - 1
 
+    train_phrases = f'lists/{fold}train.data'
     test_phrases = f'lists/{fold}test.data'
     curr_verification_phrase = f'lists/{fold}curr_verification.data'
     curr_verification_label = f'lists/{fold}curr_verification_label.mlf' #I may regret putting label in list later.
     unique_phrases = set()
 
-    with open(test_phrases) as file:
+    with open(train_phrases) as file:
         for line in file:
             curr_phrase = line.split("/")[-1].split(".")[1]
             unique_phrases.add(curr_phrase)
     
-    correct = 0
-    incorrect = 0
+    positive = 0
+    false_positive = 0
+    false_negative = 0
+    negative = 0
 
     #perform verification for each video with each possible phrase and get score.
     with open(test_phrases) as file:
@@ -100,11 +103,14 @@ def verify(model_iter:int, insertion_penalty: int, acceptance_threshold: int, be
                                 curr_verification_label, beam_threshold, fold)
                 curr_average = return_average_ll(f'results/{fold}res_hmm{model_iter}.mlf')
 
-                if (correct_phrase == curr_phrase and curr_average >= acceptance_threshold) or \
-                    (correct_phrase != curr_phrase and curr_average < acceptance_threshold):
-                    correct += 1
-                else:
-                    incorrect += 1
+                if (correct_phrase == curr_phrase and curr_average >= acceptance_threshold):
+                    positive += 1
+                elif (correct_phrase != curr_phrase and curr_average < acceptance_threshold):
+                    negative += 1
+                elif (correct_phrase != curr_phrase and curr_average >= acceptance_threshold) :
+                    false_positive += 1
+                else :
+                    false_negative += 1
 
-    return correct, incorrect 
+    return positive, negative, false_positive, false_negative 
 
