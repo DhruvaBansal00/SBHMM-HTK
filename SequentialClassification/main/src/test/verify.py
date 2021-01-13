@@ -10,7 +10,20 @@ import shutil
 from string import Template
 
 def return_average_ll(file_path: str):
-    return 0
+    total = 0
+    num = 0
+    with open(file_path) as verification_path:
+        verification_path.readline()
+        verification_path.readline()
+        for line in verification_path:
+            numbers = line.split(" ")
+            total += float(numbers[3])
+            num += 1
+            if len(numbers) > 4:
+                total += float(numbers[5])
+                num += 1
+    
+    return total/num
 
 def verification_cmd(model_iter: int, insertion_penalty: int, verification_list: str, label_file: str, 
                     beam_threshold: int = 2000, fold: str = ""):
