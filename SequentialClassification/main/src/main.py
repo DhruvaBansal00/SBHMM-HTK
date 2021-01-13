@@ -28,7 +28,7 @@ sys.path.insert(0, '../../')
 from src.prepare_data import prepare_data
 from src.train import create_data_lists, train, trainSBHMM
 from src.utils import get_results, save_results, load_json, get_arg_groups
-from src.test import test, testSBHMM
+from src.test import test, testSBHMM, verify
 from joblib import Parallel, delayed
 from statistics import mean
 
@@ -157,6 +157,7 @@ def main():
     parser.add_argument('--end', type=int, default=-1)
     parser.add_argument('--method', default='recognition', 
                         choices=['recognition', 'verification'])
+    parser.add_argument('--acceptance_threshold', default=-150)
     
     args = parser.parse_args()
     ########################################################################################
@@ -206,12 +207,21 @@ def main():
                     args.parallel_jobs, args.parallel_classifier_training)
         else:
             train(args.train_iters, args.mean, args.variance, args.transition_prob)
-            test(args.start, args.end, args.method, args.hmm_insertion_penalty)
+            if args.method == "recognition":
+                test(args.start, args.end, args.method, args.hmm_insertion_penalty)
+            elif args.method == "verification":
+                correct, incorrect = verify(args.end, args.insertion_penalty, args.acceptance_threshold, args.beam_threshold)
         
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
             all_results['average']['error'] = all_results['fold_0']['error']
             all_results['average']['sentence_error'] = all_results['fold_0']['sentence_error']
+
+            print('Test on Train Results')
+        
+        if args.method == "verification":
+            all_results['fold_0']['correct'] = correct
+            all_results['fold_0']['incorrect'] = incorrect
 
             print('Test on Train Results')
     
@@ -409,12 +419,21 @@ def main():
                     args.parallel_jobs, args.parallel_classifier_training)
         else:
             train(args.train_iters, args.mean, args.variance, args.transition_prob)
-            test(args.start, args.end, args.method, args.hmm_insertion_penalty)
-
+            if args.method == "recognition":
+                test(args.start, args.end, args.method, args.hmm_insertion_penalty)
+            elif args.method == "verification":
+                correct, incorrect = verify(args.end, args.insertion_penalty, args.acceptance_threshold, args.beam_threshold)
+        
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
             all_results['average']['error'] = all_results['fold_0']['error']
             all_results['average']['sentence_error'] = all_results['fold_0']['sentence_error']
+
+            print('Test on Train Results')
+        
+        if args.method == "verification":
+            all_results['average']['correct'] = correct
+            all_results['average']['incorrect'] = incorrect
 
             print('Standard Train/Test Split Results')
 
@@ -426,6 +445,13 @@ def main():
         if args.test_type == 'cross_val' and args.cv_parallel:
             print(f'Average Insertions: {all_results["average"]["insertions"]}')
             print(f'Average Deletions: {all_results["average"]["deletions"]}')
+    
+    if args.method == "verification":
+
+        print(f'Videos correct: {all_results["average"]["correct"]}')
+        print(f'Videos incorrect: {all_results["average"]["incorrect"]}')
+        percent_correct = all_results["average"]["correct"]/(all_results["average"]["correct"] + all_results["average"]["incorrect"])
+        print(f'Correct %: {percent_correct}')
 
     # print(all_results)
     # Loads data as new run into pickle

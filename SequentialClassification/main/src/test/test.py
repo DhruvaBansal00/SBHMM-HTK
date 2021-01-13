@@ -50,14 +50,6 @@ def test(start: int, end: int, method: str, insertion_penalty: int, beam_thresho
                         f'>> $hresults')
         HResults_cmd = Template(HResults_str)
 
-    elif method == 'verification':
-
-        HVite_str = (f'HVite -a -o N -T 1 -H $macros -S '
-                     f'lists/{fold}test.data -i $results -m -t 250.0 -s 1.0 '
-                     f'-p {insertion_penalty} -I all_labels.mlf -s 25 dict wordList')
-        HVite_cmd = Template(HVite_str)
-        HResults_cmd = Template('')
-
     elif method == 'alignment':
 
         HVite_str = (f'HVite -a -o N -T 1 -H $macros -m -f -S '

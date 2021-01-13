@@ -8,6 +8,7 @@ import os
 import glob
 import shutil
 from string import Template
+import tqdm
 
 def return_average_ll(file_path: str):
     total = 0
@@ -51,6 +52,17 @@ def verification_cmd(model_iter: int, insertion_penalty: int, verification_list:
 '''
 def verify(model_iter:int, insertion_penalty: int, acceptance_threshold: int, beam_threshold: int = 2000, fold: str = "") -> None:
 
+    if os.path.exists(f'results/{fold}'):
+        shutil.rmtree(f'results/{fold}')
+    os.makedirs(f'results/{fold}')
+
+    if os.path.exists(f'hresults/{fold}'):
+        shutil.rmtree(f'hresults/{fold}')
+    os.makedirs(f'hresults/{fold}')
+    
+    if model_iter == -1:
+        model_iter = len(glob.glob(f'models/{fold}*hmm*'))
+
     test_phrases = f'lists/{fold}test.data'
     curr_verification_phrase = f'lists/{fold}curr_verification.data'
     curr_verification_label = f'lists/{fold}curr_verification_label.mlf' #I may regret putting label in list later.
@@ -66,7 +78,7 @@ def verify(model_iter:int, insertion_penalty: int, acceptance_threshold: int, be
 
     #perform verification for each video with each possible phrase and get score.
     with open(test_phrases) as file:
-        for curr_video_path in file:
+        for curr_video_path in tqdm.tqdm(file):
             curr_video = curr_video_path.split("/")[-1]
             correct_phrase = curr_video.split(".")[1]
             label_file_path = "\"*/" + curr_video.replace(".htk", ".lab") + "\""
