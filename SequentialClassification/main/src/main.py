@@ -454,15 +454,15 @@ def main():
     
     if args.method == "verification":
 
-        print(f'Videos positive: {all_results["average"]["positive"]}')
-        print(f'Videos negative: {all_results["average"]["negative"]}')
-        print(f'Videos false positive: {all_results["average"]["false_positive"]}')
-        print(f'Videos false negative: {all_results["average"]["false_negative"]}')
+        print(f'Positive Pairs: {all_results["average"]["positive"]}')
+        print(f'Negative Pairs: {all_results["average"]["negative"]}')
+        print(f'False Positive Pairs: {all_results["average"]["false_positive"]}')
+        print(f'False Negative Pairs: {all_results["average"]["false_negative"]}')
         percent_correct = (all_results["average"]["positive"] + all_results["average"]["negative"]) \
                             /(all_results["average"]["positive"] + all_results["average"]["negative"] + all_results["average"]["false_positive"] + all_results["average"]["false_negative"])
-        print(f'Correct %: {percent_correct}')
-        print(f'Precision %: {all_results["average"]["positive"]/(all_results["average"]["positive"] + all_results["average"]["false_positive"])}')
-        print(f'Recall %: {all_results["average"]["positive"]/(all_results["average"]["positive"] + all_results["average"]["false_negative"])}')
+        print(f'Correct %: {percent_correct*100}')
+        print(f'Precision %: {100*all_results["average"]["positive"]/(all_results["average"]["positive"] + all_results["average"]["false_positive"])}')
+        print(f'Recall %: {100*all_results["average"]["positive"]/(all_results["average"]["positive"] + all_results["average"]["false_negative"])}')
 
     # print(all_results)
     # Loads data as new run into pickle
