@@ -1,4 +1,4 @@
-"""Defines method to test HMM. Can perform verification or recognition.
+"""Defines method to test HMM. Can perform recognition.
 
 Methods
 -------

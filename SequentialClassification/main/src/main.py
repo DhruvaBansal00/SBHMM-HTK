@@ -155,7 +155,8 @@ def main():
     #Arguments for testing
     parser.add_argument('--start', type=int, default=-2)
     parser.add_argument('--end', type=int, default=-1)
-    parser.add_argument('--method', default='recognition')
+    parser.add_argument('--method', default='recognition', 
+                        choices=['recognition', 'verification'])
     
     args = parser.parse_args()
     ########################################################################################
