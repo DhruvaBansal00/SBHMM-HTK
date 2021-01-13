@@ -18,11 +18,12 @@ def return_average_ll(file_path: str):
         verification_path.readline()
         for line in verification_path:
             numbers = line.split(" ")
-            total += float(numbers[3])
-            num += 1
-            if len(numbers) > 4:
-                total += float(numbers[5])
+            if len(numbers) > 1:
+                total += float(numbers[3])
                 num += 1
+                if len(numbers) > 4:
+                    total += float(numbers[5])
+                    num += 1
     
     return total/num
 
@@ -30,7 +31,7 @@ def verification_cmd(model_iter: int, insertion_penalty: int, verification_list:
                     beam_threshold: int = 2000, fold: str = ""):
 
     HVite_str = (f'HVite -a -o N -T 1 -H $macros -m -f -S '
-                     f'lists/{fold}{verification_list} -i $results -t {beam_threshold} '
+                     f'{verification_list} -i $results -t {beam_threshold} '
                      f'-p {insertion_penalty} -I {label_file} -s 25 dict wordList '
                      f'>/dev/null 2>&1')
     HVite_cmd = Template(HVite_str)
@@ -61,7 +62,7 @@ def verify(model_iter:int, insertion_penalty: int, acceptance_threshold: int, be
     os.makedirs(f'hresults/{fold}')
     
     if model_iter == -1:
-        model_iter = len(glob.glob(f'models/{fold}*hmm*'))
+        model_iter = len(glob.glob(f'models/{fold}*hmm*')) - 1
 
     test_phrases = f'lists/{fold}test.data'
     curr_verification_phrase = f'lists/{fold}curr_verification.data'
@@ -81,18 +82,19 @@ def verify(model_iter:int, insertion_penalty: int, acceptance_threshold: int, be
         for curr_video_path in tqdm.tqdm(file):
             curr_video = curr_video_path.split("/")[-1]
             correct_phrase = curr_video.split(".")[1]
-            label_file_path = "\"*/" + curr_video.replace(".htk", ".lab") + "\""
+            label_file_path = "\"*/" + curr_video.replace(".htk", ".lab\"")
 
             for curr_phrase in unique_phrases:
                 with open(curr_verification_phrase, "w") as verification_list:
                     verification_list.write(curr_video_path+"\n")
                 with open(curr_verification_label, "w") as verification_label:
                     verification_label.write("#!MLF!#\n")
-                    verification_label.write(label_file_path+"\n")
+                    verification_label.write(label_file_path)
                     verification_label.write("sil0\n")
                     for word in curr_phrase.split("_"):
-                        verification_label.wirte(word+"\n")
+                        verification_label.write(word+"\n")
                     verification_label.write("sil1\n")
+                    verification_label.write(".\n")
                 
                 verification_cmd(model_iter, insertion_penalty, curr_verification_phrase,
                                 curr_verification_label, beam_threshold, fold)

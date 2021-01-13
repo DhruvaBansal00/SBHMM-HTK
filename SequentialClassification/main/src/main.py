@@ -13,6 +13,10 @@
     SBHMM CV Parallel User Independent =  python3 driver.py --test_type cross_val --train_iters 25 50 75 100 120 140 160 180 200 220 240 --sbhmm_iters 25 50 75 100 --train_sbhmm --sbhmm_cycles 1 --include_word_level_states --include_word_position --parallel_classifier_training --hmm_insertion_penalty 150 --sbhmm_insertion_penalty 150 --neighbors 200 --cross_val_method leave_one_user_out --n_splits 5 --beam_threshold 50000.0 --cv_parallel --parallel_jobs 7 --users Linda_4 Kanksha_4 Thad_4 Matthew_4 Prerna_4 David_4 Ishan_4
     HMM CV Parallel User Independent =  python3 driver.py --test_type cross_val --train_iters 25 50 75 100 120 140 160 180 200 220 240 --hmm_insertion_penalty 10 --cross_val_method leave_one_user_out --n_splits 5 --beam_threshold 50000.0 --cv_parallel --parallel_jobs 4
 """
+
+"""Verification commands
+    HMM Standard (Dry run) = python3 driver.py --test_type standard --train_iters 10 20 --users Matthew --method recognition
+"""
 import sys
 import glob
 import argparse
@@ -422,7 +426,7 @@ def main():
             if args.method == "recognition":
                 test(args.start, args.end, args.method, args.hmm_insertion_penalty)
             elif args.method == "verification":
-                correct, incorrect = verify(args.end, args.insertion_penalty, args.acceptance_threshold, args.beam_threshold)
+                correct, incorrect = verify(args.end, args.hmm_insertion_penalty, args.acceptance_threshold, args.beam_threshold)
         
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
