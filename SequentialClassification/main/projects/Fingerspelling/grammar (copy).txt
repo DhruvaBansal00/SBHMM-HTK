@@ -1,2 +1,2 @@
-$word = (away | box | breakfast | chicken | drive | gone | jump | squirrel | zipper);
+$word = (arm | big | box | cow | cup | get | hit | off | old | pen | pig | red | see | sky | zoo);
 (sil0 $word sil1)

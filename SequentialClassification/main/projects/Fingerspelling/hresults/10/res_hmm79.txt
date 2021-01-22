@@ -1,0 +1,63 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/10/res_hmm79.mlf 
+Aligned transcription: data/10/htk/01-18-21_Matthew_Fingerspelling_Right.see.0000000005.lab vs data/10/htk/01-18-21_Matthew_Fingerspelling_Right.see.0000000005.rec
+ LAB: s e e 
+ REC: o f f 
+Aligned transcription: data/10/htk/01-18-21_Matthew_Fingerspelling_Right.zoo.0000000004.lab vs data/10/htk/01-18-21_Matthew_Fingerspelling_Right.zoo.0000000004.rec
+ LAB: z o o 
+ REC: s e e 
+Aligned transcription: data/10/htk/01-18-21_Matthew_Fingerspelling_Right.pen.0000000001.lab vs data/10/htk/01-18-21_Matthew_Fingerspelling_Right.pen.0000000001.rec
+ LAB: p e n 
+ REC: s e e 
+Aligned transcription: data/10/htk/01-18-21_Matthew_Fingerspelling_Right.hit.0000000013.lab vs data/10/htk/01-18-21_Matthew_Fingerspelling_Right.hit.0000000013.rec
+ LAB: h i t 
+ REC: p i g 
+Aligned transcription: data/10/htk/01-18-21_Matthew_Fingerspelling_Right.sky.0000000002.lab vs data/10/htk/01-18-21_Matthew_Fingerspelling_Right.sky.0000000002.rec
+ LAB: s k y 
+ REC: p i g 
+Aligned transcription: data/10/htk/01-18-21_Matthew_Fingerspelling_Right.big.0000000010.lab vs data/10/htk/01-18-21_Matthew_Fingerspelling_Right.big.0000000010.rec
+ LAB: b i g 
+ REC: p i g 
+Aligned transcription: data/10/htk/01-18-21_Matthew_Fingerspelling_Right.hit.0000000012.lab vs data/10/htk/01-18-21_Matthew_Fingerspelling_Right.hit.0000000012.rec
+ LAB: h i t 
+ REC: p i g 
+Aligned transcription: data/10/htk/01-18-21_Matthew_Fingerspelling_Right.arm.0000000011.lab vs data/10/htk/01-18-21_Matthew_Fingerspelling_Right.arm.0000000011.rec
+ LAB: a r m 
+ REC: o f f 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Thu Jan 21 00:58:48 2021            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/10/res_hmm79.mlf                               |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |   16  |  60.42  39.58   0.00   0.00  39.58  50.00 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       b   c   d   e   f   g   i   l   o   p   r   s   t   u   w   x 
+                                                                     
+                                                                     
+                                                                      Del [ %c / %e]
+   a   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0    0 [ 0.0/2.1]
+   b   1   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0    0 [50.0/2.1]
+   c   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+   d   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+   e   0   0   0   3   2   0   0   0   0   0   0   0   0   0   0   0    0 [60.0/4.2]
+   f   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0    0
+   g   0   0   0   0   0   3   0   0   0   0   0   0   0   0   0   0    0
+   h   0   0   0   0   0   0   0   0   0   2   0   0   0   0   0   0    0 [ 0.0/4.2]
+   i   0   0   0   0   0   0   4   0   0   0   0   0   0   0   0   0    0
+   k   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0    0 [ 0.0/2.1]
+   l   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0    0
+   m   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0    0 [ 0.0/2.1]
+   n   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0    0 [ 0.0/2.1]
+   o   0   0   0   2   0   0   0   0   4   0   0   0   0   0   0   0    0 [66.7/4.2]
+   p   0   0   0   0   0   0   0   0   0   2   0   1   0   0   0   0    0 [66.7/2.1]
+   r   0   0   0   0   1   0   0   0   0   0   1   0   0   0   0   0    0 [50.0/2.1]
+   s   0   0   0   0   0   0   0   0   1   1   0   0   0   0   0   0    0 [ 0.0/4.2]
+   t   0   0   0   0   0   2   0   0   0   0   0   0   1   0   0   0    0 [33.3/4.2]
+   u   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0    0
+   w   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0    0
+   x   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1    0
+   y   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0    0 [ 0.0/2.1]
+   z   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0    0 [ 0.0/2.1]
+Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
