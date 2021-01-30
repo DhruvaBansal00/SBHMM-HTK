@@ -15,7 +15,8 @@
 """
 
 """Verification commands
-    HMM Standard (Dry run) = python3 driver.py --test_type standard --train_iters 10 20 --users Matthew --method recognition
+    HMM Standard (Dry run) = python3 driver.py --test_type standard --train_iters 10 20 --users Matthew --method verification
+    HMM CV = python3 driver.py --test_type cross_val --train_iters 10 --users 07-24-20_Matthew_4KDepth 11-08-20_Colby_4KDepth 11-08-20_Ishan_4KDepth --cross_val_method leave_one_user_out --n_splits 10 --cv_parallel --parallel_jobs 3  --hmm_insertion_penalty -80 --method verification
 """
 import sys
 import glob
