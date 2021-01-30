@@ -87,7 +87,7 @@ def crossValVerificationFold(train_data: list, test_data: list, args: object, fo
                     os.path.join(currDataFolder, "htk", i+".htk") for i in curr_test_files], args.phrase_len, fold)
 
         train(args.train_iters, args.mean, args.variance, args.transition_prob, fold=os.path.join(str(fold), ""))
-        curr_average_ll_sign = return_average_ll_per_sign(args.start, args.hmm_insertion_penalty, 
+        curr_average_ll_sign = return_average_ll_per_sign(args.end, args.hmm_insertion_penalty, 
                                                         args.beam_threshold, fold=os.path.join(str(fold), ""))
         if len(average_ll_per_sign) == 0:
             average_ll_per_sign = curr_average_ll_sign
@@ -98,8 +98,11 @@ def crossValVerificationFold(train_data: list, test_data: list, args: object, fo
     for sign in average_ll_per_sign:
         average_ll_per_sign[sign] /= len(users_in_train)
     
-    positive, negative, false_positive, false_negative = verify_zahoor(args.start, args.hmm_insertion_penalty, args.beam_threshold, 
-                                                                        fold=os.path.join(str(fold), ""))
+    create_data_lists([os.path.join(currDataFolder, "htk", i+".htk") for i in trainFiles], [
+                    os.path.join(currDataFolder, "htk", i+".htk") for i in testFiles], args.phrase_len, fold)
+    train(args.train_iters, args.mean, args.variance, args.transition_prob, fold=os.path.join(str(fold), ""))
+    positive, negative, false_positive, false_negative = verify_zahoor(args.end, args.hmm_insertion_penalty, average_ll_per_sign, 
+                                                                        args.beam_threshold, fold=os.path.join(str(fold), ""))
     print(f'Current Positive Rate: {positive}')
     print(f'Current Negative Rate: {negative}')
     print(f'Current False Positive Rate: {false_positive}')
