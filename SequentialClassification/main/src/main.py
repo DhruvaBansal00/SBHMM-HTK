@@ -93,20 +93,21 @@ def crossValVerificationFold(train_data: list, test_data: list, args: object, fo
             average_ll_per_sign = curr_average_ll_sign
         else:
             for sign in average_ll_per_sign:
-                average_ll_per_sign[sign] += curr_average_ll_sign[sign]
+                average_ll_per_sign[sign].extend(curr_average_ll_sign[sign])
+                average_ll_per_sign[sign] = np.array(average_ll_per_sign[sign])
     
     for sign in average_ll_per_sign:
-        average_ll_per_sign[sign] /= len(users_in_train)
+        average_ll_per_sign[sign] = [np.mean(average_ll_per_sign[sign]), np.std(average_ll_per_sign[sign])]
     
     create_data_lists([os.path.join(currDataFolder, "htk", i+".htk") for i in trainFiles], [
                     os.path.join(currDataFolder, "htk", i+".htk") for i in testFiles], args.phrase_len, fold)
     train(args.train_iters, args.mean, args.variance, args.transition_prob, fold=os.path.join(str(fold), ""))
     positive, negative, false_positive, false_negative = verify_zahoor(args.end, args.hmm_insertion_penalty, average_ll_per_sign, 
                                                                         args.beam_threshold, fold=os.path.join(str(fold), ""))
-    print(f'Current Positive Rate: {positive}')
-    print(f'Current Negative Rate: {negative}')
-    print(f'Current False Positive Rate: {false_positive}')
-    print(f'Current False Negative Rate: {false_negative}')
+    print(f'Current Positive Rate: {positive/(positive + false_negative)}')
+    print(f'Current Negative Rate: {negative/(negative + false_positive)}')
+    print(f'Current False Positive Rate: {false_positive/(negative + false_positive)}')
+    print(f'Current False Negative Rate: {false_negative/(positive + false_negative)}')
 
     return positive, negative, false_positive, false_negative
     

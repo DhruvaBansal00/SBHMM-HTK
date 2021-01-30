@@ -87,9 +87,6 @@ def return_average_ll_per_sign(model_iter:int, insertion_penalty: int,
                 average_ll_per_sign[correct_phrase].append(curr_average)
             else:
                 average_ll_per_sign[correct_phrase] = [curr_average]
-
-    for phrase in average_ll_per_sign:
-        average_ll_per_sign[phrase] = np.mean(np.array(average_ll_per_sign[phrase]))
     
     return average_ll_per_sign
 
@@ -167,12 +164,12 @@ def verify_zahoor(model_iter:int, insertion_penalty: int, average_ll_per_sign: d
                 verification_cmd(model_iter, insertion_penalty, curr_verification_phrase,
                                 curr_verification_label, beam_threshold, fold)
                 curr_average = return_average_ll(f'results/{fold}res_hmm{model_iter}.mlf')
-
-                if (correct_phrase == curr_phrase and curr_average >= average_ll_per_sign[curr_phrase]):
+                threshold = average_ll_per_sign[curr_phrase][0] - average_ll_per_sign[curr_phrase][1]
+                if (correct_phrase == curr_phrase and curr_average >= threshold):
                     positive += 1
-                elif (correct_phrase != curr_phrase and curr_average < average_ll_per_sign[curr_phrase]):
+                elif (correct_phrase != curr_phrase and curr_average < threshold):
                     negative += 1
-                elif (correct_phrase != curr_phrase and curr_average >= average_ll_per_sign[curr_phrase]):
+                elif (correct_phrase != curr_phrase and curr_average >= threshold):
                     false_positive += 1
                 else :
                     false_negative += 1
