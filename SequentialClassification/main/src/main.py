@@ -32,7 +32,7 @@ sys.path.insert(0, '../../')
 from src.prepare_data import prepare_data
 from src.train import create_data_lists, train, trainSBHMM
 from src.utils import get_results, save_results, load_json, get_arg_groups
-from src.test import test, testSBHMM, verify
+from src.test import test, testSBHMM, verify_simple
 from joblib import Parallel, delayed
 from statistics import mean
 
@@ -56,6 +56,38 @@ def copyFiles(fileNames: list, newFolder: str, originalFolder: str, ext: str):
 
     for currFile in fileNames:
         shutil.copyfile(os.path.join(originalFolder, currFile+ext), os.path.join(newFolder, currFile+ext))
+
+def get_user(filepath):
+    return filepath.split('/')[-1].split('.')[0].split('_')[-2]
+
+def crossValVerificationFold(train_data: list, test_data: list, args: object, fold: int):
+    print(f"Current split = {str(fold)}. Current Test data Size = {len(test_data)}")
+    ogDataFolder = "data"
+    currDataFolder = os.path.join("data", str(fold))
+    trainFiles = [i.split("/")[-1].replace(".htk", "") for i in train_data]
+    testFiles = [i.split("/")[-1].replace(".htk", "") for i in test_data]
+    allFiles = trainFiles + testFiles
+
+    copyFiles(allFiles, os.path.join(currDataFolder, "ark"), os.path.join(ogDataFolder, "ark"), ".ark")
+    copyFiles(allFiles, os.path.join(currDataFolder, "htk"), os.path.join(ogDataFolder, "htk"), ".htk")
+
+    users_in_train = set([get_user(filepath) for filepath in trainFiles])
+    for user in users_in_train:
+        curr_train_files = []
+        curr_test_files = []
+        for filepath in trainFiles:
+            if get_user(filepath) != user:
+                curr_train_files.append(filepath)
+            else:
+                curr_test_files.append(filepath)
+        
+        create_data_lists([os.path.join(currDataFolder, "htk", i+".htk") for i in curr_train_files], [
+                    os.path.join(currDataFolder, "htk", i+".htk") for i in curr_test_files], args.phrase_len, fold)
+
+        train(args.train_iters, args.mean, args.variance, args.transition_prob, fold=os.path.join(str(fold), ""))
+
+
+
 
 def crossValFold(train_data: list, test_data: list, args: object, fold: int):
     print(f"Current split = {str(fold)}. Current Test data Size = {len(test_data)}")
@@ -256,9 +288,7 @@ def main():
             groups = [group_map[phrase] for phrase in phrases]
             cross_val = cross_val_method
         elif cvm == 'leave_one_user_out':
-            users = [filepath.split('/')[-1].split('.')[0].split('_')[-2]
-                for filepath
-                in htk_filepaths]
+            users = [get_user(filepath) for filepath in htk_filepaths]
             unique_users = list(set(users))
             unique_users.sort()
             print(unique_users)
@@ -266,9 +296,7 @@ def main():
             groups = [group_map[user] for user in users]            
             cross_val = cross_val_method
         elif cvm == 'user_dependent':
-            users = [filepath.split('/')[-1].split('.')[0].split('_')[-2]
-                for filepath
-                in htk_filepaths]
+            users = [get_user(filepath) for filepath in htk_filepaths]
             unique_users = list(set(users))
             unique_users.sort()
             print(unique_users)
@@ -279,7 +307,9 @@ def main():
             splits = list(cross_val.split(htk_filepaths, phrases, groups))
         else:
             splits = list(cross_val.split(htk_filepaths, phrases))        
-        stats = Parallel(n_jobs=args.parallel_jobs)(delayed(crossValFold)(np.array(htk_filepaths)[splits[currFold][0]], np.array(htk_filepaths)[splits[currFold][1]], args, currFold) for currFold in range(len(splits)))
+        stats = Parallel(n_jobs=args.parallel_jobs)(delayed(crossValFold)
+                        (np.array(htk_filepaths)[splits[currFold][0]], np.array(htk_filepaths)[splits[currFold][1]], args, currFold)
+                        for currFold in range(len(splits)))
         
         all_results['average']['error'] = mean([i[0] for i in stats])
         all_results['average']['sentence_error'] = mean([i[1] for i in stats])
@@ -308,9 +338,7 @@ def main():
             for filepath
             in htk_filepaths]
         
-        users = [filepath.split('/')[-1].split('.')[0].split('_')[1]
-            for filepath
-            in htk_filepaths]     
+        users = [get_user(filepath) for filepath in htk_filepaths]     
 
         if cvm == 'kfold' or cvm == 'stratified':
             unique_phrases = set(phrases)
@@ -328,9 +356,7 @@ def main():
             groups = [group_map[user] for user in users]            
             cross_val = cross_val_method
         elif cvm == 'user_dependent':
-            users = [filepath.split('/')[-1].split('.')[0].split('_')[-2]
-                for filepath
-                in htk_filepaths]
+            users = [get_user(filepath) for filepath in htk_filepaths]
             unique_users = list(set(users))
             unique_users.sort()
             print(unique_users)
