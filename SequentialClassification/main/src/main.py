@@ -93,8 +93,7 @@ def crossValVerificationFold(train_data: list, test_data: list, args: object, fo
             average_ll_per_sign = curr_average_ll_sign
         else:
             for sign in average_ll_per_sign:
-                average_ll_per_sign[sign].extend(curr_average_ll_sign[sign])
-                average_ll_per_sign[sign] = np.array(average_ll_per_sign[sign])
+                average_ll_per_sign[sign] = np.concatenate((average_ll_per_sign[sign], curr_average_ll_sign[sign]), axis=None)
     
     for sign in average_ll_per_sign:
         average_ll_per_sign[sign] = [np.mean(average_ll_per_sign[sign]), np.std(average_ll_per_sign[sign])]
@@ -208,7 +207,7 @@ def main():
     parser.add_argument('--multiple_classifiers', action='store_true')
     parser.add_argument('--classifier', type=str, default='knn',
                         choices=['knn', 'adaboost'])
-    parser.add_argument('--beam_threshold', default=100000.0)
+    parser.add_argument('--beam_threshold', default=10000000.0)
 
     #Arguments for testing
     parser.add_argument('--start', type=int, default=-2)

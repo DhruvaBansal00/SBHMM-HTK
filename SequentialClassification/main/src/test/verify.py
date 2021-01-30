@@ -31,10 +31,12 @@ def return_average_ll(file_path: str):
 def verification_cmd(model_iter: int, insertion_penalty: int, verification_list: str, label_file: str, 
                     beam_threshold: int = 2000, fold: str = ""):
 
+    verification_log = f'logs/{fold}verification_log.data'
+
     HVite_str = (f'HVite -a -o N -T 1 -H $macros -m -f -S '
                      f'{verification_list} -i $results -t {beam_threshold} '
                      f'-p {insertion_penalty} -I {label_file} -s 25 dict wordList '
-                     f'>/dev/null 2>&1')
+                     f'>> {verification_log}')
     HVite_cmd = Template(HVite_str)
     macros_filepath = f'models/{fold}hmm{model_iter}/newMacros'
     results_filepath = f'results/{fold}res_hmm{model_iter}.mlf'
