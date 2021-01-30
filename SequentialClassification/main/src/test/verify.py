@@ -41,7 +41,7 @@ def verification_cmd(model_iter: int, insertion_penalty: int, verification_list:
 
     os.system(HVite_cmd.substitute(macros=macros_filepath, results=results_filepath))
 
-def return_average_ll_per_sign(model_iter:int, insertion_penalty: int, acceptance_threshold: int, 
+def return_average_ll_per_sign(model_iter:int, insertion_penalty: int,
                             beam_threshold: int = 2000, fold: str = "") -> None:
     
     if os.path.exists(f'results/{fold}'):
@@ -93,6 +93,93 @@ def return_average_ll_per_sign(model_iter:int, insertion_penalty: int, acceptanc
     
     return average_ll_per_sign
 
+def get_one_off_phrases(curr_phrase: str, unique_phrases: set):
+    one_off_phrases = []
+    curr_phrase_arr = curr_phrase.split("_")
+    for phrase in unique_phrases:
+        phrase_arr = phrase.split("_")
+        dp_table = np.zeros((len(phrase_arr), len(curr_phrase_arr)))
+        for idx_1, word_1 in enumerate(phrase_arr):
+            for idx_2, word_2 in enumerate(curr_phrase_arr):
+                MATCH = 1 - (word_1 == word_2)
+                if idx_1 == 0 and idx_2 == 0:
+                    dp_table[idx_1, idx_2] = MATCH
+                elif idx_1 == 0:
+                    dp_table[idx_1, idx_2] = min(dp_table[idx_1, idx_2 - 1] + 1, MATCH + idx_1)
+                elif idx_2 == 0:
+                    dp_table[idx_1, idx_2] = min(dp_table[idx_1-1] + 1, MATCH + idx_2)
+                else:
+                    dp_table[idx_1, idx_2] = min(MATCH + dp_table[idx_1-1, idx_2-1], 
+                                                dp_table[idx_1-1, idx_2],
+                                                dp_table[idx_1, idx_2-1])
+        if dp_table[-1,-1] <= 1:
+            one_off_phrases.append(phrase)
+    return one_off_phrases
+
+def verify_zahoor(model_iter:int, insertion_penalty: int, average_ll_per_sign: dict, 
+                beam_threshold: int = 2000, fold: str = "") -> None:
+
+    if os.path.exists(f'results/{fold}'):
+        shutil.rmtree(f'results/{fold}')
+    os.makedirs(f'results/{fold}')
+
+    if os.path.exists(f'hresults/{fold}'):
+        shutil.rmtree(f'hresults/{fold}')
+    os.makedirs(f'hresults/{fold}')
+    
+    if model_iter == -1:
+        model_iter = len(glob.glob(f'models/{fold}*hmm*')) - 1
+
+    train_phrases = f'lists/{fold}train.data'
+    test_phrases = f'lists/{fold}test.data'
+    curr_verification_phrase = f'lists/{fold}curr_verification.data'
+    curr_verification_label = f'lists/{fold}curr_verification_label.mlf' #I may regret putting label in list later.
+    unique_phrases = set()
+
+    with open(train_phrases) as file:
+        for line in file:
+            curr_phrase = line.split("/")[-1].split(".")[1]
+            unique_phrases.add(curr_phrase)
+    
+    positive = 0
+    false_positive = 0
+    false_negative = 0
+    negative = 0
+
+    #perform verification for each video with each possible phrase and get score.
+    with open(test_phrases) as file:
+        for curr_video_path in tqdm.tqdm(file):
+            curr_video = curr_video_path.split("/")[-1]
+            correct_phrase = curr_video.split(".")[1]
+            label_file_path = "\"*/" + curr_video.replace(".htk", ".lab\"")
+            one_off_phrases = get_one_off_phrases(curr_phrase, unique_phrases)
+
+            for curr_phrase in one_off_phrases:
+                with open(curr_verification_phrase, "w") as verification_list:
+                    verification_list.write(curr_video_path+"\n")
+                with open(curr_verification_label, "w") as verification_label:
+                    verification_label.write("#!MLF!#\n")
+                    verification_label.write(label_file_path)
+                    verification_label.write("sil0\n")
+                    for word in curr_phrase.split("_"):
+                        verification_label.write(word+"\n")
+                    verification_label.write("sil1\n")
+                    verification_label.write(".\n")
+                
+                verification_cmd(model_iter, insertion_penalty, curr_verification_phrase,
+                                curr_verification_label, beam_threshold, fold)
+                curr_average = return_average_ll(f'results/{fold}res_hmm{model_iter}.mlf')
+
+                if (correct_phrase == curr_phrase and curr_average >= average_ll_per_sign[curr_phrase]):
+                    positive += 1
+                elif (correct_phrase != curr_phrase and curr_average < average_ll_per_sign[curr_phrase]):
+                    negative += 1
+                elif (correct_phrase != curr_phrase and curr_average >= average_ll_per_sign[curr_phrase]) :
+                    false_positive += 1
+                else :
+                    false_negative += 1
+
+    return positive, negative, false_positive, false_negative 
 
 '''
     While evaluating network accuracy:

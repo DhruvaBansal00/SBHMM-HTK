@@ -32,7 +32,7 @@ sys.path.insert(0, '../../')
 from src.prepare_data import prepare_data
 from src.train import create_data_lists, train, trainSBHMM
 from src.utils import get_results, save_results, load_json, get_arg_groups
-from src.test import test, testSBHMM, verify_simple
+from src.test import test, testSBHMM, verify_simple, return_average_ll_per_sign, verify_zahoor
 from joblib import Parallel, delayed
 from statistics import mean
 
@@ -72,6 +72,7 @@ def crossValVerificationFold(train_data: list, test_data: list, args: object, fo
     copyFiles(allFiles, os.path.join(currDataFolder, "htk"), os.path.join(ogDataFolder, "htk"), ".htk")
 
     users_in_train = set([get_user(filepath) for filepath in trainFiles])
+    average_ll_per_sign = {}
     for user in users_in_train:
         curr_train_files = []
         curr_test_files = []
@@ -85,10 +86,26 @@ def crossValVerificationFold(train_data: list, test_data: list, args: object, fo
                     os.path.join(currDataFolder, "htk", i+".htk") for i in curr_test_files], args.phrase_len, fold)
 
         train(args.train_iters, args.mean, args.variance, args.transition_prob, fold=os.path.join(str(fold), ""))
+        curr_average_ll_sign = return_average_ll_per_sign(args.start, args.hmm_insertion_penalty, 
+                                                        args.beam_threshold, fold=os.path.join(str(fold), ""))
+        if len(average_ll_per_sign) == 0:
+            average_ll_per_sign = curr_average_ll_sign
+        else:
+            for sign in average_ll_per_sign:
+                average_ll_per_sign[sign] += curr_average_ll_sign[sign]
+    
+    for sign in average_ll_per_sign:
+        average_ll_per_sign[sign] /= len(users_in_train)
+    
+    positive, negative, false_positive, false_negative = verify_zahoor(args.start, args.hmm_insertion_penalty, args.beam_threshold, 
+                                                                        fold=os.path.join(str(fold), ""))
+    print(f'Current Positive Rate: {positive}')
+    print(f'Current Negative Rate: {negative}')
+    print(f'Current False Positive Rate: {false_positive}')
+    print(f'Current False Negative Rate: {false_negative}')
 
-
-
-
+    return positive, negative, false_positive, false_negative
+    
 def crossValFold(train_data: list, test_data: list, args: object, fold: int):
     print(f"Current split = {str(fold)}. Current Test data Size = {len(test_data)}")
     ogDataFolder = "data"
@@ -246,7 +263,8 @@ def main():
             if args.method == "recognition":
                 test(args.start, args.end, args.method, args.hmm_insertion_penalty)
             elif args.method == "verification":
-                correct, incorrect = verify(args.end, args.insertion_penalty, args.acceptance_threshold, args.beam_threshold)
+                positive, negative, false_positive, false_negative = verify_simple(args.end, args.insertion_penalty, 
+                                                                    args.acceptance_threshold, args.beam_threshold)
         
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
@@ -256,8 +274,10 @@ def main():
             print('Test on Train Results')
         
         if args.method == "verification":
-            all_results['fold_0']['correct'] = correct
-            all_results['fold_0']['incorrect'] = incorrect
+            all_results['average']['positive'] = positive
+            all_results['average']['negative'] = negative
+            all_results['average']['false_positive'] = false_positive
+            all_results['average']['false_negative'] = false_negative
 
             print('Test on Train Results')
     
@@ -306,15 +326,25 @@ def main():
         elif use_groups:
             splits = list(cross_val.split(htk_filepaths, phrases, groups))
         else:
-            splits = list(cross_val.split(htk_filepaths, phrases))        
-        stats = Parallel(n_jobs=args.parallel_jobs)(delayed(crossValFold)
-                        (np.array(htk_filepaths)[splits[currFold][0]], np.array(htk_filepaths)[splits[currFold][1]], args, currFold)
-                        for currFold in range(len(splits)))
+            splits = list(cross_val.split(htk_filepaths, phrases))
+        if args.method == "recognition":         
+            stats = Parallel(n_jobs=args.parallel_jobs)(delayed(crossValFold)
+                            (np.array(htk_filepaths)[splits[currFold][0]], np.array(htk_filepaths)[splits[currFold][1]], args, currFold)
+                            for currFold in range(len(splits)))
+            all_results['average']['error'] = mean([i[0] for i in stats])
+            all_results['average']['sentence_error'] = mean([i[1] for i in stats])
+            all_results['average']['insertions'] = mean([i[2] for i in stats])
+            all_results['average']['deletions'] = mean([i[3] for i in stats])
+
+        elif args.method == "verification":
+            stats = Parallel(n_jobs=args.parallel_jobs)(delayed(crossValVerificationFold)
+                            (np.array(htk_filepaths)[splits[currFold][0]], np.array(htk_filepaths)[splits[currFold][1]], args, currFold)
+                            for currFold in range(len(splits)))
+            all_results['average']['positive'] = mean(i[0] for i in stats)
+            all_results['average']['negative'] = mean(i[1] for i in stats)
+            all_results['average']['false_positive'] = mean(i[2] for i in stats)
+            all_results['average']['false_negative'] = mean(i[3] for i in stats)
         
-        all_results['average']['error'] = mean([i[0] for i in stats])
-        all_results['average']['sentence_error'] = mean([i[1] for i in stats])
-        all_results['average']['insertions'] = mean([i[2] for i in stats])
-        all_results['average']['deletions'] = mean([i[3] for i in stats])
         print(stats)
 
     elif args.test_type == 'cross_val':
@@ -452,7 +482,7 @@ def main():
             if args.method == "recognition":
                 test(args.start, args.end, args.method, args.hmm_insertion_penalty)
             elif args.method == "verification":
-                positive, negative, false_positive, false_negative = verify(args.end, args.hmm_insertion_penalty, args.acceptance_threshold, args.beam_threshold)
+                positive, negative, false_positive, false_negative = verify_simple(args.end, args.hmm_insertion_penalty, args.acceptance_threshold, args.beam_threshold)
         
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
