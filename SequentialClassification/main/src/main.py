@@ -15,7 +15,8 @@
 """
 
 """Verification commands
-    HMM Standard (Dry run) = python3 driver.py --test_type standard --train_iters 10 20 --users Matthew --method recognition
+    HMM Standard (Dry run) = python3 driver.py --test_type standard --train_iters 10 20 --users Matthew --method verification
+    HMM CV = python3 driver.py --test_type cross_val --train_iters 10 --users 07-24-20_Matthew_4KDepth 11-08-20_Colby_4KDepth 11-08-20_Ishan_4KDepth --cross_val_method leave_one_user_out --n_splits 10 --cv_parallel --parallel_jobs 3  --hmm_insertion_penalty -80 --method verification
 """
 import sys
 import glob
@@ -32,7 +33,7 @@ sys.path.insert(0, '../../')
 from src.prepare_data import prepare_data
 from src.train import create_data_lists, train, trainSBHMM
 from src.utils import get_results, save_results, load_json, get_arg_groups
-from src.test import test, testSBHMM, verify
+from src.test import test, testSBHMM, verify_simple, return_average_ll_per_sign, verify_zahoor
 from joblib import Parallel, delayed
 from statistics import mean
 
@@ -57,6 +58,58 @@ def copyFiles(fileNames: list, newFolder: str, originalFolder: str, ext: str):
     for currFile in fileNames:
         shutil.copyfile(os.path.join(originalFolder, currFile+ext), os.path.join(newFolder, currFile+ext))
 
+def get_user(filepath):
+    return filepath.split('/')[-1].split('.')[0].split('_')[-2]
+
+def crossValVerificationFold(train_data: list, test_data: list, args: object, fold: int):
+    print(f"Current split = {str(fold)}. Current Test data Size = {len(test_data)}")
+    ogDataFolder = "data"
+    currDataFolder = os.path.join("data", str(fold))
+    trainFiles = [i.split("/")[-1].replace(".htk", "") for i in train_data]
+    testFiles = [i.split("/")[-1].replace(".htk", "") for i in test_data]
+    allFiles = trainFiles + testFiles
+
+    copyFiles(allFiles, os.path.join(currDataFolder, "ark"), os.path.join(ogDataFolder, "ark"), ".ark")
+    copyFiles(allFiles, os.path.join(currDataFolder, "htk"), os.path.join(ogDataFolder, "htk"), ".htk")
+
+    users_in_train = set([get_user(filepath) for filepath in trainFiles])
+    average_ll_per_sign = {}
+    for user in users_in_train:
+        curr_train_files = []
+        curr_test_files = []
+        for filepath in trainFiles:
+            if get_user(filepath) != user:
+                curr_train_files.append(filepath)
+            else:
+                curr_test_files.append(filepath)
+        
+        create_data_lists([os.path.join(currDataFolder, "htk", i+".htk") for i in curr_train_files], [
+                    os.path.join(currDataFolder, "htk", i+".htk") for i in curr_test_files], args.phrase_len, fold)
+
+        train(args.train_iters, args.mean, args.variance, args.transition_prob, fold=os.path.join(str(fold), ""))
+        curr_average_ll_sign = return_average_ll_per_sign(args.end, args.hmm_insertion_penalty, 
+                                                        args.beam_threshold, fold=os.path.join(str(fold), ""))
+        if len(average_ll_per_sign) == 0:
+            average_ll_per_sign = curr_average_ll_sign
+        else:
+            for sign in average_ll_per_sign:
+                average_ll_per_sign[sign] = np.concatenate((average_ll_per_sign[sign], curr_average_ll_sign[sign]), axis=None)
+    
+    for sign in average_ll_per_sign:
+        average_ll_per_sign[sign] = [np.mean(average_ll_per_sign[sign]), np.std(average_ll_per_sign[sign])]
+    
+    create_data_lists([os.path.join(currDataFolder, "htk", i+".htk") for i in trainFiles], [
+                    os.path.join(currDataFolder, "htk", i+".htk") for i in testFiles], args.phrase_len, fold)
+    train(args.train_iters, args.mean, args.variance, args.transition_prob, fold=os.path.join(str(fold), ""))
+    positive, negative, false_positive, false_negative = verify_zahoor(args.end, args.hmm_insertion_penalty, average_ll_per_sign, 
+                                                                        args.beam_threshold, fold=os.path.join(str(fold), ""))
+    print(f'Current Positive Rate: {positive/(positive + false_negative)}')
+    print(f'Current Negative Rate: {negative/(negative + false_positive)}')
+    print(f'Current False Positive Rate: {false_positive/(negative + false_positive)}')
+    print(f'Current False Negative Rate: {false_negative/(positive + false_negative)}')
+
+    return positive, negative, false_positive, false_negative
+    
 def crossValFold(train_data: list, test_data: list, args: object, fold: int):
     print(f"Current split = {str(fold)}. Current Test data Size = {len(test_data)}")
     ogDataFolder = "data"
@@ -154,7 +207,7 @@ def main():
     parser.add_argument('--multiple_classifiers', action='store_true')
     parser.add_argument('--classifier', type=str, default='knn',
                         choices=['knn', 'adaboost'])
-    parser.add_argument('--beam_threshold', default=100000.0)
+    parser.add_argument('--beam_threshold', default=10000000.0)
 
     #Arguments for testing
     parser.add_argument('--start', type=int, default=-2)
@@ -214,7 +267,8 @@ def main():
             if args.method == "recognition":
                 test(args.start, args.end, args.method, args.hmm_insertion_penalty)
             elif args.method == "verification":
-                correct, incorrect = verify(args.end, args.insertion_penalty, args.acceptance_threshold, args.beam_threshold)
+                positive, negative, false_positive, false_negative = verify_simple(args.end, args.insertion_penalty, 
+                                                                    args.acceptance_threshold, args.beam_threshold)
         
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)
@@ -224,8 +278,10 @@ def main():
             print('Test on Train Results')
         
         if args.method == "verification":
-            all_results['fold_0']['correct'] = correct
-            all_results['fold_0']['incorrect'] = incorrect
+            all_results['average']['positive'] = positive
+            all_results['average']['negative'] = negative
+            all_results['average']['false_positive'] = false_positive
+            all_results['average']['false_negative'] = false_negative
 
             print('Test on Train Results')
     
@@ -256,9 +312,7 @@ def main():
             groups = [group_map[phrase] for phrase in phrases]
             cross_val = cross_val_method
         elif cvm == 'leave_one_user_out':
-            users = [filepath.split('/')[-1].split('.')[0].split('_')[-2]
-                for filepath
-                in htk_filepaths]
+            users = [get_user(filepath) for filepath in htk_filepaths]
             unique_users = list(set(users))
             unique_users.sort()
             print(unique_users)
@@ -266,9 +320,7 @@ def main():
             groups = [group_map[user] for user in users]            
             cross_val = cross_val_method
         elif cvm == 'user_dependent':
-            users = [filepath.split('/')[-1].split('.')[0].split('_')[-2]
-                for filepath
-                in htk_filepaths]
+            users = [get_user(filepath) for filepath in htk_filepaths]
             unique_users = list(set(users))
             unique_users.sort()
             print(unique_users)
@@ -278,13 +330,25 @@ def main():
         elif use_groups:
             splits = list(cross_val.split(htk_filepaths, phrases, groups))
         else:
-            splits = list(cross_val.split(htk_filepaths, phrases))        
-        stats = Parallel(n_jobs=args.parallel_jobs)(delayed(crossValFold)(np.array(htk_filepaths)[splits[currFold][0]], np.array(htk_filepaths)[splits[currFold][1]], args, currFold) for currFold in range(len(splits)))
+            splits = list(cross_val.split(htk_filepaths, phrases))
+        if args.method == "recognition":         
+            stats = Parallel(n_jobs=args.parallel_jobs)(delayed(crossValFold)
+                            (np.array(htk_filepaths)[splits[currFold][0]], np.array(htk_filepaths)[splits[currFold][1]], args, currFold)
+                            for currFold in range(len(splits)))
+            all_results['average']['error'] = mean([i[0] for i in stats])
+            all_results['average']['sentence_error'] = mean([i[1] for i in stats])
+            all_results['average']['insertions'] = mean([i[2] for i in stats])
+            all_results['average']['deletions'] = mean([i[3] for i in stats])
+
+        elif args.method == "verification":
+            stats = Parallel(n_jobs=args.parallel_jobs)(delayed(crossValVerificationFold)
+                            (np.array(htk_filepaths)[splits[currFold][0]], np.array(htk_filepaths)[splits[currFold][1]], args, currFold)
+                            for currFold in range(len(splits)))
+            all_results['average']['positive'] = mean(i[0] for i in stats)
+            all_results['average']['negative'] = mean(i[1] for i in stats)
+            all_results['average']['false_positive'] = mean(i[2] for i in stats)
+            all_results['average']['false_negative'] = mean(i[3] for i in stats)
         
-        all_results['average']['error'] = mean([i[0] for i in stats])
-        all_results['average']['sentence_error'] = mean([i[1] for i in stats])
-        all_results['average']['insertions'] = mean([i[2] for i in stats])
-        all_results['average']['deletions'] = mean([i[3] for i in stats])
         print(stats)
 
     elif args.test_type == 'cross_val':
@@ -308,9 +372,7 @@ def main():
             for filepath
             in htk_filepaths]
         
-        users = [filepath.split('/')[-1].split('.')[0].split('_')[1]
-            for filepath
-            in htk_filepaths]     
+        users = [get_user(filepath) for filepath in htk_filepaths]     
 
         if cvm == 'kfold' or cvm == 'stratified':
             unique_phrases = set(phrases)
@@ -328,9 +390,7 @@ def main():
             groups = [group_map[user] for user in users]            
             cross_val = cross_val_method
         elif cvm == 'user_dependent':
-            users = [filepath.split('/')[-1].split('.')[0].split('_')[-2]
-                for filepath
-                in htk_filepaths]
+            users = [get_user(filepath) for filepath in htk_filepaths]
             unique_users = list(set(users))
             unique_users.sort()
             print(unique_users)
@@ -426,7 +486,7 @@ def main():
             if args.method == "recognition":
                 test(args.start, args.end, args.method, args.hmm_insertion_penalty)
             elif args.method == "verification":
-                positive, negative, false_positive, false_negative = verify(args.end, args.hmm_insertion_penalty, args.acceptance_threshold, args.beam_threshold)
+                positive, negative, false_positive, false_negative = verify_simple(args.end, args.hmm_insertion_penalty, args.acceptance_threshold, args.beam_threshold)
         
         if args.method == "recognition":
             all_results['fold_0'] = get_results(hresults_file)

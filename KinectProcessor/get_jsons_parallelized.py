@@ -7,6 +7,7 @@ import multiprocessing
 from ctypes import c_char_p
 
 def runOfflineProcessorParallelized(source: str, dest: str, all_errors, lock):
+    print("run")
     if " " in source:
         source = f"\"{source}\""
     if " " in dest:
@@ -22,19 +23,18 @@ def runOfflineProcessorParallelized(source: str, dest: str, all_errors, lock):
 
 
 def parallelizeHelper(video_list: list, destination: str, all_errors, lock):
-
     for video in tqdm.tqdm(video_list):
         name = video.split("/")[-1].replace(".mkv", "")
         prefix = '/'.join(video.split("/")[-4:-1])
         destionationDir = os.path.join(destination, prefix)
         if not os.path.exists(destionationDir):
             os.makedirs(destionationDir)
-            destinationFile = os.path.join(destination, prefix, name)
-            # print(video, destinationFile, sep = ' | ')
-            runOfflineProcessorParallelized(video, destinationFile, all_errors, lock)
+        destinationFile = os.path.join(destination, prefix, name)
+        # print(video, destinationFile, sep = ' | ')
+        runOfflineProcessorParallelized(video, destinationFile, all_errors, lock)
         
 
-def parallelizeProduceJSONS(source: str, destination: str, num_processes = 3):
+def parallelizeProduceJSONS(source: str, destination: str, num_processes = 2):
     processes = []
     manager = multiprocessing.Manager()
     lock = multiprocessing.Lock()
@@ -68,8 +68,8 @@ def parallelizeProduceJSONS(source: str, destination: str, num_processes = 3):
     
 
 
-#
-parallelizeProduceJSONS("/home/aslr/ccg-charizard/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Videos/08-12-20_Kanksha_4KDepth/**/*.mkv", "/home/aslr/ccg-charizard/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Kinect_Data_2020/")
+parallelizeProduceJSONS("/run/user/1000/gvfs/sftp:host=ccg-charizard.cc.gt.atl.ga.us,user=thad/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/Fingerspelling_Of_The_Dead/Correct_Data/**/*.mkv", "/run/user/1000/gvfs/sftp:host=ccg-charizard.cc.gt.atl.ga.us,user=thad/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/Fingerspelling_Of_The_Dead/Correct_Kinect")
+
 
 
 #print("Processing files in Extreme SSD")

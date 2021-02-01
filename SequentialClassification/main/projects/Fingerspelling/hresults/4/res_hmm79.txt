@@ -1,0 +1,57 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/4/res_hmm79.mlf 
+Aligned transcription: data/4/htk/01-18-21_Matthew_Fingerspelling_Right.see.0000000011.lab vs data/4/htk/01-18-21_Matthew_Fingerspelling_Right.see.0000000011.rec
+ LAB: s e e 
+ REC: o f f 
+Aligned transcription: data/4/htk/01-18-21_Matthew_Fingerspelling_Right.box.0000000011.lab vs data/4/htk/01-18-21_Matthew_Fingerspelling_Right.box.0000000011.rec
+ LAB: b o x 
+ REC: r e d 
+Aligned transcription: data/4/htk/01-18-21_Matthew_Fingerspelling_Right.old.0000000003.lab vs data/4/htk/01-18-21_Matthew_Fingerspelling_Right.old.0000000003.rec
+ LAB: o l d 
+ REC: s k y 
+Aligned transcription: data/4/htk/01-18-21_Matthew_Fingerspelling_Right.big.0000000008.lab vs data/4/htk/01-18-21_Matthew_Fingerspelling_Right.big.0000000008.rec
+ LAB: b i g 
+ REC: o f f 
+Aligned transcription: data/4/htk/01-18-21_Matthew_Fingerspelling_Right.cup.0000000004.lab vs data/4/htk/01-18-21_Matthew_Fingerspelling_Right.cup.0000000004.rec
+ LAB: c u p 
+ REC: z o o 
+Aligned transcription: data/4/htk/01-18-21_Matthew_Fingerspelling_Right.cup.0000000009.lab vs data/4/htk/01-18-21_Matthew_Fingerspelling_Right.cup.0000000009.rec
+ LAB: c u p 
+ REC: z o o 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Thu Jan 21 00:55:08 2021            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/4/res_hmm79.mlf                                |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |   16  |  62.50  37.50   0.00   0.00  37.50  37.50 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       a   c   d   e   f   g   h   i   k   m   n   o   p   r   s   t   w   y   z 
+                                                                                 
+                                                                                 
+                                                                                  Del [ %c / %e]
+   a   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+   b   0   0   0   0   0   0   0   0   0   0   0   1   0   1   0   0   0   0   0    0 [ 0.0/4.2]
+   c   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   2    0 [33.3/4.2]
+   d   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0    0 [50.0/2.1]
+   e   0   0   0   3   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0 [60.0/4.2]
+   f   0   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+   g   0   0   0   0   1   2   0   0   0   0   0   0   0   0   0   0   0   0   0    0 [66.7/2.1]
+   h   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0    0
+   i   0   0   0   0   1   0   0   2   0   0   0   0   0   0   0   0   0   0   0    0 [66.7/2.1]
+   k   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0    0
+   l   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0    0 [ 0.0/2.1]
+   m   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0    0
+   n   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0    0
+   o   0   0   0   1   0   0   0   0   0   0   0   4   0   0   1   0   0   0   0    0 [66.7/4.2]
+   p   0   0   0   0   0   0   0   0   0   0   0   2   2   0   0   0   0   0   0    0 [50.0/4.2]
+   r   0   0   0   0   0   0   0   0   0   0   0   0   0   2   0   0   0   0   0    0
+   s   0   0   0   0   0   0   0   0   0   0   0   1   0   0   1   0   0   0   0    0 [50.0/2.1]
+   t   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   2   0   0   0    0
+   u   0   0   0   0   0   0   0   0   0   0   0   2   0   0   0   0   0   0   0    0 [ 0.0/4.2]
+   w   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0    0
+   x   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0 [ 0.0/2.1]
+   y   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0    0
+   z   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1    0
+Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0

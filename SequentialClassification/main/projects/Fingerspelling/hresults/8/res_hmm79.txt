@@ -1,0 +1,51 @@
+HResults -A -h -e ??? sil0 -e ??? sil1 -p -t -I all_labels.mlf wordList results/8/res_hmm79.mlf 
+Aligned transcription: data/8/htk/01-18-21_Matthew_Fingerspelling_Right.red.0000000003.lab vs data/8/htk/01-18-21_Matthew_Fingerspelling_Right.red.0000000003.rec
+ LAB: r e d 
+ REC: s e e 
+Aligned transcription: data/8/htk/01-18-21_Matthew_Fingerspelling_Right.box.0000000003.lab vs data/8/htk/01-18-21_Matthew_Fingerspelling_Right.box.0000000003.rec
+ LAB: b o x 
+ REC: b i g 
+Aligned transcription: data/8/htk/01-18-21_Matthew_Fingerspelling_Right.old.0000000004.lab vs data/8/htk/01-18-21_Matthew_Fingerspelling_Right.old.0000000004.rec
+ LAB: o l d 
+ REC: s e e 
+Aligned transcription: data/8/htk/01-18-21_Matthew_Fingerspelling_Right.arm.0000000000.lab vs data/8/htk/01-18-21_Matthew_Fingerspelling_Right.arm.0000000000.rec
+ LAB: a r m 
+ REC: s e e 
+    ,-------------------------------------------------------------.
+    | HTK Results Analysis at Thu Jan 21 00:58:19 2021            |
+    | Ref: all_labels.mlf                                         |
+    | Rec: results/8/res_hmm79.mlf                                |
+    |=============================================================|
+    |           # Snt |  Corr    Sub    Del    Ins    Err  S. Err |
+    |-------------------------------------------------------------|
+    | Sum/Avg |   16  |  79.17  20.83   0.00   0.00  20.83  25.00 |
+    `-------------------------------------------------------------'
+------------------------ Confusion Matrix -------------------------
+       b   c   e   f   g   h   i   k   n   o   p   s   t   u   w   y   z 
+                                                                         
+                                                                         
+                                                                          Del [ %c / %e]
+   a   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0    0 [ 0.0/2.1]
+   b   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+   c   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+   d   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0 [ 0.0/4.2]
+   e   0   0   6   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+   f   0   0   0   2   0   0   0   0   0   0   0   0   0   0   0   0   0    0
+   g   0   0   0   0   4   0   0   0   0   0   0   0   0   0   0   0   0    0
+   h   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0    0
+   i   0   0   0   0   0   0   3   0   0   0   0   0   0   0   0   0   0    0
+   k   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0    0
+   l   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0 [ 0.0/2.1]
+   m   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0   0    0 [ 0.0/2.1]
+   n   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0    0
+   o   0   0   0   0   0   0   1   0   0   4   0   1   0   0   0   0   0    0 [66.7/4.2]
+   p   0   0   0   0   0   0   0   0   0   0   3   0   0   0   0   0   0    0
+   r   0   0   1   0   0   0   0   0   0   0   0   1   0   0   0   0   0    0 [ 0.0/4.2]
+   s   0   0   0   0   0   0   0   0   0   0   0   2   0   0   0   0   0    0
+   t   0   0   0   0   0   0   0   0   0   0   0   0   3   0   0   0   0    0
+   u   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0   0    0
+   w   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0   0    0
+   x   0   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0    0 [ 0.0/2.1]
+   y   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1   0    0
+   z   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   1    0
+Ins    0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0

@@ -27,6 +27,8 @@ def produceJSONS(source: str, destination: str):
 
     video_list = glob.glob(source, recursive=True)
 
+    # print(video_list)
+
     for video in tqdm.tqdm(video_list):
         name = video.split("/")[-1].replace(".mkv", "")
         prefix = '/'.join(video.split("/")[-4:-1])
@@ -44,16 +46,12 @@ def produceJSONS(source: str, destination: str):
     f.write(all_errors)
     f.close()
 
-#
-produceJSONS("/home/aslr/ccg-charizard/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Videos/10-02-20_ThadLeft_4KDepth/**/*.mkv", "/home/aslr/ccg-charizard/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Kinect_Data_2020/")
+produceJSONS("/run/user/1000/gvfs/sftp:host=ccg-charizard.cc.gt.atl.ga.us,user=thad/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Videos/01-04-21_Harley_4KDepth/**/*.mkv", "/run/user/1000/gvfs/sftp:host=ccg-charizard.cc.gt.atl.ga.us,user=thad/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Kinect_Data_2020/")
 
 
 #print("Processing files in Extreme SSD")
 #produceJSONS("/media/aslr/Extreme SSD/ProcessingPipeline/DATA/Videos/**/*.mkv", "/media/aslr/U32 Shadow/ProcessingPipeline/DATA/Kinect_Data_July_2020")
-<<<<<<< HEAD
 # print("Processing files in U32 Shadow")
 # produceJSONS("/home/aslr/ccg-charizard/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/Fingerspelling_Of_The_Dead/output_directory/Kinect/12-13-20_Matthew_Fingerspelling_Right/**/*.mkv", "/home/aslr/ccg-charizard/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/Fingerspelling_Of_The_Dead/output_directory/Kinect_json")
-=======
-print("Processing files")
-produceJSONS("/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Videos/07-24-20_Matthew_4KDepth/*/*/*.mkv", "/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Kinect_Data_2020/07-24-20_Matthew_4KDepth")
->>>>>>> 68869373d8b66b037ca054734f3a66658542be06
+# print("Processing files")
+# produceJSONS("/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Videos/07-24-20_Matthew_4KDepth/*/*/*.mkv", "/mnt/884b8515-1b2b-45fa-94b2-ec73e4a2e557/CopyCatDatasetWIP/RawProcessingPipeline/DATA/Kinect_Data_2020/07-24-20_Matthew_4KDepth")

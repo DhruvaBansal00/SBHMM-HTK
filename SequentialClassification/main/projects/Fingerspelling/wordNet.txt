@@ -1,20 +1,26 @@
 VERSION=1.0
-N=14   L=21   
+N=20   L=33   
 I=0    W=!NULL               
 I=1    W=!NULL               
 I=2    W=sil0                
-I=3    W=away                
+I=3    W=arm                 
 I=4    W=!NULL               
-I=5    W=box                 
-I=6    W=breakfast           
-I=7    W=chicken             
-I=8    W=drive               
-I=9    W=gone                
-I=10   W=jump                
-I=11   W=squirrel            
-I=12   W=zipper              
-I=13   W=sil1                
-J=0     S=13   E=1    
+I=5    W=big                 
+I=6    W=box                 
+I=7    W=cow                 
+I=8    W=cup                 
+I=9    W=get                 
+I=10   W=hit                 
+I=11   W=off                 
+I=12   W=old                 
+I=13   W=pen                 
+I=14   W=pig                 
+I=15   W=red                 
+I=16   W=see                 
+I=17   W=sky                 
+I=18   W=zoo                 
+I=19   W=sil1                
+J=0     S=19   E=1    
 J=1     S=0    E=2    
 J=2     S=2    E=3    
 J=3     S=3    E=4    
@@ -26,12 +32,24 @@ J=8     S=9    E=4
 J=9     S=10   E=4    
 J=10    S=11   E=4    
 J=11    S=12   E=4    
-J=12    S=2    E=5    
-J=13    S=2    E=6    
-J=14    S=2    E=7    
-J=15    S=2    E=8    
-J=16    S=2    E=9    
-J=17    S=2    E=10   
-J=18    S=2    E=11   
-J=19    S=2    E=12   
-J=20    S=4    E=13   
+J=12    S=13   E=4    
+J=13    S=14   E=4    
+J=14    S=15   E=4    
+J=15    S=16   E=4    
+J=16    S=17   E=4    
+J=17    S=18   E=4    
+J=18    S=2    E=5    
+J=19    S=2    E=6    
+J=20    S=2    E=7    
+J=21    S=2    E=8    
+J=22    S=2    E=9    
+J=23    S=2    E=10   
+J=24    S=2    E=11   
+J=25    S=2    E=12   
+J=26    S=2    E=13   
+J=27    S=2    E=14   
+J=28    S=2    E=15   
+J=29    S=2    E=16   
+J=30    S=2    E=17   
+J=31    S=2    E=18   
+J=32    S=4    E=19   
